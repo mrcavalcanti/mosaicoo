@@ -5,7 +5,7 @@ package definitions
 // Get all the mute timings.
 //
 //     Responses:
-//       200: []MuteTiming
+//       200: MuteTimings
 //       400: ValidationError
 
 // swagger:route GET /api/provisioning/mute-timings/{name} provisioning RouteGetMuteTiming
@@ -13,5 +13,51 @@ package definitions
 // Get a mute timing.
 //
 //     Responses:
-//       200: MuteTiming
+//       200: MuteTimeInterval
 //       400: ValidationError
+
+// swagger:route POST /api/provisioning/mute-timings provisioning RoutePostMuteTiming
+//
+// Create a new mute timing.
+//
+//     Consumes:
+//     - application/json
+//
+//     Responses:
+//       201: MuteTimeInterval
+//       400: ValidationError
+
+// swagger:route PUT /api/provisioning/mute-timings/{name} provisioning RoutePutMuteTiming
+//
+// Replace an existing mute timing.
+//
+//     Consumes:
+//     - application/json
+//
+//     Responses:
+//       200: MuteTimeInterval
+//       400: ValidationError
+
+// swagger:route DELETE /api/provisioning/mute-timings/{name} provisioning RouteDeleteMuteTiming
+//
+// Delete a mute timing.
+//
+//     Responses:
+//       204: Accepted
+
+// swagger:route
+
+// swagger:model
+type MuteTimings []MuteTimeInterval
+
+// swagger:parameters RouteGetMuteTiming RoutePutMuteTiming RouteDeleteMuteTiming
+type RouteGetMuteTimingParam struct {
+	// in: path
+	Name string `json:"name"`
+}
+
+// swagger:parameters RoutePostMuteTiming RoutePutMuteTiming
+type MuteTimingPayload struct {
+	// in:body
+	Body MuteTimeInterval
+}

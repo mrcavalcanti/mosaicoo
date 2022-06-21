@@ -212,7 +212,7 @@ function getGrafanaCloudPhantomPlugin(): DataSourcePluginMeta {
       author: { name: 'Grafana Labs' },
       links: [
         {
-          url: 'https://grafana.com/products/cloud/',
+          url: 'https://mosaicoo.com/products/cloud/',
           name: 'Learn more',
         },
       ],

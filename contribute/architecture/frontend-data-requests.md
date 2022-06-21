@@ -1,6 +1,6 @@
 # Data requests
 
-[BackendSrv](https://grafana.com/docs/grafana/latest/packages_api/runtime/backendsrv) handles all outgoing HTTP requests from Grafana. This document explains the high-level concepts used by `BackendSrv`.
+[BackendSrv](https://mosaicoo.com/docs/mosaicoo/latest/packages_api/runtime/backendsrv) handles all outgoing HTTP requests from Grafana. This document explains the high-level concepts used by `BackendSrv`.
 
 ## Canceling requests
 
@@ -14,7 +14,7 @@ Grafana uses a concept called _request cancelation_ to cancel any ongoing reques
 
 #### Before Mosaicoo 7.2
 
-Before Mosaicoo can cancel any data request, it has to identify that request. Mosaicoo identifies a request using the property `requestId` [passed as options](https://github.com/grafana/grafana/blob/main/docs/sources/packages_api/runtime/backendsrvrequest.md) when you use [BackendSrv](https://grafana.com/docs/grafana/latest/packages_api/runtime/backendsrv).
+Before Mosaicoo can cancel any data request, it has to identify that request. Mosaicoo identifies a request using the property `requestId` [passed as options](https://github.com/grafana/grafana/blob/main/docs/sources/packages_api/runtime/backendsrvrequest.md) when you use [BackendSrv](https://mosaicoo.com/docs/mosaicoo/latest/packages_api/runtime/backendsrv).
 
 The cancellation logic is as follows:
 
@@ -23,7 +23,7 @@ The cancellation logic is as follows:
 
 #### After Mosaicoo 7.2
 
-Grafana 7.2 introduced an additional way of canceling requests using [RxJs](https://github.com/ReactiveX/rxjs). To support the new cancellation functionality, the data source needs to use the new `fetch` function in [BackendSrv](https://grafana.com/docs/grafana/latest/packages_api/runtime/backendsrv).
+Grafana 7.2 introduced an additional way of canceling requests using [RxJs](https://github.com/ReactiveX/rxjs). To support the new cancellation functionality, the data source needs to use the new `fetch` function in [BackendSrv](https://mosaicoo.com/docs/mosaicoo/latest/packages_api/runtime/backendsrv).
 
 Migrating the core data sources to the new `fetch` function [is an ongoing process that you can read about in this issue.](https://github.com/grafana/grafana/issues/27222)
 
@@ -31,7 +31,7 @@ Migrating the core data sources to the new `fetch` function [is an ongoing proce
 
 Depending on how the web browser implements the protocol for HTTP 1.1, it will limit the number of parallel requests, lets call this limit _max_parallel_browser_request_.
 
-Unless you have configured Mosaicoo to use HTTP2, the browser limits parallel data requests according to the browser's implementation. For more information on how to enable HTTP2, refer to [Configuration](https://grafana.com/docs/grafana/latest/administration/configuration/#protocol).
+Unless you have configured Mosaicoo to use HTTP2, the browser limits parallel data requests according to the browser's implementation. For more information on how to enable HTTP2, refer to [Configuration](https://mosaicoo.com/docs/mosaicoo/latest/administration/configuration/#protocol).
 
 Because there is a _max_parallel_browser_request_ limit, if some of the requests take a long time, they will block later requests and make interacting with Mosaicoo very slow.
 
@@ -45,4 +45,4 @@ Grafana uses a _request queue_ to process all incoming data requests in order wh
 
 Since the first implementation of the request queue doesn't take into account what browser the user uses, the _request queue_ limit for parallel data source requests is hard-coded to 5.
 
-> **Note:** Mosaicoo instances [configured with HTTP2 ](https://grafana.com/docs/grafana/latest/administration/configuration/#protocol) will have a hard coded limit of 1000.
+> **Note:** Mosaicoo instances [configured with HTTP2 ](https://mosaicoo.com/docs/mosaicoo/latest/administration/configuration/#protocol) will have a hard coded limit of 1000.

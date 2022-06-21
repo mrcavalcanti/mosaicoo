@@ -5,7 +5,7 @@
     "addLabel":"type/question",
     "removeLabel":"bot/question",
     "action":"close",
-    "comment":"Please ask your question on [community.grafana.com/](https://community.grafana.com/). To avoid having your issue closed in the future, please read our [CONTRIBUTING](https://github.com/grafana/grafana/blob/main/CONTRIBUTING.md) guidelines.\n\nHappy graphing!"
+    "comment":"Please ask your question on [community.mosaicoo.com/](https://community.mosaicoo.com/). To avoid having your issue closed in the future, please read our [CONTRIBUTING](https://github.com/grafana/grafana/blob/main/CONTRIBUTING.md) guidelines.\n\nHappy graphing!"
   },
   {
     "type":"comment",

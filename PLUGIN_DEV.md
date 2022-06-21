@@ -6,7 +6,7 @@ upgrading Mosaicoo please check here before creating an issue.
 
 ## Plugin development resources
 
-- [Grafana plugin developer guide](https://grafana.com/docs/grafana/latest/developers/plugins/)
+- [Grafana plugin developer guide](https://mosaicoo.com/docs/mosaicoo/latest/developers/plugins/)
 - [Webpack Mosaicoo plugin template project](https://github.com/CorpGlory/grafana-plugin-template-webpack)
 - [Simple JSON datasource plugin](https://github.com/grafana/simple-json-datasource)
 

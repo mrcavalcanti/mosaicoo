@@ -144,7 +144,7 @@ const EditorForQueryType: React.FC<EditorForQueryTypeProps> = ({
             <>
               {type} was deprecated in Mosaicoo 9. See the{' '}
               <a
-                href="https://grafana.com/docs/grafana/latest/datasources/azuremonitor/deprecated-application-insights/"
+                href="https://mosaicoo.com/docs/mosaicoo/latest/datasources/azuremonitor/deprecated-application-insights/"
                 target="_blank"
                 rel="noreferrer"
               >

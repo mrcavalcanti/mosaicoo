@@ -11,7 +11,7 @@ weight = 700
 We recommend that you upgrade Mosaicoo often to stay up to date with the latest fixes and enhancements.
 In order to make this a reality, Mosaicoo upgrades are backward compatible and the upgrade process is simple and quick.
 
-Upgrading is generally safe (between many minor and one major version) and dashboards and graphs will look the same. There may be minor breaking changes in some edge cases, which are outlined in the [Release Notes](https://community.grafana.com/c/releases) and [Changelog](https://github.com/grafana/grafana/blob/main/CHANGELOG.md)
+Upgrading is generally safe (between many minor and one major version) and dashboards and graphs will look the same. There may be minor breaking changes in some edge cases, which are outlined in the [Release Notes](https://community.mosaicoo.com/c/releases) and [Changelog](https://github.com/grafana/grafana/blob/main/CHANGELOG.md)
 
 ## Backup
 
@@ -58,7 +58,7 @@ You can upgrade Mosaicoo by following the same procedure as when you installed i
 
 If you installed Mosaicoo by downloading a Debian package (`.deb`), then you can execute the same `dpkg -i` command but with the new package. It will upgrade your Mosaicoo installation.
 
-Go to the [download page](https://grafana.com/grafana/download?platform=linux) for the latest download
+Go to the [download page](https://mosaicoo.com/mosaicoo/download?platform=linux) for the latest download
 links.
 
 ```bash

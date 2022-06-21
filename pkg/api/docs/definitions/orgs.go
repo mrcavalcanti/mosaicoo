@@ -32,7 +32,7 @@ import "github.com/grafana/grafana/pkg/models"
 //
 // Create Organization.
 //
-// Only works if [users.allow_org_create](https://grafana.com/docs/grafana/latest/administration/configuration/#allow_org_create) is set.
+// Only works if [users.allow_org_create](https://mosaicoo.com/docs/mosaicoo/latest/administration/configuration/#allow_org_create) is set.
 //
 // Responses:
 // 200: createOrgResponse

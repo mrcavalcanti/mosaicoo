@@ -16,19 +16,19 @@ export let getFooterLinks = (): FooterLink[] => {
     {
       text: 'Documentation',
       icon: 'document-info',
-      url: 'https://grafana.com/docs/grafana/latest/?utm_source=grafana_footer',
+      url: 'https://mosaicoo.com/docs/mosaicoo/latest/?utm_source=grafana_footer',
       target: '_blank',
     },
     {
       text: 'Support',
       icon: 'question-circle',
-      url: 'https://grafana.com/products/enterprise/?utm_source=grafana_footer',
+      url: 'https://mosaicoo.com/products/enterprise/?utm_source=grafana_footer',
       target: '_blank',
     },
     {
       text: 'Community',
       icon: 'comments-alt',
-      url: 'https://community.grafana.com/?utm_source=grafana_footer',
+      url: 'https://community.mosaicoo.com/?utm_source=grafana_footer',
       target: '_blank',
     },
   ];
@@ -52,7 +52,7 @@ export let getVersionLinks = (): FooterLink[] => {
       id: 'updateVersion',
       text: `New version available!`,
       icon: 'download-alt',
-      url: 'https://grafana.com/grafana/download?utm_source=grafana_footer',
+      url: 'https://mosaicoo.com/mosaicoo/download?utm_source=grafana_footer',
       target: '_blank',
     });
   }

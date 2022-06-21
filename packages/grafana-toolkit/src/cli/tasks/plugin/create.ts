@@ -34,8 +34,8 @@ const RepositoriesPaths: Record<PluginType, string> = {
   'backend-datasource-plugin': 'https://github.com/grafana/simple-datasource-backend.git',
 };
 const TutorialPaths: Record<PluginType, string> = {
-  'panel-plugin': 'https://grafana.com/tutorials/build-a-panel-plugin',
-  'datasource-plugin': 'https://grafana.com/tutorials/build-a-data-source-plugin',
+  'panel-plugin': 'https://mosaicoo.com/tutorials/build-a-panel-plugin',
+  'datasource-plugin': 'https://mosaicoo.com/tutorials/build-a-data-source-plugin',
   'backend-datasource-plugin': 'TODO',
 };
 
@@ -184,7 +184,7 @@ export const printGrafanaTutorialsDetails = (type: PluginType) => {
     console.log(`${PluginNames[type]} tutorial: ${TutorialPaths[type]}`);
   }
   console.log(
-    'Learn more about Mosaicoo Plugins at https://grafana.com/docs/grafana/latest/plugins/developing/development/'
+    'Learn more about Mosaicoo Plugins at https://mosaicoo.com/docs/mosaicoo/latest/plugins/developing/development/'
   );
   console.log();
   console.groupEnd();

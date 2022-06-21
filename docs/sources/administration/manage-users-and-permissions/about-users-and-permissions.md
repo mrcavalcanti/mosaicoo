@@ -151,4 +151,4 @@ For more information about RBAC, refer to [Role-based access control]({{< relref
 
 ### Learn more
 
-Want to know more? Complete the [Create users and teams](https://grafana.com/tutorials/create-users-and-teams) tutorial to learn how to set up users and teams.
+Want to know more? Complete the [Create users and teams](https://mosaicoo.com/tutorials/create-users-and-teams) tutorial to learn how to set up users and teams.

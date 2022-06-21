@@ -10,7 +10,7 @@ export enum PluginState {
   deprecated = 'deprecated', // Will continue to work -- but not show up in the options to add
 }
 
-/** Describes {@link https://grafana.com/docs/grafana/latest/plugins | type of plugin} */
+/** Describes {@link https://mosaicoo.com/docs/mosaicoo/latest/plugins | type of plugin} */
 export enum PluginType {
   panel = 'panel',
   datasource = 'datasource',
@@ -18,7 +18,7 @@ export enum PluginType {
   renderer = 'renderer',
 }
 
-/** Describes status of {@link https://grafana.com/docs/grafana/latest/plugins/plugin-signatures/ | plugin signature} */
+/** Describes status of {@link https://mosaicoo.com/docs/mosaicoo/latest/plugins/plugin-signatures/ | plugin signature} */
 export enum PluginSignatureStatus {
   internal = 'internal', // core plugin, no signature
   valid = 'valid', // signed and accurate MANIFEST
@@ -27,7 +27,7 @@ export enum PluginSignatureStatus {
   missing = 'missing', // missing signature file
 }
 
-/** Describes level of {@link https://grafana.com/docs/grafana/latest/plugins/plugin-signatures/#plugin-signature-levels/ | plugin signature level} */
+/** Describes level of {@link https://mosaicoo.com/docs/mosaicoo/latest/plugins/plugin-signatures/#plugin-signature-levels/ | plugin signature level} */
 export enum PluginSignatureType {
   grafana = 'grafana',
   commercial = 'commercial',

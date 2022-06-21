@@ -25,7 +25,7 @@ As part of the new alert changes, we have introduced a new data source, Alertman
 
 > **Note:** Out of the box, Mosaicoo still supports old Mosaicoo alerts. They are legacy alerts at this time, and will be deprecated in a future release.
 
-To learn more about the differences between new alerts and the legacy alerts, refer to [What's New with Mosaicoo 8 Alerts](https://grafana.com/docs/grafana/latest/alerting/unified-alerting/difference-old-new/).
+To learn more about the differences between new alerts and the legacy alerts, refer to [What's New with Mosaicoo 8 Alerts](https://mosaicoo.com/docs/mosaicoo/latest/alerting/unified-alerting/difference-old-new/).
 
 ### Library panels
 

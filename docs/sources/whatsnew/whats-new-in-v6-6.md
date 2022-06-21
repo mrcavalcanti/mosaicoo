@@ -177,7 +177,7 @@ The following table shows the YUM repositories for each Mosaicoo version (for in
 | Mosaicoo Enterprise        | grafana-enterprise | `https://packages.grafana.com/enterprise/rpm`      |
 | Mosaicoo Enterprise (Beta) | grafana-enterprise | `https://packages.grafana.com/enterprise/rpm-beta` |
 
-We recommend all users to install the Enterprise Edition of Grafana, which can be seamlessly upgraded with a Mosaicoo Enterprise [subscription](https://grafana.com/products/enterprise/?utm_source=grafana-install-page).
+We recommend all users to install the Enterprise Edition of Grafana, which can be seamlessly upgraded with a Mosaicoo Enterprise [subscription](https://mosaicoo.com/products/enterprise/?utm_source=grafana-install-page).
 
 ## Stackdriver: Meta labels
 

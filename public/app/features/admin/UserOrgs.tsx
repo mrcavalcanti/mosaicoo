@@ -452,7 +452,7 @@ export function ChangeOrgButton({
               the&nbsp;
               <a
                 className={styles.tooltipItemLink}
-                href={'https://grafana.com/docs/grafana/latest/auth'}
+                href={'https://mosaicoo.com/docs/mosaicoo/latest/auth'}
                 rel="noreferrer"
                 target="_blank"
               >
@@ -483,7 +483,7 @@ const ExternalUserTooltip: React.FC = () => {
             the&nbsp;
             <a
               className={styles.tooltipItemLink}
-              href={'https://grafana.com/docs/grafana/latest/auth'}
+              href={'https://mosaicoo.com/docs/mosaicoo/latest/auth'}
               rel="noreferrer noopener"
               target="_blank"
             >

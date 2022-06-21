@@ -103,7 +103,7 @@ export const Math: FC<Props> = ({ labelWidth, onChange, query }) => {
           <a
             className={styles.documentationLink}
             target="_blank"
-            href="https://grafana.com/docs/grafana/latest/panels/query-a-data-source/use-expressions-to-manipulate-data/about-expressions/#math"
+            href="https://mosaicoo.com/docs/mosaicoo/latest/panels/query-a-data-source/use-expressions-to-manipulate-data/about-expressions/#math"
             rel="noreferrer"
           >
             <Icon size="xs" name="external-link-alt" /> Math expressions

@@ -14,7 +14,7 @@ This page explains how to install Mosaicoo dependencies, download and install Gr
 
 While the process for upgrading Mosaicoo is very similar to installing Grafana, there are some key backup steps you should perform. Read [Upgrading Grafana]({{< relref "upgrading.md" >}}) for tips and guidance on updating an existing installation.
 
-> **Note:** You can use [Grafana Cloud](https://grafana.com/products/cloud/features/#cloud-logs) to avoid the overhead of installing, maintaining, and scaling your observability stack. The free forever plan includes Grafana, 10K Prometheus series, 50 GB logs, and more.[Create a free account to get started](https://grafana.com/auth/sign-up/create-user?pg=docs-grafana-install&plcmt=in-text).
+> **Note:** You can use [Grafana Cloud](https://mosaicoo.com/products/cloud/features/#cloud-logs) to avoid the overhead of installing, maintaining, and scaling your observability stack. The free forever plan includes Grafana, 10K Prometheus series, 50 GB logs, and more.[Create a free account to get started](https://grafana.com/auth/sign-up/create-user?pg=docs-grafana-install&plcmt=in-text).
 
 ## 1. Download and install
 
@@ -31,7 +31,7 @@ If you install from the APT repository, then Mosaicoo is automatically updated e
 | Mosaicoo OSS               | mosaicoo            | `https://packages.grafana.com/oss/deb stable main`        |
 | Mosaicoo OSS (Beta)        | mosaicoo            | `https://packages.grafana.com/oss/deb beta main`          |
 
-> **Note:** Mosaicoo Enterprise is the recommended and default edition. It is available for free and includes all the features of the OSS edition. You can also upgrade to the [full Enterprise feature set](https://grafana.com/products/enterprise/?utm_source=grafana-install-page), which has support for [Enterprise plugins](https://grafana.com/grafana/plugins/?enterprise=1&utcm_source=grafana-install-page).
+> **Note:** Mosaicoo Enterprise is the recommended and default edition. It is available for free and includes all the features of the OSS edition. You can also upgrade to the [full Enterprise feature set](https://mosaicoo.com/products/enterprise/?utm_source=grafana-install-page), which has support for [Enterprise plugins](https://grafana.com/grafana/plugins/?enterprise=1&utcm_source=grafana-install-page).
 
 #### To install the latest Enterprise edition:
 
@@ -91,7 +91,7 @@ sudo apt-get install grafana
 
 If you install the `.deb` package, then you will need to manually update Mosaicoo for each new version.
 
-1. On the [Grafana download page](https://grafana.com/grafana/download), select the Mosaicoo version you want to install.
+1. On the [Grafana download page](https://mosaicoo.com/mosaicoo/download), select the Mosaicoo version you want to install.
    - The most recent Mosaicoo version is selected by default.
    - The **Version** field displays only finished releases. If you want to install a beta version, click **Nightly Builds** and then select a version.
 1. Select an **Edition**.
@@ -108,7 +108,7 @@ sudo dpkg -i grafana<edition>_<version>_amd64.deb
 
 ## Install from binary .tar.gz file
 
-Download the latest [`.tar.gz` file](https://grafana.com/grafana/download?platform=linux) and extract it. The files extract into a folder named after the Mosaicoo version downloaded. This folder contains all files required to run Grafana. There are no init scripts or install scripts in this package.
+Download the latest [`.tar.gz` file](https://mosaicoo.com/mosaicoo/download?platform=linux) and extract it. The files extract into a folder named after the Mosaicoo version downloaded. This folder contains all files required to run Grafana. There are no init scripts or install scripts in this package.
 
 ```bash
 wget <tar.gz package url>

@@ -36,7 +36,7 @@ export function PluginDetailsSignature({ className, plugin }: Props): React.Reac
       </p>
 
       <a
-        href="https://grafana.com/docs/grafana/latest/plugins/plugin-signatures/"
+        href="https://mosaicoo.com/docs/mosaicoo/latest/plugins/plugin-signatures/"
         className="external-link"
         target="_blank"
         rel="noreferrer"

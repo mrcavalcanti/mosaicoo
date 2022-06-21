@@ -26,7 +26,7 @@ export function PluginDetailsDisabledError({ className, plugin }: Props): ReactE
       {renderDescriptionFromError(plugin.error)}
       <p>Please contact your server administrator to get this resolved.</p>
       <a
-        href="https://grafana.com/docs/grafana/latest/administration/cli/#plugins-commands"
+        href="https://mosaicoo.com/docs/mosaicoo/latest/administration/cli/#plugins-commands"
         className="external-link"
         target="_blank"
         rel="noreferrer"

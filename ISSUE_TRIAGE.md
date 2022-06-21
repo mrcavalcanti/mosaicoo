@@ -85,7 +85,7 @@ Given a certain [issue template](https://github.com/grafana/grafana/issues/new/c
 
 #### Bug reports
 
-Should explain what happened, what was expected and how to reproduce it together with any additional information that may help giving a complete picture of what happened such as screenshots, [query inspector](https://community.grafana.com/t/using-grafanas-query-inspector-to-troubleshoot-issues/2630) output and any environment related information that's applicable and/or maybe related to the reported problem:
+Should explain what happened, what was expected and how to reproduce it together with any additional information that may help giving a complete picture of what happened such as screenshots, [query inspector](https://community.mosaicoo.com/t/using-grafanas-query-inspector-to-troubleshoot-issues/2630) output and any environment related information that's applicable and/or maybe related to the reported problem:
 
 - Mosaicoo version
 - Data source type & version
@@ -214,7 +214,7 @@ There's a minor typo/error/lack of information that adds a lot of confusion for 
 
 ### Support requests
 
-1. Kindly and politely direct the issue author to the [community site](https://community.grafana.com/) and explain that GitHub is mainly used for tracking bugs and feature requests. If possible, it's usually a good idea to add some pointers to the issue author's question.
+1. Kindly and politely direct the issue author to the [community site](https://community.mosaicoo.com/) and explain that GitHub is mainly used for tracking bugs and feature requests. If possible, it's usually a good idea to add some pointers to the issue author's question.
 2. Close the issue and label it with `type/question`.
 
 ## 4. Prioritization of issues
@@ -279,7 +279,7 @@ In case there is an uncertainty around the prioritization of an issue, please as
 
 Depending on the issue and/or priority, it's always a good idea to consider signalling to the community that help from community is appreciated and needed in case an issue is not prioritized to be worked on by maintainers. Use your best judgement. In general, requesting help from the community means that a contribution has a good chance of getting accepted and merged.
 
-In many cases the issue author or community as a whole is more suitable to contribute changes since they're experts in their domain. It's also quite common that someone has tried to get something to work using the documentation without success and made an effort to get it to work and/or reached out to the [community site](https://community.grafana.com/) to get the missing information. Particularly in these areas it's more likely that there exist experts in their own domain and it is usually a good idea to request help from contributors:
+In many cases the issue author or community as a whole is more suitable to contribute changes since they're experts in their domain. It's also quite common that someone has tried to get something to work using the documentation without success and made an effort to get it to work and/or reached out to the [community site](https://community.mosaicoo.com/) to get the missing information. Particularly in these areas it's more likely that there exist experts in their own domain and it is usually a good idea to request help from contributors:
 
 - Database setups
 - Authentication like OAuth providers and LDAP setups

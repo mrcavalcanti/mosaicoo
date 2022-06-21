@@ -171,7 +171,7 @@ export const VariableQueryEditor = ({ query, datasource, onChange }: Props) => {
               <>
                 {'Attribute or tag to query on. Tags should be formatted "Tags.<name>". '}
                 <a
-                  href="https://grafana.com/docs/grafana/latest/datasources/aws-cloudwatch/template-queries-cloudwatch/#selecting-attributes"
+                  href="https://mosaicoo.com/docs/mosaicoo/latest/datasources/aws-cloudwatch/template-queries-cloudwatch/#selecting-attributes"
                   target="_blank"
                   rel="noreferrer"
                 >
@@ -186,7 +186,7 @@ export const VariableQueryEditor = ({ query, datasource, onChange }: Props) => {
             tooltip={
               <>
                 <a
-                  href="https://grafana.com/docs/grafana/latest/datasources/aws-cloudwatch/template-queries-cloudwatch/#selecting-attributes"
+                  href="https://mosaicoo.com/docs/mosaicoo/latest/datasources/aws-cloudwatch/template-queries-cloudwatch/#selecting-attributes"
                   target="_blank"
                   rel="noreferrer"
                 >

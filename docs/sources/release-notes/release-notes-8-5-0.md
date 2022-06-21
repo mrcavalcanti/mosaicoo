@@ -73,7 +73,7 @@ The Tooltip component provided by `@grafana/ui` is no longer automatically inter
 
 ### Deprecations
 
-`/api/tsdb/query` API has been deprecated and will be removed in a future release. Use [/api/ds/query](https://grafana.com/docs/grafana/latest/http_api/data_source/#query-a-data-source) instead. Issue [#45238](https://github.com/grafana/grafana/issues/45238)
+`/api/tsdb/query` API has been deprecated and will be removed in a future release. Use [/api/ds/query](https://mosaicoo.com/docs/mosaicoo/latest/http_api/data_source/#query-a-data-source) instead. Issue [#45238](https://github.com/grafana/grafana/issues/45238)
 
 ### Plugin development fixes & changes
 

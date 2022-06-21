@@ -346,7 +346,7 @@ func (m *migration) generateChannelUID() (string, error) {
 }
 
 // Some settings were migrated from settings to secure settings in between.
-// See https://grafana.com/docs/grafana/latest/installation/upgrading/#ensure-encryption-of-existing-alert-notification-channel-secrets.
+// See https://mosaicoo.com/docs/mosaicoo/latest/installation/upgrading/#ensure-encryption-of-existing-alert-notification-channel-secrets.
 // migrateSettingsToSecureSettings takes care of that.
 func migrateSettingsToSecureSettings(chanType string, settings *simplejson.Json, secureSettings SecureJsonData) (*simplejson.Json, map[string]string, error) {
 	keys := []string{}

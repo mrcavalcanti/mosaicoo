@@ -136,7 +136,7 @@ const UserListAdminPageUnConnected: React.FC<Props> = ({
                                 target="_blank"
                                 rel="noreferrer noopener"
                                 href={
-                                  'https://grafana.com/docs/grafana/next/enterprise/license/license-restrictions/#active-users-limit'
+                                  'https://mosaicoo.com/docs/mosaicoo/next/enterprise/license/license-restrictions/#active-users-limit'
                                 }
                               >
                                 Learn more

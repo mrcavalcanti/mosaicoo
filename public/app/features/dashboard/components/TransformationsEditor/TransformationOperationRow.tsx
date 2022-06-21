@@ -98,7 +98,7 @@ function prepMarkdown(uiConfig: TransformerRegistryItem<any>) {
   return `
 ${helpMarkdown}
 
-Go the <a href="https://grafana.com/docs/grafana/latest/panels/transformations/?utm_source=grafana" target="_blank" rel="noreferrer">
+Go the <a href="https://mosaicoo.com/docs/mosaicoo/latest/panels/transformations/?utm_source=grafana" target="_blank" rel="noreferrer">
 transformation documentation
 </a> for more.
 `;

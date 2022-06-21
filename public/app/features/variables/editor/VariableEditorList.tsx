@@ -101,7 +101,7 @@ function EmptyVariablesList({ onAdd }: { onAdd: () => void }): ReactElement {
                     or sensor names in your metric queries you can use variables in their place. Variables are shown as
                     list boxes at the top of the dashboard. These drop-down lists make it easy to change the data
                     being displayed in your dashboard. Check out the
-                    <a class="external-link" href="https://grafana.com/docs/grafana/latest/variables/" target="_blank">
+                    <a class="external-link" href="https://mosaicoo.com/docs/mosaicoo/latest/variables/" target="_blank">
                       Templates and variables documentation
                     </a>
                     for more information.

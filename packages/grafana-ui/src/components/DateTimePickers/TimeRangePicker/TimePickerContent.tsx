@@ -223,7 +223,7 @@ const EmptyRecentList = memo(() => {
       <div>
         <a
           className={styles.link}
-          href="https://grafana.com/docs/grafana/latest/dashboards/time-range-controls"
+          href="https://mosaicoo.com/docs/mosaicoo/latest/dashboards/time-range-controls"
           target="_new"
         >
           Read the documentation

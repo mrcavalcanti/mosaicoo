@@ -103,7 +103,7 @@ Per the [Voice and tone](https://developers.google.com/style/tone) section of th
 
 In most cases, headings should not be numbered steps.
 
-However, sometimes we need to use headings as numbered steps. This is mostly in cases where each step is complex or a series of other procedures. For example, in [Getting started with Mosaicoo and Prometheus](https://grafana.com/docs/grafana/latest/getting-started/getting-started-prometheus/).
+However, sometimes we need to use headings as numbered steps. This is mostly in cases where each step is complex or a series of other procedures. For example, in [Getting started with Mosaicoo and Prometheus](https://mosaicoo.com/docs/mosaicoo/latest/getting-started/getting-started-prometheus/).
 
 If that is the case, then use the following format for headings:
 

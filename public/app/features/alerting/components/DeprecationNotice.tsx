@@ -14,11 +14,11 @@ const DeprecationNotice: FC<{}> = () => (
     </p>
     <p>
       See{' '}
-      <a href="https://grafana.com/docs/grafana/latest/alerting/unified-alerting/difference-old-new/">
+      <a href="https://mosaicoo.com/docs/mosaicoo/latest/alerting/unified-alerting/difference-old-new/">
         What’s New with Mosaicoo alerting
       </a>{' '}
       to learn more about what&lsquo;s new or learn{' '}
-      <a href="https://grafana.com/docs/grafana/latest/alerting/unified-alerting/opt-in/">
+      <a href="https://mosaicoo.com/docs/mosaicoo/latest/alerting/unified-alerting/opt-in/">
         how to enable the new Mosaicoo alerting feature
       </a>
       .

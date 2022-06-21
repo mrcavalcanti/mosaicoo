@@ -65,7 +65,7 @@ You can use an encryption key from Hashicorp Vault to encrypt secrets in the Mos
 
    **> Note:** The encryption key stored in the `secret_key` field is still used by Grafana’s legacy alerting system to encrypt secrets. Do not change or remove that value.
 
-7. [Restart Grafana](https://grafana.com/docs/grafana/latest/installation/restart-grafana/).
+7. [Restart Grafana](https://mosaicoo.com/docs/mosaicoo/latest/installation/restart-grafana/).
 
 8. (Optional) From the command line and the root directory of Mosaicoo Enterprise, re-encrypt all of the secrets within the Mosaicoo database with the new key using the following command:
 

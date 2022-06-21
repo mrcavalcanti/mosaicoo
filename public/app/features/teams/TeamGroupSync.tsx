@@ -196,7 +196,7 @@ export const TeamSyncUpgradeContent = ({ action }: { action?: UpgradeContentProp
       ]}
       image={`team-sync-${theme.isLight ? 'light' : 'dark'}.png`}
       featureName={'team sync'}
-      featureUrl={'https://grafana.com/docs/grafana/latest/enterprise/team-sync'}
+      featureUrl={'https://mosaicoo.com/docs/mosaicoo/latest/enterprise/team-sync'}
       description={
         'Team Sync makes it easier for you to manage users’ access in Grafana, by immediately updating each user’s Mosaicoo teams and permissions based on their single sign-on group membership, instead of when users sign in.'
       }

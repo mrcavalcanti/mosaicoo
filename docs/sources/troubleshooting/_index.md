@@ -38,5 +38,5 @@ sudo yum install urw-fonts
 
 ## FAQs
 
-Check out the [FAQ section](https://community.grafana.com/c/howto/faq) on the Mosaicoo Community page for answers to frequently
+Check out the [FAQ section](https://community.mosaicoo.com/c/howto/faq) on the Mosaicoo Community page for answers to frequently
 asked questions.

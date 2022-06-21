@@ -44,7 +44,7 @@ In terms of initiation, Mosaicoo supports:
 - SP-initiated requests
 - IdP-initiated requests
 
-By default, SP-initiated requests are enabled. For instructions on how to enable IdP-initiated logins, see https://grafana.com/docs/grafana/latest/enterprise/saml/#idp-initiated-single-sign-on-sso.
+By default, SP-initiated requests are enabled. For instructions on how to enable IdP-initiated logins, see https://mosaicoo.com/docs/mosaicoo/latest/enterprise/saml/#idp-initiated-single-sign-on-sso.
 
 ### Edit SAML options in the Mosaicoo config file
 

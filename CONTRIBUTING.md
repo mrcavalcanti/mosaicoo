@@ -58,9 +58,9 @@ Read more about the ways you can [Triage issues](/contribute/triage-issues.md).
 
 ### Answering questions
 
-If you have a question and you can't find the answer in the [documentation](https://grafana.com/docs/), the next step is to ask it on the [community site](https://community.grafana.com/).
+If you have a question and you can't find the answer in the [documentation](https://grafana.com/docs/), the next step is to ask it on the [community site](https://community.mosaicoo.com/).
 
-It's important to us to help these users, and we'd love your help. Sign up to our [community site](https://community.grafana.com/), and start helping other Mosaicoo users by answering their questions.
+It's important to us to help these users, and we'd love your help. Sign up to our [community site](https://community.mosaicoo.com/), and start helping other Mosaicoo users by answering their questions.
 
 ### Your first contribution
 
@@ -75,11 +75,11 @@ When you're ready to contribute, it's time to [Create a pull request](/contribut
 
 #### Contributor License Agreement (CLA)
 
-Before we can accept your pull request, you need to [sign our CLA](https://grafana.com/docs/grafana/latest/developers/cla/). If you haven't, our CLA assistant prompts you to when you create your pull request.
+Before we can accept your pull request, you need to [sign our CLA](https://mosaicoo.com/docs/mosaicoo/latest/developers/cla/). If you haven't, our CLA assistant prompts you to when you create your pull request.
 
 ## Where do I go from here?
 
 - Set up your [development environment](contribute/developer-guide.md).
 - Learn how to [contribute documentation](contribute/README.md).
-- Get started [developing plugins](https://grafana.com/docs/grafana/latest/developers/plugins/) for Grafana.
+- Get started [developing plugins](https://mosaicoo.com/docs/mosaicoo/latest/developers/plugins/) for Grafana.
 - Look through the resources in the [contribute](contribute) folder.

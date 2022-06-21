@@ -22,7 +22,7 @@ export default function NotEnabled(): JSX.Element | null {
           className={css`
             text-decoration: underline;
           `}
-          href="https://grafana.com/docs/grafana/latest/plugins/catalog"
+          href="https://mosaicoo.com/docs/mosaicoo/latest/plugins/catalog"
         >
           Plugin Catalog
         </a>{' '}

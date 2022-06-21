@@ -41,7 +41,7 @@ export const SaveProvisionedDashboardForm: React.FC<SaveDashboardFormProps> = ({
             See{' '}
             <a
               className="external-link"
-              href="https://grafana.com/docs/grafana/latest/administration/provisioning/#dashboards"
+              href="https://mosaicoo.com/docs/mosaicoo/latest/administration/provisioning/#dashboards"
               target="_blank"
               rel="noreferrer"
             >

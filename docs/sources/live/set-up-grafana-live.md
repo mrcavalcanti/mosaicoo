@@ -46,7 +46,7 @@ For data source plugin channels, Mosaicoo uses `ds` scope. Namespace in the case
 
 For example, a data source channel looks like this: `ds/<DATASOURCE_UID>/<CUSTOM_PATH>`.
 
-Refer to the tutorial about [building a streaming data source backend plugin](https://grafana.com/tutorials/build-a-streaming-data-source-plugin/) for more details.
+Refer to the tutorial about [building a streaming data source backend plugin](https://mosaicoo.com/tutorials/build-a-streaming-data-source-plugin/) for more details.
 
 The basic streaming example included in Mosaicoo core streams frames with some generated data to a panel. To look at it create a new panel and point it to the `-- Mosaicoo --` data source. Next, choose `Live Measurements` and select the `plugin/testdata/random-20Hz-stream` channel.
 
@@ -54,7 +54,7 @@ The basic streaming example included in Mosaicoo core streams frames with some g
 
 A new API endpoint `/api/live/push/:streamId` allows accepting metrics data in Influx format from Telegraf. These metrics are transformed into Mosaicoo data frames and published to channels.
 
-Refer to the tutorial about [streaming metrics from Telegraf to Grafana](https://grafana.com/tutorials/stream-metrics-from-telegraf-to-grafana/) for more information.
+Refer to the tutorial about [streaming metrics from Telegraf to Grafana](https://mosaicoo.com/tutorials/stream-metrics-from-telegraf-to-grafana/) for more information.
 
 ## Mosaicoo Live channel
 

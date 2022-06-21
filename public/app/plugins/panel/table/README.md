@@ -6,4 +6,4 @@ The table panel is very flexible, supporting both multiple modes for time series
 
 Check out the [Table Panel Showcase in the Mosaicoo Playground](http://play.grafana.org/dashboard/db/table-panel-showcase) or read more about it here:
 
-[https://grafana.com/docs/grafana/latest/features/panels/table_panel/](https://grafana.com/docs/grafana/latest/features/panels/table_panel/)
+[https://mosaicoo.com/docs/mosaicoo/latest/features/panels/table_panel/](https://mosaicoo.com/docs/mosaicoo/latest/features/panels/table_panel/)

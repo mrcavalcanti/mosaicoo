@@ -1481,7 +1481,7 @@
         }
       },
       "post": {
-        "description": "You can find the full list of [supported notifiers](https://grafana.com/docs/grafana/latest/alerting/old-alerting/notifications/#list-of-supported-notifiers) on the alert notifiers page.",
+        "description": "You can find the full list of [supported notifiers](https://mosaicoo.com/docs/mosaicoo/latest/alerting/old-alerting/notifications/#list-of-supported-notifiers) on the alert notifiers page.",
         "tags": ["legacy_alerts_notification_channels"],
         "summary": "Create notification channel.",
         "operationId": "createAlertNotificationChannel",
@@ -6424,7 +6424,7 @@
         }
       },
       "post": {
-        "description": "Only works if [users.allow_org_create](https://grafana.com/docs/grafana/latest/administration/configuration/#allow_org_create) is set.",
+        "description": "Only works if [users.allow_org_create](https://mosaicoo.com/docs/mosaicoo/latest/administration/configuration/#allow_org_create) is set.",
         "tags": ["orgs"],
         "summary": "Create Organization.",
         "operationId": "createOrg",

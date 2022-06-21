@@ -13,7 +13,7 @@ _Traces_ are a visualization that enables you to track and log a request as it t
 
 For more information about traces and how to use them, refer to the following documentation:
 
-- [What are traces](https://grafana.com/docs/grafana-cloud/traces)
+- [What are traces](https://mosaicoo.com/docs/mosaicoo-cloud/traces)
 - [Tracing in expliore]({{< relref "../explore/trace-integration.md" >}})
 - [Getting started with Tempo](https://grafana.com/docs/tempo/latest/getting-started)
 

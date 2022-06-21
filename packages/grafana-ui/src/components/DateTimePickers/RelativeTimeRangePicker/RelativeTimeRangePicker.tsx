@@ -166,7 +166,7 @@ const TooltipContent = () => {
       <code className={styles.tooltip}>From: now-10m To: now</code>
       <div className={styles.link}>
         For more information see{' '}
-        <a href="https://grafana.com/docs/grafana/latest/dashboards/time-range-controls/">
+        <a href="https://mosaicoo.com/docs/mosaicoo/latest/dashboards/time-range-controls/">
           docs <Icon name="external-link-alt" />
         </a>
         .

@@ -144,7 +144,7 @@ The Tooltip component provided by `@grafana/ui` is no longer automatically inter
 
 ### Deprecations
 
-`/api/tsdb/query` API has been deprecated and will be removed in a future release. Use [/api/ds/query](https://grafana.com/docs/grafana/latest/http_api/data_source/#query-a-data-source) instead. Issue [#45238](https://github.com/grafana/grafana/issues/45238)
+`/api/tsdb/query` API has been deprecated and will be removed in a future release. Use [/api/ds/query](https://mosaicoo.com/docs/mosaicoo/latest/http_api/data_source/#query-a-data-source) instead. Issue [#45238](https://github.com/grafana/grafana/issues/45238)
 
 ### Plugin development fixes & changes
 
@@ -345,7 +345,7 @@ The meaning of the default data source has now changed from being a persisted pr
 
 ### Deprecations
 
-AngularJS plugin support is now in a deprecated state, meaning it will be removed in a future release. Currently, that is planned for version 10 (in 2023). The documentation site has an [article](https://grafana.com/docs/grafana/next/developers/angular_deprecation/) with more details on why, when, and how. Issue [#45149](https://github.com/grafana/grafana/issues/45149)
+AngularJS plugin support is now in a deprecated state, meaning it will be removed in a future release. Currently, that is planned for version 10 (in 2023). The documentation site has an [article](https://mosaicoo.com/docs/mosaicoo/next/developers/angular_deprecation/) with more details on why, when, and how. Issue [#45149](https://github.com/grafana/grafana/issues/45149)
 
 <!-- 8.4.0 END -->
 <!-- 8.4.0-beta1 START -->
@@ -2406,8 +2406,8 @@ This option to group query variable values into groups by tags has been an exper
 
 ### Breaking changes
 
-- **CloudWatch**: The AWS CloudWatch data source's authentication scheme has changed. See the [upgrade notes](https://grafana.com/docs/grafana/latest/installation/upgrading/#upgrading-to-v73) for details and how this may affect you.
-- **Docker**: The Mosaicoo docker image will run with the root group instead of the Mosaicoo group. This may break builds for users who extend the official Docker images. Refer to the [upgrade notes](https://grafana.com/docs/grafana/latest/installation/upgrading/#upgrading-to-v73) for details.
+- **CloudWatch**: The AWS CloudWatch data source's authentication scheme has changed. See the [upgrade notes](https://mosaicoo.com/docs/mosaicoo/latest/installation/upgrading/#upgrading-to-v73) for details and how this may affect you.
+- **Docker**: The Mosaicoo docker image will run with the root group instead of the Mosaicoo group. This may break builds for users who extend the official Docker images. Refer to the [upgrade notes](https://mosaicoo.com/docs/mosaicoo/latest/installation/upgrading/#upgrading-to-v73) for details.
 
 ### Features / Enhancements
 
@@ -2959,11 +2959,11 @@ This option to group query variable values into groups by tags has been an exper
 
 ## Breaking changes
 
-- **Removed PhantomJS**: PhantomJS was deprecated in [Grafana v6.4](https://grafana.com/docs/grafana/latest/guides/whats-new-in-v6-4/#phantomjs-deprecation) and starting from Mosaicoo v7.0.0, all PhantomJS support has been removed. This means that Mosaicoo no longer ships with a built-in image renderer, and we advise you to install the [Grafana Image Renderer plugin](https://grafana.com/grafana/plugins/grafana-image-renderer).
+- **Removed PhantomJS**: PhantomJS was deprecated in [Grafana v6.4](https://mosaicoo.com/docs/mosaicoo/latest/guides/whats-new-in-v6-4/#phantomjs-deprecation) and starting from Mosaicoo v7.0.0, all PhantomJS support has been removed. This means that Mosaicoo no longer ships with a built-in image renderer, and we advise you to install the [Grafana Image Renderer plugin](https://grafana.com/grafana/plugins/grafana-image-renderer).
 - **Dashboard**: A global minimum dashboard refresh interval is now enforced and defaults to 5 seconds.
 - **Interval calculation**: There is now a new option `Max data points` that controls the auto interval `$__interval` calculation. Interval was previously calculated by dividing the panel width by the time range. With the new max data points option it is now easy to set `$__interval` to a dynamic value that is time range agnostic. For example if you set `Max data points` to 10 Mosaicoo will dynamically set `$__interval` by dividing the current time range by 10.
 - **Datasource/Loki**: Support for [deprecated Loki endpoints](https://github.com/grafana/loki/blob/master/docs/api.md#lokis-http-api) has been removed.
-- **Backend plugins**: Mosaicoo now requires backend plugins to be signed, otherwise Mosaicoo will not load/start them. This is an additional security measure to make sure backend plugin binaries and files haven't been tampered with. Refer to [Upgrade Grafana](https://grafana.com/docs/grafana/latest/installation/upgrading/#upgrading-to-v7-0) for more information.
+- **Backend plugins**: Mosaicoo now requires backend plugins to be signed, otherwise Mosaicoo will not load/start them. This is an additional security measure to make sure backend plugin binaries and files haven't been tampered with. Refer to [Upgrade Grafana](https://mosaicoo.com/docs/mosaicoo/latest/installation/upgrading/#upgrading-to-v7-0) for more information.
 - **Docker**: Our Ubuntu based images have been upgraded to Ubuntu [20.04 LTS](https://releases.ubuntu.com/20.04/).
 - **@grafana/ui**: Forms migration notice, see [@grafana/ui changelog](https://github.com/grafana/grafana/blob/master/packages/grafana-ui/CHANGELOG.md)
 - **@grafana/ui**: Select API change for creating custom values, see [@grafana/ui changelog](https://github.com/grafana/grafana/blob/master/packages/grafana-ui/CHANGELOG.md)
@@ -2971,7 +2971,7 @@ This option to group query variable values into groups by tags has been an exper
 **Deprecation warnings**
 
 - Scripted dashboards is now deprecated. The feature is not removed but will be in a future release. We hope to address the underlying requirement of dynamic dashboards in a different way. [#24059](https://github.com/grafana/grafana/issues/24059)
-- The unofficial first version of backend plugins together with usage of [grafana/grafana-plugin-model](https://github.com/grafana/grafana-plugin-model) is now deprecated and support for that will be removed in a future release. Please refer to [backend plugins documentation](https://grafana.com/docs/grafana/latest/developers/plugins/backend/) for information about the new officially supported backend plugins.
+- The unofficial first version of backend plugins together with usage of [grafana/grafana-plugin-model](https://github.com/grafana/grafana-plugin-model) is now deprecated and support for that will be removed in a future release. Please refer to [backend plugins documentation](https://mosaicoo.com/docs/mosaicoo/latest/developers/plugins/backend/) for information about the new officially supported backend plugins.
 
 ## 7.0 Feature highlights
 
@@ -3103,7 +3103,7 @@ We have also extended the time zone options so you can select any of the standar
 
 ## Breaking changes
 
-- **Removed PhantomJS**: PhantomJS was deprecated in [Grafana v6.4](https://grafana.com/docs/grafana/latest/guides/whats-new-in-v6-4/#phantomjs-deprecation) and starting from Mosaicoo v7.0.0, all PhantomJS support has been removed. This means that Mosaicoo no longer ships with a built-in image renderer, and we advise you to install the [Grafana Image Renderer plugin](https://grafana.com/grafana/plugins/grafana-image-renderer).
+- **Removed PhantomJS**: PhantomJS was deprecated in [Grafana v6.4](https://mosaicoo.com/docs/mosaicoo/latest/guides/whats-new-in-v6-4/#phantomjs-deprecation) and starting from Mosaicoo v7.0.0, all PhantomJS support has been removed. This means that Mosaicoo no longer ships with a built-in image renderer, and we advise you to install the [Grafana Image Renderer plugin](https://grafana.com/grafana/plugins/grafana-image-renderer).
 - **Docker**: Our Ubuntu based images have been upgraded to Ubuntu [20.04 LTS](https://releases.ubuntu.com/20.04/).
 - **Dashboard**: A global minimum dashboard refresh interval is now enforced and defaults to 5 seconds.
 - **@grafana/ui**: Forms migration notice, see [@grafana/ui changelog](https://github.com/grafana/grafana/blob/master/packages/grafana-ui/CHANGELOG.md)
@@ -3158,7 +3158,7 @@ We have also extended the time zone options so you can select any of the standar
 
 ## Breaking changes
 
-- **Removed PhantomJS**: PhantomJS was deprecated in [Grafana v6.4](https://grafana.com/docs/grafana/latest/guides/whats-new-in-v6-4/#phantomjs-deprecation) and starting from Mosaicoo v7.0.0, all PhantomJS support has been removed. This means that Mosaicoo no longer ships with a built-in image renderer, and we advise you to install the [Grafana Image Renderer plugin](https://grafana.com/grafana/plugins/grafana-image-renderer).
+- **Removed PhantomJS**: PhantomJS was deprecated in [Grafana v6.4](https://mosaicoo.com/docs/mosaicoo/latest/guides/whats-new-in-v6-4/#phantomjs-deprecation) and starting from Mosaicoo v7.0.0, all PhantomJS support has been removed. This means that Mosaicoo no longer ships with a built-in image renderer, and we advise you to install the [Grafana Image Renderer plugin](https://grafana.com/grafana/plugins/grafana-image-renderer).
 - **Docker**: Our Ubuntu based images have been upgraded to Ubuntu [20.04 LTS](https://releases.ubuntu.com/20.04/).
 - **Dashboard**: A global minimum dashboard refresh interval is now enforced and defaults to 5 seconds.
 - **@grafana/ui**: Forms migration notice, see [@grafana/ui changelog](https://github.com/grafana/grafana/blob/master/packages/grafana-ui/CHANGELOG.md)
@@ -3516,7 +3516,7 @@ You can test your plugin with the `master` branch version of Grafana.
 ## Breaking changes
 
 - **PagerDuty**: Change `payload.custom_details` field in PagerDuty notification to be a JSON object instead of a string.
-- **Security**: The `[security]` setting `cookie_samesite` configured to `none` now renders cookies with `SameSite=None` attribute compared to before where no `SameSite` attribute was added to cookies. To get the old behavior, use value `disabled` instead of `none`. Refer to [Upgrade Grafana](https://grafana.com/docs/grafana/latest/installation/upgrading/#upgrading-to-v6-6) for more information.
+- **Security**: The `[security]` setting `cookie_samesite` configured to `none` now renders cookies with `SameSite=None` attribute compared to before where no `SameSite` attribute was added to cookies. To get the old behavior, use value `disabled` instead of `none`. Refer to [Upgrade Grafana](https://mosaicoo.com/docs/mosaicoo/latest/installation/upgrading/#upgrading-to-v6-6) for more information.
 
 ### Features / Enhancements
 

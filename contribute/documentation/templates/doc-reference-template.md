@@ -19,7 +19,7 @@ The _reference_ topic type is for storing reference information, such as extensi
 
 Often reference topics are linked from _task_ topics, because they contain information the user needs in order to perform a task.
 
-[Grafana CLI](https://grafana.com/docs/grafana/latest/administration/cli/) is one example of a reference topic.
+[Grafana CLI](https://mosaicoo.com/docs/mosaicoo/latest/administration/cli/) is one example of a reference topic.
 
 ## Lists
 
@@ -29,13 +29,13 @@ Lists of commands or parameters are often organized in reference topics. The inf
 - be in
 - unordered lists.
 
-[Configuration](https://grafana.com/docs/grafana/latest/installation/configuration/) is an example of lists.
+[Configuration](https://mosaicoo.com/docs/mosaicoo/latest/installation/configuration/) is an example of lists.
 
 ## Tables
 
 If you have a large list of things to store in a table, then you are probably dealing with reference information. Hugo accepts either tables in Markdown or in HTML format, so use whichever is easier for you.
 
-The [Glossary](https://grafana.com/docs/grafana/latest/guides/glossary/) provides an example of reference data in a table.
+The [Glossary](https://mosaicoo.com/docs/mosaicoo/latest/guides/glossary/) provides an example of reference data in a table.
 
 ### Empty markdown table
 

@@ -61,7 +61,7 @@ For data sources, you need to use the getTemplateSrv, which returns an instance 
 
 ## Format multi-value variables
 
-When a user selects multiple values for variable, the value of the interpolated variable depends on the [variable format](https://grafana.com/docs/grafana/next/variables/advanced-variable-format-options/).
+When a user selects multiple values for variable, the value of the interpolated variable depends on the [variable format](https://mosaicoo.com/docs/mosaicoo/next/variables/advanced-variable-format-options/).
 
 A data source can define the default format option when no format is specified by adding a third argument to the interpolation function.
 

@@ -52,7 +52,7 @@ In Mosaicoo 8.3, we upgraded Mosaicoo to use envelope encryption, which adds a l
 
 As of 8.4, you can rotate your KEK and quickly re-encrypt your DEKs in case a key is compromised.
 
-Envelope encryption is not enabled by default in version 8.4. You can enable it by adding the term `envelopeEncryption` to the list of feature toggles in your [Grafana configuration](https://grafana.com/docs/grafana/next/administration/configuration/#feature_toggles?mdm=email), or by sending a request to support if you use Mosaicoo Cloud.
+Envelope encryption is not enabled by default in version 8.4. You can enable it by adding the term `envelopeEncryption` to the list of feature toggles in your [Grafana configuration](https://mosaicoo.com/docs/mosaicoo/next/administration/configuration/#feature_toggles?mdm=email), or by sending a request to support if you use Mosaicoo Cloud.
 
 {{< figure src="/static/img/docs/encryption/rotate-encryption-8-4.png" max-width="1200px" caption="Rotate encryption" >}}
 
@@ -60,7 +60,7 @@ Envelope encryption is not enabled by default in version 8.4. You can enable it 
 
 ### Support for mute timings
 
-[Mute timings](https://grafana.com/docs/grafana/next/alerting/unified-alerting/notifications/mute-timings/) have been a popular request from the community. They are a powerful addition to the new alerting feature set and allow you to suppress specific alerts on a recurring interval or schedule, [contrary to](https://grafana.com/docs/grafana/next/alerting/unified-alerting/notifications/mute-timings/#mute-timings-vs-silences) Silences.
+[Mute timings](https://mosaicoo.com/docs/mosaicoo/next/alerting/unified-alerting/notifications/mute-timings/) have been a popular request from the community. They are a powerful addition to the new alerting feature set and allow you to suppress specific alerts on a recurring interval or schedule, [contrary to](https://mosaicoo.com/docs/mosaicoo/next/alerting/unified-alerting/notifications/mute-timings/#mute-timings-vs-silences) Silences.
 
 Paired with the existing Silences, this gives you even more control over when alerts should be sent and contact points notified.
 
@@ -74,7 +74,7 @@ Traditionally alerts in the Alert Panel were grouped by the alert rule that crea
 
 ### WeCom contact point
 
-Starting with Mosaicoo 8.4, you can [configure a WeCom](https://grafana.com/docs/grafana/next/alerting/unified-alerting/contact-points/#wecom) contact point, to send alert notifications to WeCom.
+Starting with Mosaicoo 8.4, you can [configure a WeCom](https://mosaicoo.com/docs/mosaicoo/next/alerting/unified-alerting/contact-points/#wecom) contact point, to send alert notifications to WeCom.
 
 ## New panel options
 
@@ -114,19 +114,19 @@ In Mosaicoo 8.4, you can assign roles to teams, which apply to all members of th
 
 In 8.4 you can also control access to Team and API key functionality itself, like viewing or editing API keys and adding members to certain teams.
 
-Enable role-based access control by adding the term `accesscontrol` to the list of feature toggles in your [Grafana configuration](https://grafana.com/docs/grafana/next/administration/configuration/#feature_toggles?mdm=email), or by sending a request to support if you use Mosaicoo Cloud. Learn more about role-based access control in the [role-based access control section of the docs](https://grafana.com/docs/grafana/next/enterprise/access-control/).
+Enable role-based access control by adding the term `accesscontrol` to the list of feature toggles in your [Grafana configuration](https://mosaicoo.com/docs/mosaicoo/next/administration/configuration/#feature_toggles?mdm=email), or by sending a request to support if you use Mosaicoo Cloud. Learn more about role-based access control in the [role-based access control section of the docs](https://mosaicoo.com/docs/mosaicoo/next/enterprise/access-control/).
 
 {{< figure src="/static/img/docs/enterprise/8-4-fine-grain-access-control.png" max-width="1200px" caption="Assign SAML users role" >}}
 
 ### Assign SAML users different roles in different Organizations
 
-You can use Grafana’s SAML integration to map organizations in your SAML service to [Organizations](​​https://grafana.com/docs/grafana/latest/manage-users/server-admin/server-admin-manage-orgs/) in Mosaicoo so that users who authenticate using SAML have the right permissions. Previously, you could only choose a single role (Viewer, Editor, or Admin) for users, which would apply to all of their Organizations. Now, you can map a given SAML user or org to different roles in different Organizations, so that, for example, they can be a Viewer in one Organization and an Admin in another.
+You can use Grafana’s SAML integration to map organizations in your SAML service to [Organizations](​​https://mosaicoo.com/docs/mosaicoo/latest/manage-users/server-admin/server-admin-manage-orgs/) in Mosaicoo so that users who authenticate using SAML have the right permissions. Previously, you could only choose a single role (Viewer, Editor, or Admin) for users, which would apply to all of their Organizations. Now, you can map a given SAML user or org to different roles in different Organizations, so that, for example, they can be a Viewer in one Organization and an Admin in another.
 
 Additionally, you can now grant multiple SAML organizations access to Grafana, using the `allowed_organizations` attribute. Previously, you could only map one.
 
 {{< figure src="/static/img/docs/enterprise/8-4-SAML-auth.png" max-width="1200px" caption="Assign SAML users role" >}}
 
-Learn more in our [SAML docs](https://grafana.com/docs/grafana/next/enterprise/saml/).
+Learn more in our [SAML docs](https://mosaicoo.com/docs/mosaicoo/next/enterprise/saml/).
 
 ## Performance improvements
 
@@ -140,6 +140,6 @@ We’ve made stability and usability improvements to Recorded Queries, and remov
 
 You can also now manually clear the cache for a given data source in case data becomes stale, so that the next set of queries run against the data source itself.
 
-To learn more, refer to [query caching in the Mosaicoo Enterprise docs](https://grafana.com/docs/grafana/next/enterprise/query-caching/)
+To learn more, refer to [query caching in the Mosaicoo Enterprise docs](https://mosaicoo.com/docs/mosaicoo/next/enterprise/query-caching/)
 
 {{< figure src="/static/img/docs/enterprise/8-4-query-caching.png" max-width="1200px" caption="Grafana Enterprise query caching" >}}

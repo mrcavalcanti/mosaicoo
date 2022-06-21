@@ -20,7 +20,7 @@ export function PluginDetailsHeaderSignature({ plugin }: Props): React.ReactElem
   return (
     <div className={styles.container}>
       <a
-        href="https://grafana.com/docs/grafana/latest/plugins/plugin-signatures/"
+        href="https://mosaicoo.com/docs/mosaicoo/latest/plugins/plugin-signatures/"
         target="_blank"
         rel="noreferrer"
         className={styles.link}

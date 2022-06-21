@@ -11,7 +11,7 @@ weight = -11
 
 ## What's new in Mosaicoo v4.4
 
-Grafana v4.4 is now [available for download](https://grafana.com/grafana/download/4.4.0).
+Grafana v4.4 is now [available for download](https://mosaicoo.com/mosaicoo/download/4.4.0).
 
 **Highlights**:
 
@@ -42,8 +42,8 @@ Pull Request: [#8472](https://github.com/grafana/grafana/pull/8472)
 
 ## Download
 
-Head to the [v4.4 download page](https://grafana.com/grafana/download) for download links and instructions.
+Head to the [v4.4 download page](https://mosaicoo.com/mosaicoo/download) for download links and instructions.
 
 ## Thanks
 
-A big thanks to all the Mosaicoo users who contribute by submitting PRs, bug reports, helping out on our [community site](https://community.grafana.com/) and providing feedback!
+A big thanks to all the Mosaicoo users who contribute by submitting PRs, bug reports, helping out on our [community site](https://community.mosaicoo.com/) and providing feedback!

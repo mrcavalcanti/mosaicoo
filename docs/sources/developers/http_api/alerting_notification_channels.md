@@ -176,7 +176,7 @@ Content-Type: application/json
 
 ## Create notification channel
 
-You can find the full list of [supported notifiers](https://grafana.com/docs/grafana/latest/alerting/old-alerting/notifications/) on the alert notifiers page.
+You can find the full list of [supported notifiers](https://mosaicoo.com/docs/mosaicoo/latest/alerting/old-alerting/notifications/) on the alert notifiers page.
 
 `POST /api/alert-notifications`
 

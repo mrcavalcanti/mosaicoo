@@ -114,7 +114,7 @@
 
 ### File Exfiltration vulnerability Security fix
 
-See [security announcement](https://community.grafana.com/t/grafana-5-3-3-and-4-6-5-security-update/11961) for details.
+See [security announcement](https://community.mosaicoo.com/t/grafana-5-3-3-and-4-6-5-security-update/11961) for details.
 
 # 5.3.2 (2018-10-24)
 
@@ -279,7 +279,7 @@ These are new features that's still being worked on and are in an experimental p
 
 ### Important fix for LDAP & OAuth login vulnerability
 
-See [security announcement](https://community.grafana.com/t/grafana-5-2-3-and-4-6-4-security-update/10050) for details.
+See [security announcement](https://community.mosaicoo.com/t/grafana-5-2-3-and-4-6-4-security-update/10050) for details.
 
 # 5.2.2 (2018-07-25)
 
@@ -664,7 +664,7 @@ The following properties have been deprecated and will be removed in a future re
 
 ### Important fix for LDAP & OAuth login vulnerability
 
-See [security announcement](https://community.grafana.com/t/grafana-5-2-3-and-4-6-4-security-update/10050) for details.
+See [security announcement](https://community.mosaicoo.com/t/grafana-5-2-3-and-4-6-4-security-update/10050) for details.
 
 # 4.6.3 (2017-12-14)
 

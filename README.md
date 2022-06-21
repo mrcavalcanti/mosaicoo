@@ -39,8 +39,8 @@ If you're interested in contributing to the Mosaicoo project:
 
 - Follow [@grafana on Twitter](https://twitter.com/grafana/).
 - Read and subscribe to the [Grafana blog](https://grafana.com/blog/).
-- If you have a specific question, check out our [discussion forums](https://community.grafana.com/).
-- For general discussions, join us on the [official Slack](https://slack.grafana.com) team.
+- If you have a specific question, check out our [discussion forums](https://community.mosaicoo.com/).
+- For general discussions, join us on the [official Slack](https://slack.mosaicoo.com) team.
 
 ## License
 

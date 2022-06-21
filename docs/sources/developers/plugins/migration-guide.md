@@ -278,9 +278,9 @@ func (d *SampleDatasource) CheckHealth(_ context.Context, req *backend.CheckHeal
 
 We strongly recommend that you not allow unsigned plugins in your Mosaicoo installation. By allowing unsigned plugins, we cannot guarantee the authenticity of the plugin, which could compromise the security of your Mosaicoo installation.
 
-To sign your plugin, see [Sign a plugin](https://grafana.com/docs/grafana/latest/developers/plugins/sign-a-plugin/#sign-a-plugin).
+To sign your plugin, see [Sign a plugin](https://mosaicoo.com/docs/mosaicoo/latest/developers/plugins/sign-a-plugin/#sign-a-plugin).
 
-You can still run and develop an unsigned plugin by running your Mosaicoo instance in [development mode](https://grafana.com/docs/grafana/latest/administration/configuration/#app_mode). Alternatively, you can use the [allow_loading_unsigned_plugins configuration setting.](../../administration/configuration.md#allow_loading_unsigned_plugins)
+You can still run and develop an unsigned plugin by running your Mosaicoo instance in [development mode](https://mosaicoo.com/docs/mosaicoo/latest/administration/configuration/#app_mode). Alternatively, you can use the [allow_loading_unsigned_plugins configuration setting.](../../administration/configuration.md#allow_loading_unsigned_plugins)
 
 ### Update react-hook-form from v6 to v7
 
@@ -622,9 +622,9 @@ Before 7.0, data source and panel plugins exchanged data using either time serie
 
 Grafana 7.0 is backward compatible with the old data format used in previous versions. Panels and data sources using the old format will still work with plugins using the new data frame format.
 
-The `DataQueryResponse` returned by the `query` method can be either a [LegacyResponseData](https://grafana.com/docs/grafana/latest/packages_api/data/legacyresponsedata/) or a [DataFrame](https://grafana.com/docs/grafana/latest/packages_api/data/dataframe/).
+The `DataQueryResponse` returned by the `query` method can be either a [LegacyResponseData](https://mosaicoo.com/docs/mosaicoo/latest/packages_api/data/legacyresponsedata/) or a [DataFrame](https://mosaicoo.com/docs/mosaicoo/latest/packages_api/data/dataframe/).
 
-The [toDataFrame()](https://grafana.com/docs/grafana/latest/packages_api/data/todataframe/) function converts a legacy response, such as `TimeSeries` or `Table`, to a `DataFrame`. Use it to gradually move your code to the new format.
+The [toDataFrame()](https://mosaicoo.com/docs/mosaicoo/latest/packages_api/data/todataframe/) function converts a legacy response, such as `TimeSeries` or `Table`, to a `DataFrame`. Use it to gradually move your code to the new format.
 
 ```ts
 import { toDataFrame } from '@grafana/data';

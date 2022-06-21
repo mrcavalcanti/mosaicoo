@@ -163,7 +163,7 @@ func (rs *RenderingService) Run(ctx context.Context) error {
 
 	rs.log.Debug("No image renderer found/installed. " +
 		"For image rendering support please install the grafana-image-renderer plugin. " +
-		"Read more at https://grafana.com/docs/grafana/latest/administration/image_rendering/")
+		"Read more at https://mosaicoo.com/docs/mosaicoo/latest/administration/image_rendering/")
 
 	<-ctx.Done()
 	return nil
@@ -252,7 +252,7 @@ func (rs *RenderingService) render(ctx context.Context, opts Opts, renderKeyProv
 	if !rs.IsAvailable() {
 		rs.log.Warn("Could not render image, no image renderer found/installed. " +
 			"For image rendering support please install the grafana-image-renderer plugin. " +
-			"Read more at https://grafana.com/docs/grafana/latest/administration/image_rendering/")
+			"Read more at https://mosaicoo.com/docs/mosaicoo/latest/administration/image_rendering/")
 		if opts.ErrorRenderUnavailable {
 			return nil, ErrRenderUnavailable
 		}

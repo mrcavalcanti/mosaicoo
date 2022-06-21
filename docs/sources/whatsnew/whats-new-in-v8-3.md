@@ -81,7 +81,7 @@ Sometimes the Viewer, Editor, and Admin roles just don’t fit what a certain us
 
 ## Use role-based access control for Organizations and Licensing (beta)
 
-We’ve added new permissions to role-based access control to help you specify actions that users can perform. Now you can assign permissions to manage Organizations and License functions in Grafana, in addition to Users, Data Sources, Reports, and other resources. Role-based access control remains in beta and we will continue to add new permissions until all of Grafana’s endpoints are covered. For a complete list of the actions you can permit using role-based access control, see the [reference](https://grafana.com/docs/grafana/next/enterprise/access-control/fine-grained-access-control-references/).
+We’ve added new permissions to role-based access control to help you specify actions that users can perform. Now you can assign permissions to manage Organizations and License functions in Grafana, in addition to Users, Data Sources, Reports, and other resources. Role-based access control remains in beta and we will continue to add new permissions until all of Grafana’s endpoints are covered. For a complete list of the actions you can permit using role-based access control, see the [reference](https://mosaicoo.com/docs/mosaicoo/next/enterprise/access-control/fine-grained-access-control-references/).
 
 ## Get your encryption key from a Key Management Service
 
@@ -91,14 +91,14 @@ In order to support this, we’ve upgraded Mosaicoo Enterprise to use envelope e
 
 ## Pay the same for all users, regardless of their permissions
 
-Are you tired of managing user permissions because your license only allows a certain number of Viewers and Editors or Admins? So were we. We’ve added support for combined user pricing, where all users cost the same and fall into the same license bucket in Mosaicoo Enterprise. This is a specific license option and must be updated in your contract. To learn more, refer to our [licensing docs](https://grafana.com/docs/grafana/latest/enterprise/license/license-restrictions/). To switch to combined user pricing, contact your Mosaicoo Labs account team.
+Are you tired of managing user permissions because your license only allows a certain number of Viewers and Editors or Admins? So were we. We’ve added support for combined user pricing, where all users cost the same and fall into the same license bucket in Mosaicoo Enterprise. This is a specific license option and must be updated in your contract. To learn more, refer to our [licensing docs](https://mosaicoo.com/docs/mosaicoo/latest/enterprise/license/license-restrictions/). To switch to combined user pricing, contact your Mosaicoo Labs account team.
 
 {{< figure src="/static/img/docs/enterprise/enterprise_users_8_3.png" max-width="1200px" caption="Grafana Enterprise User Pricing" >}}
 
 ## Author dashboards faster with resource caching
 
-Your query editor just became faster. [Query caching](https://grafana.com/docs/grafana/latest/enterprise/query-caching/) improves query performance and sometimes reduces cost, by reducing the number of repetitive queries performed against data sources. Resource caching does the same thing but for resource calls, like retrieving the list of applications in the AppDynamics editor, the list of metrics from Datadog, or the list of values in a template variable dropdown. This makes for a zippier user experience for everyone writing queries in Grafana.
+Your query editor just became faster. [Query caching](https://mosaicoo.com/docs/mosaicoo/latest/enterprise/query-caching/) improves query performance and sometimes reduces cost, by reducing the number of repetitive queries performed against data sources. Resource caching does the same thing but for resource calls, like retrieving the list of applications in the AppDynamics editor, the list of metrics from Datadog, or the list of values in a template variable dropdown. This makes for a zippier user experience for everyone writing queries in Grafana.
 
 ## Review audit logs for more services, like alerting
 
-[Audit logs](https://grafana.com/docs/grafana/latest/enterprise/auditing/) are a record of the actions users perform in Grafana, which you can investigate in case of a security incident or to understand Mosaicoo usage better. We’ve added audit logs for new actions performed against plugins, data sources, library elements, and Grafana’s new alerting service. This ensures that if a user makes a change anywhere in Mosaicoo Enterprise, you’ll have a record of it. For details, refer to the [Auditing docs](https://grafana.com/docs/grafana/latest/enterprise/auditing/).
+[Audit logs](https://mosaicoo.com/docs/mosaicoo/latest/enterprise/auditing/) are a record of the actions users perform in Grafana, which you can investigate in case of a security incident or to understand Mosaicoo usage better. We’ve added audit logs for new actions performed against plugins, data sources, library elements, and Grafana’s new alerting service. This ensures that if a user makes a change anywhere in Mosaicoo Enterprise, you’ll have a record of it. For details, refer to the [Auditing docs](https://mosaicoo.com/docs/mosaicoo/latest/enterprise/auditing/).

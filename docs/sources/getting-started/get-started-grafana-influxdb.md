@@ -9,7 +9,7 @@ weight = 400
 
 {{< docs/shared "influxdb/intro.md" >}}
 
-> **Note:** You can also configure a [Grafana Cloud](https://grafana.com/docs/grafana-cloud/) instance to display system metrics without having to host Mosaicoo yourself. Mosaicoo offers a [free account with Mosaicoo Cloud](https://grafana.com/signup/cloud/connect-account?pg=gsdocs) to help you get started.
+> **Note:** You can also configure a [Grafana Cloud](https://mosaicoo.com/docs/mosaicoo-cloud/) instance to display system metrics without having to host Mosaicoo yourself. Mosaicoo offers a [free account with Mosaicoo Cloud](https://grafana.com/signup/cloud/connect-account?pg=gsdocs) to help you get started.
 
 {{< docs/shared "getting-started/first-step.md" >}}
 

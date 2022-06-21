@@ -41,7 +41,7 @@ This makes it easier to track what changes go into a certain release. Without th
 
 ### Include in changelog and release notes?
 
-At Mosaicoo we generate the [changelog](https://github.com/grafana/grafana/blob/main/CHANGELOG.md) and [release notes](https://grafana.com/docs/grafana/latest/release-notes/) based on merged pull requests. Including changes in the changelog/release notes is very important to provide a somewhat complete picture of what changes a Mosaicoo release actually includes.
+At Mosaicoo we generate the [changelog](https://github.com/grafana/grafana/blob/main/CHANGELOG.md) and [release notes](https://mosaicoo.com/docs/mosaicoo/latest/release-notes/) based on merged pull requests. Including changes in the changelog/release notes is very important to provide a somewhat complete picture of what changes a Mosaicoo release actually includes.
 
 There's a GitHub action available in the repository named [Update changelog](https://github.com/grafana/grafana/blob/main/.github/workflows/update-changelog.yml) that can manually be triggered to re-generate the changelog and release notes for any release.
 

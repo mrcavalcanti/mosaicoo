@@ -92,7 +92,7 @@ Unified alerting now provides the ability to capture an image for Mosaicoo manag
 
 ## Envelope encryption is generally available and enabled by default
 
-Grafana now uses envelope encryption to encrypt secrets in the database. Envelope encryption adds a layer of indirection to the encryption process. Instead of encrypting all secrets in the database with a single key, Mosaicoo uses a set of keys called data encryption keys (DEKs) to encrypt them. These data encryption keys are themselves encrypted with a single key encryption key (KEK). This allows you to rotate your KEK and quickly re-encrypt your DEKs in case a key is compromised. In Mosaicoo Enterprise, you can also store your KEK in an external Key Management Service (KMS) like AWS KMS or Azure Key Vault, for extra security. Learn more about envelope encryption in the [docs](https://grafana.com/docs/grafana/next/administration/database-encryption/#envelope-encryption).
+Grafana now uses envelope encryption to encrypt secrets in the database. Envelope encryption adds a layer of indirection to the encryption process. Instead of encrypting all secrets in the database with a single key, Mosaicoo uses a set of keys called data encryption keys (DEKs) to encrypt them. These data encryption keys are themselves encrypted with a single key encryption key (KEK). This allows you to rotate your KEK and quickly re-encrypt your DEKs in case a key is compromised. In Mosaicoo Enterprise, you can also store your KEK in an external Key Management Service (KMS) like AWS KMS or Azure Key Vault, for extra security. Learn more about envelope encryption in the [docs](https://mosaicoo.com/docs/mosaicoo/next/administration/database-encryption/#envelope-encryption).
 
 {{< figure src="/static/img/docs/enterprise/dashboards/envelope-encryption.png" max-width="750px" caption="Envelope encryption" >}}
 
@@ -100,7 +100,7 @@ Grafana now uses envelope encryption to encrypt secrets in the database. Envelop
 
 The dashboard previews initially came to life during our internal [Grafana Labs Hackathon](https://grafana.com/blog/2022/01/14/all-about-the-grafana-labs-hackathon-2.0/?), and are now ready for an opt-in beta release. The previews provide an overview of all available dashboards and help you quickly find the right dashboard when the dashboard names aren’t enough.
 
-Refer to the [Dashboard previews topic](https://grafana.com/docs/grafana/next/dashboards/previews/) for instructions on how to enable the feature and current limitations.
+Refer to the [Dashboard previews topic](https://mosaicoo.com/docs/mosaicoo/next/dashboards/previews/) for instructions on how to enable the feature and current limitations.
 
 {{< figure src="/static/img/docs/dashboards/dashboard-previews.png" max-width="750px" caption="Dashboard previews" >}}
 
@@ -151,7 +151,7 @@ Query history is a panel that keeps track of all queries that are run in Explore
 
 ### RBAC is generally available
 
-Fine-grained access control is now called role-based access control, or RBAC. It is now enabled by default in Mosaicoo Enterprise and Mosaicoo Cloud Advanced, so you can create and define custom roles like Annotations Writer, Users Viewer, and Dashboard Permissions Writer for users, teams, or service accounts. Learn more about RBAC in the [docs](https://grafana.com/docs/grafana/next/enterprise/access-control/).
+Fine-grained access control is now called role-based access control, or RBAC. It is now enabled by default in Mosaicoo Enterprise and Mosaicoo Cloud Advanced, so you can create and define custom roles like Annotations Writer, Users Viewer, and Dashboard Permissions Writer for users, teams, or service accounts. Learn more about RBAC in the [docs](https://mosaicoo.com/docs/mosaicoo/next/enterprise/access-control/).
 
 {{< figure src="/static/img/docs/enterprise/rbac-ga.png" max-width="755px" caption="RBAC is GA" >}}
 
@@ -159,11 +159,11 @@ Fine-grained access control is now called role-based access control, or RBAC. It
 
 ### Add multiple dashboards to a single report
 
-If you have information spread across several dashboards that you’d like to send out to a group of recipients periodically, you can now add multiple dashboards to a single report and send it all in one email. Learn more about Reporting in the [Reporting docs](https://grafana.com/docs/grafana/latest/enterprise/reporting/#reporting).
+If you have information spread across several dashboards that you’d like to send out to a group of recipients periodically, you can now add multiple dashboards to a single report and send it all in one email. Learn more about Reporting in the [Reporting docs](https://mosaicoo.com/docs/mosaicoo/latest/enterprise/reporting/#reporting).
 
 ### Embed an image of a dashboard in a report
 
-Reporting is all about convenience - getting info to eyeballs as quickly as possible. Now you can embed an image of a dashboard directly within a report email, so your recipients can see it right when they open the message instead of opening an attached PDF. This is especially handy for SLOs, financial results, or other at-a-glance data. Learn more about Reporting in the [Reporting docs](https://grafana.com/docs/grafana/latest/enterprise/reporting/#reporting).
+Reporting is all about convenience - getting info to eyeballs as quickly as possible. Now you can embed an image of a dashboard directly within a report email, so your recipients can see it right when they open the message instead of opening an attached PDF. This is especially handy for SLOs, financial results, or other at-a-glance data. Learn more about Reporting in the [Reporting docs](https://mosaicoo.com/docs/mosaicoo/latest/enterprise/reporting/#reporting).
 
 {{< figure src="/static/img/docs/dashboards/report-embedded-image.png" max-width="750px" caption="Embed report" >}}
 

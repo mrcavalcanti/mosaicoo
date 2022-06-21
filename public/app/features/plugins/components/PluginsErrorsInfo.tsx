@@ -21,7 +21,7 @@ export function PluginsErrorsInfo(): React.ReactElement | null {
       aria-label={selectors.pages.PluginsList.signatureErrorNotice}
       severity="warning"
       urlTitle="Read more about plugin signing"
-      url="https://grafana.com/docs/grafana/latest/plugins/plugin-signatures/"
+      url="https://mosaicoo.com/docs/mosaicoo/latest/plugins/plugin-signatures/"
     >
       <div>
         <p>

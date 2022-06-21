@@ -44,7 +44,7 @@ This topic lists words and abbreviations that are commonly used in the Mosaicoo 
   <tr>
     <td style="vertical-align: top">Explore</td>
     <td>
-      Explore allows a user to focus on building a query. Users can refine the query to return the expected metrics before building a dashboard. For more information, refer to the <a href="https://grafana.com/docs/grafana/latest/explore">Explore</a> topic.
+      Explore allows a user to focus on building a query. Users can refine the query to return the expected metrics before building a dashboard. For more information, refer to the <a href="https://mosaicoo.com/docs/mosaicoo/latest/explore">Explore</a> topic.
     </td>
   </tr>
   <tr>
@@ -116,7 +116,7 @@ This topic lists words and abbreviations that are commonly used in the Mosaicoo 
   <tr>
     <td style="vertical-align: top">transformation</td>
     <td>
-      Transformations process the result set of a query before it’s passed on for visualization. For more information, refer to the <a href="https://grafana.com/docs/grafana/latest/panels/transformations">Transformations overview</a> topic.
+      Transformations process the result set of a query before it’s passed on for visualization. For more information, refer to the <a href="https://mosaicoo.com/docs/mosaicoo/latest/panels/transformations">Transformations overview</a> topic.
     </td>
   </tr>
   <tr>

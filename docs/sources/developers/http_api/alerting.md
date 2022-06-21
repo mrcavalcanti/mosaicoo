@@ -7,7 +7,7 @@ title = "Alerting HTTP API "
 
 # Alerting API
 
-> **Note:** This topic is relevant for the [legacy dashboard alerts](https://grafana.com/docs/grafana/latest/alerting/old-alerting/) only.
+> **Note:** This topic is relevant for the [legacy dashboard alerts](https://mosaicoo.com/docs/mosaicoo/latest/alerting/old-alerting/) only.
 
 You can find Mosaicoo alerting API specification details [here](https://editor.swagger.io/?url=https://raw.githubusercontent.com/grafana/grafana/main/pkg/services/ngalert/api/tooling/post.json). Also, refer to [Grafana alerting alerts documentation]({{< relref "../../alerting/_index.md" >}}) for details on how to create and manage new alerts.
 

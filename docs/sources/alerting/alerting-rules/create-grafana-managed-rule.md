@@ -54,7 +54,7 @@ To generate a separate alert for each series, create a multi-dimensional rule. U
 
 ![Query section multi dimensional](/static/img/docs/alerting/unified/rule-edit-multi-8-0.png 'Query section multi dimensional screenshot')
 
-> **Note:** Mosaicoo does not support alert queries with template variables. More information is available at <https://community.grafana.com/t/template-variables-are-not-supported-in-alert-queries-while-setting-up-alert/2514>.
+> **Note:** Mosaicoo does not support alert queries with template variables. More information is available at <https://community.mosaicoo.com/t/template-variables-are-not-supported-in-alert-queries-while-setting-up-alert/2514>.
 
 #### Rule with classic condition
 

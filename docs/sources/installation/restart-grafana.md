@@ -8,7 +8,7 @@ weight = 750
 
 # Restart Grafana
 
-Users often need to restart Grafana after they have made configuration changes. This topic provides detailed instructions on how to restart Grafana supported operating systems.
+Users often need to restart Mosaicoo after they have made configuration changes. This topic provides detailed instructions on how to restart Mosaicoo supported operating systems.
 
 - [Windows](#windows)
 - [MacOS](#macos)
@@ -25,9 +25,9 @@ To restart Grafana:
 
 ## macOS
 
-Restart methods differ depending on whether you installed Grafana using Homebrew or as standalone macOS binaries.
+Restart methods differ depending on whether you installed Mosaicoo using Homebrew or as standalone macOS binaries.
 
-### Restart Grafana using Homebrew
+### Restart Mosaicoo using Homebrew
 
 Use the [Homebrew](http://brew.sh/) restart command:
 
@@ -59,13 +59,13 @@ sudo systemctl restart grafana-server
 sudo systemctl status grafana-server
 ```
 
-Alternately, you can configure the Grafana server to restart at boot:
+Alternately, you can configure the Mosaicoo server to restart at boot:
 
 ```bash
 sudo systemctl enable grafana-server.service
 ```
 
-> **Note:** SUSE or OpenSUSE users may need to start the server with the systemd method, then use the init.d method to configure Grafana to start at boot.
+> **Note:** SUSE or OpenSUSE users may need to start the server with the systemd method, then use the init.d method to configure Mosaicoo to start at boot.
 
 ### Restart the server with init.d
 
@@ -93,7 +93,7 @@ or
 sudo /etc/init.d/grafana-server status
 ```
 
-Alternately, you can configure the Grafana server to restart at boot:
+Alternately, you can configure the Mosaicoo server to restart at boot:
 
 ```bash
 sudo update-rc.d grafana-server defaults
@@ -101,7 +101,7 @@ sudo update-rc.d grafana-server defaults
 
 ## Docker
 
-To restart the Grafana service, use the `docker restart` command.
+To restart the Mosaicoo service, use the `docker restart` command.
 
 `docker restart grafana`
 
@@ -121,11 +121,11 @@ grafana:
     - GF_INSTALL_PLUGINS=grafana-clock-panel,grafana-piechart-panel,grafana-polystat-panel
 ```
 
-Start the Grafana server:
+Start the Mosaicoo server:
 
 `docker-compose up`
 
-This starts the Grafana server along with the three plugins specified in the YAML file.
+This starts the Mosaicoo server along with the three plugins specified in the YAML file.
 
 To restart the running container, use this command:
 

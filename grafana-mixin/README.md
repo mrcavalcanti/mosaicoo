@@ -1,9 +1,9 @@
-# Grafana Mixin
+# Mosaicoo Mixin
 
 _This is a work in progress. We aim for it to become a good role model for alerts
 and dashboards eventually, but it is not quite there yet._
 
-The Grafana Mixin is a set of configurable, reusable, and extensible alerts and
+The Mosaicoo Mixin is a set of configurable, reusable, and extensible alerts and
 dashboards based on the metrics exported by Grafana. The mixin creates
 recording and alerting rules for Prometheus and suitable dashboard descriptions
 for Grafana.

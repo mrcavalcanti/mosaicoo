@@ -15,11 +15,11 @@ to add and configure a `notification` channel (can be email, PagerDuty, or other
 
 This is done from the Notification channels page.
 
-> **Note:** Alerting is only available in Grafana v4.0 and above.
+> **Note:** Alerting is only available in Mosaicoo v4.0 and above.
 
 ## Add a notification channel
 
-1. In the Grafana side bar, hover your cursor over the **Alerting** (bell) icon and then click **Notification channels**.
+1. In the Mosaicoo side bar, hover your cursor over the **Alerting** (bell) icon and then click **Notification channels**.
 1. Click **Add channel**.
 1. Fill out the fields or select options described below.
 
@@ -76,7 +76,7 @@ These examples show how often and when reminders are sent for a triggered alert.
 ### Email
 
 To enable email notifications you have to set up [SMTP settings]({{< relref "../../administration/configuration/#smtp" >}})
-in the Grafana config. Email notifications will upload an image of the alert graph to an
+in the Mosaicoo config. Email notifications will upload an image of the alert graph to an
 external image destination if available or fallback to attaching the image to the email.
 Be aware that if you use the `local` image storage email servers and clients might not be
 able to access the image.
@@ -95,7 +95,7 @@ able to access the image.
 To set up Slack, you need to configure an incoming Slack webhook URL. You can follow
 [Sending messages using Incoming Webhooks](https://api.slack.com/incoming-webhooks) on how to do that. If you want to include screenshots of the
 firing alerts in the Slack messages you have to configure either the [external image destination](#external-image-store)
-in Grafana or a bot integration via Slack Apps. [Follow Slack's guide to set up a bot integration](https://api.slack.com/bot-users) and use the token
+in Mosaicoo or a bot integration via Slack Apps. [Follow Slack's guide to set up a bot integration](https://api.slack.com/bot-users) and use the token
 provided, which starts with "xoxb".
 
 | Setting         | Description                                                                                                                                                                                                                                                                                                                   |
@@ -108,7 +108,7 @@ provided, which starts with "xoxb".
 | Mention Users   | Optionally mention one or more users in the Slack notification sent by Grafana. You have to refer to users, comma-separated, via their corresponding Slack IDs (which you can find by clicking the overflow button on each user's Slack profile).                                                                             |
 | Mention Groups  | Optionally mention one or more groups in the Slack notification sent by Grafana. You have to refer to groups, comma-separated, via their corresponding Slack IDs (which you can get from each group's Slack profile URL).                                                                                                     |
 | Mention Channel | Optionally mention either all channel members or just active ones.                                                                                                                                                                                                                                                            |
-| Token           | If provided, Grafana will upload the generated image via Slack's file.upload API method, not the external image destination. If you use the `chat.postMessage` Slack API endpoint, this is required.                                                                                                                          |
+| Token           | If provided, Mosaicoo will upload the generated image via Slack's file.upload API method, not the external image destination. If you use the `chat.postMessage` Slack API endpoint, this is required.                                                                                                                          |
 
 If you are using the token for a slack bot, then you have to invite the bot to the channel you want to send notifications and add the channel to the recipient field.
 
@@ -119,7 +119,7 @@ To setup Opsgenie you will need an API Key and the Alert API Url. These can be o
 | Setting                   | Description                                                                                                                                                                                                                                |
 | ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | Alert API URL             | The API URL for your Opsgenie instance. This will normally be either `https://api.opsgenie.com` or, for EU customers, `https://api.eu.opsgenie.com`.                                                                                       |
-| API Key                   | The API Key as provided by Opsgenie for your configured Grafana integration.                                                                                                                                                               |
+| API Key                   | The API Key as provided by Opsgenie for your configured Mosaicoo integration.                                                                                                                                                               |
 | Override priority         | Configures the alert priority using the `og_priority` tag. The `og_priority` tag must have one of the following values: `P1`, `P2`, `P3`, `P4`, or `P5`. Default is `False`.                                                               |
 | Send notification tags as | Specify how you would like [Notification Tags]({{< relref "create-alerts.md/#notifications" >}}) delivered to Opsgenie. They can be delivered as `Tags`, `Extra Properties` or both. Default is Tags. See note below for more information. |
 
@@ -147,11 +147,11 @@ To set up PagerDuty, all you have to do is to provide an integration key.
 
 > **Note:** The `state` tag overrides the current alert state inside the `custom_details` payload.
 
-> **Note:** Grafana uses the `Events API V2` integration. This can be configured for each service.
+> **Note:** Mosaicoo uses the `Events API V2` integration. This can be configured for each service.
 
 ### VictorOps
 
-To configure VictorOps, provide the URL from the Grafana Integration and substitute `$routing_key` with a valid key.
+To configure VictorOps, provide the URL from the Mosaicoo Integration and substitute `$routing_key` with a valid key.
 
 > **Note:** The tag `Severity` has special meaning in the [VictorOps Incident Fields](https://help.victorops.com/knowledge-base/incident-fields-glossary/). If an alert panel defines this key, then it replaces the `message_type` in the root of the event sent to VictorOps.
 
@@ -174,7 +174,7 @@ To set up Pushover, you must provide a user key and an API token. Refer to [What
 ### Webhook
 
 The webhook notification is a simple way to send information about a state change over HTTP to a custom endpoint.
-Using this notification you could integrate Grafana into a system of your choosing.
+Using this notification you could integrate Mosaicoo into a system of your choosing.
 
 Example json body:
 
@@ -221,7 +221,7 @@ In DingTalk PC Client:
 
 5. In "Add Robot" panel, input a nickname for the robot and select a "message group" which the robot will join in. click "next".
 
-6. There will be a Webhook URL in the panel, looks like this: https://oapi.dingtalk.com/robot/send?access_token=xxxxxxxxx. Copy this URL to the Grafana DingTalk setting page and then click "finish".
+6. There will be a Webhook URL in the panel, looks like this: https://oapi.dingtalk.com/robot/send?access_token=xxxxxxxxx. Copy this URL to the Mosaicoo DingTalk setting page and then click "finish".
 
 ### Discord
 
@@ -239,8 +239,8 @@ Alternately, use the [Slack](#slack) notifier by appending `/slack` to a Discord
 
 ### Kafka
 
-Notifications can be sent to a Kafka topic from Grafana using the [Kafka REST Proxy](https://docs.confluent.io/1.0/kafka-rest/docs/index.html).
-There are a couple of configuration options which need to be set up in Grafana UI under Kafka Settings:
+Notifications can be sent to a Kafka topic from Mosaicoo using the [Kafka REST Proxy](https://docs.confluent.io/1.0/kafka-rest/docs/index.html).
+There are a couple of configuration options which need to be set up in Mosaicoo UI under Kafka Settings:
 
 1. Kafka REST Proxy endpoint.
 
@@ -254,9 +254,9 @@ Notifications can be sent by setting up an incoming webhook in Google Hangouts c
 
 ### Prometheus Alertmanager
 
-Alertmanager handles alerts sent by client applications such as Prometheus server or Grafana. It takes care of deduplicating, grouping, and routing them to the correct receiver. Grafana notifications can be sent to Alertmanager via a simple incoming webhook. Refer to the official [Prometheus Alertmanager documentation](https://prometheus.io/docs/alerting/alertmanager) for configuration information.
+Alertmanager handles alerts sent by client applications such as Prometheus server or Grafana. It takes care of deduplicating, grouping, and routing them to the correct receiver. Mosaicoo notifications can be sent to Alertmanager via a simple incoming webhook. Refer to the official [Prometheus Alertmanager documentation](https://prometheus.io/docs/alerting/alertmanager) for configuration information.
 
-> **Caution:** In case of a high-availability setup, do not load balance traffic between Grafana and Alertmanagers to keep coherence between all your Alertmanager instances. Instead, point Grafana to a list of all Alertmanagers, by listing their URLs comma-separated in the notification channel configuration.
+> **Caution:** In case of a high-availability setup, do not load balance traffic between Mosaicoo and Alertmanagers to keep coherence between all your Alertmanager instances. Instead, point Mosaicoo to a list of all Alertmanagers, by listing their URLs comma-separated in the notification channel configuration.
 
 ### Sensu Go
 
@@ -271,13 +271,13 @@ You must configure an [external image storage provider]({{< relref "../../admini
 
 Notification services which need public image access are marked as 'external only'.
 
-## Configure the link back to Grafana from alert notifications
+## Configure the link back to Mosaicoo from alert notifications
 
-All alert notifications contain a link back to the triggered alert in the Grafana instance.
+All alert notifications contain a link back to the triggered alert in the Mosaicoo instance.
 This URL is based on the [domain]({{< relref "../../administration/configuration/#domain" >}}) setting in Grafana.
 
 ## Notification templating
 
-> **Note:** Alert notification templating is only available in Grafana v7.4 and above.
+> **Note:** Alert notification templating is only available in Mosaicoo v7.4 and above.
 
 The alert notification template feature allows you to take the [label]({{< relref "../../basics/timeseries-dimensions.md#labels" >}}) value from an alert query and [inject that into alert notifications]({{< relref "./add-notification-template.md" >}}).

@@ -1,4 +1,4 @@
-# Grafana Schema Library
+# Mosaicoo Schema Library
 
 > **@grafana/schema is currently in ALPHA**.
 

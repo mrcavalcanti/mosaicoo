@@ -15,4 +15,4 @@ You can generate and save PDF files from any of your dashboards.
 1. In the upper right corner of the dashboard that you want to export as PDF, click the **Share dashboard** icon.
 1. On the PDF tab, select the layout option for exported dashboard: **Portrait** or **Landscape**.
 1. Click **Save as PDF** to render the dashboard as a PDF file.
-   Grafana opens the PDF file in a new window or browser tab.
+   Mosaicoo opens the PDF file in a new window or browser tab.

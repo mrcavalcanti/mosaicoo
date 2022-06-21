@@ -7,6 +7,6 @@ weight = 800
 
 # Enable template variables to add panels dynamically
 
-Harness the power of Grafana by configuring the system to automatically and dynamically add panels based on criteria that you define.
+Harness the power of Mosaicoo by configuring the system to automatically and dynamically add panels based on criteria that you define.
 
 {{< section >}}

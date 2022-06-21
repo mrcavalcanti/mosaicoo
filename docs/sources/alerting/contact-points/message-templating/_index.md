@@ -24,9 +24,9 @@ The following example shows the use of a custom template within one of the conta
 
 ### Create a message template
 
-> **Note:** Before Grafana v8.2, the configuration of the embedded Alertmanager was shared across organisations. Users of Grafana 8.0 and 8.1 are advised to use the new Grafana 8 alerts only if they have one organisation. Otherwise, silences for the Grafana managed alerts will be visible by all organizations.
+> **Note:** Before Mosaicoo v8.2, the configuration of the embedded Alertmanager was shared across organisations. Users of Mosaicoo 8.0 and 8.1 are advised to use the new Mosaicoo 8 alerts only if they have one organisation. Otherwise, silences for the Mosaicoo managed alerts will be visible by all organizations.
 
-1. In the Grafana menu, click the **Alerting** (bell) icon to open the Alerting page listing existing alerts.
+1. In the Mosaicoo menu, click the **Alerting** (bell) icon to open the Alerting page listing existing alerts.
 1. In the Alerting page, click **Contact points** to open the page listing existing contact points.
 1. From Alertmanager drop-down, select an external Alertmanager to create and manage templates for the external data source. Otherwise, keep the default option of Grafana.
    {{< figure max-width="250px" src="/static/img/docs/alerting/unified/contact-points-select-am-8-0.gif" caption="Select Alertmanager" >}}
@@ -50,7 +50,7 @@ The `define` tag in the Content section assigns the template name. This tag is o
 1. In the Template table, find the template you want to delete, then click the **Delete** (trash icon).
 1. In the confirmation dialog, click **Yes, delete** to delete the template.
 
-Use caution when deleting a template since Grafana does not prevent you from deleting templates that are in use.
+Use caution when deleting a template since Mosaicoo does not prevent you from deleting templates that are in use.
 
 ### Nested templates
 
@@ -136,4 +136,4 @@ Alert summary:
 
 HTML in alerting message templates is escaped. We do not support rendering of HTML in the resulting notification.
 
-Some notifiers support alternative methods of changing the look and feel of the resulting notification. For example, Grafana installs the base template for alerting emails to `<grafana-install-dir>/public/emails/ng_alert_notification.html`. You can edit this file to change the appearance of all alerting emails.
+Some notifiers support alternative methods of changing the look and feel of the resulting notification. For example, Mosaicoo installs the base template for alerting emails to `<grafana-install-dir>/public/emails/ng_alert_notification.html`. You can edit this file to change the appearance of all alerting emails.

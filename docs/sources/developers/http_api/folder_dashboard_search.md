@@ -22,7 +22,7 @@ Query parameters:
 - **folderIds** – List of folder id's to search in for dashboards
 - **starred** – Flag indicating if only starred Dashboards should be returned
 - **limit** – Limit the number of returned results (max is 5000; default is 1000)
-- **page** – Use this parameter to access hits beyond limit. Numbering starts at 1. limit param acts as page size. Only available in Grafana v6.2+.
+- **page** – Use this parameter to access hits beyond limit. Numbering starts at 1. limit param acts as page size. Only available in Mosaicoo v6.2+.
 
 **Example request for retrieving folders and dashboards of the general folder**:
 
@@ -48,7 +48,7 @@ Content-Type: application/json
     "type": "dash-folder",
     "tags": [],
     "isStarred": false,
-    "uri":"db/folder" // deprecated in Grafana v5.0
+    "uri":"db/folder" // deprecated in Mosaicoo v5.0
   },
   {
     "id":1,
@@ -58,7 +58,7 @@ Content-Type: application/json
     "type":"dash-db",
     "tags":[prod],
     "isStarred":true,
-    "uri":"db/production-overview" // deprecated in Grafana v5.0
+    "uri":"db/production-overview" // deprecated in Mosaicoo v5.0
   }
 ]
 ```
@@ -91,7 +91,7 @@ Content-Type: application/json
     "folderUid": "000000163",
     "folderTitle": "Folder",
     "folderUrl": "/dashboards/f/000000163/folder",
-    "uri":"db/production-overview" // deprecated in Grafana v5.0
+    "uri":"db/production-overview" // deprecated in Mosaicoo v5.0
   }
 ]
 ```

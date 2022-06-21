@@ -21,7 +21,7 @@ First, you need to create a Google OAuth Client:
    - Name: Grafana
    - Authorized JavaScript Origins: https://grafana.mycompany.com
    - Authorized Redirect URLs: https://grafana.mycompany.com/login/google
-   - Replace https://grafana.mycompany.com with the URL of your Grafana instance.
+   - Replace https://grafana.mycompany.com with the URL of your Mosaicoo instance.
 1. Click Create
 1. Copy the Client ID and Client Secret from the 'OAuth Client' modal
 
@@ -42,9 +42,9 @@ allow_sign_up = true
 ```
 
 You may have to set the `root_url` option of `[server]` for the callback URL to be
-correct. For example in case you are serving Grafana behind a proxy.
+correct. For example in case you are serving Mosaicoo behind a proxy.
 
-Restart the Grafana back-end. You should now see a Google login button
+Restart the Mosaicoo back-end. You should now see a Google login button
 on the login page. You can now login or sign up with your Google
 accounts. The `allowed_domains` option is optional, and domains were separated by space.
 

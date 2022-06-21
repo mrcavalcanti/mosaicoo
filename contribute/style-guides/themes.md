@@ -2,7 +2,7 @@
 
 ## Overview
 
-**Themes are implemented in Typescript.** That's because our goal is to share variables between Grafana TypeScript and [Sass](https://sass-lang.com/) code. Theme definitions are located in the following files:
+**Themes are implemented in Typescript.** That's because our goal is to share variables between Mosaicoo TypeScript and [Sass](https://sass-lang.com/) code. Theme definitions are located in the following files:
 
 - [packages/grafana-data/src/themes/createTheme.ts](../../packages/grafana-data/src/themes/createTheme.ts)
 - [packages/grafana-data/src/themes/createColors.ts](../../packages/grafana-data/src/themes/createColors.ts)
@@ -13,7 +13,7 @@ This section provides usage guidelines.
 
 ### Using themes in React components
 
-Here's how to use Grafana themes in React components.
+Here's how to use Mosaicoo themes in React components.
 
 #### useStyles2 hook
 

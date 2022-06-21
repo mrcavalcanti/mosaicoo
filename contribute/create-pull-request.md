@@ -1,6 +1,6 @@
 # Create a pull request
 
-We're excited that you're considering making a contribution to the Grafana project! This document guides you through the process of creating a [pull request](https://help.github.com/en/articles/about-pull-requests/).
+We're excited that you're considering making a contribution to the Mosaicoo project! This document guides you through the process of creating a [pull request](https://help.github.com/en/articles/about-pull-requests/).
 
 ## Before you begin
 
@@ -62,7 +62,7 @@ We use [pa11y-ci](https://github.com/pa11y/pa11y-ci) to collect accessibility er
 If the contribution introduces new a11y errors, our continuous integration will fail, preventing you to merge on the main branch. In those cases there are two alternatives for moving forward:
 
 - Check the error log on the pipeline step `test-a11y-frontend-pr`, identify what was the error, and fix it.
-- Locally run the command `yarn test:accessibility-report` that generates an HTML accessibility report, then go to the URL that contains your change, identify the error, and fix it. Keep in mind, a local e2e Grafana instance is going to be running on `http://localhost:3001`.
+- Locally run the command `yarn test:accessibility-report` that generates an HTML accessibility report, then go to the URL that contains your change, identify the error, and fix it. Keep in mind, a local e2e Mosaicoo instance is going to be running on `http://localhost:3001`.
 
 You can also prevent introducing a11y errors by installing an a11y plugin in your browser, for example, axe DevTools, Accessibility Insights for Web among others.
 
@@ -117,7 +117,7 @@ If you're unsure, see the existing [changelog](https://github.com/grafana/grafan
 
 ### Pull request titles
 
-The Grafana team _squashes_ all commits into one when we accept a pull request. The title of the pull request becomes the subject line of the squashed commit message. We still encourage contributors to write informative commit messages, as they becomes a part of the Git commit body.
+The Mosaicoo team _squashes_ all commits into one when we accept a pull request. The title of the pull request becomes the subject line of the squashed commit message. We still encourage contributors to write informative commit messages, as they becomes a part of the Git commit body.
 
 We use the pull request title when we generate change logs for releases. As such, we strive to make the title as informative as possible.
 

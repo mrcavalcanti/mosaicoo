@@ -14,7 +14,7 @@ Update user permissions when you want to enhance or restrict a user's access to 
 
 **To change the organization role of a user**:
 
-1. Sign in to Grafana as an organization administrator.
+1. Sign in to Mosaicoo as an organization administrator.
 1. Hover your cursor over the **Configuration** (gear) icon in the side menu and click **Users**.
 1. Find the user account for which you want to change the role.
 

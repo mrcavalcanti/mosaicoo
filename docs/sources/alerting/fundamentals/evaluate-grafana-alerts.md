@@ -6,7 +6,7 @@ weight = 116
 
 # Alerting on numeric data
 
-This topic describes how Grafana managed alerts are evaluated by the backend engine as well as how Grafana handles alerting on numeric rather than time series data.
+This topic describes how Mosaicoo managed alerts are evaluated by the backend engine as well as how Mosaicoo handles alerting on numeric rather than time series data.
 
 - [Alerting on numeric data](#alerting-on-numeric-data)
   - [Alert evaluation](#alert-evaluation)
@@ -25,7 +25,7 @@ Grafana managed alerts query the following backend data sources that have alerti
 
 ### Metrics from the alerting engine
 
-The alerting engine publishes some internal metrics about itself. You can read more about how Grafana publishes [internal metrics]({{< relref "../../administration/view-server/internal-metrics.md" >}}). See also, [View alert rules and their current state]({{< relref "../alerting-rules/rule-list.md" >}}).
+The alerting engine publishes some internal metrics about itself. You can read more about how Mosaicoo publishes [internal metrics]({{< relref "../../administration/view-server/internal-metrics.md" >}}). See also, [View alert rules and their current state]({{< relref "../alerting-rules/rule-list.md" >}}).
 
 | Metric Name                                       | Type      | Description                                                                              |
 | ------------------------------------------------- | --------- | ---------------------------------------------------------------------------------------- |
@@ -40,7 +40,7 @@ The alerting engine publishes some internal metrics about itself. You can read m
 ## Alerting on numeric data
 
 Among certain data sources numeric data that is not time series can be directly alerted on, or passed into Server Side Expressions (SSE). This allows for more processing and resulting efficiency within the data source, and it can also simplify alert rules.
-When alerting on numeric data instead of time series data, there is no need to reduce each labeled time series into a single number. Instead labeled numbers are returned to Grafana instead.
+When alerting on numeric data instead of time series data, there is no need to reduce each labeled time series into a single number. Instead labeled numbers are returned to Mosaicoo instead.
 
 ### Tabular Data
 
@@ -49,10 +49,10 @@ This feature is supported with backend data sources that query tabular data:
 - SQL data sources such as MySQL, Postgres, MSSQL, and Oracle.
 - The Azure Kusto based services: Azure Monitor (Logs), Azure Monitor (Azure Resource Graph), and Azure Data Explorer.
 
-A query with Grafana managed alerts or SSE is considered numeric with these data sources, if:
+A query with Mosaicoo managed alerts or SSE is considered numeric with these data sources, if:
 
 - The "Format AS" option is set to "Table" in the data source query.
-- The table response returned to Grafana from the query includes only one numeric (e.g. int, double, float) column, and optionally additional string columns.
+- The table response returned to Mosaicoo from the query includes only one numeric (e.g. int, double, float) column, and optionally additional string columns.
 
 If there are string columns then those columns become labels. The name of column becomes the label name, and the value for each row becomes the value of the corresponding label. If multiple rows are returned, then each row should be uniquely identified their labels.
 

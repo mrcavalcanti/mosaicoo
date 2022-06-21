@@ -1,15 +1,15 @@
 +++
 aliases = ["/docs/grafana/latest/getting-started/getting-started-prometheus/", "/docs/grafana/latest/guides/getting_started/", "/docs/grafana/latest/guides/gettingstarted/"]
 description = "Learn how to build your first Prometheus dashboard in Grafana."
-title = "Get started with Grafana and Prometheus"
+title = "Get started with Mosaicoo and Prometheus"
 weight = 300
 +++
 
-# Get started with Grafana and Prometheus
+# Get started with Mosaicoo and Prometheus
 
-Prometheus is an open source monitoring system for which Grafana provides out-of-the-box support. This topic walks you through the steps to create a series of dashboards in Grafana to display system metrics for a server monitored by Prometheus.
+Prometheus is an open source monitoring system for which Mosaicoo provides out-of-the-box support. This topic walks you through the steps to create a series of dashboards in Mosaicoo to display system metrics for a server monitored by Prometheus.
 
-> **Note:** You can configure a [Grafana Cloud](https://grafana.com/docs/grafana-cloud/) instance to display system metrics without having to host Grafana yourself. A [free forever plan](https://grafana.com/signup/cloud/connect-account?pg=gsdocs) provides 10,000 active series for metrics.
+> **Note:** You can configure a [Grafana Cloud](https://grafana.com/docs/grafana-cloud/) instance to display system metrics without having to host Mosaicoo yourself. A [free forever plan](https://grafana.com/signup/cloud/connect-account?pg=gsdocs) provides 10,000 active series for metrics.
 
 {{< docs/shared "getting-started/first-step.md" >}}
 
@@ -50,9 +50,9 @@ Prometheus node_exporter is a widely used tool that exposes system metrics. Inst
     ./prometheus --config.file=./prometheus.yml
    ```
 
-#### Check Prometheus metrics in Grafana Explore view
+#### Check Prometheus metrics in Mosaicoo Explore view
 
-In your Grafana instance, go to the [Explore]({{< relref "../explore/_index.md" >}}) view and build queries to experiment with the metrics you want to monitor. Here you can also debug issues related to collecting metrics from Prometheus. Pay special attention to the [Prometheus-specific features]({{< relref "../explore/_index.md#prometheus-specific-features" >}}) to avail custom querying experience for Prometheus.
+In your Mosaicoo instance, go to the [Explore]({{< relref "../explore/_index.md" >}}) view and build queries to experiment with the metrics you want to monitor. Here you can also debug issues related to collecting metrics from Prometheus. Pay special attention to the [Prometheus-specific features]({{< relref "../explore/_index.md#prometheus-specific-features" >}}) to avail custom querying experience for Prometheus.
 
 #### Start building dashboards
 
@@ -64,5 +64,5 @@ The following image shows a dashboard with three panels showing some system metr
 
 To learn more:
 
-- Grafana documentation: [Prometheus data source]({{< relref "../datasources/prometheus.md" >}})
+- Mosaicoo documentation: [Prometheus data source]({{< relref "../datasources/prometheus.md" >}})
 - Prometheus documentation: [What is Prometheus?](https://prometheus.io/docs/introduction/overview/)

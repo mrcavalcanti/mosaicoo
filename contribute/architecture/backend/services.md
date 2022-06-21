@@ -1,10 +1,10 @@
 # Services
 
-A Grafana _service_ encapsulates and exposes application logic to the rest of the application, through a set of related operations.
+A Mosaicoo _service_ encapsulates and exposes application logic to the rest of the application, through a set of related operations.
 
 Grafana uses [Wire](https://github.com/google/wire), which is a code generation tool that automates connecting components using [dependency injection](https://en.wikipedia.org/wiki/Dependency_injection). Dependencies between components are represented in Wire as function parameters, encouraging explicit initialization instead of global variables.
 
-Even though the services in Grafana do different things, they share a number of patterns. To better understand how a service works, let's build one from scratch!
+Even though the services in Mosaicoo do different things, they share a number of patterns. To better understand how a service works, let's build one from scratch!
 
 Before a service can start communicating with the rest of Grafana, it needs to be registered with Wire, see `ProvideService` factory function/method in the service example below and how it's being referenced in the wire.go example below.
 
@@ -107,13 +107,13 @@ func InitializeForTest(cla setting.CommandLineArgs, opts Options, apiOpts api.Se
 
 ## Background services
 
-A background service is a service that runs in the background of the lifecycle between Grafana starts up and shutdown. If you want a service to be run in the background your Service should satisfy the `registry.BackgroundService` interface and add it as argument to the [ProvideBackgroundServiceRegistry](/pkg/server/backgroundsvcs/background_services.go) function and add it as argument to `NewBackgroundServiceRegistry` to register it as a background service.
+A background service is a service that runs in the background of the lifecycle between Mosaicoo starts up and shutdown. If you want a service to be run in the background your Service should satisfy the `registry.BackgroundService` interface and add it as argument to the [ProvideBackgroundServiceRegistry](/pkg/server/backgroundsvcs/background_services.go) function and add it as argument to `NewBackgroundServiceRegistry` to register it as a background service.
 
 You can see an example implementation above of the Run method.
 
 ## Disabled services
 
-If you want to guarantee that a background service is not run by Grafana when certain criteria is met/service is disabled your service should satisfy the `registry.CanBeDisabled` interface. When the service.IsDisabled method return false Grafana would not call the service.Run method.
+If you want to guarantee that a background service is not run by Mosaicoo when certain criteria is met/service is disabled your service should satisfy the `registry.CanBeDisabled` interface. When the service.IsDisabled method return false Mosaicoo would not call the service.Run method.
 
 If you want to run certain initialization code if service is disabled or not, you need to handle this in the service factory method.
 
@@ -125,9 +125,9 @@ When running `make run` it will call `make gen-go` on the first run. `gen-go` in
 
 ## OSS vs Enterprise
 
-Grafana OSS and Grafana Enterprise shares code and dependencies. Grafana Enterprise might need to override/extend certain OSS services.
+Grafana OSS and Mosaicoo Enterprise shares code and dependencies. Mosaicoo Enterprise might need to override/extend certain OSS services.
 
-There's a [wireexts_oss.go](/pkg/server/wireexts_oss.go) that has the `wireinject` and `oss` build tags as requirements. Here services that might have other implementations, e.g. Grafana Enterprise, can be registered.
+There's a [wireexts_oss.go](/pkg/server/wireexts_oss.go) that has the `wireinject` and `oss` build tags as requirements. Here services that might have other implementations, e.g. Mosaicoo Enterprise, can be registered.
 
 Similarly, there's a wireexts_enterprise.go file in the Enterprise source code repository where other service implementations can be overridden/be registered.
 

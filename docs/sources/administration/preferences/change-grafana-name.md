@@ -5,7 +5,7 @@ title = "Change name and email"
 weight = 100
 +++
 
-# Change Grafana name and email
+# Change Mosaicoo name and email
 
 In Grafana, you can change your names and emails associated with groups or accounts in the Settings or Preferences. This topic provides instructions for each task.
 
@@ -15,9 +15,9 @@ In Grafana, you can change your names and emails associated with groups or accou
 
 Grafana server administrators and organization administrators can change organization names.
 
-### Grafana Server Admin change organization name
+### Mosaicoo Server Admin change organization name
 
-Follow these instructions if you are a Grafana Server Admin.
+Follow these instructions if you are a Mosaicoo Server Admin.
 
 {{< docs/list >}}
 {{< docs/shared "manage-users/view-server-org-list.md" >}}
@@ -44,7 +44,7 @@ Organization administrators and team administrators can change team names and em
 To change the team name or email, follow these steps:
 
 1. Hover your cursor over the **Configuration** (gear) icon in the side menu.
-1. Click **Teams**. Grafana displays the team list.
+1. Click **Teams**. Mosaicoo displays the team list.
 1. In the team list, click the name of the team that you want to change.
 1. Click the **Settings** tab.
 1. In the Team Settings section, you can edit the following:

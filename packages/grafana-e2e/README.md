@@ -1,4 +1,4 @@
-# Grafana End-to-End Test library
+# Mosaicoo End-to-End Test library
 
 > **@grafana/e2e is currently in BETA**.
 

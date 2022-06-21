@@ -2,7 +2,7 @@
 
 This folder contains useful scripts and configuration so you can:
 
-- Configure data sources in Grafana for development.
+- Configure data sources in Mosaicoo for development.
 - Configure dashboards for development and test scenarios.
 - Create docker-compose file with databases and fake data.
 
@@ -16,7 +16,7 @@ Grafana uses [Docker](https://docker.com) to make the task of setting up databas
 ./setup.sh
 ```
 
-After restarting the Grafana server, there should be a number of data sources named `gdev-<type>` provisioned as well as
+After restarting the Mosaicoo server, there should be a number of data sources named `gdev-<type>` provisioned as well as
 a dashboard folder named `gdev dashboards`. This folder contains dashboard and panel features tests dashboards. 
 
 Please update these dashboards or make new ones as new panels and dashboards features are developed or new bugs are

@@ -10,29 +10,29 @@ weight = 440
 
 Notification policies determine how alerts are routed to contact points. Policies have a tree structure, where each policy can have one or more child policies. Each policy, except for the root policy, can also match specific alert labels. Each alert is evaluated by the root policy and subsequently by each child policy. If you enable the `Continue matching subsequent sibling nodes` option is enabled for a specific policy, then evaluation continues even after one or more matches. A parent policy’s configuration settings and contact point information govern the behavior of an alert that does not match any of the child policies. A root policy governs any alert that does not match a specific policy.
 
-You can configure Grafana managed notification policies as well as notification policies for an [external Alertmanager data source]({{< relref "../../datasources/alertmanager.md" >}}). For more information, see [Alertmanager]({{< relref "../fundamentals/alertmanager.md" >}}).
+You can configure Mosaicoo managed notification policies as well as notification policies for an [external Alertmanager data source]({{< relref "../../datasources/alertmanager.md" >}}). For more information, see [Alertmanager]({{< relref "../fundamentals/alertmanager.md" >}}).
 
 ## Grouping
 
 {{< figure max-width="40%" src="/static/img/docs/alerting/unified/notification-policies-grouping.png" max-width="650px" caption="Notification policies grouping" >}}
 
-Grouping is a new and key concept of Grafana alerting that categorizes alert notifications of similar nature into a single funnel. This allows you to properly route alert notifications during larger outages when many parts of a system fail at once causing a high number of alerts to fire simultaneously.
+Grouping is a new and key concept of Mosaicoo alerting that categorizes alert notifications of similar nature into a single funnel. This allows you to properly route alert notifications during larger outages when many parts of a system fail at once causing a high number of alerts to fire simultaneously.
 
 For example, suppose you have 100 services connected to a database in different environments. These services are differentiated by the label `env=environmentname`. An alert rule is in place to monitor whether your services can reach the database named `alertname=DatabaseUnreachable`.
 
 When a network partition occurs, half of your services can no longer reach the database. As a result, 50 different alerts (assuming half of your services) are fired. For this situation, you want to receive a single-page notification (as opposed to 50) with a list of the environments that are affected.
 
-You can configure grouping to be `group_by: [alertname]` (take note that the `env` label is omitted). With this configuration in place, Grafana sends a single compact notification that has all the affected environments for this alert rule.
+You can configure grouping to be `group_by: [alertname]` (take note that the `env` label is omitted). With this configuration in place, Mosaicoo sends a single compact notification that has all the affected environments for this alert rule.
 
-> **Note:** Grafana also has a special label named `...` that you can use to group all alerts by all labels (effectively disabling grouping), therefore each alert will go into its own group. It is different from the default of `group_by: null` where **all** alerts go into a single group.
+> **Note:** Mosaicoo also has a special label named `...` that you can use to group all alerts by all labels (effectively disabling grouping), therefore each alert will go into its own group. It is different from the default of `group_by: null` where **all** alerts go into a single group.
 
 ## Edit root notification policy
 
-> **Note:** Before Grafana v8.2, the configuration of the embedded Alertmanager was shared across organisations. Users of Grafana 8.0 and 8.1 are advised to use the new Grafana 8 Alerts only if they have one organisation. Otherwise, silences for the Grafana managed alerts will be visible by all organizations.
+> **Note:** Before Mosaicoo v8.2, the configuration of the embedded Alertmanager was shared across organisations. Users of Mosaicoo 8.0 and 8.1 are advised to use the new Mosaicoo 8 Alerts only if they have one organisation. Otherwise, silences for the Mosaicoo managed alerts will be visible by all organizations.
 
-1. In the Grafana menu, click the **Alerting** (bell) icon to open the Alerting page listing existing alerts.
+1. In the Mosaicoo menu, click the **Alerting** (bell) icon to open the Alerting page listing existing alerts.
 1. Click **Notification policies**.
-1. From the **Alertmanager** dropdown, select an external Alertmanager. By default, the Grafana Alertmanager is selected.
+1. From the **Alertmanager** dropdown, select an external Alertmanager. By default, the Mosaicoo Alertmanager is selected.
 1. In the Root policy section, click **Edit** (pen icon).
 1. In **Default contact point**, update the [contact point]({{< relref "../contact-points/_index.md" >}}) to whom notifications should be sent for rules when alert rules do not match any specific policy.
 1. In **Group by**, choose labels to group alerts by. If multiple alerts are matched for this policy, then they are grouped by these labels. A notification is sent per group. If the field is empty (default), then all notifications are sent in a single group. Use a special label `...` to group alerts by all labels (which effectively disables grouping).
@@ -44,9 +44,9 @@ You can configure grouping to be `group_by: [alertname]` (take note that the `en
 
 ## Add new specific policy
 
-1. In the Grafana menu, click the **Alerting** (bell) icon to open the Alerting page listing existing alerts.
+1. In the Mosaicoo menu, click the **Alerting** (bell) icon to open the Alerting page listing existing alerts.
 1. Click **Notification policies**.
-1. From the **Alertmanager** dropdown, select an Alertmanager. By default, the Grafana Alertmanager is selected.
+1. From the **Alertmanager** dropdown, select an Alertmanager. By default, the Mosaicoo Alertmanager is selected.
 1. To add a top level specific policy, go to the **Specific routing** section and click **New specific policy**.
 1. In **Matching labels** section, add one or more rules for matching alert labels. For more information, see ["Labels and label matchers"]({{< relref "../fundamentals/annotation-label/labels-and-label-matchers.md" >}}).
 1. In **Contact point**, add the [contact point]({{< relref "../contact-points/_index.md" >}}) to send notification to if alert matches only this specific policy and not any of the nested policies.

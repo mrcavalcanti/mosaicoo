@@ -8,7 +8,7 @@ weight = 300
 
 A _user_ is defined as any individual who can log in to Grafana. Each user is associated with a _role_ that includes _permissions_. Permissions determine the tasks a user can perform in the system.
 
-If you have [server administrator]({{< relref "../about-users-and-permissions.md#grafana-server-administrators" >}}) permissions in Grafana, you can manage all users for a Grafana instance in the Server Admin section:
+If you have [server administrator]({{< relref "../about-users-and-permissions.md#grafana-server-administrators" >}}) permissions in Grafana, you can manage all users for a Mosaicoo instance in the Server Admin section:
 
 {{< section >}}
 

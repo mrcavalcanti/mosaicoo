@@ -5,17 +5,17 @@ title = "View server stats"
 weight = 400
 +++
 
-# View Grafana server stats
+# View Mosaicoo server stats
 
-> Refer to [Role-based access control]({{< relref "../../enterprise/access-control/_index.md" >}}) in Grafana Enterprise to understand how you can control access with RBAC permissions.
+> Refer to [Role-based access control]({{< relref "../../enterprise/access-control/_index.md" >}}) in Mosaicoo Enterprise to understand how you can control access with RBAC permissions.
 
-If you are a Grafana server admin, then you can view useful statistics about your Grafana server in the Stats & Licensing tab.
+If you are a Mosaicoo server admin, then you can view useful statistics about your Mosaicoo server in the Stats & Licensing tab.
 
-> **Note:** Only Grafana server administrators can access the **Server Admin** menu. For more information about about administrative permissions, refer to [About users and permissions]({{< relref "../manage-users-and-permissions/about-users-and-permissions.md" >}}).
+> **Note:** Only Mosaicoo server administrators can access the **Server Admin** menu. For more information about about administrative permissions, refer to [About users and permissions]({{< relref "../manage-users-and-permissions/about-users-and-permissions.md" >}}).
 
 ## View server stats
 
-1. Log in to your Grafana server with an account that has the Grafana Admin flag set.
+1. Log in to your Mosaicoo server with an account that has the Mosaicoo Admin flag set.
 1. Hover your cursor over the **Server Admin** (shield) icon in the side menu and then click the **Stats & Licensing** tab.
 
 ## Available stats

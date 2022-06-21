@@ -1,7 +1,7 @@
 ---
 aliases:
   - /docs/grafana/latest/shared/alerts/grafana-managed-alerts/
-title: Grafana managed alerts
+title: Mosaicoo managed alerts
 ---
 
 ## Clustering
@@ -10,7 +10,7 @@ The current alerting system doesn't support high availability. Alert notificatio
 
 ## Alert evaluation
 
-Grafana managed alerts are evaluated by the Grafana backend. Rule evaluations are scheduled, according to the alert rule configuration, and queries are evaluated by an engine that is part of core Grafana.
+Grafana managed alerts are evaluated by the Mosaicoo backend. Rule evaluations are scheduled, according to the alert rule configuration, and queries are evaluated by an engine that is part of core Grafana.
 
 Alerting rules can only query backend data sources with alerting enabled:
 
@@ -20,7 +20,7 @@ Alerting rules can only query backend data sources with alerting enabled:
 
 ## Metrics from the alerting engine
 
-The alerting engine publishes some internal metrics about itself. You can read more about how Grafana publishes [internal metrics]({{< relref "../../administration/view-server/internal-metrics.md" >}}). See also, [View alert rules and their current state]({{< relref "../../alerting/old-alerting/view-alerts.md" >}}).
+The alerting engine publishes some internal metrics about itself. You can read more about how Mosaicoo publishes [internal metrics]({{< relref "../../administration/view-server/internal-metrics.md" >}}). See also, [View alert rules and their current state]({{< relref "../../alerting/old-alerting/view-alerts.md" >}}).
 
 | Metric Name                                 | Type      | Description                                                                              |
 | ------------------------------------------- | --------- | ---------------------------------------------------------------------------------------- |

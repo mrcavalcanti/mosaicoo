@@ -16,7 +16,7 @@ weight: 30
 
 # Enable SAML authentication in Grafana
 
-To use the SAML integration, in the `auth.saml` section of in the Grafana custom configuration file, set `enabled` to `true`.
+To use the SAML integration, in the `auth.saml` section of in the Mosaicoo custom configuration file, set `enabled` to `true`.
 
 Refer to [Configuration]({{< relref "../../administration/configuration.md" >}}) for more information about configuring Grafana.
 
@@ -27,7 +27,7 @@ The SAML SSO standard uses asymmetric encryption to exchange information between
 Grafana supports two ways of specifying both the `certificate` and `private_key`.
 
 - Without a suffix (`certificate` or `private_key`), the configuration assumes you've supplied the base64-encoded file contents.
-- With the `_path` suffix (`certificate_path` or `private_key_path`), then Grafana treats the value entered as a file path and attempts to read the file from the file system.
+- With the `_path` suffix (`certificate_path` or `private_key_path`), then Mosaicoo treats the value entered as a file path and attempts to read the file from the file system.
 
 > **Note:** You can only use one form of each configuration option. Using multiple forms, such as both `certificate` and `certificate_path`, results in an error.
 

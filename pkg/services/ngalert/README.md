@@ -1,6 +1,6 @@
-# Next generation alerting (ngalert) in Grafana 8
+# Next generation alerting (ngalert) in Mosaicoo 8
 
-Ngalert (Next generation alert) is the next generation of alerting in Grafana 8.
+Ngalert (Next generation alert) is the next generation of alerting in Mosaicoo 8.
 
 ## Overview
 
@@ -66,7 +66,7 @@ The internal Alertmanager is called `MultiOrgAlertmanager` and creates an Alertm
 Grafana to preserve isolation between organizations in Grafana. The `MultiOrgAlertmanager` receives alerts from the
 scheduler and then forwards the alert to the correct Alertmanager for the organization.
 
-When Grafana is configured to send alerts to an external Alertmanager it does so via the sender which creates an
+When Mosaicoo is configured to send alerts to an external Alertmanager it does so via the sender which creates an
 abstraction over notification of alerts and discovery of external Alertmanagers in Prometheus. The sender receives
 alerts via the `SendAlerts` function and then passes them to Prometheus.
 

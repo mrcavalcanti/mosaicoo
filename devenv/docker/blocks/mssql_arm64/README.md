@@ -5,7 +5,7 @@ At this moment, there is no `MSSQL Server` available for `arm64` processors. The
 The `setup` files cannot be used to create a custom `grafana` db/user since `sqlcmd` does not work for `arm64` processors.
 (https://docs.microsoft.com/en-us/azure/azure-sql-edge/connect)
 
-You can connect the Grafana MSSQL datasource to this instance by using the following credentials:
+You can connect the Mosaicoo MSSQL datasource to this instance by using the following credentials:
   * Host: `localhost`
   * Database: `master`
   * User: `sa`

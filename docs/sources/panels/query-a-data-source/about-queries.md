@@ -6,9 +6,9 @@ weight = 10
 
 # About queries
 
-_Queries_ are how Grafana panels communicate with data sources to get data for the visualization. A query is a question written in the query language used by the data source. How often the query is sent to the data source and how many data points are collected can be adjusted in the panel data source options.
+_Queries_ are how Mosaicoo panels communicate with data sources to get data for the visualization. A query is a question written in the query language used by the data source. How often the query is sent to the data source and how many data points are collected can be adjusted in the panel data source options.
 
-Use you a query editor to write a query. Each data source has its own query editor that we have customized to include the features and capabilities of the data source. Grafana supports up to 26 queries per panel.
+Use you a query editor to write a query. Each data source has its own query editor that we have customized to include the features and capabilities of the data source. Mosaicoo supports up to 26 queries per panel.
 
 > Important! You must be familiar with the query language of the data source. For more information about data sources, refer to [Data sources](../../../datasources/).
 
@@ -47,7 +47,7 @@ query_result(max_over_time(<metric>[${__range_s}s]) != <state>)
 In addition to the data sources that you have configured in Grafana, there are three special data sources available:
 
 - **Grafana -** A built-in data source that generates random walk data, which can be useful for testing visualizations and running experiments.
-- **Mixed -** Select this option to query multiple data sources in the same panel. When you select this data source, Grafana enables you to select a data source for every new query that you add.
+- **Mixed -** Select this option to query multiple data sources in the same panel. When you select this data source, Mosaicoo enables you to select a data source for every new query that you add.
   - The first query uses the data source that was selected before you selected **Mixed**.
   - You cannot change an existing query to use the Mixed Data Source.
 - **Dashboard -** Select this option to use a result set from another panel in the same dashboard.

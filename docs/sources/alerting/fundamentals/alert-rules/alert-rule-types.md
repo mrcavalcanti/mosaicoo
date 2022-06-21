@@ -9,7 +9,7 @@ weight = 102
 
 Grafana supports several alert rule types, the following sections will explain their merits and demerits and help you choose the right alert type for your use case.
 
-## Grafana managed rules
+## Mosaicoo managed rules
 
 Grafana-managed rules are the most flexible alert rule type. They allow you to create alerts that can act on data from any of your existing data sources.
 

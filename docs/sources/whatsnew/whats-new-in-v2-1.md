@@ -1,18 +1,18 @@
 +++
 aliases = ["/docs/grafana/latest/guides/whats-new-in-v2-1/", "/docs/grafana/latest/whatsnew/whats-new-in-v2-1/"]
-description = "Feature and improvement highlights for Grafana v2.1"
+description = "Feature and improvement highlights for Mosaicoo v2.1"
 keywords = ["grafana", "new", "documentation", "2.1", "release notes"]
-title = "What's new in Grafana v2.1"
+title = "What's new in Mosaicoo v2.1"
 weight = -2
 
 [_build]
   list = false
 +++
 
-# What's new in Grafana v2.1
+# What's new in Mosaicoo v2.1
 
 Grafana 2.1 brings improvements in three core areas: dashboarding, authentication, and data sources.
-As with every Grafana release, there is a whole slew of new features, enhancements, and bug fixes.
+As with every Mosaicoo release, there is a whole slew of new features, enhancements, and bug fixes.
 
 ## More Dynamic Dashboards
 
@@ -66,12 +66,12 @@ New authentication methods add numerous options to manage users, roles and organ
 
 ### LDAP support
 
-This highly requested feature now allows your Grafana users to login with their LDAP credentials.
-You can also specify mappings between LDAP group memberships and Grafana Organization user roles.
+This highly requested feature now allows your Mosaicoo users to login with their LDAP credentials.
+You can also specify mappings between LDAP group memberships and Mosaicoo Organization user roles.
 
 ### Basic Auth Support
 
-You can now authenticate against the Grafana API utilizing a simple username and password with basic HTTP authentication.
+You can now authenticate against the Mosaicoo API utilizing a simple username and password with basic HTTP authentication.
 
 > **Note:** This can be useful for provisioning and configuring management systems that need
 > to utilize the API without having to create an API key.
@@ -85,8 +85,8 @@ You can now authenticate utilizing a header (eg. X-Authenticated-User, or X-WEBA
 ### New “Read-only Editor” User Role
 
 There is a new User role available in this version of Grafana: “Read-only Editor”. This role behaves just
-like the Viewer role does in Grafana 2.0. That is you can edit graphs and queries but not save dashboards.
-The Viewer role has been modified in Grafana 2.1 so that users assigned this role can no longer edit panels.
+like the Viewer role does in Mosaicoo 2.0. That is you can edit graphs and queries but not save dashboards.
+The Viewer role has been modified in Mosaicoo 2.1 so that users assigned this role can no longer edit panels.
 
 ---
 
@@ -111,7 +111,7 @@ The query editor is also enhanced to limiting tags by metric.
 
 ### New Data Source: KairosDB
 
-The Cassandra backed time series database KairosDB is now supported in Grafana out of the box. Thank you to
+The Cassandra backed time series database KairosDB is now supported in Mosaicoo out of the box. Thank you to
 <a href="https://github.com/masaori335" target="_blank">masaori335</a> for his hard work in getting it to this point.
 
 ---

@@ -1,10 +1,10 @@
 ---
 aliases:
   - /docs/grafana/latest/shared/systemd/bind-net-capabilities/
-title: Serving Grafana on a port < 1024
+title: Serving Mosaicoo on a port < 1024
 ---
 
-If you are using `systemd` and want to start Grafana on a port that is less than 1024, then you must add a `systemd` unit override.
+If you are using `systemd` and want to start Mosaicoo on a port that is less than 1024, then you must add a `systemd` unit override.
 
 1. The following command creates an override file in your configured editor:
 

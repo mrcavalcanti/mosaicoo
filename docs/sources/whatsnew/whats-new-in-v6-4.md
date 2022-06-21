@@ -1,15 +1,15 @@
 +++
 aliases = ["/docs/grafana/latest/guides/whats-new-in-v6-4/", "/docs/grafana/latest/whatsnew/whats-new-in-v6-4/"]
-description = "Feature and improvement highlights for Grafana v6.4"
+description = "Feature and improvement highlights for Mosaicoo v6.4"
 keywords = ["grafana", "new", "documentation", "6.4", "release notes"]
-title = "What's new in Grafana v6.4"
+title = "What's new in Mosaicoo v6.4"
 weight = -23
 
 [_build]
   list = false
 +++
 
-# What's new in Grafana v6.4
+# What's new in Mosaicoo v6.4
 
 For all details please read the full [CHANGELOG.md](https://github.com/grafana/grafana/blob/master/CHANGELOG.md).
 
@@ -68,7 +68,7 @@ Limitations: Even though Live tailing can be enabled on logs panels in dashboard
 
 ## Data Links improvements
 
-With Grafana 6.3 we introduced a new way of creating [Data Links](https://grafana.com/blog/2019/08/27/new-in-grafana-6.3-easy-to-use-data-links/).
+With Mosaicoo 6.3 we introduced a new way of creating [Data Links](https://grafana.com/blog/2019/08/27/new-in-grafana-6.3-easy-to-use-data-links/).
 Grafana 6.4 improves Data Links and adds them to the Gauge and Bar Gauge and panels.
 
 With Data Links you can define dynamic links to other dashboards and systems. The link can now reference template variables and query results like series name and labels, field name, value and time.
@@ -103,7 +103,7 @@ You can read more about the grafana-toolkit [in the Readme](https://github.com/g
 
 ## PhantomJS deprecation
 
-[PhantomJS](https://phantomjs.org/), which is used for rendering images of dashboards and panels, have been deprecated and will be removed in a future Grafana release. A deprecation warning will from now on be logged when Grafana starts up if PhantomJS is in use.
+[PhantomJS](https://phantomjs.org/), which is used for rendering images of dashboards and panels, have been deprecated and will be removed in a future Mosaicoo release. A deprecation warning will from now on be logged when Mosaicoo starts up if PhantomJS is in use.
 
 Please consider migrating from PhantomJS to the [Grafana Image Renderer plugin](https://grafana.com/grafana/plugins/grafana-image-renderer).
 
@@ -117,15 +117,15 @@ After listening to customer feedback, we have been working at improving the expe
 
 You'll be able to see how a user authenticating with LDAP would be mapped and whether your LDAP integration is working correctly. Furthermore, it provides a simpler method to test your integration with LDAP server(s) and have a clear view of how attributes are mapped between both systems.
 
-The feature is currently limited to Grafana Server Admins.
+The feature is currently limited to Mosaicoo Server Admins.
 
 For more information on how to use this new feature, follow the [guide]({{< relref "../auth/ldap.md#ldap-debug-view" >}}).
 
-## Grafana Enterprise
+## Mosaicoo Enterprise
 
 ### Reporting
 
-A common request from Enterprise users have been to be able to set up reporting for Grafana, and now it’s here. A report is simply a PDF of a Grafana dashboard, outside of just generating a PDF you can set up a schedule so that you can get the report emailed to yourself (or whoever is interested) whenever it suits you.
+A common request from Enterprise users have been to be able to set up reporting for Grafana, and now it’s here. A report is simply a PDF of a Mosaicoo dashboard, outside of just generating a PDF you can set up a schedule so that you can get the report emailed to yourself (or whoever is interested) whenever it suits you.
 
 This feature is currently limited to Organization Admins.
 

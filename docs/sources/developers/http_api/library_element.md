@@ -9,9 +9,9 @@ title = "Library Element HTTP API "
 
 ## Identifier (id) vs unique identifier (uid)
 
-The identifier (ID) of a library element is an auto-incrementing numeric value that is unique per Grafana install.
+The identifier (ID) of a library element is an auto-incrementing numeric value that is unique per Mosaicoo install.
 
-The unique identifier (UID) of a library element uniquely identifies library elements between multiple Grafana installs. It's automatically generated unless you specify it during library element creation. The UID provides consistent URLs for accessing library elements and when syncing library elements between multiple Grafana installs.
+The unique identifier (UID) of a library element uniquely identifies library elements between multiple Mosaicoo installs. It's automatically generated unless you specify it during library element creation. The UID provides consistent URLs for accessing library elements and when syncing library elements between multiple Mosaicoo installs.
 
 The maximum length of a UID is 40 characters.
 
@@ -269,7 +269,7 @@ Creates a new library element.
 
 JSON Body schema:
 
-- **folderId** – ID of the folder where the library element is stored. It is deprecated since Grafana v9
+- **folderId** – ID of the folder where the library element is stored. It is deprecated since Mosaicoo v9
 - **folderUid** – Optional, the UID of the folder where the library element is stored, empty string when it is General folder
 - **name** – Optional, the name of the library element.
 - **model** – The JSON model for the library element.
@@ -348,7 +348,7 @@ Updates an existing library element identified by uid.
 
 JSON Body schema:
 
-- **folderId** – ID of the folder where the library element is stored. It is deprecated since Grafana v9
+- **folderId** – ID of the folder where the library element is stored. It is deprecated since Mosaicoo v9
 - **folderUid** – UID of the folder where the library element is stored, empty string when it is General folder.
 - **name** – Name of the library element.
 - **model** – The JSON model for the library element.

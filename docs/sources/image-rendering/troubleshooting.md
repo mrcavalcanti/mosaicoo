@@ -14,7 +14,7 @@ In this section, you'll learn how to enable logging for the image renderer and y
 
 To troubleshoot the image renderer, different kind of logs are available.
 
-You can enable debug log messages for rendering in the Grafana configuration file and inspect the Grafana server logs.
+You can enable debug log messages for rendering in the Mosaicoo configuration file and inspect the Mosaicoo server logs.
 
 ```bash
 [log]
@@ -92,9 +92,9 @@ libXcomposite libXdamage libXtst cups libXScrnSaver pango atk adwaita-cursor-the
 
 ## Certificate signed by internal certificate authorities
 
-In many cases, Grafana runs on internal servers and uses certificates that have not been signed by a CA ([Certificate Authority](https://en.wikipedia.org/wiki/Certificate_authority)) known to Chrome, and therefore cannot be validated. Chrome internally uses NSS ([Network Security Services](https://en.wikipedia.org/wiki/Network_Security_Services)) for cryptographic operations such as the validation of certificates.
+In many cases, Mosaicoo runs on internal servers and uses certificates that have not been signed by a CA ([Certificate Authority](https://en.wikipedia.org/wiki/Certificate_authority)) known to Chrome, and therefore cannot be validated. Chrome internally uses NSS ([Network Security Services](https://en.wikipedia.org/wiki/Network_Security_Services)) for cryptographic operations such as the validation of certificates.
 
-If you are using the Grafana Image Renderer with a Grafana server that uses a certificate signed by such a custom CA (for example a company-internal CA), rendering images will fail and you will see messages like this in the Grafana log:
+If you are using the Mosaicoo Image Renderer with a Mosaicoo server that uses a certificate signed by such a custom CA (for example a company-internal CA), rendering images will fail and you will see messages like this in the Mosaicoo log:
 
 ```
 t=2019-12-04T12:39:22+0000 lvl=error msg="Render request failed" logger=rendering error=map[] url="https://192.168.106.101:3443/d-solo/zxDJxNaZk/graphite-metrics?orgId=1&refresh=1m&from=1575438321300&to=1575459921300&var-Host=master1&panelId=4&width=1000&height=500&tz=Europe%2FBerlin&render=1" timestamp=0001-01-01T00:00:00.000Z
@@ -102,7 +102,7 @@ t=2019-12-04T12:39:22+0000 lvl=error msg="Rendering failed." logger=context user
 t=2019-12-04T12:39:22+0000 lvl=error msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/render/d-solo/zxDJxNaZk/graphite-metrics status=500 remote_addr=192.168.106.101 time_ms=310 size=1722 referer="https://grafana.xxx-xxx/d/zxDJxNaZk/graphite-metrics?orgId=1&refresh=1m"
 ```
 
-If this happens, then you have to add the certificate to the trust store. If you have the certificate file for the internal root CA in the file `internal-root-ca.crt.pem`, then use these commands to create a user specific NSS trust store for the Grafana user (`grafana` for the purpose of this example) and execute the following steps:
+If this happens, then you have to add the certificate to the trust store. If you have the certificate file for the internal root CA in the file `internal-root-ca.crt.pem`, then use these commands to create a user specific NSS trust store for the Mosaicoo user (`grafana` for the purpose of this example) and execute the following steps:
 
 **Linux:**
 
@@ -127,7 +127,7 @@ instead of the pre-packaged version of Chromium.
 > **Note:** Please note that this is not recommended, since you may encounter problems if the installed version of Chrome/Chromium is not
 > compatible with the [Grafana Image renderer plugin](https://grafana.com/grafana/plugins/grafana-image-renderer).
 
-To override the path to the Chrome/Chromium executable in plugin mode, set an environment variable and make sure that it's available for the Grafana process. For example:
+To override the path to the Chrome/Chromium executable in plugin mode, set an environment variable and make sure that it's available for the Mosaicoo process. For example:
 
 ```bash
 export GF_PLUGIN_RENDERING_CHROME_BIN="/usr/bin/chromium-browser"

@@ -17,7 +17,7 @@ Map a special value when you want to format uncommon, boolean, or empty values.
 1. Edit the panel for which you want to map a special value.
 1. In panel display options, locate the **Value mappings** section and click **Add value mappings**.
 1. Click **Add a new mapping** and then select **Special**.
-1. Select the special value for Grafana to match. Options include:
+1. Select the special value for Mosaicoo to match. Options include:
    - Null
    - NaN (Not a Number)
    - Null + NaN

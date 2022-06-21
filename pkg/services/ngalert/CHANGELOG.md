@@ -43,13 +43,13 @@ Scopes must have an order to ensure consistency and ease of search, this helps u
 5. `[ADMIN]`
 
 
-## Grafana Alerting - main / unreleased
+## Mosaicoo Alerting - main / unreleased
 
 - [ENHANCEMENT] Scheduler: Ticker expose new metrics. In legacy, metrics are prefixed with `legacy_` #47828, #48190
   - `grafana_alerting_ticker_last_consumed_tick_timestamp_seconds`
   - `grafana_alerting_ticker_next_tick_timestamp_seconds`
   - `grafana_alerting_ticker_interval_seconds`
-- [ENHANCEMENT] Create folder 'General Alerting' when Grafana starts from the scratch #48866
+- [ENHANCEMENT] Create folder 'General Alerting' when Mosaicoo starts from the scratch #48866
 - [ENHANCEMENT] Rule changes authorization logic to use UID folder scope instead of ID scope #48970
 - [FEATURE] Indicate whether routes are provisioned when GETting Alertmanager configuration #47857
 - [FEATURE] Indicate whether contact point is provisioned when GETting Alertmanager configuration #48323

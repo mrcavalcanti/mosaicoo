@@ -8,7 +8,7 @@ weight = 500
 
 # Generic OAuth authentication
 
-You can configure many different OAuth2 authentication services with Grafana using the generic OAuth2 feature. Examples:
+You can configure many different OAuth2 authentication services with Mosaicoo using the generic OAuth2 feature. Examples:
 
 - [Generic OAuth authentication](#generic-oauth-authentication)
   - [Set up OAuth2 with Auth0](#set-up-oauth2-with-auth0)
@@ -22,7 +22,7 @@ You can configure many different OAuth2 authentication services with Grafana usi
 This callback URL must match the full HTTP address that you use in your browser to access Grafana, but with the suffixed path of `/login/generic_oauth`.
 
 You may have to set the `root_url` option of `[server]` for the callback URL to be
-correct. For example in case you are serving Grafana behind a proxy.
+correct. For example in case you are serving Mosaicoo behind a proxy.
 
 Example config:
 
@@ -57,7 +57,7 @@ You can also specify the SSL/TLS configuration used by the client.
 
 `tls_skip_verify_insecure` controls whether a client verifies the server's certificate chain and host name. If it is true, then SSL/TLS accepts any certificate presented by the server and any host name in that certificate. _You should only use this for testing_, because this mode leaves SSL/TLS susceptible to man-in-the-middle attacks.
 
-Set `empty_scopes` to true to use an empty scope during authentication. By default, Grafana uses `user:email` as scope.
+Set `empty_scopes` to true to use an empty scope during authentication. By default, Mosaicoo uses `user:email` as scope.
 
 ### Email address
 
@@ -65,14 +65,14 @@ Grafana determines a user's email address by querying the OAuth provider until i
 
 1. Check for the presence of an e-mail address via the `email` field encoded in the OAuth `id_token` parameter.
 1. Check for the presence of an e-mail address using the [JMESPath](http://jmespath.org/examples.html) specified via the `email_attribute_path` configuration option. The JSON used for the path lookup is the HTTP response obtained from querying the UserInfo endpoint specified via the `api_url` configuration option.
-   **Note**: Only available in Grafana v6.4+.
-1. Check for the presence of an e-mail address in the `attributes` map encoded in the OAuth `id_token` parameter. By default Grafana will perform a lookup into the attributes map using the `email:primary` key, however, this is configurable and can be adjusted by using the `email_attribute_name` configuration option.
+   **Note**: Only available in Mosaicoo v6.4+.
+1. Check for the presence of an e-mail address in the `attributes` map encoded in the OAuth `id_token` parameter. By default Mosaicoo will perform a lookup into the attributes map using the `email:primary` key, however, this is configurable and can be adjusted by using the `email_attribute_name` configuration option.
 1. Query the `/emails` endpoint of the OAuth provider's API (configured with `api_url`), then check for the presence of an email address marked as a primary address.
 1. If no email address is found in steps (1-4), then the email address of the user is set to an empty string.
 
 ### Roles
 
-Grafana checks for the presence of a role using the [JMESPath](http://jmespath.org/examples.html) specified via the `role_attribute_path` configuration option. The JMESPath is applied to the `id_token` first. If there is no match, then the UserInfo endpoint specified via the `api_url` configuration option is tried next. The result after evaluation of the `role_attribute_path` JMESPath expression should be a valid Grafana role, for example, `Viewer`, `Editor` or `Admin`.
+Grafana checks for the presence of a role using the [JMESPath](http://jmespath.org/examples.html) specified via the `role_attribute_path` configuration option. The JMESPath is applied to the `id_token` first. If there is no match, then the UserInfo endpoint specified via the `api_url` configuration option is tried next. The result after evaluation of the `role_attribute_path` JMESPath expression should be a valid Mosaicoo role, for example, `Viewer`, `Editor` or `Admin`.
 
 For more information, refer to the [JMESPath examples](#jmespath-examples).
 
@@ -80,31 +80,31 @@ For more information, refer to the [JMESPath examples](#jmespath-examples).
 
 Similarly, group mappings are made using [JMESPath](http://jmespath.org/examples.html) with the `groups_attribute_path` configuration option. The `id_token` is attempted first, followed by the UserInfo from the `api_url`. The result of the JMESPath expression should be a string array of groups.
 
-Furthermore, Grafana will check for the presence of at least one of the teams specified via the `team_ids` configuration option using the [JMESPath](http://jmespath.org/examples.html) specified via the `team_ids_attribute_path` configuration option. The JSON used for the path lookup is the HTTP response obtained from querying the Teams endpoint specified via the `teams_url` configuration option (using `/teams` as a fallback endpoint). The result should be a string array of Grafana Team IDs. Using this setting ensures that only certain teams is allowed to authenticate to Grafana using your OAuth provider.
+Furthermore, Mosaicoo will check for the presence of at least one of the teams specified via the `team_ids` configuration option using the [JMESPath](http://jmespath.org/examples.html) specified via the `team_ids_attribute_path` configuration option. The JSON used for the path lookup is the HTTP response obtained from querying the Teams endpoint specified via the `teams_url` configuration option (using `/teams` as a fallback endpoint). The result should be a string array of Mosaicoo Team IDs. Using this setting ensures that only certain teams is allowed to authenticate to Mosaicoo using your OAuth provider.
 
 ### Login
 
 Customize user login using `login_attribute_path` configuration option. Order of operations is as follows:
 
-1. Grafana evaluates the `login_attribute_path` JMESPath expression against the ID token.
-1. If Grafana finds no value, then Grafana evaluates expression against the JSON data obtained from UserInfo endpoint. The UserInfo endpoint URL is specified in the `api_url` configuration option.
+1. Mosaicoo evaluates the `login_attribute_path` JMESPath expression against the ID token.
+1. If Mosaicoo finds no value, then Mosaicoo evaluates expression against the JSON data obtained from UserInfo endpoint. The UserInfo endpoint URL is specified in the `api_url` configuration option.
 
 You can customize the attribute name used to extract the ID token from the returned OAuth token with the `id_token_attribute_name` option.
 
 You can set the user's display name with JMESPath using the `name_attribute_path` configuration option. It operates the same way as the `login_attribute_path` option.
 
-> **Note:** `name_attribute_path` is available in Grafana 7.4+.
+> **Note:** `name_attribute_path` is available in Mosaicoo 7.4+.
 
 ### PKCE
 
-> Available in Grafana v8.3 and later versions.
+> Available in Mosaicoo v8.3 and later versions.
 
 IETF's [RFC 7636](https://datatracker.ietf.org/doc/html/rfc7636)
 introduces "proof key for code exchange" (PKCE) which introduces
 additional protection against some forms of authorization code
 interception attacks. PKCE will be required in [OAuth 2.1](https://datatracker.ietf.org/doc/html/draft-ietf-oauth-v2-1-03).
 
-You can enable PKCE in Grafana by setting `use_pkce` to `true` in the
+You can enable PKCE in Mosaicoo by setting `use_pkce` to `true` in the
 `[auth.generic_oauth]` section.
 
 ```
@@ -171,13 +171,13 @@ allowed_organizations =
 
 1. On the Trust tab, generate a long password and put it into the OpenID Connect Client Secret field.
 
-1. Put the URL to the front page of your Grafana instance into the "Resource Application URL" field.
+1. Put the URL to the front page of your Mosaicoo instance into the "Resource Application URL" field.
 
 1. Add an authorized Redirect URI like https://your-grafana-server/login/generic_oauth
 
 1. Set up permissions, policies, etc. just like any other Centrify app
 
-1. Configure Grafana as follows:
+1. Configure Mosaicoo as follows:
 
    ```bash
    [auth.generic_oauth]
@@ -204,17 +204,17 @@ allowed_organizations =
 
    then:
 
-1. Add an App to the Grafana Connector:
+1. Add an App to the Mosaicoo Connector:
 
    - Display Name: Grafana
 
    then:
 
-1. Under the SSO tab on the Grafana App details page you'll find the Client ID and Client Secret.
+1. Under the SSO tab on the Mosaicoo App details page you'll find the Client ID and Client Secret.
 
    Your OneLogin Domain will match the URL you use to access OneLogin.
 
-   Configure Grafana as follows:
+   Configure Mosaicoo as follows:
 
    ```bash
    [auth.generic_oauth]
@@ -241,7 +241,7 @@ If  the`role_attribute_path` property does not return a role, then the user is 
 
 **Basic example:**
 
-In the following example user will get `Editor` as role when authenticating. The value of the property `role` will be the resulting role if the role is a proper Grafana role, i.e. `Viewer`, `Editor` or `Admin`.
+In the following example user will get `Editor` as role when authenticating. The value of the property `role` will be the resulting role if the role is a proper Mosaicoo role, i.e. `Viewer`, `Editor` or `Admin`.
 
 Payload:
 
@@ -288,9 +288,9 @@ role_attribute_path = contains(info.roles[*], 'admin') && 'Admin' || contains(in
 
 ### Groups mapping
 
-> Available in Grafana Enterprise v8.1 and later versions.
+> Available in Mosaicoo Enterprise v8.1 and later versions.
 
-With Team Sync you can map your Generic OAuth groups to teams in Grafana so that the users are automatically added to the correct teams.
+With Team Sync you can map your Generic OAuth groups to teams in Mosaicoo so that the users are automatically added to the correct teams.
 
 Generic OAuth groups can be referenced by group ID, like `8bab1c86-8fba-33e5-2089-1d1c80ec267d` or `myteam`.
 

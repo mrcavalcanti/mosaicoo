@@ -11,7 +11,7 @@ weight: 60
 
 A service account token is a generated random string that acts as an alternative to a password when authenticating with Grafana’s HTTP API. For more information about service accounts, refer to [About service accounts in Grafana]({{< relref "./about-service-accounts.md" >}}).
 
-You can create a service account token using the Grafana UI or via the API. For more information about creating a service account token via the API, refer to [Create service account tokens using the HTTP API]({{< relref "../../developers/http_api/serviceaccount.md#create-service-account-tokens" >}}).
+You can create a service account token using the Mosaicoo UI or via the API. For more information about creating a service account token via the API, refer to [Create service account tokens using the HTTP API]({{< relref "../../developers/http_api/serviceaccount.md#create-service-account-tokens" >}}).
 
 ## Before you begin
 

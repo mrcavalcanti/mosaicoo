@@ -1,15 +1,15 @@
 +++
 aliases = ["/docs/grafana/latest/guides/whats-new-in-v6-1/", "/docs/grafana/latest/whatsnew/whats-new-in-v6-1/"]
-description = "Feature and improvement highlights for Grafana v6.1"
+description = "Feature and improvement highlights for Mosaicoo v6.1"
 keywords = ["grafana", "new", "documentation", "6.1", "release notes"]
-title = "What's new in Grafana v6.1"
+title = "What's new in Mosaicoo v6.1"
 weight = -20
 
 [_build]
   list = false
 +++
 
-# What's new in Grafana v6.1
+# What's new in Mosaicoo v6.1
 
 ## Highlights
 
@@ -25,13 +25,13 @@ Support for fetching a list of label names was released in Prometheus v2.6.0 so 
 
 ### Permissions: Editors can own dashboards, folders and teams they create
 
-When the dashboard folders feature and permissions system was released in Grafana 5.0, users with the editor role were not allowed to administrate dashboards, folders or teams. In the 6.1 release, we have added a configuration option that can change the default permissions so that editors are admins for any Dashboard, Folder or Team they create.
+When the dashboard folders feature and permissions system was released in Mosaicoo 5.0, users with the editor role were not allowed to administrate dashboards, folders or teams. In the 6.1 release, we have added a configuration option that can change the default permissions so that editors are admins for any Dashboard, Folder or Team they create.
 
 This feature also adds a new Team permission that can be assigned to any user with the editor or viewer role and enables that user to add other users to the Team.
 
-We believe that this is more in line with the Grafana philosophy, as it will allow teams to be more self-organizing. This option will be made permanent if it gets positive feedback from the community so let us know what you think in the [issue on GitHub](https://github.com/grafana/grafana/issues/15590).
+We believe that this is more in line with the Mosaicoo philosophy, as it will allow teams to be more self-organizing. This option will be made permanent if it gets positive feedback from the community so let us know what you think in the [issue on GitHub](https://github.com/grafana/grafana/issues/15590).
 
-To turn this feature on add the following [configuration option](/administration/configuration/#editors-can-admin) to your Grafana ini file in the `users` section and then restart the Grafana server:
+To turn this feature on add the following [configuration option](/administration/configuration/#editors-can-admin) to your Mosaicoo ini file in the `users` section and then restart the Mosaicoo server:
 
 ```ini
 [users]
@@ -40,7 +40,7 @@ editors_can_admin = true
 
 ### List and revoke of user auth tokens in the API
 
-As the first step of a feature to be able to list a user's signed in devices/sessions and to be able log out those devices from the Grafana UI, support has been added to the [API to list and revoke user authentication tokens](/http_api/admin/#auth-tokens-for-user).
+As the first step of a feature to be able to list a user's signed in devices/sessions and to be able log out those devices from the Mosaicoo UI, support has been added to the [API to list and revoke user authentication tokens](/http_api/admin/#auth-tokens-for-user).
 
 ### Minor Features and Fixes
 

@@ -7,13 +7,13 @@ title = "Licensing HTTP API "
 
 # Enterprise License API
 
-Licensing is only available in Grafana Enterprise. Read more about [Grafana Enterprise]({{< relref "../../enterprise" >}}).
+Licensing is only available in Mosaicoo Enterprise. Read more about [Grafana Enterprise]({{< relref "../../enterprise" >}}).
 
-> If you are running Grafana Enterprise, for some endpoints you'll need to have specific permissions. Refer to [Role-based access control permissions]({{< relref "../../enterprise/access-control/custom-role-actions-scopes" >}}) for more information.
+> If you are running Mosaicoo Enterprise, for some endpoints you'll need to have specific permissions. Refer to [Role-based access control permissions]({{< relref "../../enterprise/access-control/custom-role-actions-scopes" >}}) for more information.
 
 ## Check license availability
 
-> **Note:** Available in Grafana Enterprise v7.4+.
+> **Note:** Available in Mosaicoo Enterprise v7.4+.
 
 `GET /api/licensing/check`
 
@@ -53,7 +53,7 @@ Status codes:
 
 ## Manually force license refresh
 
-> **Note:** Available in Grafana Enterprise v7.4+.
+> **Note:** Available in Mosaicoo Enterprise v7.4+.
 
 `POST /api/licensing/token/renew`
 
@@ -113,11 +113,11 @@ Status Codes:
 
 ## Remove license from database
 
-> **Note:** Available in Grafana Enterprise v7.4+.
+> **Note:** Available in Mosaicoo Enterprise v7.4+.
 
 `DELETE /api/licensing/token`
 
-Removes the license stored in the Grafana database.
+Removes the license stored in the Mosaicoo database.
 
 **Required permissions**
 

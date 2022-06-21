@@ -6,7 +6,7 @@ aliases:
 description: Learn how to view permissions associated with roles, create custom roles,
   and update and delete roles in Grafana.
 menuTitle: Manage RBAC roles
-title: Manage Grafana RBAC roles
+title: Manage Mosaicoo RBAC roles
 weight: 50
 ---
 
@@ -43,7 +43,7 @@ curl --location --request GET '<grafana_url>/api/access-control/roles/qQui_LCMk'
     "uid": "qQui_LCMk",
     "name": "fixed:users:writer",
     "displayName": "User writer",
-    "description": "Read and update all attributes and settings for all users in Grafana: update user information, read user information, create or enable or disable a user, make a user a Grafana administrator, sign out a user, update a user’s authentication token, or update quotas for all users.",
+    "description": "Read and update all attributes and settings for all users in Grafana: update user information, read user information, create or enable or disable a user, make a user a Mosaicoo administrator, sign out a user, update a user’s authentication token, or update quotas for all users.",
     "global": true,
     "permissions": [
         {
@@ -80,7 +80,7 @@ Refer to the [RBAC HTTP API]({{< relref "../../developers/http_api/access_contro
 
 ## Create custom roles
 
-This section shows you how to create a custom RBAC role using Grafana provisioning and the HTTP API.
+This section shows you how to create a custom RBAC role using Mosaicoo provisioning and the HTTP API.
 
 Create a custom role when basic roles and fixed roles do not meet your permissions requirements.
 
@@ -90,8 +90,8 @@ Create a custom role when basic roles and fixed roles do not meet your permissio
 - Determine which permissions you want to add to the custom role. To see a list of actions and scope, refer to [RBAC permissions actions and scopes]({{< relref "./custom-role-actions-scopes.md" >}}).
 - [Enable role provisioning]({{< relref "./rbac-provisioning" >}}).
 - Ensure that you have permissions to create a custom role.
-  - By default, the Grafana Admin role has permission to create custom roles.
-  - A Grafana Admin can delegate the custom role privilege to another user by creating a custom role with the relevant permissions and adding the `permissions:type:delegate` scope.
+  - By default, the Mosaicoo Admin role has permission to create custom roles.
+  - A Mosaicoo Admin can delegate the custom role privilege to another user by creating a custom role with the relevant permissions and adding the `permissions:type:delegate` scope.
 
 ### Create custom roles using provisioning
 
@@ -104,7 +104,7 @@ File-based provisioning is one method you can use to create custom roles.
 | Attribute     | Description                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 | ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `name`        | A human-friendly identifier for the role that helps administrators understand the purpose of a role. `name` is required and cannot be longer than 190 characters. We recommend that you use ASCII characters. Role names must be unique within an organization.                                                                                                                                                                                    |
-| `uid`         | A unique identifier associated with the role. The UID enables you to change or delete the role. You can either generate a UID yourself, or let Grafana generate one for you. You cannot use the same UID within the same Grafana instance.                                                                                                                                                                                                         |
+| `uid`         | A unique identifier associated with the role. The UID enables you to change or delete the role. You can either generate a UID yourself, or let Mosaicoo generate one for you. You cannot use the same UID within the same Mosaicoo instance.                                                                                                                                                                                                         |
 | `orgId`       | Identifies the organization to which the role belongs. The [default org ID]({{< relref "../../administration/configuration#auto_assign_org_id" >}}) is used if you do not specify `orgId`.                                                                                                                                                                                                                                                         |
 | `global`      | Global roles are not associated with any specific organization, which means that you can reuse them across all organizations. This setting overrides `orgId`.                                                                                                                                                                                                                                                                                      |
 | `displayName` | Human-friendly text that is displayed in the UI. Role display name cannot be longer than 190 ASCII-based characters. For fixed roles, the display name is shown as specified. If you do not set a display name the display name replaces `':'` (a colon) with `' '` (a space).                                                                                                                                                                     |
@@ -115,7 +115,7 @@ File-based provisioning is one method you can use to create custom roles.
 | `state`       | State of the role. Defaults to `present`, but if set to `absent` the role will be removed.                                                                                                                                                                                                                                                                                                                                                         |
 | `force`       | Can be used in addition to state `absent`, to force the removal of a role and all its assignments.                                                                                                                                                                                                                                                                                                                                                 |
 | `from`        | An optional list of roles from which you want to copy permissions.                                                                                                                                                                                                                                                                                                                                                                                 |
-| `permissions` | Provides users access to Grafana resources. For a list of permissions, refer to [RBAC permissions actions and scopes]({{< relref "./rbac-fixed-basic-role-definitions.md" >}}). If you do not know which permissions to assign, you can create and assign roles without any permissions as a placeholder. Using the `from` attribute, you can specify additional permissions or permissions to remove by adding a `state` to your permission list. |
+| `permissions` | Provides users access to Mosaicoo resources. For a list of permissions, refer to [RBAC permissions actions and scopes]({{< relref "./rbac-fixed-basic-role-definitions.md" >}}). If you do not know which permissions to assign, you can create and assign roles without any permissions as a placeholder. Using the `from` attribute, you can specify additional permissions or permissions to remove by adding a `state` to your permission list. |
 
 1. Reload the provisioning configuration file.
 
@@ -188,7 +188,7 @@ roles:
 
 ### Create custom roles using the HTTP API
 
-The following examples show you how to create a custom role using the Grafana HTTP API. For more information about the HTTP API, refer to [Create a new custom role]({{< relref "../../developers/http_api/access_control.md#create-a-new-custom-role" >}}).
+The following examples show you how to create a custom role using the Mosaicoo HTTP API. For more information about the HTTP API, refer to [Create a new custom role]({{< relref "../../developers/http_api/access_control.md#create-a-new-custom-role" >}}).
 
 > **Note:** You cannot create a custom role with permissions that you do not have. For example, if you only have `users:create` permissions, then you cannot create a role that includes other permissions.
 
@@ -268,7 +268,7 @@ If the default basic role definitions do not meet your requirements, you can cha
 The following example modifies the `Grafana Admin` basic role permissions.
 
 - Permissions to list, grant, and revoke roles to teams are removed.
-- Permission to read and write Grafana folders is added.
+- Permission to read and write Mosaicoo folders is added.
 
 ```yaml
 # config file version
@@ -329,7 +329,7 @@ This section describes how to reset the basic roles to their default:
 
 1. As a `Grafana Admin`, call the API endpoint to reset the basic roles to their default. Refer to the [RBAC HTTP API]({{< relref "../../developers/http_api/access_control.md#reset-basic-roles-to-their-default" >}}) for more details.
 
-## Delete a custom role using Grafana provisioning
+## Delete a custom role using Mosaicoo provisioning
 
 Delete a custom role when you no longer need it. When you delete a custom role, the custom role is removed from users and teams to which it is assigned.
 

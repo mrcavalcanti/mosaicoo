@@ -1,6 +1,6 @@
 +++
 title = "Alert rules"
-description = "About Grafana alert rules"
+description = "About Mosaicoo alert rules"
 keywords = ["grafana", "alerting", "rules"]
 weight = 101
 +++

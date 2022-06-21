@@ -8,13 +8,13 @@ weight = 1000
 
 # Using MySQL in Grafana
 
-> Starting from Grafana v5.1 you can name the time column _time_ in addition to earlier supported _time_sec_. Usage of _time_sec_ will eventually be deprecated.
+> Starting from Mosaicoo v5.1 you can name the time column _time_ in addition to earlier supported _time_sec_. Usage of _time_sec_ will eventually be deprecated.
 
 Grafana ships with a built-in MySQL data source plugin that allows you to query and visualize data from a MySQL compatible database.
 
 ## Adding the data source
 
-1. Open the side menu by clicking the Grafana icon in the top header.
+1. Open the side menu by clicking the Mosaicoo icon in the top header.
 1. In the side menu under the `Dashboards` link you should find a link named `Data Sources`.
 1. Click the `+ Add data source` button in the top header.
 1. Select _MySQL_ from the _Type_ dropdown.
@@ -55,7 +55,7 @@ number followed by a valid time identifier, e.g. `1m` (1 minute) or `30s` (30 se
 ### Database User Permissions (Important!)
 
 The database user you specify when you add the data source should only be granted SELECT permissions on
-the specified database and tables you want to query. Grafana does not validate that the query is safe. The query
+the specified database and tables you want to query. Mosaicoo does not validate that the query is safe. The query
 could include any SQL statement. For example, statements like `USE otherdb;` and `DROP TABLE user;` would be
 executed. To protect against this we **Highly** recommend you create a specific mysql user with restricted permissions.
 
@@ -70,7 +70,7 @@ You can use wildcards (`*`) in place of database or table if you want to grant a
 
 ## Query Editor
 
-> Only available in Grafana v5.4+.
+> Only available in Mosaicoo v5.4+.
 
 {{< figure src="/static/img/docs/v54/mysql_query_still.png" class="docs-image--no-shadow" animated-gif="/static/img/docs/v54/mysql_query.gif" >}}
 
@@ -81,9 +81,9 @@ The query editor has a link named `Generated SQL` that shows up after a query ha
 
 ### Select table, time column and metric column (FROM)
 
-When you enter edit mode for the first time or add a new query Grafana will try to prefill the query builder with the first table that has a timestamp column and a numeric column.
+When you enter edit mode for the first time or add a new query Mosaicoo will try to prefill the query builder with the first table that has a timestamp column and a numeric column.
 
-In the FROM field, Grafana will suggest tables that are in the configured database. To select a table or view in another database that your database user has access to you can manually enter a fully qualified name (database.table) like `otherDb.metrics`.
+In the FROM field, Mosaicoo will suggest tables that are in the configured database. To select a table or view in another database that your database user has access to you can manually enter a fully qualified name (database.table) like `otherDb.metrics`.
 
 The Time column field refers to the name of the column holding your time values. Selecting a value for the Metric column field is optional. If a value is selected, the Metric column field will be used as the series name.
 
@@ -115,7 +115,7 @@ If you add any grouping, all selected columns need to have an aggregate function
 
 #### Gap Filling
 
-Grafana can fill in missing values when you group by time. The time function accepts two arguments. The first argument is the time window that you would like to group by, and the second argument is the value you want Grafana to fill missing items with.
+Grafana can fill in missing values when you group by time. The time function accepts two arguments. The first argument is the time window that you would like to group by, and the second argument is the value you want Mosaicoo to fill missing items with.
 
 ### Text Editor Mode (RAW)
 
@@ -137,16 +137,16 @@ To simplify syntax and to allow for dynamic parts, like date range filters, the 
 | `$__timeGroup(dateColumn,'5m')`                       | Will be replaced by an expression usable in GROUP BY clause. For example, *cast(cast(UNIX_TIMESTAMP(dateColumn)/(300) as signed)*300 as signed),\*                                                           |
 | `$__timeGroup(dateColumn,'5m', 0)`                    | Same as above but with a fill parameter so missing points in that series will be added by grafana and 0 will be used as value.                                                                               |
 | `$__timeGroup(dateColumn,'5m', NULL)`                 | Same as above but NULL will be used as value for missing points.                                                                                                                                             |
-| `$__timeGroup(dateColumn,'5m', previous)`             | Same as above but the previous value in that series will be used as fill value if no value has been seen yet NULL will be used (only available in Grafana 5.3+).                                             |
-| `$__timeGroupAlias(dateColumn,'5m')`                  | Will be replaced identical to $\_\_timeGroup but with an added column alias (only available in Grafana 5.3+).                                                                                                |
+| `$__timeGroup(dateColumn,'5m', previous)`             | Same as above but the previous value in that series will be used as fill value if no value has been seen yet NULL will be used (only available in Mosaicoo 5.3+).                                             |
+| `$__timeGroupAlias(dateColumn,'5m')`                  | Will be replaced identical to $\_\_timeGroup but with an added column alias (only available in Mosaicoo 5.3+).                                                                                                |
 | `$__unixEpochFilter(dateColumn)`                      | Will be replaced by a time range filter using the specified column name with times represented as Unix timestamp. For example, _dateColumn > 1494410783 AND dateColumn < 1494497183_                         |
 | `$__unixEpochFrom()`                                  | Will be replaced by the start of the currently active time selection as Unix timestamp. For example, _1494410783_                                                                                            |
 | `$__unixEpochTo()`                                    | Will be replaced by the end of the currently active time selection as Unix timestamp. For example, _1494497183_                                                                                              |
 | `$__unixEpochNanoFilter(dateColumn)`                  | Will be replaced by a time range filter using the specified column name with times represented as nanosecond timestamp. For example, _dateColumn > 1494410783152415214 AND dateColumn < 1494497183142514872_ |
 | `$__unixEpochNanoFrom()`                              | Will be replaced by the start of the currently active time selection as nanosecond timestamp. For example, _1494410783152415214_                                                                             |
 | `$__unixEpochNanoTo()`                                | Will be replaced by the end of the currently active time selection as nanosecond timestamp. For example, _1494497183142514872_                                                                               |
-| `$__unixEpochGroup(dateColumn,'5m', [fillmode])`      | Same as $\_\_timeGroup but for times stored as Unix timestamp (only available in Grafana 5.3+).                                                                                                              |
-| `$__unixEpochGroupAlias(dateColumn,'5m', [fillmode])` | Same as above but also adds a column alias (only available in Grafana 5.3+).                                                                                                                                 |
+| `$__unixEpochGroup(dateColumn,'5m', [fillmode])`      | Same as $\_\_timeGroup but for times stored as Unix timestamp (only available in Mosaicoo 5.3+).                                                                                                              |
+| `$__unixEpochGroupAlias(dateColumn,'5m', [fillmode])` | Same as above but also adds a column alias (only available in Mosaicoo 5.3+).                                                                                                                                 |
 
 We plan to add many more macros. If you have suggestions for what macros you would like to see, please [open an issue](https://github.com/grafana/grafana) in our GitHub repo.
 
@@ -291,7 +291,7 @@ For example, you can have a variable that contains all values for the `hostname`
 SELECT hostname FROM my_host
 ```
 
-A query can return multiple columns and Grafana will automatically create a list from them. For example, the query below will return a list with values from `hostname` and `hostname2`.
+A query can return multiple columns and Mosaicoo will automatically create a list from them. For example, the query below will return a list with values from `hostname` and `hostname2`.
 
 ```sql
 SELECT my_host.hostname, my_other_host.hostname2 FROM my_host JOIN my_other_host ON my_host.city = my_other_host.city
@@ -318,12 +318,12 @@ SELECT hostname FROM my_host  WHERE region IN($region)
 
 #### Using `__searchFilter` to filter results in Query Variable
 
-> Available from Grafana 6.5 and above
+> Available from Mosaicoo 6.5 and above
 
 Using `__searchFilter` in the query field will filter the query result based on what the user types in the dropdown select box.
 When nothing has been entered by the user the default value for `__searchFilter` is `%`.
 
-> Important that you surround the `__searchFilter` expression with quotes as Grafana does not do this for you.
+> Important that you surround the `__searchFilter` expression with quotes as Mosaicoo does not do this for you.
 
 The example below shows how to use `__searchFilter` as part of the query field to enable searching for `hostname` while the user types in the dropdown select box.
 
@@ -335,9 +335,9 @@ SELECT hostname FROM my_host  WHERE hostname LIKE '$__searchFilter'
 
 ### Using Variables in Queries
 
-From Grafana 4.3.0 to 4.6.0, template variables are always quoted automatically so if it is a string value do not wrap them in quotes in where clauses.
+From Mosaicoo 4.3.0 to 4.6.0, template variables are always quoted automatically so if it is a string value do not wrap them in quotes in where clauses.
 
-From Grafana 4.7.0, template variable values are only quoted when the template variable is a `multi-value`.
+From Mosaicoo 4.7.0, template variable values are only quoted when the template variable is a `multi-value`.
 
 If the variable is a multi-value variable then use the `IN` comparison operator rather than `=` to match against multiple values.
 
@@ -394,7 +394,7 @@ WHERE
 
 **Example region query using time and timeend columns with epoch values:**
 
-> Only available in Grafana v6.6+.
+> Only available in Mosaicoo v6.6+.
 
 ```sql
 SELECT
@@ -448,9 +448,9 @@ datasources:
     database: grafana
     user: grafana
     jsonData:
-      maxOpenConns: 0 # Grafana v5.4+
-      maxIdleConns: 2 # Grafana v5.4+
-      connMaxLifetime: 14400 # Grafana v5.4+
+      maxOpenConns: 0 # Mosaicoo v5.4+
+      maxIdleConns: 2 # Mosaicoo v5.4+
+      connMaxLifetime: 14400 # Mosaicoo v5.4+
     secureJsonData:
       password: ${GRAFANA_MYSQL_PASSWORD}
 ```

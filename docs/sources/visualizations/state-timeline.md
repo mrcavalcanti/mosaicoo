@@ -18,7 +18,7 @@ Use these options to refine the visualization.
 
 ### Merge equal consecutive values
 
-Controls whether Grafana merges identical values if they are next to each other.
+Controls whether Mosaicoo merges identical values if they are next to each other.
 
 ### Show values
 

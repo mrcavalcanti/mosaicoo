@@ -1,13 +1,13 @@
 +++
 aliases = ["/docs/grafana/latest/alerting/difference-old-new/", "/docs/grafana/latest/alerting/unified-alerting/difference-old-new/"]
-description = "What's New with Grafana alerts"
+description = "What's New with Mosaicoo alerts"
 draft = true
 keywords = ["grafana", "alerting", "guide"]
-title = "What's new in Grafana alerting"
+title = "What's new in Mosaicoo alerting"
 weight = 108
 +++
 
-# What's new in Grafana alerting
+# What's new in Mosaicoo alerting
 
 Grafana alerting has several enhancements over legacy dashboard alerting.
 
@@ -17,21 +17,21 @@ You can now create alerts that give you system-wide visibility with a single ale
 
 ## Create alerts outside of Dashboards
 
-Unlike legacy dashboard alerts, Grafana alerts allow you to create queries and expressions that combine data from multiple sources in unique ways. You can still link dashboards and panels to alerting rules using their ID and quickly troubleshoot the system under observation.
+Unlike legacy dashboard alerts, Mosaicoo alerts allow you to create queries and expressions that combine data from multiple sources in unique ways. You can still link dashboards and panels to alerting rules using their ID and quickly troubleshoot the system under observation.
 
 Since unified alerts are no longer directly tied to panel queries, they do not include images or query values in the notification email. You can use customized notification templates to view query values.
 
-## Create Loki and Grafana Mimir alerting rules
+## Create Loki and Mosaicoo Mimir alerting rules
 
-In Grafana alerting, you can manage Loki and Grafana Mimir alerting rules using the same UI and API as your Grafana managed alerts.
+In Mosaicoo alerting, you can manage Loki and Mosaicoo Mimir alerting rules using the same UI and API as your Mosaicoo managed alerts.
 
 ## View and search for alerts from Prometheus compatible data sources
 
-Alerts for Prometheus compatible data sources are now listed under the Grafana alerts section. You can search for labels across multiple data sources to quickly find relevant alerts.
+Alerts for Prometheus compatible data sources are now listed under the Mosaicoo alerts section. You can search for labels across multiple data sources to quickly find relevant alerts.
 
 ## Special alerts for alert state NoData and Error
 
-Grafana alerting introduced a new concept of the alert states. When evaluation of an alerting rule produces state NoData or Error, Grafana alerting will generate special alerts that will have the following labels:
+Grafana alerting introduced a new concept of the alert states. When evaluation of an alerting rule produces state NoData or Error, Mosaicoo alerting will generate special alerts that will have the following labels:
 
 - `alertname` with value DatasourceNoData or DatasourceError depending on the state.
 - `rulename` name of the alert rule the special alert belongs to.

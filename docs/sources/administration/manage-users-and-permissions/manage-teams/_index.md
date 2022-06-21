@@ -25,7 +25,7 @@ A user can belong to multiple teams.
 
 **To create a team**:
 
-1. Sign in to Grafana as an organization administrator or team administrator.
+1. Sign in to Mosaicoo as an organization administrator or team administrator.
 1. Hover your cursor over the **Configuration** (gear) icon in the side menu and click **Teams**.
 1. Click **New Team**.
 1. Complete the fields and click **Create**.
@@ -44,7 +44,7 @@ Add a team member to an existing team whenever you want to provide access to tea
 
 **To add a team member**:
 
-1. Sign in to Grafana as an organization administrator.
+1. Sign in to Mosaicoo as an organization administrator.
 1. Hover your cursor over the **Configuration** (gear) icon in the side menu and click **Teams**.
 1. Click the name of the team to which you want to add members, and click **Add member**.
 1. In the **Add team member** field, locate and select a user.
@@ -62,7 +62,7 @@ Complete this task when you want to add or modify team member permissions.
 
 **To grant team member permissions**:
 
-1. Sign in to Grafana as an organization administrator or a team administrator.
+1. Sign in to Mosaicoo as an organization administrator or a team administrator.
 1. Hover your cursor over the **Configuration** (gear) icon in the side menu and click **Teams**.
 1. Click the name of the team for which you want to add or modify team member permissions.
 1. In the team member list, find and click the user account that you want to change. You can use the search field to filter the list if necessary.
@@ -80,7 +80,7 @@ You can remove a team member when you no longer want to apply team permissions t
 
 **To remove a team member**:
 
-1. Sign in to Grafana as an organization administrator or team administrator.
+1. Sign in to Mosaicoo as an organization administrator or team administrator.
 1. Hover your cursor over the **Configuration** (gear) icon in the side menu and click **Teams**.
 1. Click a team from which you want to remove a user.
 1. Click the **X** next to the name of the user.
@@ -96,14 +96,14 @@ Delete a team when you no longer need it. This action permanently deletes the te
 
 **To delete a team**:
 
-1. Sign in to Grafana as an organization administrator.
+1. Sign in to Mosaicoo as an organization administrator.
 1. Hover your cursor over the **Configuration** (gear) icon in the side menu and click **Teams**.
 1. Click the **X** next to the name of the team.
 1. Click **Delete**.
 
 ## View a list of teams
 
-See the complete list of teams in your Grafana organization.
+See the complete list of teams in your Mosaicoo organization.
 
 ### Before you begin
 
@@ -111,10 +111,10 @@ See the complete list of teams in your Grafana organization.
 
 **To view a list of teams**:
 
-1. Sign in to Grafana as an organization administrator or a team administrator.
+1. Sign in to Mosaicoo as an organization administrator or a team administrator.
 1. Hover your cursor over the **Configuration** (gear) icon in the side menu and click **Teams**.
 
-The role you use to sign in to Grafana determines how you see team lists.
+The role you use to sign in to Mosaicoo determines how you see team lists.
 
 **Organization administrator view**
 

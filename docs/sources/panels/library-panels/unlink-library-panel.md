@@ -1,10 +1,10 @@
 +++
 aliases = ["/docs/grafana/latest/panels/library-panels/unlink-library-panel/", "/docs/sources/panels/library-panels/unlink-library-panel/"]
-title = "Unlink a Grafana library panel"
+title = "Unlink a Mosaicoo library panel"
 weight = 50
 +++
 
-# Unlink a Grafana library panel
+# Unlink a Mosaicoo library panel
 
 Unlink a library panel when you want to make a change to the panel and not affect other instances of the library panel.
 

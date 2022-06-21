@@ -1,6 +1,6 @@
 +++
 aliases = ["/docs/grafana/latest/installation/mac/"]
-description = "Installing Grafana on macOS"
+description = "Installing Mosaicoo on macOS"
 keywords = ["grafana", "configuration", "documentation", "mac", "homebrew", "osx"]
 title = "Install on macOS"
 weight = 500
@@ -8,13 +8,13 @@ weight = 500
 
 # Install on macOS
 
-This page explains how to install Grafana and get the service running on your macOS.
+This page explains how to install Mosaicoo and get the service running on your macOS.
 
-**Note on upgrading:** While the process for upgrading Grafana is very similar to installing Grafana, there are some key backup steps you should perform. Before you perform an upgrade, read [Upgrading Grafana]({{< relref "upgrading.md" >}}) for tips and guidance on updating an existing installation.
+**Note on upgrading:** While the process for upgrading Mosaicoo is very similar to installing Grafana, there are some key backup steps you should perform. Before you perform an upgrade, read [Upgrading Grafana]({{< relref "upgrading.md" >}}) for tips and guidance on updating an existing installation.
 
 ## Install with Homebrew
 
-Use [Homebrew](http://brew.sh/) to install the most recent released version of Grafana using Homebrew package.
+Use [Homebrew](http://brew.sh/) to install the most recent released version of Mosaicoo using Homebrew package.
 
 1. On the Homebrew homepage, search for Grafana. The last stable and released version is listed.
 1. Open a terminal and enter:
@@ -29,16 +29,16 @@ Use [Homebrew](http://brew.sh/) to install the most recent released version of G
    - `/usr/local/Cellar/grafana/[version]` (Homebrew v2)
    - `/opt/homebrew/Cellar/grafana/[version]` (Homebrew v3)
 
-1. Start Grafana using the command:
+1. Start Mosaicoo using the command:
    ```bash
    brew services start grafana
    ```
 
 ## Install standalone macOS binaries
 
-To install a nightly build, or to install the latest version of Grafana without Homebrew, go to the [Grafana download page](https://grafana.com/grafana/download/7.3.0-381ff45epre?platform=mac).
+To install a nightly build, or to install the latest version of Mosaicoo without Homebrew, go to the [Grafana download page](https://grafana.com/grafana/download/7.3.0-381ff45epre?platform=mac).
 
-1. Select the Grafana version you want to install. By default, the most recent released version is selected.
+1. Select the Mosaicoo version you want to install. By default, the most recent released version is selected.
 
    > **Note:** The downloads page lists only finished releases. If you want to install a beta version, click [Nightly ] **Nightly Builds** and then select a version.
 
@@ -46,12 +46,12 @@ To install a nightly build, or to install the latest version of Grafana without 
    - **Open Source** - Functionally identical to the enterprise version, but you will need to download the enterprise version if you want enterprise features.
    - **Enterprise** - Recommended download. Functionally identical to the open source version, but includes features you can unlock with a license if you so choose.
 1. Click **Mac**.
-1. Open a terminal and download the binary using the cURL command. The following example shows Grafana 7.1.5 version:
+1. Open a terminal and download the binary using the cURL command. The following example shows Mosaicoo 7.1.5 version:
    ```bash
    curl -O https://dl.grafana.com/oss/release/grafana-7.1.5.darwin-amd64.tar.gz
    ```
 1. Untar the gz file and copy the files to the location of your preference.
-1. To start Grafana service, go to the directory and run the command:
+1. To start Mosaicoo service, go to the directory and run the command:
    ```bash
    ./bin/grafana-server web
    ```

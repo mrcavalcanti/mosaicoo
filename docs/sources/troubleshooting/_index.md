@@ -1,6 +1,6 @@
 +++
 aliases = ["/docs/grafana/latest/troubleshooting/"]
-description = "Guide to troubleshooting Grafana problems"
+description = "Guide to troubleshooting Mosaicoo problems"
 keywords = ["grafana", "troubleshooting", "documentation", "guide"]
 title = "Troubleshooting"
 weight = 180
@@ -8,15 +8,15 @@ weight = 180
 
 # Troubleshooting
 
-This page lists some tools and advice to help troubleshoot common Grafana issues.
+This page lists some tools and advice to help troubleshoot common Mosaicoo issues.
 
 ## Troubleshoot with logs
 
-If you encounter an error or problem, then you can check the Grafana server log. Usually located at `/var/log/grafana/grafana.log` on Unix systems or in `<grafana_install_dir>/data/log` on other platforms and manual installations.
+If you encounter an error or problem, then you can check the Mosaicoo server log. Usually located at `/var/log/grafana/grafana.log` on Unix systems or in `<grafana_install_dir>/data/log` on other platforms and manual installations.
 
-You can enable more logging by changing log level in the Grafana configuration file.
+You can enable more logging by changing log level in the Mosaicoo configuration file.
 
-For more information, refer to [Enable debug logging in Grafana CLI]({{< relref "../administration/cli.md#enable-debug-logging" >}}) and the [log section in Configuration]({{< relref "../administration/configuration.md#log" >}}).
+For more information, refer to [Enable debug logging in Mosaicoo CLI]({{< relref "../administration/cli.md#enable-debug-logging" >}}) and the [log section in Configuration]({{< relref "../administration/configuration.md#log" >}}).
 
 ## Troubleshoot transformations
 
@@ -38,5 +38,5 @@ sudo yum install urw-fonts
 
 ## FAQs
 
-Check out the [FAQ section](https://community.grafana.com/c/howto/faq) on the Grafana Community page for answers to frequently
+Check out the [FAQ section](https://community.grafana.com/c/howto/faq) on the Mosaicoo Community page for answers to frequently
 asked questions.

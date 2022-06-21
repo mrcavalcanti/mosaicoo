@@ -16,7 +16,7 @@ Create an API key when you want to manage your computed workload with a user.
 
 For more information about API keys, refer to [About API keys in Grafana]({{< relref "./about-api-keys.md" >}}).
 
-This topic shows you how to create an API key using the Grafana UI. You can also create an API key using the Grafana HTTP API. For more information about creating API keys via the API, refer to [Create API key via API]({{< relref "../../developers/http_api/create-api-tokens-for-org.md#how-to-create-a-new-organization-and-an-api-token" >}}).
+This topic shows you how to create an API key using the Mosaicoo UI. You can also create an API key using the Mosaicoo HTTP API. For more information about creating API keys via the API, refer to [Create API key via API]({{< relref "../../developers/http_api/create-api-tokens-for-org.md#how-to-create-a-new-organization-and-an-api-token" >}}).
 
 ## Before you begin:
 

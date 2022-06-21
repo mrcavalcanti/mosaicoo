@@ -5,7 +5,7 @@ aliases:
   - /docs/grafana/latest/enterprise/access-control/manage-role-assignments/manage-user-role-assignments/
 description: Learn how to assign RBAC roles to users and teams in Grafana.
 menuTitle: Assign RBAC roles
-title: Assign Grafana RBAC roles
+title: Assign Mosaicoo RBAC roles
 weight: 40
 ---
 
@@ -36,7 +36,7 @@ In both cases, the assignment applies only to the user or team within the affect
 - Ensure that your own user account has the correct permissions:
   - If you are assigning permissions to a user or team within an organization, you must have organization administrator or server administrator permissions.
   - If you are assigning permissions to a user who belongs to multiple organizations, you must have server administrator permissions.
-  - Your Grafana user can also assign fixed role if it has either the `fixed:roles:writer` fixed role assigned to the same organization to which you are assigning RBAC to a user, or a custom role with `users.roles:add` and `users.roles:remove` permissions.
+  - Your Mosaicoo user can also assign fixed role if it has either the `fixed:roles:writer` fixed role assigned to the same organization to which you are assigning RBAC to a user, or a custom role with `users.roles:add` and `users.roles:remove` permissions.
   - Your own user account must have the roles you are granting. For example, if you would like to grant the `fixed:users:writer` role to a team, you must have that role yourself.
 
 <br/>
@@ -65,7 +65,7 @@ In both cases, the assignment applies only to the user or team within the affect
 
 ## Assign fixed or custom roles to a team using provisioning
 
-Instead of using the Grafana role picker, you can use file-based provisioning to assign fixed roles to teams. If you have a large number of teams, provisioning can provide an easier approach to assigning and managing role assignments.
+Instead of using the Mosaicoo role picker, you can use file-based provisioning to assign fixed roles to teams. If you have a large number of teams, provisioning can provide an easier approach to assigning and managing role assignments.
 
 **Before you begin:**
 

@@ -1,4 +1,4 @@
-# Get Grafana help
+# Get Mosaicoo help
 
 ---
 
@@ -8,6 +8,6 @@ If you require further help or support then ask a question in the [Grafana commu
 
 **Please note:**
 
-- The Grafana project uses GitHub mainly for tracking bugs and feature requests.
+- The Mosaicoo project uses GitHub mainly for tracking bugs and feature requests.
 - Do not open an issue just to ask a question. The issue will be closed immediately.
 - Only submit issues for bug reports, feature requests, or enhancements.

@@ -7,9 +7,9 @@ title = "Annotations HTTP API "
 
 # Annotations API
 
-This is the API documentation for the new Grafana Annotations feature released in Grafana 4.6. Annotations are saved in the Grafana database (sqlite, mysql or postgres). Annotations can be organization annotations that can be shown on any dashboard by configuring an annotation data source - they are filtered by tags. Or they can be tied to a panel on a dashboard and are then only shown on that panel.
+This is the API documentation for the new Mosaicoo Annotations feature released in Mosaicoo 4.6. Annotations are saved in the Mosaicoo database (sqlite, mysql or postgres). Annotations can be organization annotations that can be shown on any dashboard by configuring an annotation data source - they are filtered by tags. Or they can be tied to a panel on a dashboard and are then only shown on that panel.
 
-> If you are running Grafana Enterprise, for some endpoints you'll need to have specific permissions. Refer to [Role-based access control permissions]({{< relref "../../enterprise/access-control/custom-role-actions-scopes" >}}) for more information.
+> If you are running Mosaicoo Enterprise, for some endpoints you'll need to have specific permissions. Refer to [Role-based access control permissions]({{< relref "../../enterprise/access-control/custom-role-actions-scopes" >}}) for more information.
 
 ## Find Annotations
 
@@ -92,13 +92,13 @@ Content-Type: application/json
 ]
 ```
 
-> Starting in Grafana v6.4 regions annotations are now returned in one entity that now includes the timeEnd property.
+> Starting in Mosaicoo v6.4 regions annotations are now returned in one entity that now includes the timeEnd property.
 
 ## Create Annotation
 
-Creates an annotation in the Grafana database. The `dashboardId` and `panelId` fields are optional.
+Creates an annotation in the Mosaicoo database. The `dashboardId` and `panelId` fields are optional.
 If they are not specified then an organization annotation is created and can be queried in any dashboard that adds
-the Grafana annotations data source. When creating a region annotation include the timeEnd property.
+the Mosaicoo annotations data source. When creating a region annotation include the timeEnd property.
 
 The format for `time` and `timeEnd` should be epoch numbers in millisecond resolution.
 
@@ -230,7 +230,7 @@ Content-Type: application/json
 
 ## Patch Annotation
 
-> This is available in Grafana 6.0.0-beta2 and above.
+> This is available in Mosaicoo 6.0.0-beta2 and above.
 
 `PATCH /api/annotations/:id`
 

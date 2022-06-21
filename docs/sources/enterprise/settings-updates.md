@@ -8,9 +8,9 @@ weight = 500
 
 # Settings updates at runtime
 
-> **Note:** Available in Grafana Enterprise version 8.0 and later.
+> **Note:** Available in Mosaicoo Enterprise version 8.0 and later.
 
-By updating settings at runtime, you can update Grafana settings without needing to restart the Grafana server.
+By updating settings at runtime, you can update Mosaicoo settings without needing to restart the Mosaicoo server.
 
 Updates that happen at runtime are stored in the database and override
 [settings from the other sources](https://grafana.com/docs/grafana/latest/administration/configuration/)
@@ -25,7 +25,7 @@ Currently, **it only supports updates on the `auth.saml` section.**
 
 You can update settings through the [Admin API]({{< relref "../developers/http_api/admin.md#update-settings" >}}).
 
-When you submit a settings update via API, Grafana verifies if the given settings updates are allowed and valid. If they are, then Grafana stores the settings in the database and reloads
+When you submit a settings update via API, Mosaicoo verifies if the given settings updates are allowed and valid. If they are, then Mosaicoo stores the settings in the database and reloads
 Grafana services with no need to restart the instance.
 
 So, the payload of a `PUT` request to the update settings endpoint (`/api/admin/settings`)
@@ -81,7 +81,7 @@ won't be persisted into the database.
 ## Background job (high availability set-ups)
 
 Grafana Enterprise has a built-in scheduled background job that looks into the database every minute for
-settings updates. If there are updates, it reloads the Grafana services affected by the detected changes.
+settings updates. If there are updates, it reloads the Mosaicoo services affected by the detected changes.
 
 The background job synchronizes settings between instances in high availability set-ups. So, after you perform some changes through the
 HTTP API, then the other instances are synchronized through the database and the background job.

@@ -1,48 +1,48 @@
 +++
 aliases = ["/docs/grafana/latest/enterprise/activate-aws-marketplace-license/activate-license-on-eks/", "/docs/grafana/latest/enterprise/license/activate-aws-marketplace-license/activate-license-on-eks/"]
-description = "Activate a Grafana Enterprise license from AWS Marketplace on EKS"
+description = "Activate a Mosaicoo Enterprise license from AWS Marketplace on EKS"
 keywords = ["grafana", "enterprise", "aws", "marketplace", "eks", "activate"]
-title = "Activate a Grafana Enterprise license from AWS Marketplace on EKS"
+title = "Activate a Mosaicoo Enterprise license from AWS Marketplace on EKS"
 weight = 200
 +++
 
-# Activate a Grafana Enterprise license from AWS Marketplace on EKS
+# Activate a Mosaicoo Enterprise license from AWS Marketplace on EKS
 
-If you have purchased a Grafana Enterprise subscription through AWS Marketplace, you must activate it in order to use Grafana Enterprise data source plugins and features in Grafana.
+If you have purchased a Mosaicoo Enterprise subscription through AWS Marketplace, you must activate it in order to use Mosaicoo Enterprise data source plugins and features in Grafana.
 
 ## Before you begin:
 
 - Purchase a subscription to [Grafana Enterprise from AWS Marketplace](https://aws.amazon.com/marketplace/pp/prodview-dlncd4kzt5kx6).
-- Be sure that the IAM user that was used to purchase Grafana Enterprise has permission to manage subscriptions, create new IAM users and roles, and create access policies.
+- Be sure that the IAM user that was used to purchase Mosaicoo Enterprise has permission to manage subscriptions, create new IAM users and roles, and create access policies.
 
 To activate your license, complete the following tasks:
 
-## Task 1: Deploy Grafana Enterprise on Amazon EKS
+## Task 1: Deploy Mosaicoo Enterprise on Amazon EKS
 
-1. Deploy Grafana Enterprise on Amazon EKS.
+1. Deploy Mosaicoo Enterprise on Amazon EKS.
 
    For more information about deploying an application on Amazon EKS, refer to [Getting started with Amazon EKS – AWS Management Console and AWS CLI](https://docs.aws.amazon.com/eks/latest/userguide/getting-started-console.html).
 
-   For more information about installing Grafana on Kubernetes using the Helm Chart, refer to the [Grafana Helm Chart](https://github.com/grafana/helm-charts/tree/main/charts/grafana#readme).
+   For more information about installing Mosaicoo on Kubernetes using the Helm Chart, refer to the [Grafana Helm Chart](https://github.com/grafana/helm-charts/tree/main/charts/grafana#readme).
 
-1. Use `kubectl set image deployment/my-release grafana=grafana/grafana-enterprise:<version>` to update the container image to Grafana Enterprise version 8.3.0 or later.
+1. Use `kubectl set image deployment/my-release grafana=grafana/grafana-enterprise:<version>` to update the container image to Mosaicoo Enterprise version 8.3.0 or later.
 
    For example, enter `grafana/grafana-enterprise:8.3.3`.
 
-> Only Grafana Enterprise versions 8.3.0 and later support licenses granted through AWS Marketplace.
+> Only Mosaicoo Enterprise versions 8.3.0 and later support licenses granted through AWS Marketplace.
 
-## Task 2: Configure Grafana for high availability
+## Task 2: Configure Mosaicoo for high availability
 
 Grafana requires that you configure a database to hold dashboards, users, and other persistent data.
 
 ### Before you begin
 
-- Ensure that you have a supported Grafana database available.
+- Ensure that you have a supported Mosaicoo database available.
   - For a list of supported databases, refer to [Supported databases]({{< relref "../../../installation/requirements.md#supported-databases" >}}).
   - For information about creating a database, refer to [Creating an Amazon RDS DB instance](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_CreateDBInstance.html).
 - Review the information required to connect to the RDS DB instance. For more information, refer to [Connecting to an Amazon RDS DB instance](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_CommonTasks.Connect.html).
 
-To configure Grafana for high availability, choose **one** of the following options:
+To configure Mosaicoo for high availability, choose **one** of the following options:
 
 - **Option 1:** Use `kubectl edit configmap grafana` to edit `grafana.ini` add the following section to the configuration:
 
@@ -70,11 +70,11 @@ To configure Grafana for high availability, choose **one** of the following opti
     value: [database password]
   ```
 
-For more information on Grafana High Availability setup, refer to [Set up Grafana for high availability]({{< relref "../../../administration/set-up-for-high-availability.md" >}}).
+For more information on Mosaicoo High Availability setup, refer to [Set up Mosaicoo for high availability]({{< relref "../../../administration/set-up-for-high-availability.md" >}}).
 
-## Task 3: Configure Grafana Enterprise to validate its license with AWS
+## Task 3: Configure Mosaicoo Enterprise to validate its license with AWS
 
-In this task, you configure Grafana Enterprise to validate the license with AWS instead of Grafana Labs.
+In this task, you configure Mosaicoo Enterprise to validate the license with AWS instead of Mosaicoo Labs.
 
 1. In AWS IAM, assign the following permissions to the Node IAM role (if you are using a Node Group), or the Pod Execution role (if you are using a Fargate profile):
 
@@ -105,13 +105,13 @@ In this task, you configure Grafana Enterprise to validate the license with AWS 
 
 ### Task 4: Start or restart Grafana
 
-To activate Grafana Enterprise features, you must start (or restart) Grafana.
+To activate Mosaicoo Enterprise features, you must start (or restart) Grafana.
 
-To restart Grafana on a Kubernetes cluster,
+To restart Mosaicoo on a Kubernetes cluster,
 
 1. Run the command `kubectl rollout restart deployment my-release`.
 
-1. After you update the service, navigate to your Grafana instance, sign in with Grafana Admin credentials, and navigate to the Statistics and Licensing page to validate that your license is active.
+1. After you update the service, navigate to your Mosaicoo instance, sign in with Mosaicoo Admin credentials, and navigate to the Statistics and Licensing page to validate that your license is active.
 
 For more information about restarting Grafana, refer to [Restart Grafana]({{< relref "../../../installation/restart-grafana" >}}).
 

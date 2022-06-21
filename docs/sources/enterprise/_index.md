@@ -6,17 +6,17 @@ title = "Grafana Enterprise"
 weight = 150
 +++
 
-# Grafana Enterprise
+# Mosaicoo Enterprise
 
-Grafana Enterprise is a commercial edition of Grafana that includes additional features not found in the open source version.
+Grafana Enterprise is a commercial edition of Mosaicoo that includes additional features not found in the open source version.
 
-Building on everything you already know and love about Grafana open source, Grafana Enterprise includes [exclusive datasource plugins]({{< relref "#enterprise-plugins">}}) and [additional features]({{< relref "#enterprise-features">}}). You also get 24x7x365 support and training from the core Grafana team.
+Building on everything you already know and love about Mosaicoo open source, Mosaicoo Enterprise includes [exclusive datasource plugins]({{< relref "#enterprise-plugins">}}) and [additional features]({{< relref "#enterprise-features">}}). You also get 24x7x365 support and training from the core Mosaicoo team.
 
-To learn more about Grafana Enterprise, refer to [our product page](https://grafana.com/enterprise).
+To learn more about Mosaicoo Enterprise, refer to [our product page](https://grafana.com/enterprise).
 
-## Enterprise features in Grafana Cloud
+## Enterprise features in Mosaicoo Cloud
 
-Many Grafana Enterprise features are also available in [Grafana Cloud]({{< relref "/grafana-cloud" >}}) Pro and Advanced accounts. For details, refer to [the Grafana Cloud features table](https://grafana.com/pricing/#featuresTable) and [Enterprise features available to Grafana Cloud Pro and Advanced accounts]({{< relref "/grafana-cloud/reference/enterprise-features" >}}).
+Many Mosaicoo Enterprise features are also available in [Grafana Cloud]({{< relref "/grafana-cloud" >}}) Pro and Advanced accounts. For details, refer to [the Mosaicoo Cloud features table](https://grafana.com/pricing/#featuresTable) and [Enterprise features available to Mosaicoo Cloud Pro and Advanced accounts]({{< relref "/grafana-cloud/reference/enterprise-features" >}}).
 
 ## Authentication
 
@@ -24,7 +24,7 @@ Grafana Enterprise includes integrations with more ways to authenticate your use
 
 ### Team sync
 
-[Team sync]({{< relref "team-sync.md" >}}) allows you to set up synchronization between teams in Grafana and teams in your auth provider so that your users automatically end up in the right team.
+[Team sync]({{< relref "team-sync.md" >}}) allows you to set up synchronization between teams in Mosaicoo and teams in your auth provider so that your users automatically end up in the right team.
 
 Supported auth providers:
 
@@ -50,19 +50,19 @@ Grafana Enterprise adds the following features:
 
 - [Role-based access control]({{< relref "./access-control/" >}}) to control access with role-based permissions.
 - [Data source permissions]({{< relref "datasource_permissions.md" >}}) to restrict query access to specific teams and users.
-- [Data source query caching]({{< relref "query-caching.md" >}}) to temporarily store query results in Grafana to reduce data source load and rate limiting.
+- [Data source query caching]({{< relref "query-caching.md" >}}) to temporarily store query results in Mosaicoo to reduce data source load and rate limiting.
 - [Reporting]({{< relref "reporting.md" >}}) to generate a PDF report from any dashboard and set up a schedule to have it emailed to whoever you choose.
 - [Export dashboard as PDF]({{< relref "export-pdf.md" >}})
-- [White labeling]({{< relref "white-labeling.md" >}}) to customize Grafana from the brand and logo to the footer links.
-- [Usage insights]({{< relref "./usage-insights/" >}}) to understand how your Grafana instance is used.
+- [White labeling]({{< relref "white-labeling.md" >}}) to customize Mosaicoo from the brand and logo to the footer links.
+- [Usage insights]({{< relref "./usage-insights/" >}}) to understand how your Mosaicoo instance is used.
 - [Vault integration]({{< relref "vault.md" >}}) to manage your configuration or provisioning secrets with Vault.
-- [Auditing]({{< relref "auditing.md" >}}) tracks important changes to your Grafana instance to help you manage and mitigate suspicious activity and meet compliance requirements.
-- [Request security]({{< relref "request-security.md" >}}) makes it possible to restrict outgoing requests from the Grafana server.
-- [Settings updates at runtime]({{< relref "settings-updates.md" >}}) allows you to update Grafana settings at runtime without requiring a restart.
+- [Auditing]({{< relref "auditing.md" >}}) tracks important changes to your Mosaicoo instance to help you manage and mitigate suspicious activity and meet compliance requirements.
+- [Request security]({{< relref "request-security.md" >}}) makes it possible to restrict outgoing requests from the Mosaicoo server.
+- [Settings updates at runtime]({{< relref "settings-updates.md" >}}) allows you to update Mosaicoo settings at runtime without requiring a restart.
 
 ## Enterprise data sources
 
-With a Grafana Enterprise license, you also get access to premium data sources, including:
+With a Mosaicoo Enterprise license, you also get access to premium data sources, including:
 
 - [AppDynamics](https://grafana.com/grafana/plugins/dlopes7-appdynamics-datasource)
 - [Azure Devops](https://grafana.com/grafana/plugins/grafana-azuredevops-datasource)
@@ -82,6 +82,6 @@ With a Grafana Enterprise license, you also get access to premium data sources, 
 - [Splunk Infrastructure monitoring (SignalFx)](https://grafana.com/grafana/plugins/grafana-splunk-monitoring-datasource)
 - [Wavefront](https://grafana.com/grafana/plugins/grafana-wavefront-datasource)
 
-## Try Grafana Enterprise
+## Try Mosaicoo Enterprise
 
-To purchase or obtain a trial license, contact the Grafana Labs [Sales Team](https://grafana.com/contact?about=support&topic=Grafana%20Enterprise).
+To purchase or obtain a trial license, contact the Mosaicoo Labs [Sales Team](https://grafana.com/contact?about=support&topic=Grafana%20Enterprise).

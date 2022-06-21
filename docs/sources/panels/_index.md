@@ -5,7 +5,7 @@ title = "Panels"
 weight = 72
 +++
 
-# About Grafana panels
+# About Mosaicoo panels
 
 The _panel_ is the basic visualization building block in Grafana. Each panel has a query editor specific to the data source selected in the panel. The query editor allows you to extract the perfect visualization to display on the panel.
 

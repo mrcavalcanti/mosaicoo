@@ -156,7 +156,7 @@ See [security announcement](https://community.grafana.com/t/grafana-5-3-3-and-4-
 
 - **Stackdriver**: Fix for missing ngInject [#13511](https://github.com/grafana/grafana/pull/13511)
 - **Permissions**: Fix for broken permissions selector [#13507](https://github.com/grafana/grafana/issues/13507)
-- **Alerting**: Alert reminders deduping not working as expected when running multiple Grafana instances [#13492](https://github.com/grafana/grafana/issues/13492)
+- **Alerting**: Alert reminders deduping not working as expected when running multiple Mosaicoo instances [#13492](https://github.com/grafana/grafana/issues/13492)
 
 # 5.3.0-beta2 (2018-10-01)
 
@@ -192,7 +192,7 @@ See [security announcement](https://community.grafana.com/t/grafana-5-3-3-and-4-
 
 ### New Features
 
-- **LDAP**: Define Grafana Admin permission in ldap group mappings [#2469](https://github.com/grafana/grafana/issues/2496), PR [#12622](https://github.com/grafana/grafana/issues/12622)
+- **LDAP**: Define Mosaicoo Admin permission in ldap group mappings [#2469](https://github.com/grafana/grafana/issues/2496), PR [#12622](https://github.com/grafana/grafana/issues/12622)
 - **LDAP**: Client certificates support [#12805](https://github.com/grafana/grafana/issues/12805), thx [@nyxi](https://github.com/nyxi)
 - **Profile**: List teams that the user is member of in current/active organization [#12476](https://github.com/grafana/grafana/issues/12476)
 - **Configuration**: Allow auto-assigning users to specific organization (other than Main. Org) [#1823](https://github.com/grafana/grafana/issues/1823) [#12801](https://github.com/grafana/grafana/issues/12801), thx [@gzzo](https://github.com/gzzo) and [@ofosos](https://github.com/ofosos)
@@ -209,7 +209,7 @@ See [security announcement](https://community.grafana.com/t/grafana-5-3-3-and-4-
 - **Docker**: Make it possible to set a specific plugin url [#12861](https://github.com/grafana/grafana/pull/12861), thx [ClementGautier](https://github.com/ClementGautier)
 - **GrafanaCli**: Fixed issue with grafana-cli install plugin resulting in corrupt http response from source error. Fixes [#13079](https://github.com/grafana/grafana/issues/13079)
 - **Provisioning**: Should allow one default data source per organization [#12229](https://github.com/grafana/grafana/issues/12229)
-- **GitHub OAuth**: Allow changes of user info at GitHub to be synched to Grafana when signing in [#11818](https://github.com/grafana/grafana/issues/11818), thx [@rwaweber](https://github.com/rwaweber)
+- **GitHub OAuth**: Allow changes of user info at GitHub to be synched to Mosaicoo when signing in [#11818](https://github.com/grafana/grafana/issues/11818), thx [@rwaweber](https://github.com/rwaweber)
 - **OAuth**: Fix overriding tls_skip_verify_insecure using environment variable [#12747](https://github.com/grafana/grafana/issues/12747), thx [@jangaraj](https://github.com/jangaraj)
 - **Prometheus**: Fix graph panel bar width issue in aligned prometheus queries [#12379](https://github.com/grafana/grafana/issues/12379)
 - **Prometheus**: Heatmap - fix unhandled error when some points are missing [#12484](https://github.com/grafana/grafana/issues/12484)
@@ -297,7 +297,7 @@ See [security announcement](https://community.grafana.com/t/grafana-5-2-3-and-4-
 ### Minor
 
 - **Auth Proxy**: Important security fix for whitelist of IP address feature [#12444](https://github.com/grafana/grafana/pull/12444)
-- **UI**: Fix - Grafana footer overlapping page [#12430](https://github.com/grafana/grafana/issues/12430)
+- **UI**: Fix - Mosaicoo footer overlapping page [#12430](https://github.com/grafana/grafana/issues/12430)
 - **Logging**: Errors should be reported before crashing [#12438](https://github.com/grafana/grafana/issues/12438)
 
 # 5.2.0-stable (2018-06-27)
@@ -353,7 +353,7 @@ See [security announcement](https://community.grafana.com/t/grafana-5-2-3-and-4-
 ### New Features
 
 - **Elasticsearch**: Alerting support [#5893](https://github.com/grafana/grafana/issues/5893), thx [@WPH95](https://github.com/WPH95)
-- **Build**: Crosscompile and packages Grafana on arm, windows, linux and darwin [#11920](https://github.com/grafana/grafana/pull/11920), thx [@fg2it](https://github.com/fg2it)
+- **Build**: Crosscompile and packages Mosaicoo on arm, windows, linux and darwin [#11920](https://github.com/grafana/grafana/pull/11920), thx [@fg2it](https://github.com/fg2it)
 - **Login**: Change admin password after first login [#11882](https://github.com/grafana/grafana/issues/11882)
 - **Alert list panel**: Updated to support filtering alerts by name, dashboard title, folder, tags [#11500](https://github.com/grafana/grafana/issues/11500), [#8168](https://github.com/grafana/grafana/issues/8168), [#6541](https://github.com/grafana/grafana/issues/6541)
 
@@ -489,20 +489,20 @@ See [security announcement](https://community.grafana.com/t/grafana-5-2-3-and-4-
 
 # 5.0.4 (2018-03-28)
 
-- **Docker** Can't start Grafana on Kubernetes 1.7.14, 1.8.9, or 1.9.4 [#140 in grafana-docker repo](https://github.com/grafana/grafana-docker/issues/140) thx [@suquant](https://github.com/suquant)
+- **Docker** Can't start Mosaicoo on Kubernetes 1.7.14, 1.8.9, or 1.9.4 [#140 in grafana-docker repo](https://github.com/grafana/grafana-docker/issues/140) thx [@suquant](https://github.com/suquant)
 - **Dashboard** Fixed bug where collapsed panels could not be directly linked to/renderer [#11114](https://github.com/grafana/grafana/issues/11114) & [#11086](https://github.com/grafana/grafana/issues/11086) & [#11296](https://github.com/grafana/grafana/issues/11296)
 - **Dashboard** Provisioning dashboard with alert rules should create alerts [#11247](https://github.com/grafana/grafana/issues/11247)
 - **Snapshots** For snapshots, the Graph panel renders the legend incorrectly on right hand side [#11318](https://github.com/grafana/grafana/issues/11318)
-- **Alerting** Link back to Grafana returns wrong URL if root_path contains sub-path components [#11403](https://github.com/grafana/grafana/issues/11403)
+- **Alerting** Link back to Mosaicoo returns wrong URL if root_path contains sub-path components [#11403](https://github.com/grafana/grafana/issues/11403)
 - **Alerting** Incorrect default value for upload images setting for alert notifiers [#11413](https://github.com/grafana/grafana/pull/11413)
 
 # 5.0.3 (2018-03-16)
 
-- **Mysql**: Mysql panic occurring occasionally upon Grafana dashboard access (a bigger patch than the one in 5.0.2) [#11155](https://github.com/grafana/grafana/issues/11155)
+- **Mysql**: Mysql panic occurring occasionally upon Mosaicoo dashboard access (a bigger patch than the one in 5.0.2) [#11155](https://github.com/grafana/grafana/issues/11155)
 
 # 5.0.2 (2018-03-14)
 
-- **Mysql**: Mysql panic occurring occasionally upon Grafana dashboard access [#11155](https://github.com/grafana/grafana/issues/11155)
+- **Mysql**: Mysql panic occurring occasionally upon Mosaicoo dashboard access [#11155](https://github.com/grafana/grafana/issues/11155)
 - **Dashboards**: Should be possible to browse dashboard using only uid [#11231](https://github.com/grafana/grafana/issues/11231)
 - **Alerting**: Fixes bug where alerts from hidden panels where deleted [#11222](https://github.com/grafana/grafana/issues/11222)
 - **Import**: Fixes bug where dashboards with alerts couldn't be imported [#11227](https://github.com/grafana/grafana/issues/11227)
@@ -534,7 +534,7 @@ See [security announcement](https://community.grafana.com/t/grafana-5-2-3-and-4-
 
 - **Orgs** Unable to switch org when too many orgs listed [#10774](https://github.com/grafana/grafana/issues/10774)
 - **Folders** Make it easier/explicit to access/modify folders using the API [#10630](https://github.com/grafana/grafana/issues/10630)
-- **Dashboard** Scrollbar works incorrectly in Grafana 5.0 Beta4 in some cases [#10982](https://github.com/grafana/grafana/issues/10982)
+- **Dashboard** Scrollbar works incorrectly in Mosaicoo 5.0 Beta4 in some cases [#10982](https://github.com/grafana/grafana/issues/10982)
 - **ElasticSearch** Custom aggregation sizes no longer allowed for Elasticsearch [#10124](https://github.com/grafana/grafana/issues/10124)
 - **oauth** GitHub OAuth with allowed organizations fails to login [#10964](https://github.com/grafana/grafana/issues/10964)
 - **heatmap** Heatmap panel has partially hidden legend [#10793](https://github.com/grafana/grafana/issues/10793)
@@ -574,7 +574,7 @@ See [security announcement](https://community.grafana.com/t/grafana-5-2-3-and-4-
 
 # 5.0.0-beta1 (2018-02-05)
 
-Grafana v5.0 is going to be the biggest and most foundational release Grafana has ever had, coming with a ton of UX improvements, a new dashboard grid engine, dashboard folders, user teams and permissions. Checkout out this [video preview](https://www.youtube.com/watch?v=Izr0IBgoTZQ) of Grafana v5.
+Grafana v5.0 is going to be the biggest and most foundational release Mosaicoo has ever had, coming with a ton of UX improvements, a new dashboard grid engine, dashboard folders, user teams and permissions. Checkout out this [video preview](https://www.youtube.com/watch?v=Izr0IBgoTZQ) of Mosaicoo v5.
 
 ### New Major Features
 
@@ -599,7 +599,7 @@ Grafana v5.0 is going to be the biggest and most foundational release Grafana ha
 
 ## New Dashboard Grid
 
-The new grid engine is a major upgrade for how you can position and move panels. It enables new layouts and a much easier dashboard building experience. The change is backward compatible. So you can upgrade your current version to 5.0 without breaking dashboards, but you cannot downgrade from 5.0 to previous versions. Grafana will automatically upgrade your dashboards to the new schema and position panels to match your existing layout. There might be minor differences in panel height. If you upgrade to 5.0 and for some reason want to rollback to the previous version you can restore dashboards to previous versions using dashboard history. But that should only be seen as an emergency solution.
+The new grid engine is a major upgrade for how you can position and move panels. It enables new layouts and a much easier dashboard building experience. The change is backward compatible. So you can upgrade your current version to 5.0 without breaking dashboards, but you cannot downgrade from 5.0 to previous versions. Mosaicoo will automatically upgrade your dashboards to the new schema and position panels to match your existing layout. There might be minor differences in panel height. If you upgrade to 5.0 and for some reason want to rollback to the previous version you can restore dashboards to previous versions using dashboard history. But that should only be seen as an emergency solution.
 
 Dashboard panels and rows are positioned using a gridPos object `{x: 0, y: 0, w: 24, h: 5}`. Units are in grid dimensions (24 columns, 1 height unit 30px). Rows and Panels objects exist (together) in a flat array directly on the dashboard root object. Rows are not needed for layouts anymore and are mainly there for backward compatibility. Some panel plugins that do not respect their panel height might require an update.
 
@@ -613,8 +613,8 @@ Dashboard panels and rows are positioned using a gridPos object `{x: 0, y: 0, w:
 - **Data Sources**: Its now possible to configure data sources with config files [#1789](https://github.com/grafana/grafana/issues/1789)
 - **Graphite**: Query editor updated to support new query by tag features [#9230](https://github.com/grafana/grafana/issues/9230)
 - **Dashboard history**: New config file option versions_to_keep sets how many versions per dashboard to store, [#9671](https://github.com/grafana/grafana/issues/9671)
-- **Dashboard as cfg**: Load dashboards from file into Grafana on startup/change [#9654](https://github.com/grafana/grafana/issues/9654) [#5269](https://github.com/grafana/grafana/issues/5269)
-- **Prometheus**: Grafana can now send alerts to Prometheus Alertmanager while firing [#7481](https://github.com/grafana/grafana/issues/7481), thx [@Thib17](https://github.com/Thib17) and [@mtanda](https://github.com/mtanda)
+- **Dashboard as cfg**: Load dashboards from file into Mosaicoo on startup/change [#9654](https://github.com/grafana/grafana/issues/9654) [#5269](https://github.com/grafana/grafana/issues/5269)
+- **Prometheus**: Mosaicoo can now send alerts to Prometheus Alertmanager while firing [#7481](https://github.com/grafana/grafana/issues/7481), thx [@Thib17](https://github.com/Thib17) and [@mtanda](https://github.com/mtanda)
 - **Table**: Support multiple table formatted queries in table panel [#9170](https://github.com/grafana/grafana/issues/9170), thx [@davkal](https://github.com/davkal)
 - **Security**: Protect against brute force (frequent) login attempts [#7616](https://github.com/grafana/grafana/issues/7616)
 
@@ -630,7 +630,7 @@ Dashboard panels and rows are positioned using a gridPos object `{x: 0, y: 0, w:
 - **Systemd**: Use systemd notification ready flag [#10024](https://github.com/grafana/grafana/issues/10024), thx [@jgrassler](https://github.com/jgrassler)
 - **GitHub**: Use organizations_url provided from github to verify user belongs in org. [#10111](https://github.com/grafana/grafana/issues/10111), thx
   [@adiletmaratov](https://github.com/adiletmaratov)
-- **Backend**: Fixed bug where Grafana exited before all sub routines where finished [#10131](https://github.com/grafana/grafana/issues/10131)
+- **Backend**: Fixed bug where Mosaicoo exited before all sub routines where finished [#10131](https://github.com/grafana/grafana/issues/10131)
 - **Azure**: Adds support for Azure blob storage as external image stor [#8955](https://github.com/grafana/grafana/issues/8955), thx [@saada](https://github.com/saada)
 - **Telegram**: Add support for inline image uploads to telegram notifier plugin [#9967](https://github.com/grafana/grafana/pull/9967), thx [@rburchell](https://github.com/rburchell)
 
@@ -731,7 +731,7 @@ See [security announcement](https://community.grafana.com/t/grafana-5-2-3-and-4-
 
 - **Annotations**: Add support for creating annotations from graph panel [#8197](https://github.com/grafana/grafana/pull/8197)
 - **GCS**: Adds support for Google Cloud Storage [#8370](https://github.com/grafana/grafana/issues/8370) thx [@chuhlomin](https://github.com/chuhlomin)
-- **Prometheus**: Adds /metrics endpoint for exposing Grafana metrics. [#9187](https://github.com/grafana/grafana/pull/9187)
+- **Prometheus**: Adds /metrics endpoint for exposing Mosaicoo metrics. [#9187](https://github.com/grafana/grafana/pull/9187)
 - **Graph**: Add support for local formatting in axis. [#1395](https://github.com/grafana/grafana/issues/1395), thx [@m0nhawk](https://github.com/m0nhawk)
 - **Jaeger**: Add support for open tracing using jaeger in Grafana. [#9213](https://github.com/grafana/grafana/pull/9213)
 - **Unit types**: New date & time unit types added, useful in singlestat to show dates & times. [#3678](https://github.com/grafana/grafana/issues/3678), [#6710](https://github.com/grafana/grafana/issues/6710), [#2764](https://github.com/grafana/grafana/issues/2764)
@@ -761,7 +761,7 @@ See [security announcement](https://community.grafana.com/t/grafana-5-2-3-and-4-
 
 ## Tech
 
-- **Go**: Grafana is now built using golang 1.9
+- **Go**: Mosaicoo is now built using golang 1.9
 - **Webpack**: Changed from systemjs to webpack (see readme or building from source guide for new build instructions). Systemjs is still used to load plugins but now plugins can only import a limited set of dependencies. See [PLUGIN_DEV.md](https://github.com/grafana/grafana/blob/master/PLUGIN_DEV.md) for more details on how this can effect some plugins.
 
 # 4.5.2 (2017-09-22)
@@ -769,7 +769,7 @@ See [security announcement](https://community.grafana.com/t/grafana-5-2-3-and-4-
 ## Fixes
 
 - **Graphite**: Fix for issues with jsonData & graphiteVersion null errors [#9258](https://github.com/grafana/grafana/issues/9258)
-- **Graphite**: Fix for Grafana internal metrics to Graphite sending NaN values [#9279](https://github.com/grafana/grafana/issues/9279)
+- **Graphite**: Fix for Mosaicoo internal metrics to Graphite sending NaN values [#9279](https://github.com/grafana/grafana/issues/9279)
 - **HTTP API**: Fix for HEAD method requests [#9307](https://github.com/grafana/grafana/issues/9307)
 - **Templating**: Fix for duplicate template variable queries when refresh is set to time range change [#9185](https://github.com/grafana/grafana/issues/9185)
 - **Metrics**: don't write NaN values to graphite [#9279](https://github.com/grafana/grafana/issues/9279)
@@ -782,7 +782,7 @@ See [security announcement](https://community.grafana.com/t/grafana-5-2-3-and-4-
 
 ## Breaking changes
 
-- **Metrics**: The metric structure for internal metrics about Grafana published to graphite has changed. This might break dashboards for internal metrics.
+- **Metrics**: The metric structure for internal metrics about Mosaicoo published to graphite has changed. This might break dashboards for internal metrics.
 
 # 4.5.0 (2017-09-14)
 
@@ -928,7 +928,7 @@ Pull Request: [#8472](https://github.com/grafana/grafana/pull/8472)
 - **Graph**: Support for histograms [#600](https://github.com/grafana/grafana/issues/600)
 - **Prometheus**: Support table response formats (column per label) [#6140](https://github.com/grafana/grafana/issues/6140), thx [@mtanda](https://github.com/mtanda)
 - **Single Stat Panel**: support for non time series data [#6564](https://github.com/grafana/grafana/issues/6564)
-- **Server**: Monitoring Grafana (health check endpoint) [#3302](https://github.com/grafana/grafana/issues/3302)
+- **Server**: Monitoring Mosaicoo (health check endpoint) [#3302](https://github.com/grafana/grafana/issues/3302)
 - **Heatmap**: Heatmap Panel [#7934](https://github.com/grafana/grafana/pull/7934)
 - **Elasticsearch**: histogram aggregation [#3164](https://github.com/grafana/grafana/issues/3164)
 
@@ -1029,13 +1029,13 @@ Pull Request: [#8472](https://github.com/grafana/grafana/pull/8472)
 - **Alerting**: Uploading images for alert notifications is now optional [#7419](https://github.com/grafana/grafana/issues/7419)
 - **Dashboard**: Adds shortcut for collapsing/expanding all rows [#552](https://github.com/grafana/grafana/issues/552), thx [@mtanda](https://github.com/mtanda)
 - **Alerting**: Adds de duping of alert notifications [#7632](https://github.com/grafana/grafana/pull/7632)
-- **Orgs**: Sharing dashboards using Grafana share feature will now redirect to correct org. [#1613](https://github.com/grafana/grafana/issues/1613)
+- **Orgs**: Sharing dashboards using Mosaicoo share feature will now redirect to correct org. [#1613](https://github.com/grafana/grafana/issues/1613)
 - **Pushover**: Add Pushover alert notifications [#7526](https://github.com/grafana/grafana/pull/7526) thx [@devkid](https://github.com/devkid)
 - **Threema**: Add Threema Gateway alert notification integration [#7482](https://github.com/grafana/grafana/pull/7482) thx [@dbrgn](https://github.com/dbrgn)
 
 ## Minor Enhancements
 
-- **Optimization**: Never issue refresh event when Grafana tab is not visible [#7218](https://github.com/grafana/grafana/issues/7218), thx [@mtanda](https://github.com/mtanda)
+- **Optimization**: Never issue refresh event when Mosaicoo tab is not visible [#7218](https://github.com/grafana/grafana/issues/7218), thx [@mtanda](https://github.com/mtanda)
 - **Browser History**: Browser back/forward now works time ranges / zoom, [#7259](https://github.com/grafana/grafana/issues/7259)
 - **Elasticsearch**: Support for Min Doc Count options in Terms aggregation [#7324](https://github.com/grafana/grafana/pull/7324), thx [@lpic10](https://github.com/lpic10)
 - **Elasticsearch**: Term aggregation limit can now be changed in template queries [#7112](https://github.com/grafana/grafana/issues/7112), thx [@FFalcon](https://github.com/FFalcon)
@@ -1055,7 +1055,7 @@ Pull Request: [#8472](https://github.com/grafana/grafana/pull/8472)
 ## Tech
 
 - **Library Upgrade**: Upgraded angularjs from 1.5.8 to 1.6.1 [#7274](https://github.com/grafana/grafana/issues/7274)
-- **Backend**: Grafana is now built using golang 1.8
+- **Backend**: Mosaicoo is now built using golang 1.8
 
 ## Bugfixes
 
@@ -1263,7 +1263,7 @@ Pull Request: [#8472](https://github.com/grafana/grafana/pull/8472)
 - **Singlestat**: Add support for range to text mappings, closes [#1319](https://github.com/grafana/grafana/issues/1319)
 - **Graph**: Adds sort order options for graph tooltip, closes [#1189](https://github.com/grafana/grafana/issues/1189)
 - **Theme**: Add default theme to config file [#5011](https://github.com/grafana/grafana/pull/5011)
-- **Page Footer**: Added page footer with links to docs, shows Grafana version and info if new version is available, closes [#4889](https://github.com/grafana/grafana/pull/4889)
+- **Page Footer**: Added page footer with links to docs, shows Mosaicoo version and info if new version is available, closes [#4889](https://github.com/grafana/grafana/pull/4889)
 - **InfluxDB**: Add spread function, closes [#5211](https://github.com/grafana/grafana/issues/5211)
 - **Scripts**: Use restart instead of start for deb package script, closes [#5282](https://github.com/grafana/grafana/pull/5282)
 - **Logging**: Moved to structured logging lib, and moved to component specific level filters via config file, closes [#4590](https://github.com/grafana/grafana/issues/4590)
@@ -1408,7 +1408,7 @@ slack channel (link to slack channel in readme).
 
 - **Dashboard**: Fixed dashboard panel layout for mobile devices, fixes [#4529](https://github.com/grafana/grafana/issues/4529)
 - **Table Panel**: Fixed issue with table panel sort, fixes [#4532](https://github.com/grafana/grafana/issues/4532)
-- **Page Load Crash**: A data source with null jsonData would make Grafana fail to load page, fixes [#4536](https://github.com/grafana/grafana/issues/4536)
+- **Page Load Crash**: A data source with null jsonData would make Mosaicoo fail to load page, fixes [#4536](https://github.com/grafana/grafana/issues/4536)
 - **Metrics tab**: Fix for missing data source name in data source selector, fixes [#4541](https://github.com/grafana/grafana/issues/4540)
 - **Graph**: Fix legend in table mode with series on right-y axis, fixes [#4551](https://github.com/grafana/grafana/issues/4551), [#1145](https://github.com/grafana/grafana/issues/1145)
 
@@ -1436,9 +1436,9 @@ slack channel (link to slack channel in readme).
 
 - **LDAP**: Support for nested LDAP Groups, closes [#4401](https://github.com/grafana/grafana/issues/4401), [#3808](https://github.com/grafana/grafana/issues/3808)
 - **Sessions**: Support for memcached as session storage, closes [#3458](https://github.com/grafana/grafana/issues/3458)
-- **mysql**: Grafana now supports ssl for mysql, closes [#3584](https://github.com/grafana/grafana/issues/3584)
+- **mysql**: Mosaicoo now supports ssl for mysql, closes [#3584](https://github.com/grafana/grafana/issues/3584)
 - **snapshot**: Annotations are now included in snapshots, closes [#3635](https://github.com/grafana/grafana/issues/3635)
-- **Admin**: Admin can now have global overview of Grafana setup, closes [#3812](https://github.com/grafana/grafana/issues/3812)
+- **Admin**: Admin can now have global overview of Mosaicoo setup, closes [#3812](https://github.com/grafana/grafana/issues/3812)
 - **graph**: Right side legend height is now fixed at row height, closes [#1277](https://github.com/grafana/grafana/issues/1277)
 - **Table**: All content in table panel is now html escaped, closes [#3673](https://github.com/grafana/grafana/issues/3673)
 - **graph**: Template variables can now be used in TimeShift and TimeFrom, closes[#1960](https://github.com/grafana/grafana/issues/1960)
@@ -1525,7 +1525,7 @@ slack channel (link to slack channel in readme).
 
 **User Onboarding**
 
-- Org admin can now send email invites (or invite links) to people who are not yet Grafana users
+- Org admin can now send email invites (or invite links) to people who are not yet Mosaicoo users
 - Sign up flow now supports email verification (if enabled)
 - See [Issue #2353](https://github.com/grafana/grafana/issues/2353) for more info.
 
@@ -1611,7 +1611,7 @@ Grunt & Watch tasks:
 **Data sources**
 
 - [Issue #1525](https://github.com/grafana/grafana/issues/1525). InfluxDB: Full support for InfluxDB 0.9 with new adapted query editor
-- [Issue #2191](https://github.com/grafana/grafana/issues/2191). KariosDB: Grafana now ships with a KariosDB data source plugin, thx @masaori335
+- [Issue #2191](https://github.com/grafana/grafana/issues/2191). KariosDB: Mosaicoo now ships with a KariosDB data source plugin, thx @masaori335
 - [Issue #1177](https://github.com/grafana/grafana/issues/1177). OpenTSDB: Limit tags by metric, OpenTSDB config option tsd.core.meta.enable_realtime_ts must enabled for OpenTSDB lookup api
 - [Issue #1250](https://github.com/grafana/grafana/issues/1250). OpenTSDB: Support for template variable values lookup queries
 
@@ -1771,7 +1771,7 @@ Grafana 2.x is fundamentally different from 1.x; it now ships with an integrated
 
 - [Issue #1438](https://github.com/grafana/grafana/issues/1438). OpenTSDB: Automatic downsample interval passed to OpenTSDB (depends on timespan and graph width)
 - NOTICE, Downsampling is now enabled by default, so if you have not picked a downsample aggregator in your metric query do so or your graphs will be misleading
-- This will make Grafana a lot quicker for OpenTSDB users when viewing large time spans without having to change the downsample interval manually.
+- This will make Mosaicoo a lot quicker for OpenTSDB users when viewing large time spans without having to change the downsample interval manually.
 
 **Tech**
 
@@ -2101,7 +2101,7 @@ Read this [blog post](https://grafana.com/blog/2014/09/11/grafana-1.8.0-rc1-rele
 - Use influxdb aliases to distinguish between multiple columns ([Issue #283](https://github.com/grafana/grafana/issues/283))
 - Correction to ms axis formater, now formats days correctly. ([Issue #189](https://github.com/grafana/grafana/issues/189))
 - Css fix for Firefox and using top menu dropdowns in panel fullscreen / edit mode ([Issue #106](https://github.com/grafana/grafana/issues/106))
-- Browser page title is now Grafana - {{dashboard title}} ([Issue #294](https://github.com/grafana/grafana/issues/294))
+- Browser page title is now Mosaicoo - {{dashboard title}} ([Issue #294](https://github.com/grafana/grafana/issues/294))
 - Disable auto refresh zooming in (every time you change to an absolute time range), refresh will be restored when you change time range back to relative ([Issue #282](https://github.com/grafana/grafana/issues/282))
 - More graphite functions
 
@@ -2127,7 +2127,7 @@ The zip files now contains a sub folder with project name and version prefix. ([
 
 - maxDataPoints must be an integer #184 (thanks @frejsoya for fixing this)
 
-For people who are find Grafana slow for large time spans or high resolution metrics. This is most likely due to graphite returning a large number of datapoints. The maxDataPoints parameter solves this issue. For maxDataPoints to work you need to run the latest graphite-web (some builds of 0.9.12 does not include this feature).
+For people who are find Mosaicoo slow for large time spans or high resolution metrics. This is most likely due to graphite returning a large number of datapoints. The maxDataPoints parameter solves this issue. For maxDataPoints to work you need to run the latest graphite-web (some builds of 0.9.12 does not include this feature).
 
 Read this for more info:
 [Performance for large time spans](https://github.com/torkelo/grafana/wiki/Performance-for-large-time-spans)
@@ -2222,7 +2222,7 @@ Read this for more info:
 ### Fixes
 
 - #45 zero values from graphite was handled as null.
-- #63 Kibana / Grafana on same host would use same localStorage keys, now fixed
+- #63 Kibana / Mosaicoo on same host would use same localStorage keys, now fixed
 - #46 Impossible to edit graph without a name fixed.
 - #24 fix for dashboard search when elastic search is configured to disable \_all field.
 - #38 Improvement to lexer / parser to support pure numeric literals in metric segments

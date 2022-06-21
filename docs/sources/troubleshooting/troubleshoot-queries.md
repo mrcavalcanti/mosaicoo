@@ -1,6 +1,6 @@
 +++
 aliases = ["/docs/grafana/latest/troubleshooting/troubleshoot-queries/"]
-description = "Guide to troubleshooting Grafana queries"
+description = "Guide to troubleshooting Mosaicoo queries"
 keywords = ["grafana", "troubleshooting", "documentation", "guide", "queries"]
 title = "Troubleshoot queries"
 weight = 400

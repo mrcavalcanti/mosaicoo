@@ -7,15 +7,15 @@ title = "Dashboard HTTP API "
 
 # Dashboard API
 
-> If you are running Grafana Enterprise, for some endpoints you'll need to have specific permissions. Refer to [Role-based access control permissions]({{< relref "../../enterprise/access-control/custom-role-actions-scopes" >}}) for more information.
+> If you are running Mosaicoo Enterprise, for some endpoints you'll need to have specific permissions. Refer to [Role-based access control permissions]({{< relref "../../enterprise/access-control/custom-role-actions-scopes" >}}) for more information.
 
 ## Identifier (id) vs unique identifier (uid)
 
-The identifier (id) of a dashboard is an auto-incrementing numeric value and is only unique per Grafana install.
+The identifier (id) of a dashboard is an auto-incrementing numeric value and is only unique per Mosaicoo install.
 
-The unique identifier (uid) of a dashboard can be used for uniquely identify a dashboard between multiple Grafana installs.
+The unique identifier (uid) of a dashboard can be used for uniquely identify a dashboard between multiple Mosaicoo installs.
 It's automatically generated if not provided when creating a dashboard. The uid allows having consistent URLs for accessing
-dashboards and when syncing dashboards between multiple Grafana installs, see [dashboard provisioning]({{< relref "../../administration/provisioning.md#dashboards" >}})
+dashboards and when syncing dashboards between multiple Mosaicoo installs, see [dashboard provisioning]({{< relref "../../administration/provisioning.md#dashboards" >}})
 for more information. This means that changing the title of a dashboard will not break any bookmarked links to that dashboard.
 
 The uid can have a maximum length of 40 characters.
@@ -69,7 +69,7 @@ JSON Body schema:
 - **folderUid** – The UID of the folder to save the dashboard in. Overrides the `folderId`.
 - **overwrite** – Set to true if you want to overwrite existing dashboard with newer version, same dashboard title in folder or same dashboard uid.
 - **message** - Set a commit message for the version history.
-- **refresh** - Set the dashboard refresh interval. If this is lower than [the minimum refresh interval]({{< relref "../../administration/configuration.md#min_refresh_interval" >}}), then Grafana will ignore it and will enforce the minimum refresh interval.
+- **refresh** - Set the dashboard refresh interval. If this is lower than [the minimum refresh interval]({{< relref "../../administration/configuration.md#min_refresh_interval" >}}), then Mosaicoo will ignore it and will enforce the minimum refresh interval.
 
 For adding or updating an alert rule for a dashboard panel the user should declare a
 `dashboard.panels.alert` block.
@@ -241,7 +241,7 @@ Content-Length: 78
   "url":     "/d/cIBgcSjkk/production-overview",
   "status":  "success",
   "version": 1,
-  "slug":    "production-overview" //deprecated in Grafana v5.0
+  "slug":    "production-overview" //deprecated in Mosaicoo v5.0
 }
 ```
 
@@ -320,7 +320,7 @@ Content-Type: application/json
     "url": "/d/cIBgcSjkk/production-overview",
     "folderId": 2,
     "folderUid": "l3KqBxCMz",
-    "slug": "production-overview" //deprecated in Grafana v5.0
+    "slug": "production-overview" //deprecated in Mosaicoo v5.0
   }
 }
 ```

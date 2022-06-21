@@ -1,15 +1,15 @@
 +++
 aliases = ["/docs/grafana/latest/guides/whats-new-in-v4-1/", "/docs/grafana/latest/whatsnew/whats-new-in-v4-1/"]
-description = "Feature and improvement highlights for Grafana v4.1"
+description = "Feature and improvement highlights for Mosaicoo v4.1"
 keywords = ["grafana", "new", "documentation", "4.1.0", "release notes"]
-title = "What's new in Grafana v4.1"
+title = "What's new in Mosaicoo v4.1"
 weight = -8
 
 [_build]
   list = false
 +++
 
-## What's new in Grafana v4.1
+## What's new in Mosaicoo v4.1
 
 - **Graph**: Support for shared tooltip on all graphs as you hover over one graph. [#1578](https://github.com/grafana/grafana/pull/1578), [#6274](https://github.com/grafana/grafana/pull/6274)
 - **Victorops**: Add VictorOps notification integration [#6411](https://github.com/grafana/grafana/issues/6411), thx [@ichekrygin](https://github.com/ichekrygin)
@@ -23,7 +23,7 @@ weight = -8
 
 {{< figure class="float-right"  max-width="60%" src="/static/img/docs/v41/shared_tooltip.gif" caption="Shared tooltip" >}}
 
-Showing the tooltip on all panels at the same time has been a long standing request in Grafana and we are really happy to finally be able to release it.
+Showing the tooltip on all panels at the same time has been a long standing request in Mosaicoo and we are really happy to finally be able to release it.
 You can enable/disable the shared tooltip from the dashboard settings menu or cycle between default, shared tooltip and shared crosshair by pressing Ctrl/Cmd+O.
 
 <div class="clearfix"></div>
@@ -46,8 +46,8 @@ Panels with a help text available have a little indicator in the top left corner
 
 {{< figure class="float-right"  max-width="60%" src="/static/img/docs/v41/cloudwatch_settings.png" caption="Cloudwatch configuration" >}}
 
-In Grafana 4.1.0 you can configure your Cloudwatch data source with `access key` and `secret key` directly in the data source configuration page.
-This enables people to use the Cloudwatch data source without having access to the filesystem where Grafana is running.
+In Mosaicoo 4.1.0 you can configure your Cloudwatch data source with `access key` and `secret key` directly in the data source configuration page.
+This enables people to use the Cloudwatch data source without having access to the filesystem where Mosaicoo is running.
 
 Once the `access key` and `secret key` have been saved the user will no longer be able to view them.
 
@@ -55,7 +55,7 @@ Once the `access key` and `secret key` have been saved the user will no longer b
 
 ## Upgrade and Breaking changes
 
-Elasticsearch 1.x is no longer supported. Please upgrade to Elasticsearch 2.x or 5.x. Otherwise Grafana 4.1.0 contains no breaking changes.
+Elasticsearch 1.x is no longer supported. Please upgrade to Elasticsearch 2.x or 5.x. Otherwise Mosaicoo 4.1.0 contains no breaking changes.
 
 ## Changelog
 
@@ -68,4 +68,4 @@ Head to [v4.1 download page](/download/4_1_0/) for download links and instructio
 
 ## Thanks
 
-A big thanks to all the Grafana users who contribute by submitting PRs, bug reports and feedback!
+A big thanks to all the Mosaicoo users who contribute by submitting PRs, bug reports and feedback!

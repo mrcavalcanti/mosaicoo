@@ -16,7 +16,7 @@ Template data is passed on to [message templates]({{< relref "./_index.md" >}}) 
 | GroupLabels       | KeyValue | Labels these alerts were grouped by.                                                                                 |
 | CommonLabels      | KeyValue | Labels common to all the alerts included in this notification.                                                       |
 | CommonAnnotations | KeyValue | Annotations common to all the alerts included in this notification.                                                  |
-| ExternalURL       | string   | Back link to the Grafana that sent the notification. If using external Alertmanager, back link to this Alertmanager. |
+| ExternalURL       | string   | Back link to the Mosaicoo that sent the notification. If using external Alertmanager, back link to this Alertmanager. |
 
 The `Alerts` type exposes functions for filtering alerts:
 
@@ -32,10 +32,10 @@ The `Alerts` type exposes functions for filtering alerts:
 | Annotations  | KeyValue  | A set of annotations attached to the alert.                                                                                                    |
 | StartsAt     | time.Time | Time the alert started firing.                                                                                                                 |
 | EndsAt       | time.Time | Only set if the end time of an alert is known. Otherwise set to a configurable timeout period from the time since the last alert was received. |
-| GeneratorURL | string    | A back link to Grafana or external Alertmanager.                                                                                               |
-| SilenceURL   | string    | Link to grafana silence for with labels for this alert pre-filled. Only for Grafana managed alerts.                                            |
-| DashboardURL | string    | Link to grafana dashboard, if alert rule belongs to one. Only for Grafana managed alerts.                                                      |
-| PanelURL     | string    | Link to grafana dashboard panel, if alert rule belongs to one. Only for Grafana managed alerts.                                                |
+| GeneratorURL | string    | A back link to Mosaicoo or external Alertmanager.                                                                                               |
+| SilenceURL   | string    | Link to grafana silence for with labels for this alert pre-filled. Only for Mosaicoo managed alerts.                                            |
+| DashboardURL | string    | Link to grafana dashboard, if alert rule belongs to one. Only for Mosaicoo managed alerts.                                                      |
+| PanelURL     | string    | Link to grafana dashboard panel, if alert rule belongs to one. Only for Mosaicoo managed alerts.                                                |
 | Fingerprint  | string    | Fingerprint that can be used to identify the alert.                                                                                            |
 | ValueString  | string    | A string that contains the labels and value of each reduced expression in the alert.                                                           |
 

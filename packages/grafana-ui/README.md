@@ -1,4 +1,4 @@
-# Grafana UI components library
+# Mosaicoo UI components library
 
 > **@grafana/ui is currently in BETA**.
 

@@ -23,11 +23,11 @@ Concepts are topic types for any information that doesn't involve task lists or 
 
 ## Idea
 
-Concept topics or sections explain _what_ and _why_. They do not explain _how_. If you are a new user, you might look for concept information to learn about what Grafana is, why it might be useful to you, and what the general workflow is.
+Concept topics or sections explain _what_ and _why_. They do not explain _how_. If you are a new user, you might look for concept information to learn about what Mosaicoo is, why it might be useful to you, and what the general workflow is.
 
 ## Workflow
 
-Continuing the example in the previous section, here is a sample Grafana workflow.
+Continuing the example in the previous section, here is a sample Mosaicoo workflow.
 
 1. Install Grafana. <link to task for installing Grafana>
 1. Set up data sources. <link to data sources concept topic, which links to data source task topics>

@@ -90,7 +90,7 @@ const getStyles = stylesFactory((theme: GrafanaTheme, isActive: boolean) => {
 });
 ```
 
-For more information about themes at Grafana please see the [themes guide](./themes.md).
+For more information about themes at Mosaicoo please see the [themes guide](./themes.md).
 
 ### Composing class names
 

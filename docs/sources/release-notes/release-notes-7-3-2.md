@@ -1,6 +1,6 @@
 +++
 aliases = ["/docs/grafana/latest/release-notes/release-notes-7-3-2/"]
-title = "Release notes for Grafana 7.3.2"
+title = "Release notes for Mosaicoo 7.3.2"
 
 [_build]
   list = false
@@ -8,7 +8,7 @@ title = "Release notes for Grafana 7.3.2"
 
 <!-- Auto generated do not edit -->
 
-# Release notes for Grafana 7.3.2
+# Release notes for Mosaicoo 7.3.2
 
 ### Features and enhancements
 

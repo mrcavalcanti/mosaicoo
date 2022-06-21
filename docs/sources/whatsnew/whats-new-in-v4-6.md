@@ -1,15 +1,15 @@
 +++
 aliases = ["/docs/grafana/latest/guides/whats-new-in-v4-6/", "/docs/grafana/latest/whatsnew/whats-new-in-v4-6/"]
-description = "Feature and improvement highlights for Grafana v4.6"
+description = "Feature and improvement highlights for Mosaicoo v4.6"
 keywords = ["grafana", "new", "documentation", "4.6", "release notes"]
-title = "What's new in Grafana v4.6"
+title = "What's new in Mosaicoo v4.6"
 weight = -13
 
 [_build]
   list = false
 +++
 
-# What's new in Grafana v4.6
+# What's new in Mosaicoo v4.6
 
 Grafana v4.6 brings many enhancements to Annotations, Cloudwatch and Prometheus. It also adds support for Postgres as metric and table data source!
 
@@ -43,7 +43,7 @@ This makes exploring and filtering Prometheus data much easier.
 ### New Features
 
 - **GCS**: Adds support for Google Cloud Storage [#8370](https://github.com/grafana/grafana/issues/8370) thx [@chuhlomin](https://github.com/chuhlomin)
-- **Prometheus**: Adds /metrics endpoint for exposing Grafana metrics. [#9187](https://github.com/grafana/grafana/pull/9187)
+- **Prometheus**: Adds /metrics endpoint for exposing Mosaicoo metrics. [#9187](https://github.com/grafana/grafana/pull/9187)
 - **Graph**: Add support for local formatting in axis. [#1395](https://github.com/grafana/grafana/issues/1395), thx [@m0nhawk](https://github.com/m0nhawk)
 - **Jaeger**: Add support for open tracing using jaeger in Grafana. [#9213](https://github.com/grafana/grafana/pull/9213)
 - **Unit types**: New date and time unit types added, useful in singlestat to show dates and times. [#3678](https://github.com/grafana/grafana/issues/3678), [#6710](https://github.com/grafana/grafana/issues/6710), [#2764](https://github.com/grafana/grafana/issues/2764)
@@ -60,7 +60,7 @@ This makes exploring and filtering Prometheus data much easier.
 ### Minor Changes
 
 - **SMTP**: Make it possible to set specific EHLO for SMTP client. [#9319](https://github.com/grafana/grafana/issues/9319)
-- **Dataproxy**: Allow Grafana to renegotiate TLS connection [#9250](https://github.com/grafana/grafana/issues/9250)
+- **Dataproxy**: Allow Mosaicoo to renegotiate TLS connection [#9250](https://github.com/grafana/grafana/issues/9250)
 - **HTTP**: set net.Dialer.DualStack to true for all HTTP clients [#9367](https://github.com/grafana/grafana/pull/9367)
 - **Alerting**: Add diff and percent diff as series reducers [#9386](https://github.com/grafana/grafana/pull/9386), thx [@shanhuhai5739](https://github.com/shanhuhai5739)
 - **Slack**: Allow images to be uploaded to slack when Token is present [#7175](https://github.com/grafana/grafana/issues/7175), thx [@xginn8](https://github.com/xginn8)
@@ -71,4 +71,4 @@ This makes exploring and filtering Prometheus data much easier.
 
 ### Tech
 
-- **Go**: Grafana is now built using golang 1.9
+- **Go**: Mosaicoo is now built using golang 1.9

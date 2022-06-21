@@ -8,23 +8,23 @@ weight = 150
 
 # Configuration
 
-Grafana has default and custom configuration files. You can customize your Grafana instance by modifying the custom configuration file or by using environment variables. To see the list of settings for a Grafana instance, refer to [View server settings]({{< relref "view-server/view-server-settings.md" >}}).
+Grafana has default and custom configuration files. You can customize your Mosaicoo instance by modifying the custom configuration file or by using environment variables. To see the list of settings for a Mosaicoo instance, refer to [View server settings]({{< relref "view-server/view-server-settings.md" >}}).
 
-> **Note:** After you add custom options, [uncomment](#remove-comments-in-the-ini-files) the relevant sections of the configuration file. Restart Grafana for your changes to take effect.
+> **Note:** After you add custom options, [uncomment](#remove-comments-in-the-ini-files) the relevant sections of the configuration file. Restart Mosaicoo for your changes to take effect.
 
 ## Configuration file location
 
-The default settings for a Grafana instance are stored in the `$WORKING_DIR/conf/defaults.ini` file. _Do not_ change this file.
+The default settings for a Mosaicoo instance are stored in the `$WORKING_DIR/conf/defaults.ini` file. _Do not_ change this file.
 
 Depending on your OS, your custom configuration file is either the `$WORKING_DIR/conf/defaults.ini` file or the `/usr/local/etc/grafana/grafana.ini` file. The custom configuration file path can be overridden using the `--config` parameter.
 
 ### Linux
 
-If you installed Grafana using the `deb` or `rpm` packages, then your configuration file is located at `/etc/grafana/grafana.ini` and a separate `custom.ini` is not used. This path is specified in the Grafana init.d script using `--config` file parameter.
+If you installed Mosaicoo using the `deb` or `rpm` packages, then your configuration file is located at `/etc/grafana/grafana.ini` and a separate `custom.ini` is not used. This path is specified in the Mosaicoo init.d script using `--config` file parameter.
 
 ### Docker
 
-Refer to [Configure a Grafana Docker image]({{< relref "configure-docker.md" >}}) for information about environmental variables, persistent storage, and building custom Docker images.
+Refer to [Configure a Mosaicoo Docker image]({{< relref "configure-docker.md" >}}) for information about environmental variables, persistent storage, and building custom Docker images.
 
 ### Windows
 
@@ -32,7 +32,7 @@ On Windows, the `sample.ini` file is located in the same directory as `defaults.
 
 ### macOS
 
-By default, the configuration file is located at `/usr/local/etc/grafana/grafana.ini`. For a Grafana instance installed using Homebrew, edit the `grafana.ini` file directly. Otherwise, add a configuration file named `custom.ini` to the `conf` folder to override the settings defined in `conf/defaults.ini`.
+By default, the configuration file is located at `/usr/local/etc/grafana/grafana.ini`. For a Mosaicoo instance installed using Homebrew, edit the `grafana.ini` file directly. Otherwise, add a configuration file named `custom.ini` to the `conf` folder to override the settings defined in `conf/defaults.ini`.
 
 ## Remove comments in the .ini files
 
@@ -82,7 +82,7 @@ export GF_PLUGIN_GRAFANA_IMAGE_RENDERER_RENDERING_IGNORE_HTTPS_ERRORS=true
 
 ## Variable expansion
 
-> **Note:** Only available in Grafana 7.1+.
+> **Note:** Only available in Mosaicoo 7.1+.
 
 If any of your options contains the expression `$__<provider>{<argument>}`
 or `${<environment variable>}`, then they will be processed by Grafana's
@@ -122,18 +122,18 @@ password = $__file{/etc/secrets/gf_sql_password}
 
 The `vault` provider allows you to manage your secrets with [Hashicorp Vault](https://www.hashicorp.com/products/vault).
 
-> Vault provider is only available in Grafana Enterprise v7.1+. For more information, refer to [Vault integration]({{< relref "../enterprise/vault.md" >}}) in [Grafana Enterprise]({{< relref "../enterprise" >}}).
+> Vault provider is only available in Mosaicoo Enterprise v7.1+. For more information, refer to [Vault integration]({{< relref "../enterprise/vault.md" >}}) in [Grafana Enterprise]({{< relref "../enterprise" >}}).
 
 <hr />
 
 ## app_mode
 
-Options are `production` and `development`. Default is `production`. _Do not_ change this option unless you are working on Grafana development.
+Options are `production` and `development`. Default is `production`. _Do not_ change this option unless you are working on Mosaicoo development.
 
 ## instance_name
 
 Set the name of the grafana-server instance. Used in logging, internal metrics, and clustering info. Defaults to: `${HOSTNAME}`, which will be replaced with
-environment variable `HOSTNAME`, if that is empty or does not exist Grafana will try to use system calls to get the machine name.
+environment variable `HOSTNAME`, if that is empty or does not exist Mosaicoo will try to use system calls to get the machine name.
 
 ### force_migration
 
@@ -145,7 +145,7 @@ Force migration will run migrations that might cause data loss. Default is `fals
 
 ### data
 
-Path to where Grafana stores the sqlite3 database (if used), file-based sessions (if used), and other data. This path is usually specified via command line in the init.d script or the systemd service file.
+Path to where Mosaicoo stores the sqlite3 database (if used), file-based sessions (if used), and other data. This path is usually specified via command line in the init.d script or the systemd service file.
 
 **macOS:** The default SQLite database is located at `/usr/local/var/lib/grafana`
 
@@ -156,7 +156,7 @@ How long temporary images in `data` directory should be kept. Defaults to: `24h`
 
 ### logs
 
-Path to where Grafana stores logs. This path is usually specified via command line in the init.d script or the systemd service file. You can override it in the configuration file or in the default environment variable file. However, please note that by overriding this the default log path will be used temporarily until Grafana has fully initialized/started.
+Path to where Mosaicoo stores logs. This path is usually specified via command line in the init.d script or the systemd service file. You can override it in the configuration file or in the default environment variable file. However, please note that by overriding this the default log path will be used temporarily until Mosaicoo has fully initialized/started.
 
 Override log path using the command line argument `cfg:default.paths.logs`:
 
@@ -168,13 +168,13 @@ Override log path using the command line argument `cfg:default.paths.logs`:
 
 ### plugins
 
-Directory where Grafana automatically scans and looks for plugins. For information about manually or automatically installing plugins, refer to [Install Grafana plugins]({{< relref "../plugins/installation.md" >}}).
+Directory where Mosaicoo automatically scans and looks for plugins. For information about manually or automatically installing plugins, refer to [Install Mosaicoo plugins]({{< relref "../plugins/installation.md" >}}).
 
 **macOS:** By default, the Mac plugin location is: `/usr/local/var/lib/grafana/plugins`.
 
 ### provisioning
 
-Folder that contains [provisioning]({{< relref "provisioning.md" >}}) config files that Grafana will apply on startup. Dashboards will be reloaded when the json files changes.
+Folder that contains [provisioning]({{< relref "provisioning.md" >}}) config files that Mosaicoo will apply on startup. Dashboards will be reloaded when the json files changes.
 
 <hr />
 
@@ -190,19 +190,19 @@ The IP address to bind to. If empty will bind to all interfaces
 
 ### http_port
 
-The port to bind to, defaults to `3000`. To use port 80 you need to either give the Grafana binary permission for example:
+The port to bind to, defaults to `3000`. To use port 80 you need to either give the Mosaicoo binary permission for example:
 
 ```bash
 $ sudo setcap 'cap_net_bind_service=+ep' /usr/sbin/grafana-server
 ```
 
-Or redirect port 80 to the Grafana port using:
+Or redirect port 80 to the Mosaicoo port using:
 
 ```bash
 $ sudo iptables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT --to-port 3000
 ```
 
-Another way is to put a web server like Nginx or Apache in front of Grafana and have them proxy requests to Grafana.
+Another way is to put a web server like Nginx or Apache in front of Mosaicoo and have them proxy requests to Grafana.
 
 ### domain
 
@@ -214,30 +214,30 @@ Redirect to correct domain if the host header does not match the domain. Prevent
 
 ### root_url
 
-This is the full URL used to access Grafana from a web browser. This is
+This is the full URL used to access Mosaicoo from a web browser. This is
 important if you use Google or GitHub OAuth authentication (for the
 callback URL to be correct).
 
 > **Note:** This setting is also important if you have a reverse proxy
-> in front of Grafana that exposes it through a subpath. In that
+> in front of Mosaicoo that exposes it through a subpath. In that
 > case add the subpath to the end of this URL setting.
 
 ### serve_from_sub_path
 
-Serve Grafana from subpath specified in `root_url` setting. By default it is set to `false` for compatibility reasons.
+Serve Mosaicoo from subpath specified in `root_url` setting. By default it is set to `false` for compatibility reasons.
 
 By enabling this setting and using a subpath in `root_url` above, e.g.
-`root_url = http://localhost:3000/grafana`, Grafana is accessible on
+`root_url = http://localhost:3000/grafana`, Mosaicoo is accessible on
 `http://localhost:3000/grafana`.
 
 ### router_logging
 
-Set to `true` for Grafana to log all HTTP requests (not just errors). These are logged as Info level events to the Grafana log.
+Set to `true` for Mosaicoo to log all HTTP requests (not just errors). These are logged as Info level events to the Mosaicoo log.
 
 ### static_root_path
 
 The path to the directory where the front end files (HTML, JS, and CSS
-files). Defaults to `public` which is why the Grafana binary needs to be
+files). Defaults to `public` which is why the Mosaicoo binary needs to be
 executed with working directory set to the installation path.
 
 ### enable_gzip
@@ -257,13 +257,13 @@ Path to the certificate key file (if `protocol` is set to `https` or `h2`).
 
 ### socket
 
-Path where the socket should be created when `protocol=socket`. Make sure that Grafana has appropriate permissions before you change this setting.
+Path where the socket should be created when `protocol=socket`. Make sure that Mosaicoo has appropriate permissions before you change this setting.
 
 ### cdn_url
 
-> **Note**: Available in Grafana v7.4 and later versions.
+> **Note**: Available in Mosaicoo v7.4 and later versions.
 
-Specify a full HTTP URL address to the root of your Grafana CDN assets. Grafana will add edition and version paths.
+Specify a full HTTP URL address to the root of your Mosaicoo CDN assets. Mosaicoo will add edition and version paths.
 
 For example, given a cdn url like `https://cdn.myserver.com` grafana will try to load a javascript file from
 `http://cdn.myserver.com/grafana-oss/7.4.0/public/build/app.<hash>.js`.
@@ -279,7 +279,7 @@ Sets the maximum time using a duration format (5s/5m/5ms) before timing out read
 
 Grafana needs a database to store users and dashboards (and other
 things). By default it is configured to use [`sqlite3`](https://www.sqlite.org/index.html) which is an
-embedded database (included in the main Grafana binary).
+embedded database (included in the main Mosaicoo binary).
 
 ### type
 
@@ -292,7 +292,7 @@ For example, for MySQL running on the same host as Grafana: `host = 127.0.0.1:33
 
 ### name
 
-The name of the Grafana database. Leave it set to `grafana` or some
+The name of the Mosaicoo database. Leave it set to `grafana` or some
 other name.
 
 ### user
@@ -367,7 +367,7 @@ Defaults to `private`.
 
 ## [remote_cache]
 
-Caches authentication details and session information in the configured database, Redis or Memcached. This setting does not configure [Query Caching in Grafana Enterprise]({{< relref "../enterprise/query-caching.md" >}}).
+Caches authentication details and session information in the configured database, Redis or Memcached. This setting does not configure [Query Caching in Mosaicoo Enterprise]({{< relref "../enterprise/query-caching.md" >}}).
 
 ### type
 
@@ -414,11 +414,11 @@ Interval between keep-alive probes. Default is `30` seconds. For more details ch
 
 ### tls_handshake_timeout_seconds
 
-The length of time that Grafana will wait for a successful TLS handshake with the datasource. Default is `10` seconds. For more details check the [Transport.TLSHandshakeTimeout](https://golang.org/pkg/net/http/#Transport.TLSHandshakeTimeout) documentation.
+The length of time that Mosaicoo will wait for a successful TLS handshake with the datasource. Default is `10` seconds. For more details check the [Transport.TLSHandshakeTimeout](https://golang.org/pkg/net/http/#Transport.TLSHandshakeTimeout) documentation.
 
 ### expect_continue_timeout_seconds
 
-The length of time that Grafana will wait for a datasource’s first response headers after fully writing the request headers, if the request has an “Expect: 100-continue” header. A value of `0` will result in the body being sent immediately. Default is `1` second. For more details check the [Transport.ExpectContinueTimeout](https://golang.org/pkg/net/http/#Transport.ExpectContinueTimeout) documentation.
+The length of time that Mosaicoo will wait for a datasource’s first response headers after fully writing the request headers, if the request has an “Expect: 100-continue” header. A value of `0` will result in the body being sent immediately. Default is `1` second. For more details check the [Transport.ExpectContinueTimeout](https://golang.org/pkg/net/http/#Transport.ExpectContinueTimeout) documentation.
 
 ### max_conns_per_host
 
@@ -427,17 +427,17 @@ For more details check the [Transport.MaxConnsPerHost](https://golang.org/pkg/ne
 
 ### max_idle_connections
 
-The maximum number of idle connections that Grafana will maintain. Default is `100`. For more details check the [Transport.MaxIdleConns](https://golang.org/pkg/net/http/#Transport.MaxIdleConns) documentation.
+The maximum number of idle connections that Mosaicoo will maintain. Default is `100`. For more details check the [Transport.MaxIdleConns](https://golang.org/pkg/net/http/#Transport.MaxIdleConns) documentation.
 
 ### max_idle_connections_per_host
 
 [Deprecated - use max_idle_connections instead]
 
-The maximum number of idle connections per host that Grafana will maintain. Default is `2`. For more details check the [Transport.MaxIdleConnsPerHost](https://golang.org/pkg/net/http/#Transport.MaxIdleConnsPerHost) documentation.
+The maximum number of idle connections per host that Mosaicoo will maintain. Default is `2`. For more details check the [Transport.MaxIdleConnsPerHost](https://golang.org/pkg/net/http/#Transport.MaxIdleConnsPerHost) documentation.
 
 ### idle_conn_timeout_seconds
 
-The length of time that Grafana maintains idle connections before closing them. Default is `90` seconds. For more details check the [Transport.IdleConnTimeout](https://golang.org/pkg/net/http/#Transport.IdleConnTimeout) documentation.
+The length of time that Mosaicoo maintains idle connections before closing them. Default is `90` seconds. For more details check the [Transport.IdleConnTimeout](https://golang.org/pkg/net/http/#Transport.IdleConnTimeout) documentation.
 
 ### send_user_header
 
@@ -449,7 +449,7 @@ Limits the amount of bytes that will be read/accepted from responses of outgoing
 
 ### row_limit
 
-Limits the number of rows that Grafana will process from SQL (relational) data sources. Default is `1000000`.
+Limits the number of rows that Mosaicoo will process from SQL (relational) data sources. Default is `1000000`.
 
 <hr />
 
@@ -457,7 +457,7 @@ Limits the number of rows that Grafana will process from SQL (relational) data s
 
 ### reporting_enabled
 
-When enabled Grafana will send anonymous usage statistics to
+When enabled Mosaicoo will send anonymous usage statistics to
 `stats.grafana.org`. No IP addresses are being tracked, only simple counters to
 track running instances, versions, dashboard and error counts. It is very helpful
 to us, so please leave this enabled. Counters are sent every 24 hours. Default
@@ -465,17 +465,17 @@ value is `true`.
 
 ### check_for_updates
 
-Set to false, disables checking for new versions of Grafana from Grafana's GitHub repository. When enabled, the check for a new version runs every 10 minutes. It will notify, via the UI, when a new version is available. The check itself will not prompt any auto-updates of the Grafana software, nor will it send any sensitive information.
+Set to false, disables checking for new versions of Mosaicoo from Grafana's GitHub repository. When enabled, the check for a new version runs every 10 minutes. It will notify, via the UI, when a new version is available. The check itself will not prompt any auto-updates of the Mosaicoo software, nor will it send any sensitive information.
 
 ### check_for_plugin_updates
 
-> **Note**: Available in Grafana v8.5.0 and later versions.
+> **Note**: Available in Mosaicoo v8.5.0 and later versions.
 
 Set to false disables checking for new versions of installed plugins from https://grafana.com. When enabled, the check for a new plugin runs every 10 minutes. It will notify, via the UI, when a new plugin update exists. The check itself will not prompt any auto-updates of the plugin, nor will it send any sensitive information.
 
 ### google_analytics_ua_id
 
-If you want to track Grafana usage via Google analytics specify _your_ Universal
+If you want to track Mosaicoo usage via Google analytics specify _your_ Universal
 Analytics ID here. By default this feature is disabled.
 
 ### google_tag_manager_id
@@ -484,7 +484,7 @@ Google Tag Manager ID, only enabled if you enter an ID here.
 
 ### rudderstack_write_key
 
-If you want to track Grafana usage via Rudderstack specify _your_ Rudderstack
+If you want to track Mosaicoo usage via Rudderstack specify _your_ Rudderstack
 Write Key here. The `rudderstack_data_plane_url` must also be provided for this
 feature to be enabled. By default this feature is disabled.
 
@@ -505,7 +505,7 @@ URL to load the Rudderstack config.
 
 ### application_insights_connection_string
 
-If you want to track Grafana usage via Azure Application Insights, then specify _your_ Application Insights connection string. Since the connection string contains semicolons, you need to wrap it in backticks (`). By default, tracking usage is disabled.
+If you want to track Mosaicoo usage via Azure Application Insights, then specify _your_ Application Insights connection string. Since the connection string contains semicolons, you need to wrap it in backticks (`). By default, tracking usage is disabled.
 
 ### application_insights_endpoint_url
 
@@ -521,18 +521,18 @@ If set to false will remove all feedback links from the UI. Defaults to true.
 
 ### disable_initial_admin_creation
 
-> Only available in Grafana v6.5+.
+> Only available in Mosaicoo v6.5+.
 
 Disable creation of admin user on first start of Grafana. Default is `false`.
 
 ### admin_user
 
-The name of the default Grafana Admin user, who has full permissions.
+The name of the default Mosaicoo Admin user, who has full permissions.
 Default is `admin`.
 
 ### admin_password
 
-The password of the default Grafana Admin. Set once on first-run. Default is `admin`.
+The password of the default Mosaicoo Admin. Set once on first-run. Default is `admin`.
 
 ### secret_key
 
@@ -546,7 +546,7 @@ Default is `false`.
 
 ### data_source_proxy_whitelist
 
-Define a whitelist of allowed IP addresses or domains, with ports, to be used in data source URLs with the Grafana data source proxy. Format: `ip_or_domain:port` separated by spaces. PostgreSQL, MySQL, and MSSQL data sources do not use the proxy and are therefore unaffected by this setting.
+Define a whitelist of allowed IP addresses or domains, with ports, to be used in data source URLs with the Mosaicoo data source proxy. Format: `ip_or_domain:port` separated by spaces. PostgreSQL, MySQL, and MSSQL data sources do not use the proxy and are therefore unaffected by this setting.
 
 ### disable_brute_force_login_protection
 
@@ -554,7 +554,7 @@ Set to `true` to disable [brute force login protection](https://cheatsheetseries
 
 ### cookie_secure
 
-Set to `true` if you host Grafana behind HTTPS. Default is `false`.
+Set to `true` if you host Mosaicoo behind HTTPS. Default is `false`.
 
 ### cookie_samesite
 
@@ -562,8 +562,8 @@ Sets the `SameSite` cookie attribute and prevents the browser from sending this 
 
 ### allow_embedding
 
-When `false`, the HTTP header `X-Frame-Options: deny` will be set in Grafana HTTP responses which will instruct
-browsers to not allow rendering Grafana in a `<frame>`, `<iframe>`, `<embed>` or `<object>`. The main goal is to
+When `false`, the HTTP header `X-Frame-Options: deny` will be set in Mosaicoo HTTP responses which will instruct
+browsers to not allow rendering Mosaicoo in a `<frame>`, `<iframe>`, `<embed>` or `<object>`. The main goal is to
 mitigate the risk of [Clickjacking](https://owasp.org/www-community/attacks/Clickjacking). Default is `false`.
 
 ### strict_transport_security
@@ -623,7 +623,7 @@ Set to `false` to disable external snapshot publish endpoint (default `true`).
 
 ### external_snapshot_url
 
-Set root URL to a Grafana instance where you want to publish external snapshots (defaults to https://snapshots.raintank.io).
+Set root URL to a Mosaicoo instance where you want to publish external snapshots (defaults to https://snapshots.raintank.io).
 
 ### external_snapshot_name
 
@@ -631,7 +631,7 @@ Set name for external snapshot button. Defaults to `Publish to snapshots.raintan
 
 ### public_mode
 
-Set to true to enable this Grafana instance to act as an external snapshot server and allow unauthenticated requests for creating and deleting snapshots. Default is `false`.
+Set to true to enable this Mosaicoo instance to act as an external snapshot server and allow unauthenticated requests for creating and deleting snapshots. Default is `false`.
 
 ### snapshot_remove_expired
 
@@ -647,18 +647,18 @@ Number dashboard versions to keep (per dashboard). Default: `20`, Minimum: `1`.
 
 ### min_refresh_interval
 
-> Only available in Grafana v6.7+.
+> Only available in Mosaicoo v6.7+.
 
 This feature prevents users from setting the dashboard refresh interval to a lower value than a given interval value. The default interval value is 5 seconds.
 The interval string is a possibly signed sequence of decimal numbers, followed by a unit suffix (ms, s, m, h, d), e.g. `30s` or `1m`.
 
-As of Grafana v7.3, this also limits the refresh interval options in Explore.
+As of Mosaicoo v7.3, this also limits the refresh interval options in Explore.
 
 ### default_home_dashboard_path
 
-Path to the default home dashboard. If this value is empty, then Grafana uses StaticRootPath + "dashboards/home.json".
+Path to the default home dashboard. If this value is empty, then Mosaicoo uses StaticRootPath + "dashboards/home.json".
 
-> **Note:** On Linux, Grafana uses `/usr/share/grafana/public/dashboards/home.json` as the default home dashboard location.
+> **Note:** On Linux, Mosaicoo uses `/usr/share/grafana/public/dashboards/home.json` as the default home dashboard location.
 
 <hr />
 
@@ -736,13 +736,13 @@ Default is `24h` (24 hours). The minimum supported duration is `15m` (15 minutes
 
 ### hidden_users
 
-This is a comma-separated list of usernames. Users specified here are hidden in the Grafana UI. They are still visible to Grafana administrators and to themselves.
+This is a comma-separated list of usernames. Users specified here are hidden in the Mosaicoo UI. They are still visible to Mosaicoo administrators and to themselves.
 
 <hr>
 
 ## [auth]
 
-Grafana provides many ways to authenticate users. Refer to the Grafana [Authentication overview]({{< relref "../auth/overview.md" >}}) and other authentication documentation for detailed instructions on how to set up and configure authentication.
+Grafana provides many ways to authenticate users. Refer to the Mosaicoo [Authentication overview]({{< relref "../auth/overview.md" >}}) and other authentication documentation for detailed instructions on how to set up and configure authentication.
 
 ### login_cookie_name
 
@@ -796,13 +796,13 @@ Limit of API key seconds to live before expiration. Default is -1 (unlimited).
 
 ### sigv4_auth_enabled
 
-> Only available in Grafana 7.3+.
+> Only available in Mosaicoo 7.3+.
 
 Set to `true` to enable the AWS Signature Version 4 Authentication option for HTTP-based datasources. Default is `false`.
 
 ### sigv4_verbose_logging
 
-> Only available in Grafana 8.4+.
+> Only available in Mosaicoo 8.4+.
 
 Set to `true` to enable verbose request signature logging when AWS Signature Version 4 Authentication is enabled. Default is `false`.
 
@@ -906,7 +906,7 @@ Grafana supports additional integration with Azure services when hosted in the A
 
 ### cloud
 
-Azure cloud environment where Grafana is hosted:
+Azure cloud environment where Mosaicoo is hosted:
 
 | Azure Cloud                                      | Value                  |
 | ------------------------------------------------ | ---------------------- |
@@ -917,7 +917,7 @@ Azure cloud environment where Grafana is hosted:
 
 ### managed_identity_enabled
 
-Specifies whether Grafana hosted in Azure service with Managed Identity configured (e.g. Azure Virtual Machines instance). Disabled by default, needs to be explicitly enabled.
+Specifies whether Mosaicoo hosted in Azure service with Managed Identity configured (e.g. Azure Virtual Machines instance). Disabled by default, needs to be explicitly enabled.
 
 ### managed_identity_client_id
 
@@ -937,7 +937,7 @@ Email server settings.
 
 ### enabled
 
-Enable this to allow Grafana to send email. Default is `false`.
+Enable this to allow Mosaicoo to send email. Default is `false`.
 
 ### host
 
@@ -1093,7 +1093,7 @@ Syslog tag. By default, the process's `argv[0]` is used.
 
 ## [log.frontend]
 
-**Note:** This feature is available in Grafana 7.4+.
+**Note:** This feature is available in Mosaicoo 7.4+.
 
 ### enabled
 
@@ -1113,11 +1113,11 @@ Rate of events to be reported between `0` (none) and `1` (all, default), float.
 
 ### log_endpoint_requests_per_second_limit
 
-Requests per second limit enforced per an extended period, for Grafana backend log ingestion endpoint, `/log`. Default is `3`.
+Requests per second limit enforced per an extended period, for Mosaicoo backend log ingestion endpoint, `/log`. Default is `3`.
 
 ### log_endpoint_burst_limit
 
-Maximum requests accepted per short interval of time for Grafana backend log ingestion endpoint, `/log`. Default is `15`.
+Maximum requests accepted per short interval of time for Mosaicoo backend log ingestion endpoint, `/log`. Default is `15`.
 
 <hr>
 
@@ -1181,7 +1181,7 @@ Sets a global limit on number of alert rules that can be created. Default is -1 
 
 ## [unified_alerting]
 
-For more information about the Grafana alerts, refer to [About Grafana alerting]({{< relref "../alerting/_index.md" >}}).
+For more information about the Mosaicoo alerts, refer to [About Mosaicoo alerting]({{< relref "../alerting/_index.md" >}}).
 
 ### enabled
 
@@ -1191,7 +1191,7 @@ Alerting Rules migrated from dashboards and panels will include a link back via 
 
 ### disabled_orgs
 
-Comma-separated list of organization IDs for which to disable Grafana 8 Unified Alerting.
+Comma-separated list of organization IDs for which to disable Mosaicoo 8 Unified Alerting.
 
 ### admin_config_poll_interval
 
@@ -1207,11 +1207,11 @@ The interval string is a possibly signed sequence of decimal numbers, followed b
 
 ### ha_listen_address
 
-Listen address/hostname and port to receive unified alerting messages for other Grafana instances. The port is used for both TCP and UDP. It is assumed other Grafana instances are also running on the same port. The default value is `0.0.0.0:9094`.
+Listen address/hostname and port to receive unified alerting messages for other Mosaicoo instances. The port is used for both TCP and UDP. It is assumed other Mosaicoo instances are also running on the same port. The default value is `0.0.0.0:9094`.
 
 ### ha_advertise_address
 
-Explicit address/hostname and port to advertise other Grafana instances. The port is used for both TCP and UDP.
+Explicit address/hostname and port to advertise other Mosaicoo instances. The port is used for both TCP and UDP.
 
 ### ha_peers
 
@@ -1219,7 +1219,7 @@ Comma-separated list of initial instances (in a format of host:port) that will f
 
 ### ha_peer_timeout
 
-Time to wait for an instance to send a notification via the Alertmanager. In HA, each Grafana instance will
+Time to wait for an instance to send a notification via the Alertmanager. In HA, each Mosaicoo instance will
 be assigned a position (e.g. 0, 1). We then multiply this position with the timeout to indicate how long should
 each instance wait before sending the notification to take into account replication lag. The default value is `15s`.
 
@@ -1269,11 +1269,11 @@ For more information about the legacy dashboard alerting feature in Grafana, ref
 
 ### enabled
 
-Set to `false` to [enable Grafana alerting]({{<relref "#unified_alerting">}}) and to disable legacy alerting engine. to disable Grafana alerting, set to `true`.
+Set to `false` to [enable Mosaicoo alerting]({{<relref "#unified_alerting">}}) and to disable legacy alerting engine. to disable Mosaicoo alerting, set to `true`.
 
 ### execute_alerts
 
-Turns off alert rule execution, but alerting is still visible in the Grafana UI.
+Turns off alert rule execution, but alerting is still visible in the Mosaicoo UI.
 
 ### error_or_timeout
 
@@ -1281,7 +1281,7 @@ Default setting for new alert rules. Defaults to categorize error and timeouts a
 
 ### nodata_or_nullvalues
 
-Defines how Grafana handles nodata or null values in alerting. Options are `alerting`, `no_data`, `keep_state`, and `ok`. Default is `no_data`.
+Defines how Mosaicoo handles nodata or null values in alerting. Options are `alerting`, `no_data`, `keep_state`, and `ok`. Default is `no_data`.
 
 ### concurrent_render_limit
 
@@ -1313,7 +1313,7 @@ This setting should be expressed as a duration. Examples: 6h (hours), 10d (days)
 
 ### max_annotations_to_keep =
 
-Configures max number of alert annotations that Grafana stores. Default value is 0, which keeps all alert annotations.
+Configures max number of alert annotations that Mosaicoo stores. Default value is 0, which keeps all alert annotations.
 
 <hr>
 
@@ -1334,7 +1334,7 @@ This setting should be expressed as a duration. Examples: 6h (hours), 10d (days)
 
 ### max_annotations_to_keep
 
-Configures max number of dashboard annotations that Grafana stores. Default value is 0, which keeps all dashboard annotations.
+Configures max number of dashboard annotations that Mosaicoo stores. Default value is 0, which keeps all dashboard annotations.
 
 ## [annotations.api]
 
@@ -1342,12 +1342,12 @@ API annotations means that the annotations have been created using the API witho
 
 ### max_age
 
-Configures how long Grafana stores API annotations. Default is 0, which keeps them forever.
+Configures how long Mosaicoo stores API annotations. Default is 0, which keeps them forever.
 This setting should be expressed as a duration. Examples: 6h (hours), 10d (days), 2w (weeks), 1M (month).
 
 ### max_annotations_to_keep
 
-Configures max number of API annotations that Grafana keeps. Default value is 0, which keeps all API annotations.
+Configures max number of API annotations that Mosaicoo keeps. Default value is 0, which keeps all API annotations.
 
 <hr>
 
@@ -1385,7 +1385,7 @@ Enable or disable the Query history. Default is `enabled`.
 
 ## [metrics]
 
-For detailed instructions, refer to [Internal Grafana metrics]({{< relref "view-server/internal-metrics.md" >}}).
+For detailed instructions, refer to [Internal Mosaicoo metrics]({{< relref "view-server/internal-metrics.md" >}}).
 
 ### enabled
 
@@ -1407,7 +1407,7 @@ If both are set, then basic authentication is required to access the metrics end
 
 ## [metrics.environment_info]
 
-Adds dimensions to the `grafana_environment_info` metric, which can expose more information about the Grafana instance.
+Adds dimensions to the `grafana_environment_info` metric, which can expose more information about the Mosaicoo instance.
 
 ```
 ; exampleLabel1 = exampleValue1
@@ -1416,7 +1416,7 @@ Adds dimensions to the `grafana_environment_info` metric, which can expose more 
 
 ## [metrics.graphite]
 
-Use these options if you want to send internal Grafana metrics to Graphite.
+Use these options if you want to send internal Mosaicoo metrics to Graphite.
 
 ### address
 
@@ -1515,7 +1515,7 @@ These options control how images should be made public so they can be shared on 
 
 ### provider
 
-Options are s3, webdav, gcs, azure_blob, local). If left empty, then Grafana ignores the upload action.
+Options are s3, webdav, gcs, azure_blob, local). If left empty, then Mosaicoo ignores the upload action.
 
 <hr>
 
@@ -1569,7 +1569,7 @@ Secret key, e.g. AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA.
 
 ### url
 
-URL where Grafana sends PUT request with images.
+URL where Mosaicoo sends PUT request with images.
 
 ### username
 
@@ -1592,7 +1592,7 @@ Optional URL to send to users in notifications. If the string contains the seque
 Optional path to JSON key file associated with a Google service account to authenticate and authorize. If no value is provided it tries to use the [application default credentials](https://cloud.google.com/docs/authentication/production#finding_credentials_automatically).
 Service Account keys can be created and downloaded from https://console.developers.google.com/permissions/serviceaccounts.
 
-Service Account should have "Storage Object Writer" role. The access control model of the bucket needs to be "Set object-level and bucket-level permissions". Grafana itself will make the images public readable when signed urls are not enabled.
+Service Account should have "Storage Object Writer" role. The access control model of the bucket needs to be "Set object-level and bucket-level permissions". Mosaicoo itself will make the images public readable when signed urls are not enabled.
 
 ### bucket
 
@@ -1604,7 +1604,7 @@ Optional extra path inside bucket.
 
 ### enable_signed_urls
 
-If set to true, Grafana creates a [signed URL](https://cloud.google.com/storage/docs/access-control/signed-urls) for
+If set to true, Mosaicoo creates a [signed URL](https://cloud.google.com/storage/docs/access-control/signed-urls) for
 the image uploaded to Google Cloud Storage.
 
 ### signed_url_expiration
@@ -1639,11 +1639,11 @@ Options to configure a remote HTTP image rendering service, e.g. using https://g
 
 ### server_url
 
-URL to a remote HTTP image renderer service, e.g. http://localhost:8081/render, will enable Grafana to render panels and dashboards to PNG-images using HTTP requests to an external service.
+URL to a remote HTTP image renderer service, e.g. http://localhost:8081/render, will enable Mosaicoo to render panels and dashboards to PNG-images using HTTP requests to an external service.
 
 ### callback_url
 
-If the remote HTTP image renderer service runs on a different server than the Grafana server you may have to configure this to a URL where Grafana is reachable, e.g. http://grafana.domain/.
+If the remote HTTP image renderer service runs on a different server than the Mosaicoo server you may have to configure this to a URL where Mosaicoo is reachable, e.g. http://grafana.domain/.
 
 ### concurrent_render_request_limit
 
@@ -1658,7 +1658,7 @@ Set to `true` if you want to test alpha panels that are not yet ready for genera
 
 ### disable_sanitize_html
 
-If set to true Grafana will allow script tags in text panels. Not recommended as it enables XSS vulnerabilities. Default is false. This setting was introduced in Grafana v6.0.
+If set to true Mosaicoo will allow script tags in text panels. Not recommended as it enables XSS vulnerabilities. Default is false. This setting was introduced in Mosaicoo v6.0.
 
 ## [plugins]
 
@@ -1674,13 +1674,13 @@ We do _not_ recommend using this option. For more information, refer to [Plugin 
 
 ### plugin_admin_enabled
 
-Available to Grafana administrators only, enables installing / uninstalling / updating plugins directly from the Grafana UI. Set to `true` by default. Setting it to `false` will hide the install / uninstall / update controls.
+Available to Mosaicoo administrators only, enables installing / uninstalling / updating plugins directly from the Mosaicoo UI. Set to `true` by default. Setting it to `false` will hide the install / uninstall / update controls.
 
 For more information, refer to [Plugin catalog]({{< relref "../plugins/catalog.md" >}}).
 
 ### plugin_admin_external_manage_enabled
 
-Set to `true` if you want to enable external management of plugins. Default is `false`. This is only applicable to Grafana Cloud users.
+Set to `true` if you want to enable external management of plugins. Default is `false`. This is only applicable to Mosaicoo Cloud users.
 
 ### plugin_catalog_url
 
@@ -1696,19 +1696,19 @@ Enter a comma-separated list of plugin identifiers to hide in the plugin catalog
 
 ### max_connections
 
-> **Note**: Available in Grafana v8.0 and later versions.
+> **Note**: Available in Mosaicoo v8.0 and later versions.
 
-The `max_connections` option specifies the maximum number of connections to the Grafana Live WebSocket endpoint per Grafana server instance. Default is `100`.
+The `max_connections` option specifies the maximum number of connections to the Mosaicoo Live WebSocket endpoint per Mosaicoo server instance. Default is `100`.
 
 Refer to [Grafana Live configuration documentation]({{< relref "../live/set-up-grafana-live.md" >}}) if you specify a number higher than default since this can require some operating system and infrastructure tuning.
 
-0 disables Grafana Live, -1 means unlimited connections.
+0 disables Mosaicoo Live, -1 means unlimited connections.
 
 ### allowed_origins
 
-> **Note**: Available in Grafana v8.0.4 and later versions.
+> **Note**: Available in Mosaicoo v8.0.4 and later versions.
 
-The `allowed_origins` option is a comma-separated list of additional origins (`Origin` header of HTTP Upgrade request during WebSocket connection establishment) that will be accepted by Grafana Live.
+The `allowed_origins` option is a comma-separated list of additional origins (`Origin` header of HTTP Upgrade request during WebSocket connection establishment) that will be accepted by Mosaicoo Live.
 
 If not set (default), then the origin is matched over [root_url]({{< relref "#root_url" >}}) which should be sufficient for most scenarios.
 
@@ -1723,17 +1723,17 @@ allowed_origins = "https://*.example.com"
 
 ### ha_engine
 
-> **Note**: Available in Grafana v8.1 and later versions.
+> **Note**: Available in Mosaicoo v8.1 and later versions.
 
 **Experimental**
 
-The high availability (HA) engine name for Grafana Live. By default, it's not set. The only possible value is "redis".
+The high availability (HA) engine name for Mosaicoo Live. By default, it's not set. The only possible value is "redis".
 
-For more information, refer to the [Configure Grafana Live HA setup]({{< relref "../live/set-up-grafana-live/#configure-grafana-live-ha-setup" >}}).
+For more information, refer to the [Configure Mosaicoo Live HA setup]({{< relref "../live/set-up-grafana-live/#configure-grafana-live-ha-setup" >}}).
 
 ### ha_engine_address
 
-> **Note**: Available in Grafana v8.1 and later versions.
+> **Note**: Available in Mosaicoo v8.1 and later versions.
 
 **Experimental**
 
@@ -1775,7 +1775,7 @@ Instruct headless browser instance whether to capture and log verbose informatio
 
 When enabled, debug messages are captured and logged as well.
 
-For the verbose information to be included in the Grafana server log you have to adjust the rendering log level to debug, configure [log].filter = rendering:debug.
+For the verbose information to be included in the Mosaicoo server log you have to adjust the rendering log level to debug, configure [log].filter = rendering:debug.
 
 ### rendering_dumpio
 
@@ -1841,7 +1841,7 @@ Change the listening port of the gRPC server. Default port is `0` and will autom
 
 ## [enterprise]
 
-For more information about Grafana Enterprise, refer to [Grafana Enterprise]({{< relref "../enterprise/_index.md" >}}).
+For more information about Mosaicoo Enterprise, refer to [Grafana Enterprise]({{< relref "../enterprise/_index.md" >}}).
 
 <hr>
 
@@ -1853,7 +1853,7 @@ Keys of alpha features to enable, separated by space.
 
 ## [date_formats]
 
-> **Note:** The date format options below are only available in Grafana v7.2+.
+> **Note:** The date format options below are only available in Mosaicoo v7.2+.
 
 This section controls system-wide defaults for date formats used in time ranges, graphs, and date input boxes.
 
@@ -1893,11 +1893,11 @@ Set the default start of the week, valid values are: `saturday`, `sunday`, `mond
 
 ## [expressions]
 
-> **Note:** This feature is available in Grafana v7.4 and later versions.
+> **Note:** This feature is available in Mosaicoo v7.4 and later versions.
 
 ### enabled
 
-Set this to `false` to disable expressions and hide them in the Grafana UI. Default is `true`.
+Set this to `false` to disable expressions and hide them in the Mosaicoo UI. Default is `true`.
 
 ## [geomap]
 
@@ -1920,13 +1920,13 @@ default_baselayer_config = `{
 
 ### enable_custom_baselayers
 
-Set this to `true` to disable loading other custom base maps and hide them in the Grafana UI. Default is `false`.
+Set this to `true` to disable loading other custom base maps and hide them in the Mosaicoo UI. Default is `false`.
 
 ## [dashboard_previews]
 
 ### [crawler]
 
-> **Note:** This feature is available in Grafana v9.0 and later versions.
+> **Note:** This feature is available in Mosaicoo v9.0 and later versions.
 
 #### thread_count
 

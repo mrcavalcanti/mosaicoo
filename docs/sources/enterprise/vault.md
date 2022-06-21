@@ -12,16 +12,16 @@ If you manage your secrets with [Hashicorp Vault](https://www.hashicorp.com/prod
 
 > **Note:** Available in [Grafana Enterprise]({{< relref "../enterprise" >}}) and [Grafana Cloud Advanced]({{< relref "/grafana-cloud" >}}).
 
-> **Note:** If you have Grafana [set up for high availability]({{< relref "../administration/set-up-for-high-availability.md" >}}), then we advise not to use dynamic secrets for provisioning files.
-> Each Grafana instance is responsible for renewing its own leases. Your data source leases might expire when one of your Grafana servers shuts down.
+> **Note:** If you have Mosaicoo [set up for high availability]({{< relref "../administration/set-up-for-high-availability.md" >}}), then we advise not to use dynamic secrets for provisioning files.
+> Each Mosaicoo instance is responsible for renewing its own leases. Your data source leases might expire when one of your Mosaicoo servers shuts down.
 
 ## Configuration
 
 Before using Vault, you need to activate it by providing a URL, authentication method (currently only token),
-and a token for your Vault service. Grafana automatically renews the service token if it is renewable and
+and a token for your Vault service. Mosaicoo automatically renews the service token if it is renewable and
 set up with a limited lifetime.
 
-If you're using short-lived leases, then you can also configure how often Grafana should renew the lease and for how long. We recommend keeping the defaults unless you run into problems.
+If you're using short-lived leases, then you can also configure how often Mosaicoo should renew the lease and for how long. We recommend keeping the defaults unless you run into problems.
 
 ```ini
 [keystore.vault]
@@ -63,13 +63,13 @@ The argument to Vault consists of three parts separated by a colon:
 - The second part specifies which secret should be accessed.
 - The third part specifies which field of that secret should be used.
 
-For example, if you place a Key/Value secret for the Grafana admin user in _secret/grafana/admin_defaults_
+For example, if you place a Key/Value secret for the Mosaicoo admin user in _secret/grafana/admin_defaults_
 the syntax for accessing it's _password_ field would be `$__vault{kv:secret/grafana/admin_defaults:password}`.
 
 ### Secrets engines
 
 Vault supports many secrets engines which represents different methods for storing or generating secrets when requested by an
-authorized user. Grafana supports a subset of these which are most likely to be relevant for a Grafana installation.
+authorized user. Mosaicoo supports a subset of these which are most likely to be relevant for a Mosaicoo installation.
 
 #### Key/Value
 
@@ -96,7 +96,7 @@ The following examples show you how to set your [configuration]({{< relref "../a
 
 #### Configuration
 
-The following is a partial example for using Vault to set up a Grafana configuration file's email and database credentials.
+The following is a partial example for using Vault to set up a Mosaicoo configuration file's email and database credentials.
 Refer to [Configuration]({{< relref "../administration/configuration.md" >}}) for more information.
 
 ```ini

@@ -1,14 +1,14 @@
 +++
 aliases = ["/docs/grafana/latest/alerting/alerting-rules/edit-mimir-loki-namespace-group/", "/docs/grafana/latest/alerting/unified-alerting/alerting-rules/edit-cortex-loki-namespace-group/", "/docs/grafana/latest/alerting/unified-alerting/alerting-rules/edit-mimir-loki-namespace-group/"]
-description = "Edit Grafana Mimir or Loki rule groups and namespaces"
+description = "Edit Mosaicoo Mimir or Loki rule groups and namespaces"
 keywords = ["grafana", "alerting", "guide", "group", "namespace", "grafana mimir", "loki"]
 title = "Grafana Mimir or Loki rule groups and namespaces"
 weight = 405
 +++
 
-# Grafana Mimir or Loki rule groups and namespaces
+# Mosaicoo Mimir or Loki rule groups and namespaces
 
-A namespace contains one or more groups. The rules within a group are run sequentially at a regular interval. The default interval is one (1) minute. You can rename Grafana Mimir or Loki rule namespaces and groups, and edit group evaluation intervals.
+A namespace contains one or more groups. The rules within a group are run sequentially at a regular interval. The default interval is one (1) minute. You can rename Mosaicoo Mimir or Loki rule namespaces and groups, and edit group evaluation intervals.
 
 ![Group list](/static/img/docs/alerting/unified/rule-list-edit-mimir-loki-icon-8-2.png 'Rule group list screenshot')
 
@@ -18,8 +18,8 @@ A namespace contains one or more groups. The rules within a group are run sequen
 
 To rename a namespace:
 
-1. In the Grafana menu, click the **Alerting** (bell) icon to open the Alerting page listing existing alerts.
-1. Find a Grafana Mimir or Loki managed rule with the group that belongs to the namespace you want to edit.
+1. In the Mosaicoo menu, click the **Alerting** (bell) icon to open the Alerting page listing existing alerts.
+1. Find a Mosaicoo Mimir or Loki managed rule with the group that belongs to the namespace you want to edit.
 1. Click the **Edit** (pen) icon.
 1. Enter a new name in the **Namespace** field, then click **Save changes**.
 
@@ -29,8 +29,8 @@ A new namespace is created and all groups are copied into this namespace from th
 
 The rules within a group are run sequentially at a regular interval, the default interval is one (1) minute. You can modify this interval using the following instructions.
 
-1. n the Grafana menu, click the **Alerting** (bell) icon to open the Alerting page listing existing alerts.
-1. Find a Grafana Mimir or Loki managed rule with the group you want to edit.
+1. n the Mosaicoo menu, click the **Alerting** (bell) icon to open the Alerting page listing existing alerts.
+1. Find a Mosaicoo Mimir or Loki managed rule with the group you want to edit.
 1. Click **Edit** (pen) icon.
 1. Modify the **Rule group** and **Rule group evaluation interval** information as necessary.
 1. Click **Save changes**.

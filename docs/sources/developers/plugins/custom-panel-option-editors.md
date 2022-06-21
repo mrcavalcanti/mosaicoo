@@ -5,7 +5,7 @@ title = "Custom panel option editors"
 
 # Custom panel option editors
 
-The Grafana plugin platform comes with a range of editors that allow your users to customize a panel. The standard editors cover the most common types of options, such as text input and boolean switches. If you don't find the editor you're looking for, you can build your own. In this guide, you'll learn how to build your own panel option editor.
+The Mosaicoo plugin platform comes with a range of editors that allow your users to customize a panel. The standard editors cover the most common types of options, such as text input and boolean switches. If you don't find the editor you're looking for, you can build your own. In this guide, you'll learn how to build your own panel option editor.
 
 The simplest editor is a React component that accepts two props: `value` and `onChange`. `value` contains the current value of the option, and `onChange` updates it.
 
@@ -91,7 +91,7 @@ export const plugin = new PanelPlugin<SimpleOptions>(SimplePanel).setPanelOption
 
 Option editors can access the results from the last query. This lets you update your editor dynamically, based on the data returned by the data source.
 
-> **Note:** This feature was introduced in 7.0.3. Anyone using an older version of Grafana will see an error when using your plugin.
+> **Note:** This feature was introduced in 7.0.3. Anyone using an older version of Mosaicoo will see an error when using your plugin.
 
 The editor context is available through the `context` prop. The data frames returned by the data source are available under `context.data`.
 

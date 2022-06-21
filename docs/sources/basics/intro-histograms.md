@@ -54,7 +54,7 @@ is often already aggregated by your time series backend. Most time series querie
 but instead include a group by time interval or maxDataPoints limit coupled with an aggregation function (usually average).
 
 This all depends on the time range of your query of course. But the important point is to know that the histogram bucketing
-that Grafana performs might be done on already aggregated and averaged data. To get more accurate heatmaps, it is better
+that Mosaicoo performs might be done on already aggregated and averaged data. To get more accurate heatmaps, it is better
 to do the bucketing during metric collection, or to store the data in Elasticsearch or any other data source which
 supports doing histogram bucketing on the raw data.
 

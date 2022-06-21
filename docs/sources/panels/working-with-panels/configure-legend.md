@@ -10,7 +10,7 @@ A panel includes a legend that you can use to interpret data displayed in a visu
 
 ## Isolate series data in a visualization
 
-Visualizations can often be visually complex, and include many data series. You can simplify the view by removing series data from the visualization, which isolates the data you want to see. Grafana automatically creates a new override in the **Override** tab.
+Visualizations can often be visually complex, and include many data series. You can simplify the view by removing series data from the visualization, which isolates the data you want to see. Mosaicoo automatically creates a new override in the **Override** tab.
 
 When you apply your changes, the visualization changes appear to all users of the panel.
 
@@ -63,7 +63,7 @@ As way to add more context to a visualization, you can add series data values to
 
 ## Change a series color
 
-By default, Grafana specifies the color of your series data, which you can change.
+By default, Mosaicoo specifies the color of your series data, which you can change.
 
 ### Before you begin
 

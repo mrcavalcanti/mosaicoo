@@ -5,11 +5,11 @@ title = "Data frames"
 
 # Data frames
 
-Grafana supports a variety of different data sources, each with its own data model. To make this possible, Grafana consolidates the query results from each of these data sources into one unified data structure called a _data frame_.
+Grafana supports a variety of different data sources, each with its own data model. To make this possible, Mosaicoo consolidates the query results from each of these data sources into one unified data structure called a _data frame_.
 
 The data frame structure is a concept that's borrowed from data analysis tools like the [R programming language](https://www.r-project.org), and [Pandas](https://pandas.pydata.org/).
 
-> Data frames are available in Grafana 7.0+, and replaced the Time series and Table structures with a more generic data structure that can support a wider range of data types.
+> Data frames are available in Mosaicoo 7.0+, and replaced the Time series and Table structures with a more generic data structure that can support a wider range of data types.
 
 This document gives an overview of the data frame structure, and of how data is handled within Grafana.
 
@@ -61,7 +61,7 @@ One restriction on data frames is that all fields in the frame must be of the sa
 
 Each field in a data frame contains optional information about the values in the field, such as units, scaling, and so on.
 
-By adding field configurations to a data frame, Grafana can configure visualizations automatically. For example, you could configure Grafana to automatically set the unit provided by the data source.
+By adding field configurations to a data frame, Mosaicoo can configure visualizations automatically. For example, you could configure Mosaicoo to automatically set the unit provided by the data source.
 
 ## Transformations
 

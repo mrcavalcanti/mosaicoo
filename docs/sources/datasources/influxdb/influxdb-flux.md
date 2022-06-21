@@ -18,7 +18,7 @@ Grafana supports Flux running on InfluxDB 1.8+. See [1.8 compatibility](https://
 | `Token`             | The authentication token used for Flux queries. With Influx 2.0, use the [influx authentication token to function](https://v2.docs.influxdata.com/v2.0/security/tokens/create-token/). For influx 1.8, the token is `username:password`. |
 | `Default bucket`    | (Optional) The [Influx bucket](https://v2.docs.influxdata.com/v2.0/organizations/buckets/) that will be used for the `v.defaultBucket` macro in Flux queries.                                                                            |
 | `Min time interval` | (Optional) Refer to [Min time interval]({{< relref "#min-time-interval" >}}).                                                                                                                                                            |
-| `Max series`        | (Optional) Limits the number of series/tables that Grafana processes. Lower this number to prevent abuse, and increase it if you have lots of small time series and not all are shown. Defaults to 1000.                                 |
+| `Max series`        | (Optional) Limits the number of series/tables that Mosaicoo processes. Lower this number to prevent abuse, and increase it if you have lots of small time series and not all are shown. Defaults to 1000.                                 |
 
 ## Min time interval
 

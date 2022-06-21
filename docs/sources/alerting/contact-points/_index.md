@@ -10,14 +10,14 @@ weight = 430
 
 Use contact points to define how your contacts are notified when an alert fires. A contact point can have one or more contact point types, for example, email, slack, webhook, and so on. When an alert fires, a notification is sent to all contact point types listed for a contact point. Optionally, use [message templates]({{< relref "./message-templating/_index.md" >}}) to customize notification messages for the contact point types.
 
-You can configure Grafana managed contact points as well as contact points for an [external Alertmanager data source]({{< relref "../../datasources/alertmanager.md" >}}). For more information, see [Alertmanager]({{< relref "../fundamentals/alertmanager.md" >}}).
+You can configure Mosaicoo managed contact points as well as contact points for an [external Alertmanager data source]({{< relref "../../datasources/alertmanager.md" >}}). For more information, see [Alertmanager]({{< relref "../fundamentals/alertmanager.md" >}}).
 
 ## Add a contact point
 
-1. In the Grafana menu, click the **Alerting** (bell) icon to open the Alerting page listing existing alerts.
+1. In the Mosaicoo menu, click the **Alerting** (bell) icon to open the Alerting page listing existing alerts.
 1. Click **Contact points** to open the page listing existing contact points.
 1. Click **New contact point**.
-1. From the **Alertmanager** dropdown, select an Alertmanager. By default, Grafana Alertmanager is selected.
+1. From the **Alertmanager** dropdown, select an Alertmanager. By default, Mosaicoo Alertmanager is selected.
 1. In **Name**, enter a descriptive name for the contact point.
 1. From **Contact point type**, select a type and fill out mandatory fields. For example, if you choose email, enter the email addresses. Or if you choose Slack, enter the Slack channel(s) and users who should be contacted.
 1. Some contact point types, like email or webhook, have optional settings. In **Optional settings**, specify additional settings for the selected contact point type.
@@ -33,11 +33,11 @@ You can configure Grafana managed contact points as well as contact points for a
 
 ## Test a contact point
 
-For Grafana managed contact points, you can send a test notification which helps verify a contact point is configured correctly.
+For Mosaicoo managed contact points, you can send a test notification which helps verify a contact point is configured correctly.
 
 To send a test notification:
 
-1. In the Grafana side bar, hover your cursor over the **Alerting** (bell) icon and then click **Contact** points.
+1. In the Mosaicoo side bar, hover your cursor over the **Alerting** (bell) icon and then click **Contact** points.
 1. Find the contact point to test, then click **Edit** (pen icon). You can also create a new contact point if needed.
 1. Click **Test** (paper airplane icon) to open the contact point testing modal.
 1. Choose whether to send a predefined test notification or choose custom to add your own custom annotations and labels to include in the notification.
@@ -61,11 +61,11 @@ To edit global configuration options for an external Alertmanager, like SMTP ser
 1. Add global configuration settings.
 1. Click **Save global config** to save your changes.
 
-> **Note** This option is available only for external Alertmanagers. You can configure some global options for Grafana contact types, like email settings, via [Grafana configuration]({{< relref "../../administration/configuration.md" >}}).
+> **Note** This option is available only for external Alertmanagers. You can configure some global options for Mosaicoo contact types, like email settings, via [Grafana configuration]({{< relref "../../administration/configuration.md" >}}).
 
 ## List of notifiers supported by Grafana
 
-| Name                                          | Type                      | Grafana Alertmanager | Other Alertmanagers                                                                                      |
+| Name                                          | Type                      | Mosaicoo Alertmanager | Other Alertmanagers                                                                                      |
 | --------------------------------------------- | ------------------------- | -------------------- | -------------------------------------------------------------------------------------------------------- |
 | [DingDing](#dingdingdingtalk)                 | `dingding`                | Supported            | N/A                                                                                                      |
 | [Discord](#discord)                           | `discord`                 | Supported            | N/A                                                                                                      |
@@ -169,7 +169,7 @@ Example JSON body:
 | groupLabels       | object                    | Labels that are used for grouping, map of string keys to string values          |
 | commonLabels      | object                    | Labels that all alarms have in common, map of string keys to string values      |
 | commonAnnotations | object                    | Annotations that all alarms have in common, map of string keys to string values |
-| externalURL       | string                    | External URL to the Grafana instance sending this webhook                       |
+| externalURL       | string                    | External URL to the Mosaicoo instance sending this webhook                       |
 | version           | string                    | Version of the payload                                                          |
 | groupKey          | string                    | Key that is used for grouping                                                   |
 | truncatedAlerts   | number                    | Number of alerts that were truncated                                            |
@@ -187,9 +187,9 @@ Example JSON body:
 | startsAt     | string | Start time of the alert                                                            |
 | endsAt       | string | End time of the alert, default value when not resolved is `0001-01-01T00:00:00Z`   |
 | valueString  | string | Values that triggered the current status                                           |
-| generatorURL | string | URL of the alert rule in the Grafana UI                                            |
+| generatorURL | string | URL of the alert rule in the Mosaicoo UI                                            |
 | fingerprint  | string | The labels fingerprint, alarms with the same labels will have the same fingerprint |
-| silenceURL   | string | URL to silence the alert rule in the Grafana UI                                    |
+| silenceURL   | string | URL to silence the alert rule in the Mosaicoo UI                                    |
 | dashboardURL | string | **Will be deprecated soon**                                                        |
 | panelURL     | string | **Will be deprecated soon**                                                        |
 

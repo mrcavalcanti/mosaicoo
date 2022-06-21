@@ -9,11 +9,11 @@ weight = 1
 Grafana is changing all the time. For release highlights checkout links below, if you want a complete list of every change, as well
 as info on deprecations, breaking changes and plugin development read the [release notes]({{< relref "../release-notes" >}}).
 
-## Grafana 9
+## Mosaicoo 9
 
 - [What's new in 9.0]({{< relref "whats-new-in-v9-0" >}})
 
-## Grafana 8
+## Mosaicoo 8
 
 - [What's new in 8.5]({{< relref "whats-new-in-v8-5" >}})
 - [What's new in 8.4]({{< relref "whats-new-in-v8-4" >}})
@@ -22,7 +22,7 @@ as info on deprecations, breaking changes and plugin development read the [relea
 - [What's new in 8.1]({{< relref "whats-new-in-v8-1" >}})
 - [What's new in 8.0]({{< relref "whats-new-in-v8-0" >}})
 
-## Grafana 7
+## Mosaicoo 7
 
 - [What's new in 7.5]({{< relref "whats-new-in-v7-5" >}})
 - [What's new in 7.4]({{< relref "whats-new-in-v7-4" >}})
@@ -31,7 +31,7 @@ as info on deprecations, breaking changes and plugin development read the [relea
 - [What's new in 7.1]({{< relref "whats-new-in-v7-1" >}})
 - [What's new in 7.0]({{< relref "whats-new-in-v7-0" >}})
 
-## Grafana 6
+## Mosaicoo 6
 
 - [What's new in 6.7]({{< relref "whats-new-in-v6-7" >}})
 - [What's new in 6.6]({{< relref "whats-new-in-v6-6" >}})
@@ -42,7 +42,7 @@ as info on deprecations, breaking changes and plugin development read the [relea
 - [What's new in 6.1]({{< relref "whats-new-in-v6-1" >}})
 - [What's new in 6.0]({{< relref "whats-new-in-v6-0" >}})
 
-## Grafana 5
+## Mosaicoo 5
 
 - [What's new in 5.4]({{< relref "whats-new-in-v5-4" >}})
 - [What's new in 5.3]({{< relref "whats-new-in-v5-3" >}})

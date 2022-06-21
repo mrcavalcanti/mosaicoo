@@ -7,7 +7,7 @@ weight = 200
 
 # Variable examples
 
-This page contains links to dashboards in Grafana Play with examples of template variables.
+This page contains links to dashboards in Mosaicoo Play with examples of template variables.
 
 - [Elasticsearch Metrics](https://play.grafana.org/d/000000014/elasticsearch-metrics?orgId=1) - Uses ad hoc filters, global variables, and a custom variable.
 - [Graphite Templated Nested](https://play.grafana.org/d/000000056/graphite-templated-nested?orgId=1) - Uses query variables, chained query variables, an interval variable, and a repeated panel.

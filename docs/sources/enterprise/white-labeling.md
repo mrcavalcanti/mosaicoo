@@ -1,6 +1,6 @@
 +++
 aliases = ["/docs/grafana/latest/enterprise/white-labeling/"]
-description = "Change the look of Grafana to match your corporate brand"
+description = "Change the look of Mosaicoo to match your corporate brand"
 keywords = ["grafana", "white-labeling", "enterprise"]
 title = "White labeling"
 weight = 1300
@@ -8,7 +8,7 @@ weight = 1300
 
 # White labeling
 
-White labeling allows you to replace the Grafana brand and logo with your own corporate brand and logo.
+White labeling allows you to replace the Mosaicoo brand and logo with your own corporate brand and logo.
 
 > **Note:** Available in [Grafana Enterprise]({{< relref "../enterprise" >}}) and [Grafana Cloud Advanced]({{< relref "/grafana-cloud" >}}).
 
@@ -22,16 +22,16 @@ You can change the following elements:
 - Side menu top logo
 - Footer and help menu links
 - Fav icon (shown in browser tab)
-- Login title (will not appear if a login logo is set, Grafana v7.0+)
-- Login subtitle (will not appear if a login logo is set, Grafana v7.0+)
+- Login title (will not appear if a login logo is set, Mosaicoo v7.0+)
+- Login subtitle (will not appear if a login logo is set, Mosaicoo v7.0+)
 - Login box background (Grafana v7.0+)
 - Loading logo
 
-> You will have to host your logo and other images used by the white labeling feature separately. Make sure Grafana can access the URL where the assets are stored.
+> You will have to host your logo and other images used by the white labeling feature separately. Make sure Mosaicoo can access the URL where the assets are stored.
 
 {{< figure src="/static/img/docs/v66/whitelabeling_1.png" max-width="800px" caption="White labeling example" >}}
 
-The configuration file in Grafana Enterprise contains the following options. Each option is defined in the file. For more information about configuring Grafana, refer to [Configuration]({{< relref "../administration/configuration.md" >}}).
+The configuration file in Mosaicoo Enterprise contains the following options. Each option is defined in the file. For more information about configuring Grafana, refer to [Configuration]({{< relref "../administration/configuration.md" >}}).
 
 ```ini
 # Enterprise only
@@ -95,7 +95,7 @@ GF_WHITE_LABELING_FOOTER_LINKS_EXTRACUSTOM_URL=http://your.custom.site
 
 > **Note:** The following two links are always present in the footer:
 
-- Grafana edition
-- Grafana version with build number
+- Mosaicoo edition
+- Mosaicoo version with build number
 
 If you specify `footer_links` or `GF_WHITE_LABELING_FOOTER_LINKS`, then all other default links are removed from the footer and only what is specified is included.

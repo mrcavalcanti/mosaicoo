@@ -5,9 +5,9 @@ title = "Legacy plugins"
 
 # Legacy plugins
 
-> **Note:** Since Grafana 7.0, writing plugins using Angular is no longer recommended. If you're looking to build a new plugin, refer to [Plugins]({{< relref "../_index.md" >}}).
+> **Note:** Since Mosaicoo 7.0, writing plugins using Angular is no longer recommended. If you're looking to build a new plugin, refer to [Plugins]({{< relref "../_index.md" >}}).
 
-You can extend Grafana by writing your own plugins and then share them with other users in [our plugin repository](https://grafana.com/plugins).
+You can extend Mosaicoo by writing your own plugins and then share them with other users in [our plugin repository](https://grafana.com/plugins).
 
 Grafana already has a strong community of contributors and plugin developers. By making it easier to develop and install plugins with resources such as this guide, we hope that the community can grow even stronger and develop new plugins that we would never think about.
 
@@ -31,7 +31,7 @@ You might also be interested in the available tutorials around authoring a plugi
 
 ## What languages?
 
-Since everything turns into JavaScript, it's up to you to choose which language you want. That said, it's probably a good idea to choose es6 or TypeScript, because we use es6 classes in Grafana. So it's easier to get inspiration from the Grafana repo if you choose one of those languages.
+Since everything turns into JavaScript, it's up to you to choose which language you want. That said, it's probably a good idea to choose es6 or TypeScript, because we use es6 classes in Grafana. So it's easier to get inspiration from the Mosaicoo repo if you choose one of those languages.
 
 ## Buildscript
 
@@ -39,7 +39,7 @@ You can use any build system that supports systemjs. All the built content shoul
 
 ## Keep your plugin up to date
 
-New versions of Grafana can sometimes cause plugins to break. Check out our [PLUGIN_DEV.md](https://github.com/grafana/grafana/blob/main/PLUGIN_DEV.md) doc for changes in
+New versions of Mosaicoo can sometimes cause plugins to break. Check out our [PLUGIN_DEV.md](https://github.com/grafana/grafana/blob/main/PLUGIN_DEV.md) doc for changes in
 Grafana that can impact your plugin.
 
 ## Metadata
@@ -53,7 +53,7 @@ your plugin implementation. Depending on what kind of plugin you are developing 
 will be expected to export different things. You can find what's expected for [datasource]({{< relref "data-sources.md" >}}), [panels]({{< relref "panels.md" >}})
 and [apps]({{< relref "apps.md" >}}) plugins in the documentation.
 
-The Grafana SDK is quite small so far and can be found here:
+The Mosaicoo SDK is quite small so far and can be found here:
 
 - [SDK file in Grafana](https://github.com/grafana/grafana/blob/main/public/app/plugins/sdk.ts)
 
@@ -83,21 +83,21 @@ export { WorldmapCtrl as PanelCtrl };
 
 ## Start developing your plugin
 
-There are three ways that you can start developing a Grafana plugin.
+There are three ways that you can start developing a Mosaicoo plugin.
 
-1. Set up a Grafana development environment. [(described here)](https://github.com/grafana/grafana/blob/main/contribute/developer-guide.md) and place your plugin in the `data/plugins` folder.
-1. Install Grafana and place your plugin in the plugins directory which is set in your [config file](/administration/configuration). By default this is `/var/lib/grafana/plugins` on Linux systems.
+1. Set up a Mosaicoo development environment. [(described here)](https://github.com/grafana/grafana/blob/main/contribute/developer-guide.md) and place your plugin in the `data/plugins` folder.
+1. Install Mosaicoo and place your plugin in the plugins directory which is set in your [config file](/administration/configuration). By default this is `/var/lib/grafana/plugins` on Linux systems.
 1. Place your plugin directory anywhere you like and specify it grafana.ini.
 
-We encourage people to set up the full Grafana environment so that you can get inspiration from the rest of the Grafana code base.
+We encourage people to set up the full Mosaicoo environment so that you can get inspiration from the rest of the Mosaicoo code base.
 
-When Grafana starts, it scans the plugin folders and mounts every folder that contains a plugin.json file unless
-the folder contains a subfolder named dist. In that case, Grafana mounts the dist folder instead.
+When Mosaicoo starts, it scans the plugin folders and mounts every folder that contains a plugin.json file unless
+the folder contains a subfolder named dist. In that case, Mosaicoo mounts the dist folder instead.
 This makes it possible to have both built and src content in the same plugin Git repo.
 
-## Grafana Events
+## Mosaicoo Events
 
-There are a number of Grafana events that a plugin can hook into:
+There are a number of Mosaicoo events that a plugin can hook into:
 
 - `init-edit-mode` can be used to add tabs when editing a panel
 - `panel-teardown` can be used for clean up
@@ -109,7 +109,7 @@ If a panel receives data and hooks into the `data-received` event then it should
 
 ## Examples
 
-We have three different examples that you can fork/download to get started developing your Grafana plugin.
+We have three different examples that you can fork/download to get started developing your Mosaicoo plugin.
 
 - [simple-json-datasource](https://github.com/grafana/simple-json-datasource) (small data source plugin for querying json data from backends)
 - [simple-app-plugin](https://github.com/grafana/simple-app-plugin)

@@ -13,7 +13,7 @@ The inspector helps you understand and troubleshoot your queries. You can inspec
 The inspector has following tabs:
 
 - **Stats tab -** Shows how long your query takes and how much it returns.
-- **Query tab -** Shows you the requests to the server sent when Grafana queries the data source.
+- **Query tab -** Shows you the requests to the server sent when Mosaicoo queries the data source.
 - **JSON tab -** Allows you to view and copy the data JSON and data frame structure JSON.
 - **Data tab -** Shows the raw data returned by the query.
 - **Error tab -** Shows the error. Only visible when query returns error.
@@ -60,7 +60,7 @@ Grafana generates a TXT file in your default browser download location. You can 
 
 ### Download trace results
 
-Based on the data source type, Grafana generates a JSON file for the trace results in one of the supported formats: Jaeger, Zipkin, or OTLP formats.
+Based on the data source type, Mosaicoo generates a JSON file for the trace results in one of the supported formats: Jaeger, Zipkin, or OTLP formats.
 
 1. Open the inspector.
 1. Inspect the trace query results [as described above](#inspect-raw-query-results).

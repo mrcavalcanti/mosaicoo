@@ -1,15 +1,15 @@
 +++
 aliases = ["/docs/grafana/latest/guides/whats-new-in-v6-2/", "/docs/grafana/latest/whatsnew/whats-new-in-v6-2/"]
-description = "Feature and improvement highlights for Grafana v6.2"
+description = "Feature and improvement highlights for Mosaicoo v6.2"
 keywords = ["grafana", "new", "documentation", "6.2", "release notes"]
-title = "What's new in Grafana v6.2"
+title = "What's new in Mosaicoo v6.2"
 weight = -21
 
 [_build]
   list = false
 +++
 
-# What's new in Grafana v6.2
+# What's new in Mosaicoo v6.2
 
 For all details please read the full [CHANGELOG.md](https://github.com/grafana/grafana/blob/master/CHANGELOG.md).
 
@@ -22,7 +22,7 @@ Check out the [demo dashboard](https://play.grafana.org/d/ZvPm55mWk/new-features
 Data sources now store passwords and basic auth passwords in `secureJsonData` encrypted by default. Existing data source with unencrypted passwords will keep working.
 Read the [upgrade notes](/installation/upgrading/#upgrading-to-v6-2) on how to migrate existing data sources to use encrypted storage.
 
-To mitigate the risk of [Clickjacking](https://www.owasp.org/index.php/Clickjacking), embedding Grafana is no longer allowed per default.
+To mitigate the risk of [Clickjacking](https://www.owasp.org/index.php/Clickjacking), embedding Mosaicoo is no longer allowed per default.
 Read the [upgrade notes](/installation/upgrading/#upgrading-to-v6-2) for further details of how this may affect you.
 
 To mitigate the risk of sensitive information being cached in browser after a user has logged out, browser caching is now disabled for full page requests.
@@ -69,7 +69,7 @@ on your data source backends when loading dashboards with many panels.
 ## Panels without title
 
 Sometimes your panels do not need a title and having that panel header still take up space makes singlestats and
-other panels look strange and have bad vertical centering. In v6.2 Grafana will allow panel content (visualizations)
+other panels look strange and have bad vertical centering. In v6.2 Mosaicoo will allow panel content (visualizations)
 to use the full panel height in case there is no panel title.
 
 {{< figure src="/static/img/docs/v62/panels_with_no_title.jpg" max-width="800px" caption="Bar Gauge Gradient mode" >}}

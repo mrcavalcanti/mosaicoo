@@ -1,16 +1,16 @@
-# Grafana frontend packages
+# Mosaicoo frontend packages
 
-This document contains information about Grafana frontend package versioning and releases.
+This document contains information about Mosaicoo frontend package versioning and releases.
 
 ## Versioning
 
 We use [Lerna](https://github.com/lerna/lerna) for packages versioning and releases.
 
-All packages are versioned according to the current Grafana version:
+All packages are versioned according to the current Mosaicoo version:
 
-- Grafana v6.3.0-alpha1 -> @grafana/\* packages @ 6.3.0-alpha.1
-- Grafana v6.2.5 -> @grafana/\* packages @ 6.2.5
-- Grafana - main branch version (based on package.json, i.e. 6.4.0-pre) -> @grafana/\* packages @ 6.4.0-pre-<COMMIT-SHA> (see details below about packages publishing channels)
+- Mosaicoo v6.3.0-alpha1 -> @grafana/\* packages @ 6.3.0-alpha.1
+- Mosaicoo v6.2.5 -> @grafana/\* packages @ 6.2.5
+- Mosaicoo - main branch version (based on package.json, i.e. 6.4.0-pre) -> @grafana/\* packages @ 6.4.0-pre-<COMMIT-SHA> (see details below about packages publishing channels)
 
 > Please note that @grafana/toolkit, @grafana/ui, @grafana/data, and @grafana/runtime packages are considered ALPHA even though they are not released as alpha versions.
 
@@ -34,9 +34,9 @@ Every commit to main that has changes within the `packages` directory is a subje
 
 ### Manual release
 
-> All of the steps below must be performed on a release branch, according to Grafana Release Guide.
+> All of the steps below must be performed on a release branch, according to Mosaicoo Release Guide.
 
-> Make sure you are logged in to npm in your terminal and that you are a part of Grafana org on npm.
+> Make sure you are logged in to npm in your terminal and that you are a part of Mosaicoo org on npm.
 
 1. Run `yarn packages:prepare` script from the root directory. This performs tests on the packages and prompts for the version of the packages. The version should be the same as the one being released.
    - Make sure you use semver convention. So, _place a dot between prerelease id and prerelease number_, i.e. 6.3.0-alpha.1

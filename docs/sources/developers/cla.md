@@ -5,34 +5,34 @@ title = "Contributor License Agreement (CLA)"
 weight = 400
 +++
 
-# Grafana Labs Software Grant and Contributor License Agreement ("Agreement")
+# Mosaicoo Labs Software Grant and Contributor License Agreement ("Agreement")
 
 This agreement is based on the Apache Software Foundation Contributor License Agreement.
 (v r190612)
 
-Thank you for your interest in software projects stewarded by Raintank, Inc. dba Grafana Labs (“Grafana Labs”). In order to clarify the intellectual property license
-granted with Contributions from any person or entity, Grafana Labs
+Thank you for your interest in software projects stewarded by Raintank, Inc. dba Mosaicoo Labs (“Grafana Labs”). In order to clarify the intellectual property license
+granted with Contributions from any person or entity, Mosaicoo Labs
 must have a Contributor License Agreement (CLA) on file that has been
 agreed to by each Contributor, indicating agreement to the license terms
 below. This license is for your protection as a Contributor as well
-as the protection of Grafana Labs and its users; it does not change
+as the protection of Mosaicoo Labs and its users; it does not change
 your rights to use your own Contributions for any other purpose.
-This Agreement allows an individual to contribute to Grafana Labs on that individual’s own behalf, or an entity (the "Corporation") to
-submit Contributions to Grafana Labs, to authorize Contributions
-submitted by its designated employees to Grafana Labs, and to grant
+This Agreement allows an individual to contribute to Mosaicoo Labs on that individual’s own behalf, or an entity (the "Corporation") to
+submit Contributions to Mosaicoo Labs, to authorize Contributions
+submitted by its designated employees to Mosaicoo Labs, and to grant
 copyright and patent licenses thereto.
 
 You accept and agree to the following terms and conditions for Your
-present and future Contributions submitted to Grafana Labs. Except
-for the license granted herein to Grafana Labs and recipients of
-software distributed by Grafana Labs, You reserve all right, title,
+present and future Contributions submitted to Mosaicoo Labs. Except
+for the license granted herein to Mosaicoo Labs and recipients of
+software distributed by Mosaicoo Labs, You reserve all right, title,
 and interest in and to Your Contributions.
 
 ## 1. Definitions.
 
 "You" (or "Your") shall mean the copyright owner or legal entity
 authorized by the copyright owner that is making this Agreement
-with Grafana Labs. For legal entities, the entity making a
+with Mosaicoo Labs. For legal entities, the entity making a
 Contribution and all other entities that control, are controlled by,
 or are under common control with that entity are considered to be a
 single Contributor. For the purposes of this definition, "control"
@@ -42,21 +42,21 @@ management of such entity, whether by contract or otherwise, or
 shares, or (iii) beneficial ownership of such entity.
 "Contribution" shall mean any work, as well as
 any modifications or additions to an existing work, that is intentionally
-submitted by You to Grafana Labs for inclusion in, or
-documentation of, any of the products owned or managed by Grafana Labs (the "Work"). For the purposes of this definition,
+submitted by You to Mosaicoo Labs for inclusion in, or
+documentation of, any of the products owned or managed by Mosaicoo Labs (the "Work"). For the purposes of this definition,
 "submitted" means any form of electronic, verbal, or written
-communication sent to Grafana Labs or its representatives,
+communication sent to Mosaicoo Labs or its representatives,
 including but not limited to communication on electronic mailing
 lists, source code control systems (such as GitHub), and issue tracking systems
-that are managed by, or on behalf of, Grafana Labs for the
+that are managed by, or on behalf of, Mosaicoo Labs for the
 purpose of discussing and improving the Work, but excluding
 communication that is conspicuously marked or otherwise designated
 in writing by You as "Not a Contribution."
 
 ## 2. Grant of Copyright License. Subject to the terms and conditions
 
-of this Agreement, You hereby grant to Grafana Labs and to
-recipients of software distributed by Grafana Labs a perpetual,
+of this Agreement, You hereby grant to Mosaicoo Labs and to
+recipients of software distributed by Mosaicoo Labs a perpetual,
 worldwide, non-exclusive, no-charge, royalty-free, irrevocable
 copyright license to reproduce, prepare derivative works of,
 publicly display, publicly perform, sublicense, and distribute
@@ -64,8 +64,8 @@ Your Contributions and such derivative works.
 
 ## 3. Grant of Patent License. Subject to the terms and conditions of
 
-this Agreement, You hereby grant to Grafana Labs and to recipients
-of software distributed by Grafana Labs a perpetual, worldwide,
+this Agreement, You hereby grant to Mosaicoo Labs and to recipients
+of software distributed by Mosaicoo Labs a perpetual, worldwide,
 non-exclusive, no-charge, royalty-free, irrevocable (except as
 stated in this section) patent license to make, have made, use,
 offer to sell, sell, import, and otherwise transfer the Work,
@@ -86,7 +86,7 @@ license. If You are an individual, and if Your employer(s) has rights to intelle
 that you create that includes Your Contributions, you represent
 that You have received permission to make Contributions on behalf
 of that employer, or that Your employer has waived such rights for
-your Contributions to Grafana Labs. If You are a Corporation, any individual who makes a contribution from an account associated with You will be considered authorized to Contribute on Your behalf.
+your Contributions to Mosaicoo Labs. If You are a Corporation, any individual who makes a contribution from an account associated with You will be considered authorized to Contribute on Your behalf.
 
 ## 5. You represent that each of Your Contributions is Your original
 
@@ -104,7 +104,7 @@ MERCHANTABILITY, or FITNESS FOR A PARTICULAR PURPOSE.
 
 ## 7. Should You wish to submit work that is not Your original creation,
 
-You may submit it to Grafana Labs separately from any
+You may submit it to Mosaicoo Labs separately from any
 Contribution, identifying the complete details of its source and
 of any license or other restriction (including, but not limited
 to, related patents, trademarks, and license agreements) of which

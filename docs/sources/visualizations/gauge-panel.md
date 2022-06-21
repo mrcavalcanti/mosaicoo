@@ -18,13 +18,13 @@ Use the following options to refine how your visualization displays the value:
 
 ### Show
 
-Choose how Grafana displays your data.
+Choose how Mosaicoo displays your data.
 
 #### Calculate
 
 Show a calculated value based on all rows.
 
-- **Calculation -** Select a reducer function that Grafana will use to reduce many fields to a single value. For a list of available calculations, refer to [Calculation types]({{< relref "../panels/calculation-types.md" >}}).
+- **Calculation -** Select a reducer function that Mosaicoo will use to reduce many fields to a single value. For a list of available calculations, refer to [Calculation types]({{< relref "../panels/calculation-types.md" >}}).
 - **Fields -** Select the fields display in the panel.
 
 #### All values

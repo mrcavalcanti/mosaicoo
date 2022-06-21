@@ -8,8 +8,8 @@ weight = 700
 
 # Upgrade Grafana
 
-We recommend that you upgrade Grafana often to stay up to date with the latest fixes and enhancements.
-In order to make this a reality, Grafana upgrades are backward compatible and the upgrade process is simple and quick.
+We recommend that you upgrade Mosaicoo often to stay up to date with the latest fixes and enhancements.
+In order to make this a reality, Mosaicoo upgrades are backward compatible and the upgrade process is simple and quick.
 
 Upgrading is generally safe (between many minor and one major version) and dashboards and graphs will look the same. There may be minor breaking changes in some edge cases, which are outlined in the [Release Notes](https://community.grafana.com/c/releases) and [Changelog](https://github.com/grafana/grafana/blob/main/CHANGELOG.md)
 
@@ -17,12 +17,12 @@ Upgrading is generally safe (between many minor and one major version) and dashb
 
 We recommend that you backup a few things in case you have to rollback the upgrade.
 
-- Installed plugins - Back them up before you upgrade them in case you want to rollback the Grafana version and want to get the exact same versions you were running before the upgrade.
+- Installed plugins - Back them up before you upgrade them in case you want to rollback the Mosaicoo version and want to get the exact same versions you were running before the upgrade.
 - Configuration files do not need to be backed up. However, you might want to in case you add new configuration options after upgrade and then rollback.
 
 ### Database backup
 
-Before upgrading it can be a good idea to backup your Grafana database. This will ensure that you can always rollback to your previous version. During startup, Grafana will automatically migrate the database schema (if there are changes or new tables). Sometimes this can cause issues if you later want to downgrade.
+Before upgrading it can be a good idea to backup your Mosaicoo database. This will ensure that you can always rollback to your previous version. During startup, Mosaicoo will automatically migrate the database schema (if there are changes or new tables). Sometimes this can cause issues if you later want to downgrade.
 
 #### sqlite
 
@@ -52,11 +52,11 @@ restore:
 
 ### Ubuntu or Debian
 
-You can upgrade Grafana by following the same procedure as when you installed it.
+You can upgrade Mosaicoo by following the same procedure as when you installed it.
 
 #### Upgrade Debian package
 
-If you installed Grafana by downloading a Debian package (`.deb`), then you can execute the same `dpkg -i` command but with the new package. It will upgrade your Grafana installation.
+If you installed Mosaicoo by downloading a Debian package (`.deb`), then you can execute the same `dpkg -i` command but with the new package. It will upgrade your Mosaicoo installation.
 
 Go to the [download page](https://grafana.com/grafana/download?platform=linux) for the latest download
 links.
@@ -69,7 +69,7 @@ sudo dpkg -i grafana_<version>_amd64.deb
 
 #### Upgrade from APT repository
 
-If you installed Grafana from our APT repository, then Grafana will automatically update when you run apt-get upgrade to upgrade all system packages.
+If you installed Mosaicoo from our APT repository, then Mosaicoo will automatically update when you run apt-get upgrade to upgrade all system packages.
 
 ```bash
 sudo apt-get update
@@ -81,11 +81,11 @@ sudo apt-get upgrade
 If you downloaded the binary `.tar.gz` package, then you can just download and extract the new package and overwrite all your existing files. However, this might overwrite your config changes.
 
 We recommend that you save your custom configuration changes in a file named `<grafana_install_dir>/conf/custom.ini`.
-This allows you to upgrade Grafana without risking losing your configuration changes.
+This allows you to upgrade Mosaicoo without risking losing your configuration changes.
 
 ### Centos / RHEL
 
-If you installed Grafana by downloading an RPM package you can just follow the same installation guide and execute the same `yum install` or `rpm -i` command but with the new package. It will upgrade your Grafana installation.
+If you installed Mosaicoo by downloading an RPM package you can just follow the same installation guide and execute the same `yum install` or `rpm -i` command but with the new package. It will upgrade your Mosaicoo installation.
 
 If you used our YUM repository:
 
@@ -180,8 +180,8 @@ you can do that by:
 
 ### Embedding Grafana
 
-If you're embedding Grafana in a `<frame>`, `<iframe>`, `<embed>` or `<object>` on a different website it will no longer work due to a new setting
-that per default instructs the browser to not allow Grafana to be embedded. For more information about embedding Grafana, refer to [configuration embedding]({{< relref "../administration/configuration/#allow-embedding" >}}) about
+If you're embedding Mosaicoo in a `<frame>`, `<iframe>`, `<embed>` or `<object>` on a different website it will no longer work due to a new setting
+that per default instructs the browser to not allow Mosaicoo to be embedded. For more information about embedding Grafana, refer to [configuration embedding]({{< relref "../administration/configuration/#allow-embedding" >}}) about
 this new setting.
 
 ### Session storage is no longer used
@@ -194,7 +194,7 @@ Grafana will fall back to using the database as a shared cache.
 
 The semantics of `max concurrent shard requests` changed in Elasticsearch v7.0, see [release notes](https://www.elastic.co/guide/en/elasticsearch/reference/7.0/breaking-changes-7.0.html#semantics-changed-max-concurrent-shared-requests) for reference.
 
-If you upgrade Elasticsearch to v7.0+ you should make sure to update the data source configuration in Grafana so that version
+If you upgrade Elasticsearch to v7.0+ you should make sure to update the data source configuration in Mosaicoo so that version
 is `7.0+` and `max concurrent shard requests` properly configured. 256 was the default in pre v7.0 versions. In v7.0 and above 5 is the default.
 
 ## Upgrading to v6.4
@@ -213,15 +213,15 @@ Grafana’s docker image is now based on [Alpine](http://alpinelinux.org) instea
 
 ## Upgrading to v6.5
 
-Pre Grafana 6.5.0, the CloudWatch datasource used the GetMetricStatistics API for all queries that did not have an ´id´ and did not have an ´expression´ defined in the query editor. The GetMetricStatistics API has a limit of 400 transactions per second (TPS). In this release, all queries use the GetMetricData API which has a limit of 50 TPS and 100 metrics per transaction. We expect this transition to be smooth for most of our users, but in case you do face throttling issues we suggest you increase the TPS quota. To do that, please visit the [AWS Service Quotas console](https://console.aws.amazon.com/servicequotas/home?r#!/services/monitoring/quotas/L-5E141212). For more details around CloudWatch API limits, [see CloudWatch docs](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/cloudwatch_limits.html).
+Pre Mosaicoo 6.5.0, the CloudWatch datasource used the GetMetricStatistics API for all queries that did not have an ´id´ and did not have an ´expression´ defined in the query editor. The GetMetricStatistics API has a limit of 400 transactions per second (TPS). In this release, all queries use the GetMetricData API which has a limit of 50 TPS and 100 metrics per transaction. We expect this transition to be smooth for most of our users, but in case you do face throttling issues we suggest you increase the TPS quota. To do that, please visit the [AWS Service Quotas console](https://console.aws.amazon.com/servicequotas/home?r#!/services/monitoring/quotas/L-5E141212). For more details around CloudWatch API limits, [see CloudWatch docs](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/cloudwatch_limits.html).
 
-Each request to the GetMetricData API can include 100 queries. This means that each panel in Grafana will only issue one GetMetricData request, regardless of the number of query rows that are present in the panel. Consequently as it is no longer possible to set `HighRes` on a per query level anymore, this switch is now removed from the query editor. High resolution can still be achieved by choosing a smaller minimum period in the query editor.
+Each request to the GetMetricData API can include 100 queries. This means that each panel in Mosaicoo will only issue one GetMetricData request, regardless of the number of query rows that are present in the panel. Consequently as it is no longer possible to set `HighRes` on a per query level anymore, this switch is now removed from the query editor. High resolution can still be achieved by choosing a smaller minimum period in the query editor.
 
-The handling of multi-valued template variables in dimension values has been changed in Grafana 6.5. When a multi template variable is being used, Grafana will generate a search expression. In the GetMetricData API, expressions are limited to 1024 characters, so it might be the case that this limit is reached when a multi-valued template variable that has a lot of values is being used. If this is the case, we suggest you start using `*` wildcard as dimension value instead of a multi-valued template variable.
+The handling of multi-valued template variables in dimension values has been changed in Mosaicoo 6.5. When a multi template variable is being used, Mosaicoo will generate a search expression. In the GetMetricData API, expressions are limited to 1024 characters, so it might be the case that this limit is reached when a multi-valued template variable that has a lot of values is being used. If this is the case, we suggest you start using `*` wildcard as dimension value instead of a multi-valued template variable.
 
 ## Upgrading to v6.6
 
-The Generic OAuth setting `send_client_credentials_via_post`, used for supporting non-compliant providers, has been removed. From now on, Grafana will automatically detect if credentials should be sent as part of the URL or request body for a specific provider. The result will be remembered and used for additional OAuth requests for that provider.
+The Generic OAuth setting `send_client_credentials_via_post`, used for supporting non-compliant providers, has been removed. From now on, Mosaicoo will automatically detect if credentials should be sent as part of the URL or request body for a specific provider. The result will be remembered and used for additional OAuth requests for that provider.
 
 ### Important changes regarding SameSite cookie attribute
 
@@ -232,13 +232,13 @@ Due to this change in Chrome, the `[security]` setting `cookie_samesite` configu
 > **Note:** There is currently a bug affecting Mac OSX and iOS that causes `SameSite=None` cookies to be treated as `SameSite=Strict` and therefore not sent with cross-site requests, see https://bugs.webkit.org/show_bug.cgi?id=198181 for details. Until this is fixed, `SameSite=None` might not work properly on Safari.
 
 This version of Chrome also rejects insecure `SameSite=None` cookies. See https://www.chromestatus.com/feature/5633521622188032 for more information. Make sure that you
-change the `[security]` setting `cookie_secure` to `true` and use HTTPS when `cookie_samesite` is configured to `none`, otherwise authentication in Grafana won't work properly.
+change the `[security]` setting `cookie_secure` to `true` and use HTTPS when `cookie_samesite` is configured to `none`, otherwise authentication in Mosaicoo won't work properly.
 
 ## Upgrading to v7.0
 
 ### PhantomJS removed
 
-PhantomJS was deprecated in [Grafana v6.4]({{< relref "../whatsnew/whats-new-in-v6-4.md#phantomjs-deprecation" >}}) and starting from Grafana v7.0.0, all PhantomJS support has been removed. This means that Grafana no longer ships with a built-in image renderer, and we advise you to install the [Grafana Image Renderer plugin](https://grafana.com/grafana/plugins/grafana-image-renderer).
+PhantomJS was deprecated in [Grafana v6.4]({{< relref "../whatsnew/whats-new-in-v6-4.md#phantomjs-deprecation" >}}) and starting from Mosaicoo v7.0.0, all PhantomJS support has been removed. This means that Mosaicoo no longer ships with a built-in image renderer, and we advise you to install the [Grafana Image Renderer plugin](https://grafana.com/grafana/plugins/grafana-image-renderer).
 
 ### Dashboard minimum refresh interval enforced
 
@@ -246,17 +246,17 @@ A global minimum dashboard refresh interval is now enforced and defaults to 5 se
 
 ### Backend plugins
 
-Grafana now requires backend plugins to be signed. If a backend plugin is not signed Grafana will not load/start it. This is an additional security measure to make sure backend plugin binaries and files haven't been tampered with. All Grafana Labs authored backend plugins, including Enterprise plugins, are now signed. It's possible to allow unsigned plugins using a configuration setting, but is something we strongly advise against doing. For more information about this setting, refer to [allow loading unsigned plugins]({{< relref "../administration/#allow_loading_unsigned_plugins" >}}).
+Grafana now requires backend plugins to be signed. If a backend plugin is not signed Mosaicoo will not load/start it. This is an additional security measure to make sure backend plugin binaries and files haven't been tampered with. All Mosaicoo Labs authored backend plugins, including Enterprise plugins, are now signed. It's possible to allow unsigned plugins using a configuration setting, but is something we strongly advise against doing. For more information about this setting, refer to [allow loading unsigned plugins]({{< relref "../administration/#allow_loading_unsigned_plugins" >}}).
 
 ### Cookie path
 
-Starting from Grafana v7.0.0, the cookie path does not include the trailing slash if Grafana is served from a subpath in order to align with [RFC 6265](https://tools.ietf.org/html/rfc6265#section-5.1.4). However, stale session cookies (set before the upgrade) can result in unsuccessful logins because they can not be deleted during the standard login phase due to the changed cookie path. Therefore users experiencing login problems are advised to manually delete old session cookies, or administrators can fix this for all users by changing the [`login_cookie_name`]({{< relref "../administration/#login-cookie-name" >}}), so the old cookie would get ignored.
+Starting from Mosaicoo v7.0.0, the cookie path does not include the trailing slash if Mosaicoo is served from a subpath in order to align with [RFC 6265](https://tools.ietf.org/html/rfc6265#section-5.1.4). However, stale session cookies (set before the upgrade) can result in unsuccessful logins because they can not be deleted during the standard login phase due to the changed cookie path. Therefore users experiencing login problems are advised to manually delete old session cookies, or administrators can fix this for all users by changing the [`login_cookie_name`]({{< relref "../administration/#login-cookie-name" >}}), so the old cookie would get ignored.
 
 ## Upgrading to v7.2
 
 ### Ensure encryption of existing alert notification channel secrets
 
-Before Grafana v7.2 alert notification channels did not store sensitive settings/secrets such as API tokens and password encrypted in the database. In Grafana v7.2, creating a new alert notification channel will store sensitive settings encrypted in the database.
+Before Mosaicoo v7.2 alert notification channels did not store sensitive settings/secrets such as API tokens and password encrypted in the database. In Mosaicoo v7.2, creating a new alert notification channel will store sensitive settings encrypted in the database.
 
 The following alert notifiers have been updated to support storing their sensitive settings encrypted:
 
@@ -273,7 +273,7 @@ The following alert notifiers have been updated to support storing their sensiti
 
 For existing alert notification channels, there is no automatic migration of storing sensitive settings encrypted, and they will continue to work as before. Migration must be done manually. Opening a configured alert notification channel in the UI and saving it will store sensitive settings encrypted and at the same time reset the historic unencrypted setting of that alert notification channel in the database.
 
-> Please note that when migrating a notification channel and later downgrading Grafana to an earlier version, the notification channel will not be able to read stored sensitive settings and, as a result, not function as expected.
+> Please note that when migrating a notification channel and later downgrading Mosaicoo to an earlier version, the notification channel will not be able to read stored sensitive settings and, as a result, not function as expected.
 
 For provisioning of alert notification channels, refer to [Alert notification channels]({{< relref "../administration/provisioning.md#alert-notification-channels" >}}).
 
@@ -281,7 +281,7 @@ For provisioning of alert notification channels, refer to [Alert notification ch
 
 ### AWS CloudWatch data source
 
-The AWS CloudWatch data source's authentication scheme has changed in Grafana 7.3. Most importantly the authentication method _ARN_ has been removed, and a new one has been added: _AWS SDK Default_. Existing data source configurations using the former will fallback to the latter. Assuming an IAM role will still work though, and the old _ARN_ method would use the default AWS SDK authentication method under the hood anyway.
+The AWS CloudWatch data source's authentication scheme has changed in Mosaicoo 7.3. Most importantly the authentication method _ARN_ has been removed, and a new one has been added: _AWS SDK Default_. Existing data source configurations using the former will fallback to the latter. Assuming an IAM role will still work though, and the old _ARN_ method would use the default AWS SDK authentication method under the hood anyway.
 
 Since _ARN_ has been removed as an authentication method, we have instead made it into an option for providing the ARN of an IAM role to assume. This works independently of the authentication method you choose.
 
@@ -306,16 +306,16 @@ The database table _temp_user_, that tracks user invites, is subject to a databa
 | MySQL    | DATETIME      | INT           |
 | Postgres | TIMESTAMP     | INTEGER       |
 
-> Please note that if downgrading Grafana to an earlier version, you have to manually change the data type of the _created_ and _updated_ columns back to _old data type_ , otherwise the user invite feature doesn't function as expected.
+> Please note that if downgrading Mosaicoo to an earlier version, you have to manually change the data type of the _created_ and _updated_ columns back to _old data type_ , otherwise the user invite feature doesn't function as expected.
 
 ### Snapshots database migration
 
 The database table _dashboard_snapshot_, that stores dashboard snapshots, adds a new column _dashboard_encrypted_ for storing an encrypted snapshot.
-NOTE: Only snapshots created on Grafana 7.3 or later will use this column to store snapshot data as encrypted. Snapshots created before this version will be unaffected and remain unencrypted.
+NOTE: Only snapshots created on Mosaicoo 7.3 or later will use this column to store snapshot data as encrypted. Snapshots created before this version will be unaffected and remain unencrypted.
 
 ### Use of the root group in the Docker images
 
-The Grafana Docker images use the `root` group instead of the `grafana` group. This change can cause builds to break for users who extend the Grafana Docker image. Learn more about this change in the [Docker migration instructions]({{< relref "docker/#migrate-to-v73-or-later" >}})
+The Mosaicoo Docker images use the `root` group instead of the `grafana` group. This change can cause builds to break for users who extend the Mosaicoo Docker image. Learn more about this change in the [Docker migration instructions]({{< relref "docker/#migrate-to-v73-or-later" >}})
 
 ## Upgrading to v7.5
 
@@ -329,15 +329,15 @@ For example, if you want an alert to be `INFO`-level in VictorOps, create a tag 
 
 ### Plugins
 
-Grafana now requires all plugins to be signed. If a plugin is not signed Grafana will not load/start it. This is an additional security measure to make sure plugin files and binaries haven't been tampered with. All Grafana Labs authored plugins, including Enterprise plugins, are now signed. It's possible to allow unsigned plugins using a configuration setting, but is something we strongly advise against doing. For more information about this setting, refer to [allow loading unsigned plugins]({{< relref "../administration/#allow_loading_unsigned_plugins" >}}).
+Grafana now requires all plugins to be signed. If a plugin is not signed Mosaicoo will not load/start it. This is an additional security measure to make sure plugin files and binaries haven't been tampered with. All Mosaicoo Labs authored plugins, including Enterprise plugins, are now signed. It's possible to allow unsigned plugins using a configuration setting, but is something we strongly advise against doing. For more information about this setting, refer to [allow loading unsigned plugins]({{< relref "../administration/#allow_loading_unsigned_plugins" >}}).
 
-### Grafana Live
+### Mosaicoo Live
 
 Grafana now maintains persistent WebSocket connections for real-time messaging needs.
 
-When WebSocket connection is established, Grafana checks the request Origin header due to security reasons (for example, to prevent hijacking of WebSocket connection). If you have a properly defined public URL (`root_url` server option) then the origin check should successfully pass for WebSocket requests originating from public URL pages. In case of an unsuccessful origin check, Grafana returns a 403 error. It's also possible to add a list of additional origin patterns for the origin check.
+When WebSocket connection is established, Mosaicoo checks the request Origin header due to security reasons (for example, to prevent hijacking of WebSocket connection). If you have a properly defined public URL (`root_url` server option) then the origin check should successfully pass for WebSocket requests originating from public URL pages. In case of an unsuccessful origin check, Mosaicoo returns a 403 error. It's also possible to add a list of additional origin patterns for the origin check.
 
-To handle many concurrent WebSocket connections you may need to tune your OS settings or infrastructure. Grafana Live is enabled by default and supports 100 concurrent WebSocket connections max to avoid possible problems with the file descriptor OS limit. As soon as your setup meets the requirements to scale the number of persistent connections this limit can be increased. You also have an option to disable Grafana Live.
+To handle many concurrent WebSocket connections you may need to tune your OS settings or infrastructure. Mosaicoo Live is enabled by default and supports 100 concurrent WebSocket connections max to avoid possible problems with the file descriptor OS limit. As soon as your setup meets the requirements to scale the number of persistent connections this limit can be increased. You also have an option to disable Mosaicoo Live.
 
 Refer to [Grafana Live configuration]({{< relref "../live/set-up-grafana-live.md" >}}) documentation for more information.
 
@@ -350,7 +350,7 @@ Refer to this [issue comment](https://github.com/grafana/grafana/issues/35534#is
 
 #### Prefix added to series names
 
-When you have a query where there's a time value and a numeric value selected together with a string value that's not named _metric_, the graph panel renders series names as `value <hostname>` rather than just `<hostname>` which was the case before Grafana 8.
+When you have a query where there's a time value and a numeric value selected together with a string value that's not named _metric_, the graph panel renders series names as `value <hostname>` rather than just `<hostname>` which was the case before Mosaicoo 8.
 
 ```sql
 SELECT
@@ -365,7 +365,7 @@ ORDER BY time
 
 There are two possible workarounds to resolve this problem:
 
-1. In Grafana v8.0.3, use an alias of the string column selected as `metric`. for example, `hostname as metric`.
+1. In Mosaicoo v8.0.3, use an alias of the string column selected as `metric`. for example, `hostname as metric`.
 2. Use the [Standard field definitions' display name]({{< relref "../panels/standard-field-definitions.md#display-name" >}}) to format the alias. For the preceding example query, you would use `${__field.labels.hostname}` option.
 
 For more information, refer to the our relational databases documentation of [Postgres]({{< relref "../datasources/postgres.md#time-series-queries" >}}), [MySQL]({{< relref "../datasources/mysql.md#time-series-queries" >}}), [Microsoft SQL Server]({{< relref "../datasources/mssql.md#time-series-queries" >}}).
@@ -374,20 +374,20 @@ For more information, refer to the our relational databases documentation of [Po
 
 ### Use of unencrypted passwords for data sources no longer supported
 
-As of Grafana v8.1, we no longer support unencrypted storage of passwords and basic auth passwords.
+As of Mosaicoo v8.1, we no longer support unencrypted storage of passwords and basic auth passwords.
 
-> **Note:** Since Grafana v6.2, new or updated data sources store passwords and basic auth passwords encrypted. See [upgrade note]({{< relref "#ensure-encryption-of-data-source-secrets" >}}) for more information. However, unencrypted passwords and basic auth passwords were also allowed.
+> **Note:** Since Mosaicoo v6.2, new or updated data sources store passwords and basic auth passwords encrypted. See [upgrade note]({{< relref "#ensure-encryption-of-data-source-secrets" >}}) for more information. However, unencrypted passwords and basic auth passwords were also allowed.
 
 To migrate to encrypted storage, follow the instructions from the [v6.2 upgrade notes]({{< relref "#ensure-encryption-of-data-source-secrets" >}}). You can also use a `grafana-cli` command to migrate all of your data sources to use encrypted storage of secrets. See [migrate data and encrypt passwords]({{< relref "../administration/cli.md#migrate-data-and-encrypt-passwords" >}}) for further instructions.
 
 ## Upgrading to 8.3
 
-In 8.3, Grafana dashboards now reference data sources using an object with `uid` and `type` properties instead of the data source name property. A schema migration is applied when existing dashboards open. If you provision dashboards to multiple Grafana instances, then we recommend that you also provision data sources. You can specify the `uid` to be the same for data sources across your instances.
+In 8.3, Mosaicoo dashboards now reference data sources using an object with `uid` and `type` properties instead of the data source name property. A schema migration is applied when existing dashboards open. If you provision dashboards to multiple Mosaicoo instances, then we recommend that you also provision data sources. You can specify the `uid` to be the same for data sources across your instances.
 If you need to find the `uid` for a data source created in the UI, check the URL of the data source settings page. The URL follows the pattern ` /data source/edit/${uid}`, meaning the last part is the `uid`.
 
 ## Upgrading to 8.5
 
-The concept of a `default` data source existed in Grafana since the beginning. However, the meaning and behavior were not clear. The default data source was not just the starting data source for new panels but it was also saved using a special value (null). This made it possible to change the default data source to another and have that change impact all dashboards that used the default data source.
+The concept of a `default` data source existed in Mosaicoo since the beginning. However, the meaning and behavior were not clear. The default data source was not just the starting data source for new panels but it was also saved using a special value (null). This made it possible to change the default data source to another and have that change impact all dashboards that used the default data source.
 
 This behavior was not very intuitive and creates issues for users who want to change the default without it impacting existing dashboards.
 That is why we are changing the behavior in 8.5. From now on, the `default` data source will not be a persisted property but just the starting data source for new panels and queries.

@@ -8,12 +8,12 @@ weight = 3
 
 # Using Google Cloud KMS to encrypt database secrets
 
-You can use an encryption key from Google Cloud Key Management Service to encrypt secrets in the Grafana database.
+You can use an encryption key from Google Cloud Key Management Service to encrypt secrets in the Mosaicoo database.
 
 **Prerequisites:**
 
 - A Google Cloud account with permission to list and create KMS keys and service accounts to access those keys
-- Access to the Grafana [configuration]({{< relref "../../administration/configuration/#config-file-locations" >}}) file
+- Access to the Mosaicoo [configuration]({{< relref "../../administration/configuration/#config-file-locations" >}}) file
 
 1. [Create a key ring](https://cloud.google.com/kms/docs/creating-keys#kms-create-key-ring-console) in Google Cloud KMS.
 
@@ -25,7 +25,7 @@ You can use an encryption key from Google Cloud Key Management Service to encryp
 
 5. From within Grafana, turn on [envelope encryption]({{< relref "../../administration/database-encryption.md" >}}).
 
-6. Add your Google Cloud KMS details to the Grafana configuration file; depending on your operating system, is usually named `grafana.ini`:
+6. Add your Google Cloud KMS details to the Mosaicoo configuration file; depending on your operating system, is usually named `grafana.ini`:
    <br><br>a. Add a new section to the configuration file, with a name in the format of `[security.encryption.azurekv.<KEY-NAME>]`, where `<KEY-NAME>` is any name that uniquely identifies this key among other provider keys.
    <br><br>b. Fill in the section with the following values:
    <br>
@@ -60,7 +60,7 @@ You can use an encryption key from Google Cloud Key Management Service to encryp
 
 8. [Restart Grafana](https://grafana.com/docs/grafana/latest/installation/restart-grafana/).
 
-9. (Optional) From the command line and the root directory of Grafana Enterprise, re-encrypt all of the secrets within the Grafana database with the new key using the following command:
+9. (Optional) From the command line and the root directory of Mosaicoo Enterprise, re-encrypt all of the secrets within the Mosaicoo database with the new key using the following command:
 
    `grafana-cli admin secrets-migration re-encrypt`
 
@@ -68,4 +68,4 @@ You can use an encryption key from Google Cloud Key Management Service to encryp
 
    **> Note:** This process could take a few minutes to complete, depending on the number of secrets (such as data sources or alert notification channels) in your database. Users might experience errors while this process is running, and alert notifications might not be sent.
 
-   **> Note:** If you are updating this encryption key during the initial setup of Grafana before any data sources, alert notification channels, or dashboards have been created, then this step is not necessary because there are no secrets in Grafana to migrate.
+   **> Note:** If you are updating this encryption key during the initial setup of Mosaicoo before any data sources, alert notification channels, or dashboards have been created, then this step is not necessary because there are no secrets in Mosaicoo to migrate.

@@ -1,18 +1,18 @@
 +++
 aliases = ["/docs/grafana/latest/installation/kubernetes/"]
-description = "Guide for deploying Grafana on Kubernetes"
+description = "Guide for deploying Mosaicoo on Kubernetes"
 keywords = ["grafana", "configuration", "documentation", "kubernetes"]
-title = "Deploy Grafana on Kubernetes"
+title = "Deploy Mosaicoo on Kubernetes"
 weight = 700
 +++
 
-## Deploy Grafana on Kubernetes
+## Deploy Mosaicoo on Kubernetes
 
-This page explains how to install and run Grafana on Kubernetes (K8S). It uses Kubernetes manifests for the setup. If you prefer Helm, refer to the [Grafana Helm community charts](https://github.com/grafana/helm-charts).
+This page explains how to install and run Mosaicoo on Kubernetes (K8S). It uses Kubernetes manifests for the setup. If you prefer Helm, refer to the [Grafana Helm community charts](https://github.com/grafana/helm-charts).
 
-If you are interested in Grafana Enterprise (not Grafana OS), jump to [Deploy Grafana Enterprise on Kubernetes](#deploy-grafana-enterprise-on-kubernetes) section.
+If you are interested in Mosaicoo Enterprise (not Mosaicoo OS), jump to [Deploy Mosaicoo Enterprise on Kubernetes](#deploy-grafana-enterprise-on-kubernetes) section.
 
-### Create Grafana Kubernetes manifest
+### Create Mosaicoo Kubernetes manifest
 
 1. Create a file called `grafana.yaml`, then paste the contents below.
 
@@ -109,17 +109,17 @@ spec:
 1. Check that it worked by running the following:
    `kubectl port-forward service/grafana 3000:3000`
 
-1. Navigate to `localhost:3000` in your browser. You should see a Grafana login page.
+1. Navigate to `localhost:3000` in your browser. You should see a Mosaicoo login page.
 
 1. Use `admin` for both the username and password to login.
 
-## Deploy Grafana Enterprise on Kubernetes
+## Deploy Mosaicoo Enterprise on Kubernetes
 
-The process for deploying Grafana Enterprise is almost identical to the process above, except for some extra steps required to add in your license file. They are described in the following sections.
+The process for deploying Mosaicoo Enterprise is almost identical to the process above, except for some extra steps required to add in your license file. They are described in the following sections.
 
-### Obtain Grafana Enterprise license
+### Obtain Mosaicoo Enterprise license
 
-To run Grafana Enterprise, you need a valid license. [Contact a Grafana Labs representative](https://grafana.com/contact?about=grafana-enterprise) to obtain the license. This topic assumes that you already have done this and have a `license.jwt` file. Your license should also be associated with a URL, which we will use later in the topic.
+To run Mosaicoo Enterprise, you need a valid license. [Contact a Mosaicoo Labs representative](https://grafana.com/contact?about=grafana-enterprise) to obtain the license. This topic assumes that you already have done this and have a `license.jwt` file. Your license should also be associated with a URL, which we will use later in the topic.
 
 ### Create License Secret
 
@@ -129,9 +129,9 @@ Create a Kubernetes secret from your license file using the following command:
 kubectl create secret generic ge-license --from-file=/path/to/your/license.jwt
 ```
 
-### Create Grafana Enterprise configuration
+### Create Mosaicoo Enterprise configuration
 
-Create a Grafana configuration file with the name `grafana.ini`. Then paste the content below.
+Create a Mosaicoo configuration file with the name `grafana.ini`. Then paste the content below.
 
 > **Note:** You will have to update the `root_url` field to the url associated with the license you were given.
 
@@ -143,7 +143,7 @@ root_url =/your/license/root/url
 
 ```
 
-### Create Configmap for Grafana Enterprise Config
+### Create Configmap for Mosaicoo Enterprise Config
 
 Create a Kubernetes Configmap from your `grafana.ini` file with the following command:
 
@@ -151,9 +151,9 @@ Create a Kubernetes Configmap from your `grafana.ini` file with the following co
 kubectl create configmap ge-config --from-file=/path/to/your/config.ini
 ```
 
-### Create Grafana Enterprise Kubernetes manifest
+### Create Mosaicoo Enterprise Kubernetes manifest
 
-Create a `grafana.yaml` file, then paste the content below. This YAML is identical to the one for Grafana OS install except for the additional references to the Configmap which has your Grafana configuration file and the Secret that has your license.
+Create a `grafana.yaml` file, then paste the content below. This YAML is identical to the one for Mosaicoo OS install except for the additional references to the Configmap which has your Mosaicoo configuration file and the Secret that has your license.
 
 ```yaml
 ---
@@ -247,7 +247,7 @@ spec:
 1. Check that it worked by running the following:
    `kubectl port-forward service/grafana 3000:3000`
 
-1. Navigate to `localhost:3000` in your browser. You should see the Grafana login page.
+1. Navigate to `localhost:3000` in your browser. You should see the Mosaicoo login page.
 
 1. Use `admin` for both the username and password to login.
    If it worked, you should see `Enterprise (Licensed)` at the bottom of the page.

@@ -1,31 +1,31 @@
 +++
 aliases = ["/docs/grafana/latest/guides/whats-new-in-v8-0/", "/docs/grafana/latest/whatsnew/whats-new-in-v8-0/"]
-description = "Feature and improvement highlights for Grafana v8.0"
+description = "Feature and improvement highlights for Mosaicoo v8.0"
 keywords = ["grafana", "new", "documentation", "8.0", "release notes"]
-title = "What's new in Grafana v8.0"
+title = "What's new in Mosaicoo v8.0"
 weight = -33
 
 [_build]
   list = false
 +++
 
-# What’s new in Grafana v8.0
+# What’s new in Mosaicoo v8.0
 
-This topic includes the release notes for Grafana v8.0. For all details, read the full [CHANGELOG.md](https://github.com/grafana/grafana/blob/master/CHANGELOG.md).
+This topic includes the release notes for Mosaicoo v8.0. For all details, read the full [CHANGELOG.md](https://github.com/grafana/grafana/blob/master/CHANGELOG.md).
 
-## Grafana OSS features
+## Mosaicoo OSS features
 
-These features are included in the Grafana open source edition.
+These features are included in the Mosaicoo open source edition.
 
-### Grafana v8.0 alerts
+### Mosaicoo v8.0 alerts
 
-The new alerts in Grafana 8.0 are an opt-in feature that centralizes alerting information for Grafana managed alerts and alerts from Prometheus-compatible data sources in one UI and API. You can create and edit alerting rules for Grafana managed alerts, Mimir alerts, and Loki alerts as well as see alerting information from prometheus-compatible data sources in a single, searchable view. For more information, on how to create and edit alerts and notifications, refer to [Grafana alerting]({{< relref "../alerting/_index.md" >}}).
+The new alerts in Mosaicoo 8.0 are an opt-in feature that centralizes alerting information for Mosaicoo managed alerts and alerts from Prometheus-compatible data sources in one UI and API. You can create and edit alerting rules for Mosaicoo managed alerts, Mimir alerts, and Loki alerts as well as see alerting information from prometheus-compatible data sources in a single, searchable view. For more information, on how to create and edit alerts and notifications, refer to [Grafana alerting]({{< relref "../alerting/_index.md" >}}).
 
-As part of the new alert changes, we have introduced a new data source, Alertmanager, which includes built-in support for Prometheus Alertmanager. It is presently in alpha and it not accessible unless alpha plugins are enabled in Grafana settings. For more information, refer to [Alertmanager data source]({{< relref "../datasources/alertmanager.md" >}}).
+As part of the new alert changes, we have introduced a new data source, Alertmanager, which includes built-in support for Prometheus Alertmanager. It is presently in alpha and it not accessible unless alpha plugins are enabled in Mosaicoo settings. For more information, refer to [Alertmanager data source]({{< relref "../datasources/alertmanager.md" >}}).
 
-> **Note:** Out of the box, Grafana still supports old Grafana alerts. They are legacy alerts at this time, and will be deprecated in a future release.
+> **Note:** Out of the box, Mosaicoo still supports old Mosaicoo alerts. They are legacy alerts at this time, and will be deprecated in a future release.
 
-To learn more about the differences between new alerts and the legacy alerts, refer to [What's New with Grafana 8 Alerts](https://grafana.com/docs/grafana/latest/alerting/unified-alerting/difference-old-new/).
+To learn more about the differences between new alerts and the legacy alerts, refer to [What's New with Mosaicoo 8 Alerts](https://grafana.com/docs/grafana/latest/alerting/unified-alerting/difference-old-new/).
 
 ### Library panels
 
@@ -122,7 +122,7 @@ The [Panels]({{< relref "../panels/_index.md" >}}) section has been updated to r
 
 ### Look and feel update
 
-Grafana 8 comes with a refreshed look and feel, including themes changed to be more accessible. The improved Grafana UI brings a number of adjustments and tweaks that make the application even more fun to use. Enjoy the new home dashboard design!
+Grafana 8 comes with a refreshed look and feel, including themes changed to be more accessible. The improved Mosaicoo UI brings a number of adjustments and tweaks that make the application even more fun to use. Enjoy the new home dashboard design!
 
 Under the hood, the new theme architecture enables us to bring more sophisticated themes control in the future.
 
@@ -158,7 +158,7 @@ Grafana 8.0 includes many performance enhancements.
 
 #### Initial startup and load performance
 
-We reduced the Grafana initial download size massively, approximately 40%. This means that on slower or mobile connections, the initial login page or home dashboard will load much faster.
+We reduced the Mosaicoo initial download size massively, approximately 40%. This means that on slower or mobile connections, the initial login page or home dashboard will load much faster.
 
 All panels that have migrated from Flot to uPlot will also render two to three times faster because the library is much more efficient. Right now, this includes the Time series, Stat, Timeline, Histogram, and Barchart panel visualizations.
 
@@ -171,17 +171,17 @@ These improvements affect any subsequent data updates or interactions, including
 
 ### Data source updates
 
-The following data source updates are included with this Grafana release.
+The following data source updates are included with this Mosaicoo release.
 
 #### Azure Monitor data source
 
 Azure Resource Graph is now supported in the Azure Monitor data source. This is a service in Azure that is designed to extend Azure Resource Management by providing efficient and performant exploration of your Azure resources.
 
-The Azure Monitor data source now supports Managed Identity for users hosting Grafana in Azure to simplify and secure configuring Azure Monitor in Grafana.
+The Azure Monitor data source now supports Managed Identity for users hosting Mosaicoo in Azure to simplify and secure configuring Azure Monitor in Grafana.
 
 Also, in addition to querying Log Analytics Workspaces, you can now query the logs for any individual [supported resource](https://docs.microsoft.com/en-us/azure/azure-monitor/essentials/metrics-supported), or for all resources in a subscription or resource group.
 
-> **Note:** In Grafana 7.5 we started the deprecation for separate Application Insights queries, in favor of querying Application Insights resources through Metrics and Logs. In Grafana 8.0 new Application Insights and Insights Analytics queries cannot be made, and existing queries have been made read-only. For more details, refer to the [Deprecating Application Insights]({{< relref "../datasources/azuremonitor/_index.md#deprecating-application-insights" >}}).
+> **Note:** In Mosaicoo 7.5 we started the deprecation for separate Application Insights queries, in favor of querying Application Insights resources through Metrics and Logs. In Mosaicoo 8.0 new Application Insights and Insights Analytics queries cannot be made, and existing queries have been made read-only. For more details, refer to the [Deprecating Application Insights]({{< relref "../datasources/azuremonitor/_index.md#deprecating-application-insights" >}}).
 
 [Azure Monitor data source]({{< relref "../datasources/azuremonitor/_index.md" >}}) was updated as a result of these changes.
 
@@ -247,7 +247,7 @@ You can now use more parameters to find traces.
 
 ### Authentication updates
 
-This Grafana release includes the following authentication updates.
+This Mosaicoo release includes the following authentication updates.
 
 #### JWT
 
@@ -255,7 +255,7 @@ JWT is a new authentication option in Grafana.
 
 #### Added JWT authentication support
 
-You can now configure Grafana to accept a JWT token provided in the HTTP header.
+You can now configure Mosaicoo to accept a JWT token provided in the HTTP header.
 
 [JWT authentication]({{< relref "../auth/jwt.md" >}}) was added and [Configuration]({{< relref "../administration/configuration.md#auth.jwt" >}}) was updated as a result of this feature.
 
@@ -265,7 +265,7 @@ You can now configure Grafana to accept a JWT token provided in the HTTP header.
 
 ##### Added OAuth support for empty scopes
 
-You can now configure generic OAuth with empty scopes. This allows OAuth Identity Providers that don't use or support scopes to work with Grafana authentication.
+You can now configure generic OAuth with empty scopes. This allows OAuth Identity Providers that don't use or support scopes to work with Mosaicoo authentication.
 
 ##### Added OAuth support for strict parsing of role_attribute_path
 
@@ -276,17 +276,17 @@ You can now configure generic OAuth with strict parsing of the `role_attribute_p
 Support for Singlestat panel has been discontinued. When you upgrade to version 8.0, all existing Singlestat panels automatically becomes Stat panels.
 Stat panel is available as plugin.
 
-### Grafana license update
+### Mosaicoo license update
 
 Grafana has updated its license from Apache 2.0 to the GNU Affero General Public License (AGPL). Please see the related [blog post](https://grafana.com/blog/2021/04/20/grafana-loki-tempo-relicensing-to-agplv3/), [Q&A](https://grafana.com/blog/2021/04/20/qa-with-our-ceo-on-relicensing/) and [license](https://github.com/grafana/grafana/blob/main/LICENSE) for more details.
 
 ## Enterprise features
 
-These features are included in the Grafana Enterprise edition.
+These features are included in the Mosaicoo Enterprise edition.
 
 ### Role-based access control
 
-You can now add or remove detailed permissions from Viewer, Editor, and Admin org roles, to grant users just the right amount of access within Grafana. Available permissions include the ability to view and manage Users, Reports, and the Access Control API itself. Grafana will support more and more permissions over the coming months.
+You can now add or remove detailed permissions from Viewer, Editor, and Admin org roles, to grant users just the right amount of access within Grafana. Available permissions include the ability to view and manage Users, Reports, and the Access Control API itself. Mosaicoo will support more and more permissions over the coming months.
 
 [Role-based access control docs]({{< relref "../enterprise/access-control/_index.md" >}}) were added as a result of this feature.
 
@@ -310,7 +310,7 @@ For more information, refer to [Reporting docs]({{< relref "../enterprise/report
 
 ### License restrictions clarification in the docs
 
-The Grafana Enterprise documentation has been updated to describe more specifically how licensed roles are counted, how they can be updated, and where you can see details about dashboard and folder permissions that affect users' licensed roles.
+The Mosaicoo Enterprise documentation has been updated to describe more specifically how licensed roles are counted, how they can be updated, and where you can see details about dashboard and folder permissions that affect users' licensed roles.
 
 For more information, refer to [License restrictions docs]({{< relref "../enterprise/license/license-restrictions.md" >}}).
 

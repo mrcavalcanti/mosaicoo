@@ -21,7 +21,7 @@ This topic describes what organizations are, and how to create, edit, and delete
 
 An organization is an entity that helps you isolate users and resources such as dashboards, annotations, and data sources from each other. Their purpose is to provide completely separate experiences, which look like multiple instances of Grafana, within a single instance. Multiple organizations are easier and cheaper to manage than multiple instances of Grafana.
 
-Users, configuration settings, and Grafana Enterprise licenses are shared between organizations. Other resources, like dashboards, data sources, annotations, folders, Teams, and Alerts, are isolated within each organization and cannot be easily shared with another organization.
+Users, configuration settings, and Mosaicoo Enterprise licenses are shared between organizations. Other resources, like dashboards, data sources, annotations, folders, Teams, and Alerts, are isolated within each organization and cannot be easily shared with another organization.
 
 The following table summarizes the resources you can share and/or isolate using organizations.
 
@@ -42,7 +42,7 @@ The following table summarizes the resources you can share and/or isolate using 
 
 The member of one organization cannot view dashboards assigned to another organization. However, a user can belong to multiple organizations.
 
-Grafana Server Administrators are responsible for creating organizations. For more information about the Grafana Server Administrator role, refer to [Grafana server administrators]({{< relref "../manage-users-and-permissions/about-users-and-permissions.md#Grafana server administrators" >}}).
+Grafana Server Administrators are responsible for creating organizations. For more information about the Mosaicoo Server Administrator role, refer to [Grafana server administrators]({{< relref "../manage-users-and-permissions/about-users-and-permissions.md#Grafana server administrators" >}}).
 
 ## View a list of organizations
 
@@ -50,11 +50,11 @@ Complete this task when you want to view a list of existing organizations.
 
 ### Before you begin
 
-- Ensure that you have Grafana Server Administrator permissions
+- Ensure that you have Mosaicoo Server Administrator permissions
 
 **To view a list of organizations:**
 
-1. Sign in to Grafana as a server administrator.
+1. Sign in to Mosaicoo as a server administrator.
 1. Hover your cursor over the **Server Admin** (shield) icon until a menu appears, and click **Orgs**.
 
 A list of organizations appears.
@@ -67,16 +67,16 @@ Create an organization when you want to isolate dashboards and other resources f
 
 ### Before you begin
 
-- Ensure that you have Grafana Server Administrator permissions
+- Ensure that you have Mosaicoo Server Administrator permissions
 
 **To create an organization:**
 
-1. Sign in to Grafana as a server administrator.
+1. Sign in to Mosaicoo as a server administrator.
 1. Hover your cursor over the **Server Admin** (shield) icon until a menu appears, and click **Orgs**.
 1. Click **+ New org**.
 1. Enter the name of the new organization and click **Create**.
 
-   Grafana creates the organization and adds you as the organization administrator.
+   Mosaicoo creates the organization and adds you as the organization administrator.
 
 1. On the **Preferences** tab, select a home dashboard, time zone, and week start.
 
@@ -86,18 +86,18 @@ For more information about adding users to an organization, refer to [Add a user
 
 ## Delete an organization
 
-This action permanently removes an organization from your Grafana server.
+This action permanently removes an organization from your Mosaicoo server.
 
 > **Warning:** Deleting the organization also deletes all teams and dashboards associated the organization.
 
 ### Before you begin
 
-- Ensure that you have Grafana Server Administrator permissions
+- Ensure that you have Mosaicoo Server Administrator permissions
 - Because the delete action removes all teams and dashboards associated with the organization, ensure that the users who rely on the organization dashboards are aware of the change
 
 **To delete an organization:**
 
-1. Sign in to Grafana as a server administrator.
+1. Sign in to Mosaicoo as a server administrator.
 1. Hover your cursor over the **Server Admin** (shield) icon until a menu appears, and click **Orgs**.
 1. Click the red **X** next to the organization that you want to delete.
 1. Click **Delete**.
@@ -108,11 +108,11 @@ Edit an organization when you want to change its name.
 
 ### Before you begin
 
-- Ensure that you have Grafana Server Administrator permissions
+- Ensure that you have Mosaicoo Server Administrator permissions
 
 **To edit an organization:**
 
-1. Sign in to Grafana as a server administrator.
+1. Sign in to Mosaicoo as a server administrator.
 1. Hover your cursor over the **Server Admin** (shield) icon until a menu appears, and click **Orgs**.
 1. Click the organization you want to edit.
 1. Update the organization name and click **Update**.

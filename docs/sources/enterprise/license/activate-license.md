@@ -8,25 +8,25 @@ weight = 100
 
 # Activate an Enterprise license
 
-Follow these steps to activate your Grafana Enterprise license:
+Follow these steps to activate your Mosaicoo Enterprise license:
 
 ## Step 1. Download your license file
 
-To download your Grafana Enterprise license:
+To download your Mosaicoo Enterprise license:
 
 1. Sign in to your [Grafana Cloud](https://grafana.com) account.
-1. Go to **My Account** and select an organization from the drop-down menu at the top left of the page. On the Overview page for each organization, you can see a section for Grafana Enterprise licenses. Click **Details** next to a license.
+1. Go to **My Account** and select an organization from the drop-down menu at the top left of the page. On the Overview page for each organization, you can see a section for Mosaicoo Enterprise licenses. Click **Details** next to a license.
 1. At the bottom of the license details page, select **Download token** to download the `license.jwt` file that contains your license.
 
-## Step 2. Add your license to a Grafana instance
+## Step 2. Add your license to a Mosaicoo instance
 
-There is more than one way to add the license to a Grafana instance:
+There is more than one way to add the license to a Mosaicoo instance:
 
-### Upload the license file via the Grafana server administrator page
+### Upload the license file via the Mosaicoo server administrator page
 
-This is the preferred option for single instance installations of Grafana Enterprise.
+This is the preferred option for single instance installations of Mosaicoo Enterprise.
 
-1. Sign in as a Grafana server administrator.
+1. Sign in as a Mosaicoo server administrator.
 1. Navigate to **Server Admin > Upgrade** within Grafana.
 1. Click **Upload license token file**.
 1. Select your license file, and upload it.
@@ -42,7 +42,7 @@ You can also configure a custom location for the license file using the grafana.
 license_path = /company/secrets/license.jwt
 ```
 
-This setting can also be set with an environment variable, which is useful if you're running Grafana with Docker and have a custom volume where you have placed the license file. In this case, set the environment variable `GF_ENTERPRISE_LICENSE_PATH` to point to the location of your license file.
+This setting can also be set with an environment variable, which is useful if you're running Mosaicoo with Docker and have a custom volume where you have placed the license file. In this case, set the environment variable `GF_ENTERPRISE_LICENSE_PATH` to point to the location of your license file.
 
 ### Set the content of the license file as a configuration option
 
@@ -61,7 +61,7 @@ environment variable.
 
 Update the [`root_url`]({{< relref "../../administration/configuration/#root-url" >}}) in your configuration. It should be the URL that users type in their browsers to access the frontend, not the node hostname(s).
 
-This is important, because as part of the validation checks at startup, Grafana compares the license URL to the [`root_url`]({{< relref "../../administration/configuration/#root-url" >}}) in your configuration.
+This is important, because as part of the validation checks at startup, Mosaicoo compares the license URL to the [`root_url`]({{< relref "../../administration/configuration/#root-url" >}}) in your configuration.
 
 In your configuration file:
 
@@ -78,4 +78,4 @@ GF_SERVER_ROOT_URL=https://grafana.example.com/
 
 ## Step 4. Restart Grafana
 
-To finalize the installation of Grafana Enterprise, restart Grafana to enable all Grafana Enterprise features. Refer to [restart Grafana]({{< relref "../../installation/restart-grafana.md" >}}) for more information.
+To finalize the installation of Mosaicoo Enterprise, restart Mosaicoo to enable all Mosaicoo Enterprise features. Refer to [restart Grafana]({{< relref "../../installation/restart-grafana.md" >}}) for more information.

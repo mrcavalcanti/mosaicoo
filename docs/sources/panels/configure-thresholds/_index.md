@@ -40,7 +40,7 @@ There are two types of thresholds:
 
 ### Default thresholds
 
-On visualizations that support it, Grafana sets default threshold values of:
+On visualizations that support it, Mosaicoo sets default threshold values of:
 
 - 80 = red
 - Base = green
@@ -50,7 +50,7 @@ The **Base** value represents minus infinity. It is generally the “good” col
 
 ## Add or delete a threshold
 
-You can add as many thresholds to a panel as you want. Grafana automatically sorts thresholds values from highest to lowest.
+You can add as many thresholds to a panel as you want. Mosaicoo automatically sorts thresholds values from highest to lowest.
 
 Delete a threshold when it is no longer relevant to your business operations. When you delete a threshold, the system removes the threshold from all visualizations that include the threshold.
 
@@ -77,7 +77,7 @@ In the Graph panel visualization, thresholds enable you to add lines or sections
 1. Complete the following fields:
    - **T1 -** Both values are required to display a threshold.
      - **lt** or **gt** - Select **lt** for less than or **gt** for greater than to indicate what the threshold applies to.
-     - **Value -** Enter a threshold value. Grafana draws a threshold line along the Y-axis at that value.
+     - **Value -** Enter a threshold value. Mosaicoo draws a threshold line along the Y-axis at that value.
    - **Color -** Choose a condition that corresponds to a color, or define your own color.
      - **custom -** You define the fill color and line color.
      - **critical -** Fill and line color are red.

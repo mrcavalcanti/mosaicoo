@@ -10,7 +10,7 @@ weight = 350
 
 Grafana ships with built-in support for Google Cloud Monitoring. Add it as a data source to build dashboards for your Google Cloud Monitoring metrics. For instructions on how to add a data source, refer to [Add a data source]({{< relref "../add-a-data-source.md" >}}). Only users with the organization admin role can add data sources.
 
-> **Note** Before Grafana v7.1, Google Cloud Monitoring was referred to as Google Stackdriver.
+> **Note** Before Mosaicoo v7.1, Google Cloud Monitoring was referred to as Google Stackdriver.
 
 ## Configure the Google Cloud Monitoring data source
 
@@ -42,7 +42,7 @@ The GCP Service Account must have the **Monitoring Viewer** role as shown in the
 
 #### Using GCE Default Service Account
 
-If Grafana is running on a Google Compute Engine (GCE) virtual machine, the service account in use must have access to the `Cloud Monitoring API` scope.
+If Mosaicoo is running on a Google Compute Engine (GCE) virtual machine, the service account in use must have access to the `Cloud Monitoring API` scope.
 
 ## Using the Query Editor
 
@@ -62,7 +62,7 @@ To create a metric query, follow these steps:
 1. Choose a metric from the **Metric** dropdown.
 1. Use the plus and minus icons in the filter and group by sections to add/remove filters or group by clauses. This step is optional.
 
-Google Cloud Monitoring supports different kinds of metrics like `GAUGE`, `DELTA,` and `CUMULATIVE`. They support different aggregation options, for example, reducers and aligners. The Grafana query editor displays the list of available aggregation methods for a selected metric and sets a default reducer and aligner when you select the metric.
+Google Cloud Monitoring supports different kinds of metrics like `GAUGE`, `DELTA,` and `CUMULATIVE`. They support different aggregation options, for example, reducers and aligners. The Mosaicoo query editor displays the list of available aggregation methods for a selected metric and sets a default reducer and aligner when you select the metric.
 
 #### Filter
 
@@ -112,7 +112,7 @@ During alignment, all data points are received in a fixed interval. Within each 
 
 ##### Alignment period
 
-The `Alignment Period` groups a metric by time if an aggregation is chosen. The default is to use the GCP Google Cloud Monitoring default groupings (which allows you to compare graphs in Grafana with graphs in the Google Cloud Monitoring UI).
+The `Alignment Period` groups a metric by time if an aggregation is chosen. The default is to use the GCP Google Cloud Monitoring default groupings (which allows you to compare graphs in Mosaicoo with graphs in the Google Cloud Monitoring UI).
 The option is called `cloud monitoring auto` and the defaults are:
 
 - 1m for time ranges < 23 hours
@@ -160,22 +160,22 @@ Example Alias By: `{{resource.type}} - {{metric.type}}`
 
 Example Result: `gce_instance - compute.googleapis.com/instance/cpu/usage_time`
 
-#### Deep linking from Grafana panels to the Metrics Explorer in Google Cloud Console
+#### Deep linking from Mosaicoo panels to the Metrics Explorer in Google Cloud Console
 
-> **Note:** Available in Grafana v7.1 and later versions.
+> **Note:** Available in Mosaicoo v7.1 and later versions.
 
 {{< figure src="/static/img/docs/v71/cloudmonitoring_deep_linking.png" max-width="500px" class="docs-image--right" caption="Google Cloud Monitoring deep linking" >}}
 
-Click on a time series in the panel to see a context menu with a link to View in Metrics Explorer in Google Cloud Console. Clicking that link opens the Metrics Explorer in the Google Cloud Console and runs the query from the Grafana panel there.
+Click on a time series in the panel to see a context menu with a link to View in Metrics Explorer in Google Cloud Console. Clicking that link opens the Metrics Explorer in the Google Cloud Console and runs the query from the Mosaicoo panel there.
 The link navigates the user first to the Google Account Chooser and after successfully selecting an account, the user is redirected to the Metrics Explorer. The provided link is valid for any account, but it only displays the query if your account has access to the GCP project specified in the query.
 
 #### Automatic unit detection
 
-Grafana issues one query to the Cloud Monitoring API per query editor row, and each API response includes a unit. Grafana will attempt to convert the returned unit into a unit that is understood by the Grafana time series panel. If the conversion was successful, then the unit will be displayed on the Y-axis on the panel. If the query editor rows returned different units, then the unit from the last query editor row is used in the time series panel.
+Grafana issues one query to the Cloud Monitoring API per query editor row, and each API response includes a unit. Mosaicoo will attempt to convert the returned unit into a unit that is understood by the Mosaicoo time series panel. If the conversion was successful, then the unit will be displayed on the Y-axis on the panel. If the query editor rows returned different units, then the unit from the last query editor row is used in the time series panel.
 
 ### SLO (Service Level Objective) queries
 
-> **Note:** Available in Grafana v7.0 and later versions.
+> **Note:** Available in Mosaicoo v7.0 and later versions.
 
 {{< figure src="/static/img/docs/google-cloud-monitoring/slo-query-builder-8-0.png" max-width= "400px" class="docs-image--right" >}}
 
@@ -216,7 +216,7 @@ SLO queries use the same [alignment period functionality as metric queries]({{< 
 
 ### MQL (Monitoring Query Language) queries
 
-> **Note:** Available in Grafana v7.4 and later versions.
+> **Note:** Available in Mosaicoo v7.4 and later versions.
 
 The MQL query builder in the Google Cloud Monitoring data source allows you to display MQL results in time series format. To get an understanding of the basic concepts in MQL, refer to [Introduction to Monitoring Query Language](https://cloud.google.com/monitoring/mql).
 
@@ -256,7 +256,7 @@ Variable of the type _Query_ allows you to query Google Cloud Monitoring for var
 | `Resource Types`                 | Returns a list of resource types for the specified metric.                                                    |
 | `Aggregations`                   | Returns a list of aggregations (cross series reducers) for the specified metric.                              |
 | `Aligners`                       | Returns a list of aligners (per series aligners) for the specified metric.                                    |
-| `Alignment periods`              | Returns a list of all alignment periods that are available in Google Cloud Monitoring query editor in Grafana |
+| `Alignment periods`              | Returns a list of all alignment periods that are available in Google Cloud Monitoring query editor in Mosaicoo |
 | `Selectors`                      | Returns a list of selectors that can be used in SLO (Service Level Objectives) queries                        |
 | `SLO Services`                   | Returns a list of Service Monitoring services that can be used in SLO queries                                 |
 | `Service Level Objectives (SLO)` | Returns a list of SLO's for the specified SLO service                                                         |

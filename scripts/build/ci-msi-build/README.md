@@ -1,4 +1,4 @@
-# Grafana MSI Generator
+# Mosaicoo MSI Generator
 
 Creates a docker image that can be included within CircleCI or run locally to generate an MSI for Grafana.
 

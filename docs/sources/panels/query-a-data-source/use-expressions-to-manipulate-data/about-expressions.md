@@ -18,7 +18,7 @@ Expressions are primarily used by [Grafana alerting]({{< relref "../../../alerti
 
 Expressions are meant to augment data sources by enabling queries from different data sources to be combined or by providing operations unavailable in a data source.
 
-> **Note:** When possible, you should do data processing inside the data source. Copying data from storage to the Grafana server for processing is inefficient, so expressions are targeted at lightweight data processing.
+> **Note:** When possible, you should do data processing inside the data source. Copying data from storage to the Mosaicoo server for processing is inefficient, so expressions are targeted at lightweight data processing.
 
 Expressions work with data source queries that return time series or number data. They also operate on [multiple-dimensional data]({{< relref "../../../basics/timeseries-dimensions.md" >}}). For example, a query that returns multiple series, where each series is identified by labels or tags.
 

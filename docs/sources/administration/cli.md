@@ -6,9 +6,9 @@ title = "Grafana CLI"
 weight = 400
 +++
 
-# Grafana CLI
+# Mosaicoo CLI
 
-Grafana CLI is a small executable that is bundled with Grafana server. It can be executed on the same machine Grafana server is running on. Grafana CLI has `plugins` and `admin` commands, as well as global options.
+Grafana CLI is a small executable that is bundled with Mosaicoo server. It can be executed on the same machine Mosaicoo server is running on. Mosaicoo CLI has `plugins` and `admin` commands, as well as global options.
 
 To list all commands and options:
 
@@ -16,15 +16,15 @@ To list all commands and options:
 grafana-cli -h
 ```
 
-## Invoking Grafana CLI
+## Invoking Mosaicoo CLI
 
-To invoke Grafana CLI, add the path to the grafana binaries in your `PATH` environment variable. Alternately, if your current directory is the `bin` directory, use `./grafana-cli`. Otherwise, you can specify full path to the CLI. For example, on Linux `/usr/share/grafana/bin/grafana-cli` and on Windows `C:\Program Files\GrafanaLabs\grafana\bin\grafana-cli.exe`.
+To invoke Mosaicoo CLI, add the path to the grafana binaries in your `PATH` environment variable. Alternately, if your current directory is the `bin` directory, use `./grafana-cli`. Otherwise, you can specify full path to the CLI. For example, on Linux `/usr/share/grafana/bin/grafana-cli` and on Windows `C:\Program Files\GrafanaLabs\grafana\bin\grafana-cli.exe`.
 
 > **Note:** Some commands, such as installing or removing plugins, require `sudo` on Linux. If you are on Windows, run Windows PowerShell as Administrator.
 
-## Grafana CLI command syntax
+## Mosaicoo CLI command syntax
 
-The general syntax for commands in Grafana CLI is:
+The general syntax for commands in Mosaicoo CLI is:
 
 ```bash
 grafana-cli [global options] command [command options] [arguments...]
@@ -32,11 +32,11 @@ grafana-cli [global options] command [command options] [arguments...]
 
 ## Global options
 
-Grafana CLI allows you to temporarily override certain Grafana default settings. Except for `--help` and `--version`, most global options are only used by developers.
+Grafana CLI allows you to temporarily override certain Mosaicoo default settings. Except for `--help` and `--version`, most global options are only used by developers.
 
-Each global option applies only to the command in which it is used. For example, `--pluginsDir value` does not permanently change where Grafana saves plugins. It only changes it for command in which you apply the option.
+Each global option applies only to the command in which it is used. For example, `--pluginsDir value` does not permanently change where Mosaicoo saves plugins. It only changes it for command in which you apply the option.
 
-### Display Grafana CLI help
+### Display Mosaicoo CLI help
 
 `--help` or `-h` displays the help, including default paths and Docker configuration information.
 
@@ -46,9 +46,9 @@ Each global option applies only to the command in which it is used. For example,
 grafana-cli -h
 ```
 
-### Display Grafana CLI version
+### Display Mosaicoo CLI version
 
-`--version` or `-v` prints the version of Grafana CLI currently running.
+`--version` or `-v` prints the version of Mosaicoo CLI currently running.
 
 **Example:**
 
@@ -58,7 +58,7 @@ grafana-cli -v
 
 ### Override default plugin directory
 
-`--pluginsDir value` overrides the path to where your local Grafana instance stores plugins. Use this option if you want to install, update, or remove a plugin somewhere other than the default directory ("/var/lib/grafana/plugins") [$GF_PLUGIN_DIR].
+`--pluginsDir value` overrides the path to where your local Mosaicoo instance stores plugins. Use this option if you want to install, update, or remove a plugin somewhere other than the default directory ("/var/lib/grafana/plugins") [$GF_PLUGIN_DIR].
 
 **Example:**
 
@@ -68,7 +68,7 @@ grafana-cli --pluginsDir "/var/lib/grafana/devplugins" plugins install <plugin-i
 
 ### Override default plugin repo URL
 
-`--repo value` allows you to download and install or update plugins from a repository other than the default Grafana repo.
+`--repo value` allows you to download and install or update plugins from a repository other than the default Mosaicoo repo.
 
 **Example:**
 
@@ -78,7 +78,7 @@ grafana-cli --repo "https://example.com/plugins" plugins install <plugin-id>
 
 ### Override default plugin .zip URL
 
-`--pluginUrl value` allows you to download a .zip file containing a plugin from a local URL instead of downloading it from the default Grafana source.
+`--pluginUrl value` allows you to download a .zip file containing a plugin from a local URL instead of downloading it from the default Mosaicoo source.
 
 **Example:**
 
@@ -112,7 +112,7 @@ grafana-cli --debug plugins install <plugin-id>
 
 `--configOverrides` is a command line argument that acts like an environmental variable override.
 
-For example, you can use it to redirect logging to another file (maybe to log plugin installations in Grafana Cloud) or when resetting the admin password and you have non-default values for some important configuration value (like where the database is located).
+For example, you can use it to redirect logging to another file (maybe to log plugin installations in Mosaicoo Cloud) or when resetting the admin password and you have non-default values for some important configuration value (like where the database is located).
 
 **Example:**
 
@@ -122,7 +122,7 @@ grafana-cli --configOverrides cfg:default.paths.log=/dev/null plugins install <p
 
 ### Override homepath value
 
-Sets the path for the Grafana install/home path, defaults to working directory. You do not need to use this if you are in the Grafana installation directory when using the CLI.
+Sets the path for the Mosaicoo install/home path, defaults to working directory. You do not need to use this if you are in the Mosaicoo installation directory when using the CLI.
 
 **Example:**
 
@@ -132,7 +132,7 @@ grafana-cli --homepath "/usr/share/grafana" admin reset-admin-password <new pass
 
 ### Override config file
 
-`--config value` overrides the default location where Grafana expects the configuration file. Refer to [Configuration]({{< relref "../administration/configuration.md" >}}) for more information about configuring Grafana and default configuration file locations.
+`--config value` overrides the default location where Mosaicoo expects the configuration file. Refer to [Configuration]({{< relref "../administration/configuration.md" >}}) for more information about configuring Mosaicoo and default configuration file locations.
 
 **Example:**
 
@@ -142,9 +142,9 @@ grafana-cli --config "/etc/configuration/" admin reset-admin-password mynewpassw
 
 ## Plugins commands
 
-Grafana CLI allows you to install, upgrade, and manage your Grafana plugins. For more information about installing plugins, refer to [plugins page]({{< relref "../plugins/installation.md" >}}).
+Grafana CLI allows you to install, upgrade, and manage your Mosaicoo plugins. For more information about installing plugins, refer to [plugins page]({{< relref "../plugins/installation.md" >}}).
 
-All listed commands apply to the Grafana default repositories and directories. You can override the defaults with [Global Options](#global-options).
+All listed commands apply to the Mosaicoo default repositories and directories. You can override the defaults with [Global Options](#global-options).
 
 ### List available plugins
 
@@ -190,7 +190,7 @@ grafana-cli plugins remove <plugin-id>
 
 ## Admin commands
 
-Admin commands are only available in Grafana 4.1 and later.
+Admin commands are only available in Mosaicoo 4.1 and later.
 
 ### Show all admin commands
 
@@ -206,7 +206,7 @@ If there are two flags being used to set the homepath and the config file path, 
 
 > Could not find config defaults, make sure homepath command line parameter is set or working directory is homepath
 
-To correct this, use the `--homepath` global option to specify the Grafana default homepath for this command:
+To correct this, use the `--homepath` global option to specify the Mosaicoo default homepath for this command:
 
 ```bash
 grafana-cli --homepath "/usr/share/grafana" admin reset-admin-password <new password>

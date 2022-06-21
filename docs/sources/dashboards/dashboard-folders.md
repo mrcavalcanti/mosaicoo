@@ -7,9 +7,9 @@ weight = 6
 
 # Dashboard Folders
 
-Folders are a way to organize and group dashboards - very useful if you have a lot of dashboards or multiple teams using the same Grafana instance.
+Folders are a way to organize and group dashboards - very useful if you have a lot of dashboards or multiple teams using the same Mosaicoo instance.
 
-> **Note:** Only Grafana Admins and Super Admins can create, edit, or delete folders. Refer to [Dashboard permissions]({{< relref "../administration/manage-users-and-permissions/about-users-and-permissions.md#dashboard-permissions" >}}) for more information.
+> **Note:** Only Mosaicoo Admins and Super Admins can create, edit, or delete folders. Refer to [Dashboard permissions]({{< relref "../administration/manage-users-and-permissions/about-users-and-permissions.md#dashboard-permissions" >}}) for more information.
 
 ## How To Create A Folder
 

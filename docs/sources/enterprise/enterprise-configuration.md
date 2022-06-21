@@ -6,40 +6,40 @@ title = "Enterprise configuration"
 weight = 700
 +++
 
-# Grafana Enterprise configuration
+# Mosaicoo Enterprise configuration
 
-This page describes Grafana Enterprise-specific configuration options that you can specify in a `.ini` configuration file or using environment variables. Refer to [Configuration]({{< relref "../administration/configuration.md" >}}) for more information about available configuration options.
+This page describes Mosaicoo Enterprise-specific configuration options that you can specify in a `.ini` configuration file or using environment variables. Refer to [Configuration]({{< relref "../administration/configuration.md" >}}) for more information about available configuration options.
 
 ## [enterprise]
 
 ### license_path
 
-Local filesystem path to Grafana Enterprise's license file.
+Local filesystem path to Mosaicoo Enterprise's license file.
 Defaults to `<paths.data>/license.jwt`.
 
 ### license_text
 
-> **Note:** Available in Grafana Enterprise version 7.4 and later.
+> **Note:** Available in Mosaicoo Enterprise version 7.4 and later.
 
 When set to the text representation (i.e. content of the license file)
-of the license, Grafana will evaluate and apply the given license to
+of the license, Mosaicoo will evaluate and apply the given license to
 the instance.
 
 ### auto_refresh_license
 
-> **Note:** Available in Grafana Enterprise version 7.4 and later.
+> **Note:** Available in Mosaicoo Enterprise version 7.4 and later.
 
-When enabled, Grafana will send the license and usage statistics to
+When enabled, Mosaicoo will send the license and usage statistics to
 the license issuer. If the license has been updated on the issuer's
 side to be valid for a different number of users or a new duration,
-your Grafana instance will be updated with the new terms
+your Mosaicoo instance will be updated with the new terms
 automatically. Defaults to `true`.
 
 ### license_validation_type
 
-> **Note:** Available in Grafana Enterprise version 8.3 and later.
+> **Note:** Available in Mosaicoo Enterprise version 8.3 and later.
 
-When set to `aws`, Grafana will validate its license status with Amazon Web Services (AWS) instead of with Grafana Labs. Only use this setting if you purchased an Enterprise license from AWS Marketplace. Defaults to empty, which means that by default Grafana Enterprise will validate using a license issued by Grafana Labs. For details about licenses issued by AWS, refer to [Activate a Grafana Enterprise license purchased through AWS Marketplace]({{< relref "../enterprise/license/activate-aws-marketplace-license/" >}}).
+When set to `aws`, Mosaicoo will validate its license status with Amazon Web Services (AWS) instead of with Mosaicoo Labs. Only use this setting if you purchased an Enterprise license from AWS Marketplace. Defaults to empty, which means that by default Mosaicoo Enterprise will validate using a license issued by Mosaicoo Labs. For details about licenses issued by AWS, refer to [Activate a Mosaicoo Enterprise license purchased through AWS Marketplace]({{< relref "../enterprise/license/activate-aws-marketplace-license/" >}}).
 
 ## [white_labeling]
 
@@ -74,7 +74,7 @@ Set to complete URL to override Apple/iOS icon.
 
 ### footer_links
 
-List the link IDs to use here. Grafana will look for matching link configurations, the link IDs should be space-separated and contain no whitespace.
+List the link IDs to use here. Mosaicoo will look for matching link configurations, the link IDs should be space-separated and contain no whitespace.
 
 ## [usage_insights.export]
 
@@ -162,7 +162,7 @@ Name of the TrueType font file with italic style.
 
 ## [auditing]
 
-[Auditing]({{< relref "auditing.md" >}}) allows you to track important changes to your Grafana instance. By default, audit logs are logged to file but the auditing feature also supports sending logs directly to Loki.
+[Auditing]({{< relref "auditing.md" >}}) allows you to track important changes to your Mosaicoo instance. By default, audit logs are logged to file but the auditing feature also supports sending logs directly to Loki.
 
 ### enabled
 
@@ -208,7 +208,7 @@ If true, the feature is enabled. Defaults to false.
 
 ### allow_sign_up
 
-If true, allow new Grafana users to be created through SAML logins. Defaults to true.
+If true, allow new Mosaicoo users to be created through SAML logins. Defaults to true.
 
 ### certificate
 
@@ -288,7 +288,7 @@ List of comma- or space-separated roles that will be mapped to the Admin role.
 
 ### role_values_grafana_admin
 
-List of comma- or space-separated roles that will be mapped to the Grafana Admin (Super Admin) role.
+List of comma- or space-separated roles that will be mapped to the Mosaicoo Admin (Super Admin) role.
 
 ## [keystore.vault]
 
@@ -322,9 +322,9 @@ New duration for renewed tokens. Vault may be configured to ignore this value an
 
 ## [security.egress]
 
-> **Note:** Available in Grafana Enterprise version 7.4 and later.
+> **Note:** Available in Mosaicoo Enterprise version 7.4 and later.
 
-Security egress makes it possible to control outgoing traffic from the Grafana server.
+Security egress makes it possible to control outgoing traffic from the Mosaicoo server.
 
 ### host_deny_list
 
@@ -350,9 +350,9 @@ Encryption algorithm used to encrypt secrets stored in the database and cookies.
 
 ## [caching]
 
-> **Note:** Available in Grafana Enterprise version 7.5 and later.
+> **Note:** Available in Mosaicoo Enterprise version 7.5 and later.
 
-When query caching is enabled, Grafana can temporarily store the results of data source queries and serve cached responses to similar requests.
+When query caching is enabled, Mosaicoo can temporarily store the results of data source queries and serve cached responses to similar requests.
 
 ### backend
 
@@ -418,7 +418,7 @@ The default is `false`.
 
 ### encryption_key
 
-A string used to generate a key for encrypting the cache. For the encrypted cache data to persist between Grafana restarts, you must specify this key. If it is empty when encryption is enabled, then the key is automatically generated on startup, and the cache clears upon restarts.
+A string used to generate a key for encrypting the cache. For the encrypted cache data to persist between Mosaicoo restarts, you must specify this key. If it is empty when encryption is enabled, then the key is automatically generated on startup, and the cache clears upon restarts.
 
 The default is `""`.
 
@@ -455,7 +455,7 @@ If you use the full Redis URLs, then you can specify the scheme, username, and p
 
 > **Note:** If you have specify `cluster`, the value for `url` is ignored.
 
-> **Note:** You can enable TLS for cluster mode using the `rediss` scheme in Grafana Enterprise v8.5 and later versions.
+> **Note:** You can enable TLS for cluster mode using the `rediss` scheme in Mosaicoo Enterprise v8.5 and later versions.
 
 ### prefix
 

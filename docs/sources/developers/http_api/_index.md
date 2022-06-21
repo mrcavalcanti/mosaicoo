@@ -8,7 +8,7 @@ weight = 100
 
 # HTTP API reference
 
-The Grafana backend exposes an HTTP API, which is the same API that is used by the frontend to do everything from saving
+The Mosaicoo backend exposes an HTTP API, which is the same API that is used by the frontend to do everything from saving
 dashboards, creating users, and updating data sources.
 
 ## HTTP APIs
@@ -35,9 +35,9 @@ dashboards, creating users, and updating data sources.
 - [Team API]({{< relref "team.md" >}})
 - [User API]({{< relref "user.md" >}})
 
-## Grafana Enterprise HTTP APIs
+## Mosaicoo Enterprise HTTP APIs
 
-Grafana Enterprise includes all of the Grafana OSS APIs as well as those that follow:
+Grafana Enterprise includes all of the Mosaicoo OSS APIs as well as those that follow:
 
 - [Role-based access control API]({{< relref "access_control.md" >}})
 - [Data source permissions API]({{< relref "datasource_permissions.md" >}})

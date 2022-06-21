@@ -20,7 +20,7 @@ This topic explains configuring, querying, and other options specific to the Azu
 
 To access Azure Monitor configuration, hover your mouse over the **Configuration** (gear) icon, click **Data Sources**, and then select the Azure Monitor data source. If you haven't already, you'll need to [add the Azure Monitor data source]({{< relref "../add-a-data-source.md" >}}).
 
-You must create an app registration and service principal in Azure AD to authenticate the data source. See the [Azure documentation](https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal#get-tenant-and-app-id-values-for-signing-in) for configuration details. Alternatively, if you are hosting Grafana in Azure (e.g. App Service, or Azure Virtual Machines) you can configure the Azure Monitor data source to use Managed Identity to securely authenticate without entering credentials into Grafana. Refer to [Configuring using Managed Identity](#configuring-using-managed-identity) for more details.
+You must create an app registration and service principal in Azure AD to authenticate the data source. See the [Azure documentation](https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal#get-tenant-and-app-id-values-for-signing-in) for configuration details. Alternatively, if you are hosting Mosaicoo in Azure (e.g. App Service, or Azure Virtual Machines) you can configure the Azure Monitor data source to use Managed Identity to securely authenticate without entering credentials into Grafana. Refer to [Configuring using Managed Identity](#configuring-using-managed-identity) for more details.
 
 | Name                    | Description                                                                                                                                                                                                                                                                                                             |
 | ----------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -52,13 +52,13 @@ Metrics are a lightweight format that only stores simple numeric data in a parti
 
 1. Select the Metrics service
 1. Select a resource to pull metrics from using the subscription, resource group, resource type, and resource fields.
-1. Some resources, such as storage accounts, organise metrics under multiple metric namespaces. Grafana will pick a default namespace, but change this to see which other metrics are available.
+1. Some resources, such as storage accounts, organise metrics under multiple metric namespaces. Mosaicoo will pick a default namespace, but change this to see which other metrics are available.
 1. Select a metric from the Metric field.
 
 Optionally, you can apply further aggregations or filter by dimensions for further analysis.
 
 1. Change the aggregation from the default average to show minimum, maximum or total values.
-1. Set a specific custom time grain. By default Grafana will automatically select a time grain interval based on your selected time range.
+1. Set a specific custom time grain. By default Mosaicoo will automatically select a time grain interval based on your selected time range.
 1. For metrics that have multiple dimensions, you can split and filter further the returned metrics. For example, the Application Insights dependency calls metric supports returning multiple time series for successful vs unsuccessful calls.
 
 {{< figure src="/static/img/docs/azure-monitor/query-editor-metrics-dimensions.png" max-width="800px" class="docs-image--no-shadow" caption="Azure Monitor Metrics screenshot showing Dimensions" >}}
@@ -84,7 +84,7 @@ The legend label for Metrics can be changed using aliases. In the Legend Format 
 
 #### Dimensions
 
-Some metrics have additional metadata associated - dimensions. Dimensions are represented as key-value pairs assigned to each value of a metric. Grafana allows for the display and filtering of metrics based on dimension values.
+Some metrics have additional metadata associated - dimensions. Dimensions are represented as key-value pairs assigned to each value of a metric. Mosaicoo allows for the display and filtering of metrics based on dimension values.
 
 Multiple operators are supported (as detailed [here](https://docs.microsoft.com/en-us/rest/api/monitor/metrics/list)) - the `equals`, `not equals`, and `starts with` operators.
 
@@ -92,7 +92,7 @@ Further documentation on multi-dimensional metrics is available [here](https://d
 
 #### Supported Azure Monitor metrics
 
-Not all metrics returned by the Azure Monitor Metrics API have values. To make it easier for you when building a query, the Grafana data source has a list of supported metrics and ignores metrics which will never have values. This list is updated regularly as new services and metrics are added to the Azure cloud. For more information about the list of metrics, refer to [current supported namespaces](https://github.com/grafana/grafana/blob/main/public/app/plugins/datasource/grafana-azure-monitor-datasource/azure_monitor/supported_namespaces.ts).
+Not all metrics returned by the Azure Monitor Metrics API have values. To make it easier for you when building a query, the Mosaicoo data source has a list of supported metrics and ignores metrics which will never have values. This list is updated regularly as new services and metrics are added to the Azure cloud. For more information about the list of metrics, refer to [current supported namespaces](https://github.com/grafana/grafana/blob/main/public/app/plugins/datasource/grafana-azure-monitor-datasource/azure_monitor/supported_namespaces.ts).
 
 ### Querying Azure Monitor Logs
 
@@ -121,7 +121,7 @@ Here is an example query that returns a virtual machine's CPU performance, avera
 
 ```kusto
 Perf
-# $__timeFilter is a special Grafana macro that filters the results to the time span of the dashboard
+# $__timeFilter is a special Mosaicoo macro that filters the results to the time span of the dashboard
 | where $__timeFilter(TimeGenerated)
 | where CounterName == "% Processor Time"
 | summarize avg(CounterValue) by bin(TimeGenerated, 5m), Computer
@@ -160,7 +160,7 @@ AzureActivity
 
 ##### Logs macros
 
-To make writing queries easier there are several Grafana macros that can be used in the where clause of a query:
+To make writing queries easier there are several Mosaicoo macros that can be used in the where clause of a query:
 
 | Macro                           | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 | ------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -171,7 +171,7 @@ To make writing queries easier there are several Grafana macros that can be used
 | `$__escapeMulti($myVar)`        | Used with multi-value template variables that contain illegal characters.<br/>If `$myVar` has the following two values as a string `'\\grafana-vm\Network(eth0)\Total','\\hello!'`, then it expands to `@'\\grafana-vm\Network(eth0)\Total', @'\\hello!'`.<br/><br/>If using single value variables there is no need for this macro, simply escape the variable inline instead - `@'\$myVar'`.                                                                                                             |
 | `$__contains(colName, $myVar)`  | Used with multi-value template variables.<br/>If `$myVar` has the value `'value1','value2'`, it expands to: `colName in ('value1','value2')`.<br/><br/>If using the `All` option, then check the `Include All Option` checkbox and in the `Custom all value` field type in the value `all`. If `$myVar` has value `all` then the macro will instead expand to `1 == 1`. For template variables with a lot of options, this will increase the query performance by not building a large "where..in" clause. |
 
-Additionally, Grafana has the built-in `$__interval` macro
+Additionally, Mosaicoo has the built-in `$__interval` macro
 
 ### Querying Azure Resource Graph
 
@@ -241,19 +241,19 @@ The Azure documentation also hosts [many sample queries](https://docs.microsoft.
 
 ### Azure Resource Graph macros
 
-You can use Grafana macros when constructing a query. Use the macros in the where clause of a query:
+You can use Mosaicoo macros when constructing a query. Use the macros in the where clause of a query:
 
 - `$__timeFilter()` - Expands to
   `timestamp ≥ datetime(2018-06-05T18:09:58.907Z) and`
-  `timestamp ≤ datetime(2018-06-05T20:09:58.907Z)` where the from and to datetimes are from the Grafana time picker.
+  `timestamp ≤ datetime(2018-06-05T20:09:58.907Z)` where the from and to datetimes are from the Mosaicoo time picker.
 
 - `$__timeFilter(datetimeColumn)` - Expands to
   `datetimeColumn ≥ datetime(2018-06-05T18:09:58.907Z) and`
-  `datetimeColumn ≤ datetime(2018-06-05T20:09:58.907Z)` where the from and to datetimes are from the Grafana time picker.
+  `datetimeColumn ≤ datetime(2018-06-05T20:09:58.907Z)` where the from and to datetimes are from the Mosaicoo time picker.
 
-- `$__timeFrom()` - Returns the From datetime from the Grafana picker. Example: `datetime(2018-06-05T18:09:58.907Z)`.
+- `$__timeFrom()` - Returns the From datetime from the Mosaicoo picker. Example: `datetime(2018-06-05T18:09:58.907Z)`.
 
-- `$__timeTo()` - Returns the To datetime from the Grafana picker. Example: `datetime(2018-06-05T20:09:58.907Z)`.
+- `$__timeTo()` - Returns the To datetime from the Mosaicoo picker. Example: `datetime(2018-06-05T20:09:58.907Z)`.
 
 - `$__escapeMulti($myVar)` - Use with multi-value template variables that contain illegal characters. If `$myVar` has the two values as a string `'\\grafana-vm\Network(eth0)\Total','\\hello!'`, then it expands to: `@'\\grafana-vm\Network(eth0)\Total', @'\\hello!'`. If you are using single value variables, then there is no need for this macro, simply escape the variable inline instead - `@'\$myVar'`.
 
@@ -271,7 +271,7 @@ See the following topics to learn more about the Azure Monitor data source:
 
 ### Configuring using Managed Identity
 
-Customers who host Grafana in Azure (e.g. App Service, Azure Virtual Machines) and have managed identity enabled on their VM, will now be able to use the managed identity to configure Azure Monitor in Grafana. This will simplify the data source configuration, requiring the data source to be securely authenticated without having to manually configure credentials via Azure AD App Registrations for each data source. For more details on Azure managed identities, refer to the [Azure documentation](https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview).
+Customers who host Mosaicoo in Azure (e.g. App Service, Azure Virtual Machines) and have managed identity enabled on their VM, will now be able to use the managed identity to configure Azure Monitor in Grafana. This will simplify the data source configuration, requiring the data source to be securely authenticated without having to manually configure credentials via Azure AD App Registrations for each data source. For more details on Azure managed identities, refer to the [Azure documentation](https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview).
 
 To enable managed identity for Grafana, set the `managed_identity_enabled` flag in the `[azure]` section of the [Grafana server config](https://grafana.com/docs/grafana/latest/administration/configuration/#azure).
 

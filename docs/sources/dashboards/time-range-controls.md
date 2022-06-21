@@ -34,9 +34,9 @@ Here are some examples:
 | This Year              | `now/Y`     | `now/Y`     |
 | Previous fiscal year   | `now-1y/fy` | `now-1y/fy` |
 
-### Note about Grafana alerting
+### Note about Mosaicoo alerting
 
-For Grafana alerting, we do not support the following syntaxes at this time.
+For Mosaicoo alerting, we do not support the following syntaxes at this time.
 
 - now+n for future timestamps.
 - now-1n/n for "start of n until end of n" since this is an absolute timestamp.
@@ -81,7 +81,7 @@ Select the relative time range from the **Relative time ranges** list. You can f
 Set an absolute time range one of two ways:
 
 - Type values into the **From** and **To** fields. You can type exact time values or relative values, such as `now-24h`, and then click **Apply time range**.
-- Click in the **From** or **To** field. Grafana displays a calendar. Click the day or days you want to use as the current time range and then click **Apply time range**.
+- Click in the **From** or **To** field. Mosaicoo displays a calendar. Click the day or days you want to use as the current time range and then click **Apply time range**.
 
 This section also displays recently used absolute ranges.
 
@@ -95,9 +95,9 @@ Click and drag to select the time range in the visualization that you want to vi
 
 ### Refresh dashboard
 
-Click the **Refresh dashboard** icon to immediately run every query on the dashboard and refresh the visualizations. Grafana cancels any pending requests when a new refresh is triggered.
+Click the **Refresh dashboard** icon to immediately run every query on the dashboard and refresh the visualizations. Mosaicoo cancels any pending requests when a new refresh is triggered.
 
-By default, Grafana does not automatically refresh the dashboard. Queries run on their own schedule according to the panel settings. However, if you want to regularly refresh the dashboard, then click the down arrow next to the **Refresh dashboard** icon and then select a refresh interval.
+By default, Mosaicoo does not automatically refresh the dashboard. Queries run on their own schedule according to the panel settings. However, if you want to regularly refresh the dashboard, then click the down arrow next to the **Refresh dashboard** icon and then select a refresh interval.
 
 ## Dashboard time settings
 
@@ -108,12 +108,12 @@ You can change the **Timezone** and **fiscal year** settings from the time range
 For more advanced time settings, click the **Dashboard settings** (gear) icon at the top of the UI. Then navigate to the **Time Options** section of the General tab.
 
 - **Timezone -** Specify the local time zone of the service or system that you are monitoring. This can be helpful when monitoring a system or service that operates across several time zones.
-  - **Default -** The default selected time zone for the user profile, team, or organization is used. If no time zone is specified for the user profile, a team the user is a member of, or the organization, then Grafana uses local browser time.
+  - **Default -** The default selected time zone for the user profile, team, or organization is used. If no time zone is specified for the user profile, a team the user is a member of, or the organization, then Mosaicoo uses local browser time.
   - **Local browser time -** The time zone configured for the viewing user browser is used. This is usually the same time zone as set on the computer.
   - Standard [ISO 8601 time zones](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones), including UTC.
 - **Auto-refresh -** Customize the options displayed for relative time and the auto-refresh options. Entries are comma separated and accept any valid time unit.
 - **Now delay -** Override the `now` time by entering a time delay. Use this option to accommodate known delays in data aggregation to avoid null values.
-- **Hide time picker -** Select this option if you do not want Grafana to display the time picker.
+- **Hide time picker -** Select this option if you do not want Mosaicoo to display the time picker.
 
 ## Panel time overrides and timeshift
 

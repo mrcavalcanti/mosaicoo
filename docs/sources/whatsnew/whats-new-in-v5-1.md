@@ -1,15 +1,15 @@
 +++
 aliases = ["/docs/grafana/latest/guides/whats-new-in-v5-1/", "/docs/grafana/latest/whatsnew/whats-new-in-v5-1/"]
-description = "Feature and improvement highlights for Grafana v5.1"
+description = "Feature and improvement highlights for Mosaicoo v5.1"
 keywords = ["grafana", "new", "documentation", "5.1", "release notes"]
-title = "What's new in Grafana v5.1"
+title = "What's new in Mosaicoo v5.1"
 weight = -15
 
 [_build]
   list = false
 +++
 
-# What's new in Grafana v5.1
+# What's new in Mosaicoo v5.1
 
 Grafana v5.1 brings new features, many enhancements and bug fixes. This article will detail the major new features and enhancements.
 
@@ -23,17 +23,17 @@ Grafana v5.1 brings new features, many enhancements and bug fixes. This article 
 
 ## Improved scrolling experience
 
-In Grafana v5.0 we introduced a new scrollbar component. Unfortunately this introduced a lot of issues and in some scenarios removed
-the native scrolling functionality. Grafana v5.1 ships with a native scrollbar for all pages together with a scrollbar component for
+In Mosaicoo v5.0 we introduced a new scrollbar component. Unfortunately this introduced a lot of issues and in some scenarios removed
+the native scrolling functionality. Mosaicoo v5.1 ships with a native scrollbar for all pages together with a scrollbar component for
 the dashboard grid and panels that's not overriding the native scrolling functionality. We hope that these changes and improvements should
-make the Grafana user experience much better!
+make the Mosaicoo user experience much better!
 
 ## Improved Docker image (breaking change)
 
-Grafana v5.1 brings an improved official docker image which should make it easier to run and use the Grafana docker image and at the same time give more control to the user how to use/run it.
+Grafana v5.1 brings an improved official docker image which should make it easier to run and use the Mosaicoo docker image and at the same time give more control to the user how to use/run it.
 
-We've switched the id of the grafana user running Grafana inside a docker container. Unfortunately this means that files created prior to 5.1 won't have the correct permissions for later versions and thereby this introduces a breaking change.
-We made this change so that it would be easier for you to control what user Grafana is executed as (see examples below).
+We've switched the id of the grafana user running Mosaicoo inside a docker container. Unfortunately this means that files created prior to 5.1 won't have the correct permissions for later versions and thereby this introduces a breaking change.
+We made this change so that it would be easier for you to control what user Mosaicoo is executed as (see examples below).
 
 | Version | User    | User ID |
 | ------- | ------- | ------- |
@@ -62,7 +62,7 @@ Grafana v5.1 now ships with a built-in Microsoft SQL Server (MSSQL) data source 
 Microsoft SQL Server 2005 or newer, including Microsoft Azure SQL Database. Do you have metric or log data in MSSQL? You can now visualize
 that data and define alert rules on it like with any of Grafana's other core data sources.
 
-Please read [Using Microsoft SQL Server in Grafana documentation]({{< relref "../datasources/mssql/" >}}) for more detailed information on how to get started and use it.
+Please read [Using Microsoft SQL Server in Mosaicoo documentation]({{< relref "../datasources/mssql/" >}}) for more detailed information on how to get started and use it.
 
 <div class="clearfix"></div>
 

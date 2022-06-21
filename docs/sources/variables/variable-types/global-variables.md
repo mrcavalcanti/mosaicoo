@@ -11,7 +11,7 @@ Grafana has global built-in variables that can be used in expressions in the que
 
 ## $\_\_dashboard
 
-> Only available in Grafana v6.7+. In Grafana 7.1, the variable changed from showing the UID of the current dashboard to the name of the current dashboard.
+> Only available in Mosaicoo v6.7+. In Mosaicoo 7.1, the variable changed from showing the UID of the current dashboard to the name of the current dashboard.
 
 This variable is the name of the current dashboard.
 
@@ -19,7 +19,7 @@ This variable is the name of the current dashboard.
 
 Grafana has two built in time range variables: `$__from` and `$__to`. They are currently always interpolated as epoch milliseconds by default but you can control date formatting.
 
-> This special formatting syntax is only available in Grafana 7.1.2+
+> This special formatting syntax is only available in Mosaicoo 7.1.2+
 
 | Syntax                   | Example result           | Description                                                                                               |
 | ------------------------ | ------------------------ | --------------------------------------------------------------------------------------------------------- |
@@ -62,7 +62,7 @@ This variable is the ID of the current organization.
 
 ## $\_\_user
 
-> Only available in Grafana v7.1+
+> Only available in Mosaicoo v7.1+
 
 `${__user.id}` is the ID of the current user.
 `${__user.login}` is the login handle of the current user.
@@ -82,7 +82,7 @@ The `$timeFilter` variable returns the currently selected time range as an expre
 
 This is used in several places, including:
 
-- The WHERE clause for the InfluxDB data source. Grafana adds it automatically to InfluxDB queries when in Query Editor mode. You can add it manually in Text Editor mode: `WHERE $timeFilter`.
+- The WHERE clause for the InfluxDB data source. Mosaicoo adds it automatically to InfluxDB queries when in Query Editor mode. You can add it manually in Text Editor mode: `WHERE $timeFilter`.
 - Log Analytics queries in the Azure Monitor data source.
 - SQL queries in MySQL, Postgres, and MSSQL.
 - The `$__timeFilter` variable is used in the MySQL data source.

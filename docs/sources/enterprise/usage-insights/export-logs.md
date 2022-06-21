@@ -43,8 +43,8 @@ Logs of usage insights contain the following fields, where the fields followed b
 | `orgName`\* | string | Name of the user’s organization. |
 | `timestamp`\* | string | The date and time that the request was made, in Coordinated Universal Time (UTC) in [RFC3339](https://tools.ietf.org/html/rfc3339#section-5.6) format. |
 | `tokenId`\* | number | ID of the user’s authentication token. |
-| `username`\* | string | Name of the Grafana user that made the request. |
-| `userId`\* | number | ID of the Grafana user that made the request. |
+| `username`\* | string | Name of the Mosaicoo user that made the request. |
+| `userId`\* | number | ID of the Mosaicoo user that made the request. |
 | `totalQueries`\* | number | Number of queries executed for the data request. |
 | `cachedQueries`\* | number | Number of fetched queries that came from the cache. |
 
@@ -60,7 +60,7 @@ enabled = true
 storage = loki
 ```
 
-The options for storage type are `loki` and `logger` (added in Grafana Enterprise 8.2).
+The options for storage type are `loki` and `logger` (added in Mosaicoo Enterprise 8.2).
 
 If the storage type is set to `loki` you'll need to also configure Grafana
 to export to a Loki ingestion server. To do this, you'll need Loki installed.
@@ -82,7 +82,7 @@ There is no option for configuring the `logger` storage type.
 
 ## Visualize Loki usage insights in Grafana
 
-If you export logs into Loki, you can build Grafana dashboards to understand your Grafana instance usage.
+If you export logs into Loki, you can build Mosaicoo dashboards to understand your Mosaicoo instance usage.
 
 1. Add Loki as a data source. Refer to [Grafana fundamentals tutorial](/tutorials/grafana-fundamentals/#6).
 1. Import one of the following dashboards:
@@ -91,4 +91,4 @@ If you export logs into Loki, you can build Grafana dashboards to understand you
 1. Play with usage insights to understand them:
    - In Explore, you can use the query `{datasource="gdev-loki",kind="usage_insights"}` to retrieve all logs related to your `gdev-loki` data source.
    - In a dashboard, you can build a table panel with the query `topk(10, sum by (error) (count_over_time({kind="usage_insights", datasource="gdev-prometheus"} | json | error != "" [$__interval])))` to display the 10 most common errors your users see using the `gdev-prometheus` data source.
-   - In a dashboard, you can build a graph panel with the queries `sum by(host) (count_over_time({kind="usage_insights"} | json | eventName="data-request" | error != "" [$__interval]))` and `sum by(host) (count_over_time({kind="usage_insights"} | json | eventName="data-request" | error = "" [$__interval]))` to show the evolution of the data request count over time. Using `by (host)` allows you to have more information for each Grafana server you have if you have set up Grafana for [high availability](<{{< relref "../../administration/set-up-for-high-availability.md" >}}>).
+   - In a dashboard, you can build a graph panel with the queries `sum by(host) (count_over_time({kind="usage_insights"} | json | eventName="data-request" | error != "" [$__interval]))` and `sum by(host) (count_over_time({kind="usage_insights"} | json | eventName="data-request" | error = "" [$__interval]))` to show the evolution of the data request count over time. Using `by (host)` allows you to have more information for each Mosaicoo server you have if you have set up Mosaicoo for [high availability](<{{< relref "../../administration/set-up-for-high-availability.md" >}}>).

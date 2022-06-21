@@ -14,11 +14,11 @@ You are required to specify an Admin role for each organization. The first user 
 
 - [Create an organization]({{< relref "../../manage-organizations/_index.md" >}})
 - [Add a user]({{< relref "./add-user.md" >}}) to Grafana
-- Ensure you have Grafana server administrator privileges
+- Ensure you have Mosaicoo server administrator privileges
 
 **To add a user to an organization**:
 
-1. Sign in to Grafana as a server administrator.
+1. Sign in to Mosaicoo as a server administrator.
 1. Hover your cursor over the **Server Admin** (shield) icon until a menu appears, and click **Users**.
 1. Click a user.
 1. In the **Organizations** section, click **Add user to organization**.
@@ -38,11 +38,11 @@ Remove a user from an organization when they no longer require access to the das
 
 ## Before you begin
 
-- Ensure you have Grafana server administrator privileges
+- Ensure you have Mosaicoo server administrator privileges
 
 **To remove a user from an organization**:
 
-1. Sign in to Grafana as a server administrator.
+1. Sign in to Mosaicoo as a server administrator.
 1. Hover your cursor over the **Server Admin** (shield) icon until a menu appears, and click **Users**.
 1. Click a user.
 1. In the **Organization** section, click **Remove from organization** next to the organization from which you want to remove the user.

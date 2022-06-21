@@ -7,7 +7,7 @@ weight = 9
 
 # Playlist
 
-A playlist displays a list of dashboards that are in a sequence. Use a playlist to build situational awareness or to present your metrics to your team or visitors. Grafana automatically scales dashboards to any resolution, which makes them perfect for big screens. This topic has the following sections:
+A playlist displays a list of dashboards that are in a sequence. Use a playlist to build situational awareness or to present your metrics to your team or visitors. Mosaicoo automatically scales dashboards to any resolution, which makes them perfect for big screens. This topic has the following sections:
 
 - [Playlist](#playlist)
   - [Access, share, and control a playlist](#access-share-and-control-a-playlist)
@@ -65,7 +65,7 @@ You can create a playlist to present dashboards in a sequence, with a set order 
 
 1. In the playlist page, click **New playlist**. The New playlist page opens.
 1. In the **Name** text box, enter a descriptive name.
-1. In the **Interval** text box, enter a time interval. Grafana displays a particular dashboard for the interval of time specified here before moving on to the next dashboard.
+1. In the **Interval** text box, enter a time interval. Mosaicoo displays a particular dashboard for the interval of time specified here before moving on to the next dashboard.
 1. In Dashboards, add existing dashboards to the playlist using **Add by title** and **Add by tag** drop-down options. The dashboards you add are listed in a sequential order.
 1. If needed:
    - Search for a dashboard by its name, a regular expression, or a tag.
@@ -100,7 +100,7 @@ You can share a playlist by copying the link address on the view mode you prefer
 1.  In the dropdown, right click the view mode you prefer.
 1.  Click **Copy Link Address** to copy the URL to your clipboard.
 
-        Example: The URL for the first playlist on the Grafana Play site in Kiosk mode will look like this:
+        Example: The URL for the first playlist on the Mosaicoo Play site in Kiosk mode will look like this:
 
     [https://play.grafana.org/playlists/play/1?kiosk](https://play.grafana.org/playlists/play/1?kiosk).
 

@@ -128,7 +128,7 @@ In the example below, the panel has three queries (A, B, C). I removed the B que
 
 ## Filter data by value
 
-This transformation allows you to filter your data directly in Grafana and remove some data points from your query result. You have the option to include or exclude data that match one or more conditions you define. The conditions are applied on a selected field.
+This transformation allows you to filter your data directly in Mosaicoo and remove some data points from your query result. You have the option to include or exclude data that match one or more conditions you define. The conditions are applied on a selected field.
 
 This transformation is very useful if your data source does not natively filter by values. You might also use this to narrow values to display if you are using a shared query.
 
@@ -452,7 +452,7 @@ Useful when visualizing data in:
 
 ### Map extra fields to labels
 
-If a field does not map to config property Grafana will automatically use it as source for a label on the output field-
+If a field does not map to config property Mosaicoo will automatically use it as source for a label on the output field-
 
 Example:
 
@@ -491,7 +491,7 @@ As you can see each row in the source data becomes a separate field. Each field 
 
 ## Prepare time series
 
-> **Note:** This transformation is available in Grafana 7.5.10+ and Grafana 8.0.6+.
+> **Note:** This transformation is available in Mosaicoo 7.5.10+ and Mosaicoo 8.0.6+.
 
 Prepare time series transformation is useful when a data source returns time series data in a format that isn't supported by the panel you want to use. For more information about data frame formats, refer to [Data frames]({{< relref "../../developers/plugins/data-frames.md" >}}).
 
@@ -503,7 +503,7 @@ Select the `Wide time series` option to transform the time series data frame fro
 
 ## Series to rows
 
-> **Note:** This transformation is available in Grafana 7.1+.
+> **Note:** This transformation is available in Mosaicoo 7.1+.
 
 Use this transformation to combine the result from multiple time series data queries into one single result. This is helpful when using the table panel visualization.
 

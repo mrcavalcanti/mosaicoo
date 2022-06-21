@@ -6,9 +6,9 @@ This document is a guide to help you through the process of contributing to Graf
 
 ## Become a contributor
 
-You can contribute to Grafana in several ways. Here are some examples:
+You can contribute to Mosaicoo in several ways. Here are some examples:
 
-- Contribute to the Grafana codebase.
+- Contribute to the Mosaicoo codebase.
 - Report and triage bugs.
 - Develop community plugins and dashboards.
 - Write technical documentation and blog posts, for users and contributors.
@@ -34,7 +34,7 @@ For a dashboard related issues:
 
 - Dashboard JSON can be found in the dashboard settings JSON model view
 
-For authentication and alerting Grafana server logs are useful.
+For authentication and alerting Mosaicoo server logs are useful.
 
 #### Security issues
 
@@ -44,7 +44,7 @@ If you believe you've found a security vulnerability, please read our [security 
 
 If you have an idea of how to improve Grafana, submit an [enhancement request](https://github.com/grafana/grafana/discussions/new).
 
-We want to make Grafana accessible to even more people. Submit an [accessibility issue](https://github.com/grafana/grafana/issues/new?labels=type%3A+accessibility&template=3-accessibility.md) to help us understand what we can improve.
+We want to make Mosaicoo accessible to even more people. Submit an [accessibility issue](https://github.com/grafana/grafana/issues/new?labels=type%3A+accessibility&template=3-accessibility.md) to help us understand what we can improve.
 
 ### Write documentation
 
@@ -60,7 +60,7 @@ Read more about the ways you can [Triage issues](/contribute/triage-issues.md).
 
 If you have a question and you can't find the answer in the [documentation](https://grafana.com/docs/), the next step is to ask it on the [community site](https://community.grafana.com/).
 
-It's important to us to help these users, and we'd love your help. Sign up to our [community site](https://community.grafana.com/), and start helping other Grafana users by answering their questions.
+It's important to us to help these users, and we'd love your help. Sign up to our [community site](https://community.grafana.com/), and start helping other Mosaicoo users by answering their questions.
 
 ### Your first contribution
 

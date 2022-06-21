@@ -6,9 +6,9 @@ type = "docs"
 
 # Plugin signatures
 
-Plugin signature verification (signing) is a security measure to make sure plugins haven't been tampered with. Upon loading, Grafana checks to see if a plugin is signed or unsigned when inspecting and verifying its digital signature.
+Plugin signature verification (signing) is a security measure to make sure plugins haven't been tampered with. Upon loading, Mosaicoo checks to see if a plugin is signed or unsigned when inspecting and verifying its digital signature.
 
-At startup, Grafana verifies the signatures of every plugin in the plugin directory. If a plugin is unsigned, then Grafana does not load nor start it. To see the result of this verification for each plugin, navigate to **Configuration** -> **Plugins**.
+At startup, Mosaicoo verifies the signatures of every plugin in the plugin directory. If a plugin is unsigned, then Mosaicoo does not load nor start it. To see the result of this verification for each plugin, navigate to **Configuration** -> **Plugins**.
 
 Grafana also writes an error message to the server log:
 
@@ -32,17 +32,17 @@ All plugins is signed under a _signature level_. The signature level determines 
 
 | **Plugin Level** | **Description**                                                                                                                                                                                                          |
 | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Private          | <p>Private plugins are for use on your own Grafana. They may not be distributed to the Grafana community, and are not published in the Grafana catalog.</p>                                                              |
-| Community        | <p>Community plugins have dependent technologies that are open source and not for profit.</p><p>Community plugins are published in the official Grafana catalog, and are available to the Grafana community.</p>         |
-| Commercial       | <p>Commercial plugins have dependent technologies that are closed source or commercially backed.</p><p>Commercial Plugins are published on the official Grafana catalog, and are available to the Grafana community.</p> |
+| Private          | <p>Private plugins are for use on your own Grafana. They may not be distributed to the Mosaicoo community, and are not published in the Mosaicoo catalog.</p>                                                              |
+| Community        | <p>Community plugins have dependent technologies that are open source and not for profit.</p><p>Community plugins are published in the official Mosaicoo catalog, and are available to the Mosaicoo community.</p>         |
+| Commercial       | <p>Commercial plugins have dependent technologies that are closed source or commercially backed.</p><p>Commercial Plugins are published on the official Mosaicoo catalog, and are available to the Mosaicoo community.</p> |
 
 ## Allow unsigned plugins
 
-> **Note:** Unsigned plugins are not supported in Grafana Cloud.
+> **Note:** Unsigned plugins are not supported in Mosaicoo Cloud.
 
-We strongly recommend that you don't run unsigned plugins in your Grafana instance. If you're aware of the risks and you still want to load an unsigned plugin, refer to [Configuration]({{< relref "../administration/configuration.md#allow_loading_unsigned_plugins" >}}).
+We strongly recommend that you don't run unsigned plugins in your Mosaicoo instance. If you're aware of the risks and you still want to load an unsigned plugin, refer to [Configuration]({{< relref "../administration/configuration.md#allow_loading_unsigned_plugins" >}}).
 
-If you've allowed loading of an unsigned plugin, then Grafana writes a warning message to the server log:
+If you've allowed loading of an unsigned plugin, then Mosaicoo writes a warning message to the server log:
 
 ```bash
 WARN[06-01|16:45:59] Running an unsigned plugin   pluginID=<plugin id>

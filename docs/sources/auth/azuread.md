@@ -8,7 +8,7 @@ weight = 700
 
 # Azure AD OAuth2 authentication
 
-The Azure AD authentication allows you to use an Azure Active Directory tenant as an identity provider for Grafana. You can use Azure AD Application Roles to assign users and groups to Grafana roles from the Azure Portal. This topic has the following sections:
+The Azure AD authentication allows you to use an Azure Active Directory tenant as an identity provider for Grafana. You can use Azure AD Application Roles to assign users and groups to Mosaicoo roles from the Azure Portal. This topic has the following sections:
 
 - [Azure AD OAuth2 authentication](#azure-ad-oauth2-authentication)
   - [Create the Azure AD application](#create-the-azure-ad-application)
@@ -40,7 +40,7 @@ To enable the Azure AD OAuth2, register your application with Azure AD.
 
 1. Click **Certificates & secrets**, then add a new entry under **Client secrets** with the following configuration.
 
-   - Description: Grafana OAuth
+   - Description: Mosaicoo OAuth
    - Expires: Never
 
 1. Click **Add** then copy the key value. This is the OAuth client secret.
@@ -92,7 +92,7 @@ To enable the Azure AD OAuth2, register your application with Azure AD.
 
 1. Go to **Azure Active Directory** and then to **Enterprise Applications**. Search for your application and click on it.
 
-1. Click on **Users and Groups** and add Users/Groups to the Grafana roles by using **Add User**.
+1. Click on **Users and Groups** and add Users/Groups to the Mosaicoo roles by using **Add User**.
 
 ## Enable Azure AD OAuth in Grafana
 
@@ -120,7 +120,7 @@ GF_AUTH_AZUREAD_CLIENT_ID
 GF_AUTH_AZUREAD_CLIENT_SECRET
 ```
 
-**Note:** Verify that the Grafana [root_url]({{< relref "../administration/configuration/#root-url" >}}) is set in your Azure Application Redirect URLs.
+**Note:** Verify that the Mosaicoo [root_url]({{< relref "../administration/configuration/#root-url" >}}) is set in your Azure Application Redirect URLs.
 
 ### Configure allowed groups
 
@@ -149,7 +149,7 @@ allowed_domains = mycompany.com mycompany.org
 
 ### Team Sync (Enterprise only)
 
-With Team Sync you can map your Azure AD groups to teams in Grafana so that your users will automatically be added to
+With Team Sync you can map your Azure AD groups to teams in Mosaicoo so that your users will automatically be added to
 the correct teams.
 
 You can reference Azure AD groups by group object ID, like `8bab1c86-8fba-33e5-2089-1d1c80ec267d`.

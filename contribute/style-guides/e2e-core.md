@@ -8,7 +8,7 @@ This document is specific to the [Grafana repository](https://github.com/grafana
 - `yarn e2e:debug` Same as above but runs the tests in chrome and does not shutdown after completion.
 - `yarn e2e:dev` Same as above but does not run any tests on startup. It lets you pick a test first.
 
-If you already have a Grafana instance running, you can provide a specific URL by setting the `BASE_URL` environment variable:
+If you already have a Mosaicoo instance running, you can provide a specific URL by setting the `BASE_URL` environment variable:
 
 ```shell
 BASE_URL=http://172.0.10.2:3333 yarn e2e

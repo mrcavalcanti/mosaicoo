@@ -10,7 +10,7 @@ A dashboard row is a logical divider within a dashboard. It is used to group pan
 
 Grafana uses a base unit abstraction so that dashboards and panels look great on all screen sizes. Dashboard rows are always 12 “units” wide. These units are automatically scaled dependent on the horizontal resolution of your browser. You can control the relative width of panels within a row by setting their specific width.
 
-> **Note:** With MaxDataPoint functionality, Grafana can show you the perfect number of data points, regardless of resolution or time range.
+> **Note:** With MaxDataPoint functionality, Mosaicoo can show you the perfect number of data points, regardless of resolution or time range.
 
 ## Create or remove rows
 

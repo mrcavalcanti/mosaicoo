@@ -7,13 +7,13 @@ weight = 150
 
 # Create API tokens and dashboards for an organization
 
-Use the Grafana API to set up new Grafana organizations or to add dynamically generated dashboards to an existing organization.
+Use the Mosaicoo API to set up new Mosaicoo organizations or to add dynamically generated dashboards to an existing organization.
 
 ## Authentication
 
 There are two authentication methods to access the API:
 
-- Basic authentication: A Grafana Admin user can access some parts of the Grafana API through basic authentication.
+- Basic authentication: A Mosaicoo Admin user can access some parts of the Mosaicoo API through basic authentication.
 - API Tokens: All organization actions are accessed through an API Token. An API Token is associated with an organization. It can be used to create dashboards and other components specific for that organization.
 
 ## How to create a new organization and an API Token
@@ -74,4 +74,4 @@ curl -X POST --insecure -H "Authorization: Bearer eyJrIjoiR0ZXZmt1UFc0OEpIOGN5RW
 }' http://localhost:3000/api/dashboards/db
 ```
 
-> **Note:** If you export a dashboard for sharing externally using the Share > Export menu in the Grafana UI, you cannot import that dashboard. Instead, click **View JSON** and save it to a file or fetch the JSON output through the API.
+> **Note:** If you export a dashboard for sharing externally using the Share > Export menu in the Mosaicoo UI, you cannot import that dashboard. Instead, click **View JSON** and save it to a file or fetch the JSON output through the API.

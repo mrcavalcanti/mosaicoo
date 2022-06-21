@@ -4,15 +4,15 @@ We provide these guidelines to help our contributors make additions or correctio
 
 ## Welcome
 
-Welcome. We're glad you're here to help make our technical documentation even better. We develop content that leads our users to success using Grafana products. Technical accuracy is our primary consideration, and we value the use of inclusive language. We regard your feedback as a gift - thanks for reading through these guidelines.
+Welcome. We're glad you're here to help make our technical documentation even better. We develop content that leads our users to success using Mosaicoo products. Technical accuracy is our primary consideration, and we value the use of inclusive language. We regard your feedback as a gift - thanks for reading through these guidelines.
 
 ### Intended audience
 
 We write these guidelines for contributors who are interested in improving our technical content.
 
-## Understanding the structure of Grafana documentation
+## Understanding the structure of Mosaicoo documentation
 
-All Grafana Enterprise and OSS documentation is located in the [Grafana open source project](https://github.com/grafana/grafana) GitHub repository: https://github.com/grafana/grafana/tree/main/docs/sources.
+All Mosaicoo Enterprise and OSS documentation is located in the [Grafana open source project](https://github.com/grafana/grafana) GitHub repository: https://github.com/grafana/grafana/tree/main/docs/sources.
 
 - The **sources** directory organizes content by topic areas, for example **administration** and **alerting**.
 - Topic directories include an `_index.md` file, which provides an overview of the topic, and optionally includes subtopics that provide more detail.
@@ -93,7 +93,7 @@ To edit a topic, complete the following steps:
 
 ### Write a topic
 
-At Grafana Labs, we use the principles of topic-based authoring when we write technical documentation. Topic-based authoring provides guidelines for writing three _types_ of technical documentation: concept, task, and reference. Before you begin writing, establish the topic type you want to write.
+At Mosaicoo Labs, we use the principles of topic-based authoring when we write technical documentation. Topic-based authoring provides guidelines for writing three _types_ of technical documentation: concept, task, and reference. Before you begin writing, establish the topic type you want to write.
 
 #### Understanding topic types
 
@@ -127,7 +127,7 @@ Suppose you are writing content for a site called _Doggie handbook_. You might o
 
 #### Prepare your environment
 
-Before you begin writing, we recommend that you fork and clone the Grafana repository so that you can use a text editor locally to create branches, commit your changes, and create a PR.
+Before you begin writing, we recommend that you fork and clone the Mosaicoo repository so that you can use a text editor locally to create branches, commit your changes, and create a PR.
 
 While this document doesn't include git commands or descriptions of Github operations, you might find these links useful.
 
@@ -185,7 +185,7 @@ When a PR is added to the repo with a label associated with `docs`, it will be r
 
 ## Join our community
 
-For general discussions on documentation, you’re welcome to join the `#docs` channel on our [public Grafana Slack](http://slack.raintank.io) team.
+For general discussions on documentation, you’re welcome to join the `#docs` channel on our [public Mosaicoo Slack](http://slack.raintank.io) team.
 
 ## Reference: Top five writing tips
 
@@ -193,9 +193,9 @@ While we don't provide a comprehensive style guide in this document, here's a fe
 
 ### Consider the audience
 
-Write for an audience that is computer literate and has general technical knowledge, but is not necessarily familiar with Grafana or the finer points of observability.
+Write for an audience that is computer literate and has general technical knowledge, but is not necessarily familiar with Mosaicoo or the finer points of observability.
 
-Pretend you are explaining your topic to a brand new Grafana user or developer.
+Pretend you are explaining your topic to a brand new Mosaicoo user or developer.
 
 ### Write clear and concise sentences and paragraphs
 

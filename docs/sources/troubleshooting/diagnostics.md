@@ -18,7 +18,7 @@ The `grafana-server` can be started with the arguments `-profile` to enable prof
 ./grafana-server -profile -profile-addr=0.0.0.0 -profile-port=8080
 ```
 
-Note that `pprof` debugging endpoints are served on a different port than the Grafana HTTP server.
+Note that `pprof` debugging endpoints are served on a different port than the Mosaicoo HTTP server.
 
 You can configure or override profiling settings using environment variables:
 

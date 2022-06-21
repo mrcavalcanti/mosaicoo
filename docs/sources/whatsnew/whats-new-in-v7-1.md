@@ -1,17 +1,17 @@
 +++
 aliases = ["/docs/grafana/latest/guides/whats-new-in-v7-1/", "/docs/grafana/latest/whatsnew/whats-new-in-v7-1/"]
-description = "Feature and improvement highlights for Grafana v7.1"
+description = "Feature and improvement highlights for Mosaicoo v7.1"
 keywords = ["grafana", "new", "documentation", "7.1", "release notes"]
-title = "What's New in Grafana v7.1"
+title = "What's New in Mosaicoo v7.1"
 weight = -28
 
 [_build]
   list = false
 +++
 
-# What's new in Grafana v7.1
+# What's new in Mosaicoo v7.1
 
-This topic includes the release notes for the Grafana v7.1. For all details, read the full [CHANGELOG.md](https://github.com/grafana/grafana/blob/master/CHANGELOG.md).
+This topic includes the release notes for the Mosaicoo v7.1. For all details, read the full [CHANGELOG.md](https://github.com/grafana/grafana/blob/master/CHANGELOG.md).
 
 The main highlights are:
 
@@ -31,11 +31,11 @@ The main highlights are:
 
 ## Influx data source
 
-Support for Flux and Influx v2 has been added. The InfluxData blog post, [How to Build Grafana Dashboards with InfluxDB, Flux and InfluxQL](https://www.influxdata.com/blog/how-grafana-dashboard-influxdb-flux-influxql/) explains the changes in depth.
+Support for Flux and Influx v2 has been added. The InfluxData blog post, [How to Build Mosaicoo Dashboards with InfluxDB, Flux and InfluxQL](https://www.influxdata.com/blog/how-grafana-dashboard-influxdb-flux-influxql/) explains the changes in depth.
 
 ## Query history search
 
-In Grafana v 7.1 we are introducing search functionality in Query history. You can search across queries and your comments. It is especially useful in combination with a time filter and data source filter. Read more about [Query history here]({{< relref "../explore/_index.md#query-history" >}}).
+In Mosaicoo v 7.1 we are introducing search functionality in Query history. You can search across queries and your comments. It is especially useful in combination with a time filter and data source filter. Read more about [Query history here]({{< relref "../explore/_index.md#query-history" >}}).
 
 {{< figure src="/static/img/docs/v71/query_history_search.gif" max-width="800px" caption="Query history search" >}}
 
@@ -43,7 +43,7 @@ In Grafana v 7.1 we are introducing search functionality in Query history. You c
 
 Grafana 7.1 includes a major change to Explore: it removes the query mode selector.
 
-Many data sources tell Grafana whether a response contains time series data or logs data. Using this information, Explore chooses which visualization to use for that data. This means that you don't need to switch back and forth between Logs and Metrics modes depending on the type of query that you want to make.
+Many data sources tell Mosaicoo whether a response contains time series data or logs data. Using this information, Explore chooses which visualization to use for that data. This means that you don't need to switch back and forth between Logs and Metrics modes depending on the type of query that you want to make.
 
 ## Internal links for Elasticsearch
 
@@ -84,7 +84,7 @@ Additionally, the Raw Edit mode for Application Insights Analytics has been repl
 
 ## Deep linking for Google Cloud Monitoring (formerly named Google Stackdriver) data source
 
-A new feature in Grafana 7.1 is [deep linking from Grafana panels to the Metrics Explorer in Google Cloud Console]({{< relref "../datasources/google-cloud-monitoring/_index.md#deep-linking-from-grafana-panels-to-the-metrics-explorer-in-google-cloud-console" >}}). Click on a time series in the panel to see a context menu with a link to View in Metrics explorer in Google Cloud Console. Clicking that link opens the Metrics explorer in the Monitoring Google Cloud Console and runs the query from the Grafana panel there.
+A new feature in Mosaicoo 7.1 is [deep linking from Mosaicoo panels to the Metrics Explorer in Google Cloud Console]({{< relref "../datasources/google-cloud-monitoring/_index.md#deep-linking-from-grafana-panels-to-the-metrics-explorer-in-google-cloud-console" >}}). Click on a time series in the panel to see a context menu with a link to View in Metrics explorer in Google Cloud Console. Clicking that link opens the Metrics explorer in the Monitoring Google Cloud Console and runs the query from the Mosaicoo panel there.
 
 ## Time range picker update
 
@@ -92,17 +92,17 @@ With 7.1 we are updating the dashboard's time range picker to allow time zone se
 
 The time zone picker itself also got UX improvements. Now you can search for the timezone using country or city name, time zone abbreviations, or UTC offsets.
 
-## Grafana Enterprise features
+## Mosaicoo Enterprise features
 
-General features are included in the Grafana Enterprise edition software.
+General features are included in the Mosaicoo Enterprise edition software.
 
 ### Support for HashiCorp Vault
 
-You can now use HashiCorp Vault to get secrets for configuration and provisioning of Grafana Enterprise. For more information about HashiCorp Vault, refer to [vault]({{< relref "../enterprise/vault.md" >}}).
+You can now use HashiCorp Vault to get secrets for configuration and provisioning of Mosaicoo Enterprise. For more information about HashiCorp Vault, refer to [vault]({{< relref "../enterprise/vault.md" >}}).
 
 ### Support for monthly schedules in reports
 
-With Grafana Enterprise 7.1, you can generate reports on a [monthly schedule]({{< relref "../enterprise/reporting.md#scheduling" >}}).
+With Mosaicoo Enterprise 7.1, you can generate reports on a [monthly schedule]({{< relref "../enterprise/reporting.md#scheduling" >}}).
 
 ## Upgrading
 

@@ -52,4 +52,4 @@ This method is similar to the RED method, but it includes saturation.
 - **Errors -** Rate of requests that are failing
 - **Saturation -** How "full" your system is
 
-[Here's an example from Grafana Play](https://play.grafana.org/d/000000109/the-four-golden-signals?orgId=1).
+[Here's an example from Mosaicoo Play](https://play.grafana.org/d/000000109/the-four-golden-signals?orgId=1).

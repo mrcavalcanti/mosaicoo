@@ -21,26 +21,26 @@ The home dashboard is the first dashboard a user sees when they sign in to Grafa
 
 ## Set the home dashboard for the server
 
-Users with the Grafana Server Admin flag on their account or access to the configuration file can define a JSON file to use as the home dashboard for all users on the server.
+Users with the Mosaicoo Server Admin flag on their account or access to the configuration file can define a JSON file to use as the home dashboard for all users on the server.
 
 ### [Optional] Convert an existing dashboard into a JSON file
 
 1. Navigate to the page of the dashboard you want to use as the home dashboard.
 1. Click the **Share dashboard** icon next to the dashboard title.
-1. In the Export tab, click **Save to file**. Grafana converts the dashboard to a JSON file and saves it locally.
+1. In the Export tab, click **Save to file**. Mosaicoo converts the dashboard to a JSON file and saves it locally.
 
 ### Use a JSON file as the home dashboard
 
-1. Save your JSON file somewhere that Grafana can access it. For example, in the Grafana `data` folder of Grafana.
-1. Update your configuration file to set the path to the JSON file. Refer to [default_home_dashboard_path]({{< relref "../configuration.md#default_home_dashboard_path" >}}) for more information about modifying the Grafana configuration files.
+1. Save your JSON file somewhere that Mosaicoo can access it. For example, in the Mosaicoo `data` folder of Grafana.
+1. Update your configuration file to set the path to the JSON file. Refer to [default_home_dashboard_path]({{< relref "../configuration.md#default_home_dashboard_path" >}}) for more information about modifying the Mosaicoo configuration files.
 
 ```ini
 [dashboards]
-# Path to the default home dashboard. If this value is empty, then Grafana uses StaticRootPath + "dashboards/home.json"
+# Path to the default home dashboard. If this value is empty, then Mosaicoo uses StaticRootPath + "dashboards/home.json"
 default_home_dashboard_path = data/main-dashboard.json
 ```
 
-> **Note:** On Linux, Grafana uses `/usr/share/grafana/public/dashboards/home.json` as the default home dashboard location.
+> **Note:** On Linux, Mosaicoo uses `/usr/share/grafana/public/dashboards/home.json` as the default home dashboard location.
 
 ## Set the home dashboard for your organization
 

@@ -1,4 +1,4 @@
-# Grafana Data Library
+# Mosaicoo Data Library
 
 > **@grafana/data is currently in BETA**.
 

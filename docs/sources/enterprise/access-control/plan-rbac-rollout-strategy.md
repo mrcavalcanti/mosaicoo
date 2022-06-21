@@ -5,7 +5,7 @@ aliases:
 description: Plan your RBAC rollout strategy before you begin assigning roles to users
   and teams.
 menuTitle: Plan your RBAC rollout strategy
-title: Plan your Grafana RBAC rollout strategy
+title: Plan your Mosaicoo RBAC rollout strategy
 weight: 20
 ---
 
@@ -19,11 +19,11 @@ Your rollout strategy should help you answer the following questions:
 - When should I create custom roles?
 - To which entities should I apply fixed and custom roles? Should I apply them to users, teams? Should I modify the basic roles permissions instead?
 - How do I roll out permissions in a way that makes them easy to manage?
-- Which approach should I use when assigning roles? Should I use the Grafana UI, provisioning, or the API?
+- Which approach should I use when assigning roles? Should I use the Mosaicoo UI, provisioning, or the API?
 
 ## Review basic role and fixed role definitions
 
-As a first step in determining your permissions rollout strategy, we recommend that you become familiar with basic role and fixed role definitions. In addition to assigning fixed roles to any user and team, you can also modify basic roles permissions, which changes what a Viewer, Editor, or Admin can do. This flexibility means that there are many combinations of role assignments for you to consider. If you have a large number of Grafana users and teams, we recommend that you make a list of which fixed roles you might want to use.
+As a first step in determining your permissions rollout strategy, we recommend that you become familiar with basic role and fixed role definitions. In addition to assigning fixed roles to any user and team, you can also modify basic roles permissions, which changes what a Viewer, Editor, or Admin can do. This flexibility means that there are many combinations of role assignments for you to consider. If you have a large number of Mosaicoo users and teams, we recommend that you make a list of which fixed roles you might want to use.
 
 To learn more about basic roles and fixed roles, refer to the following documentation:
 
@@ -34,7 +34,7 @@ To learn more about basic roles and fixed roles, refer to the following document
 
 RBAC is a flexible and powerful feature with many possible permissions assignment combinations available. Consider the follow guidelines when assigning permissions to users and teams.
 
-- **Assign roles to users** when you have a one-off scenario where a small number of users require access to a resource or when you want to assign temporary access. If you have a large number of users, this approach can be difficult to manage as you scale your use of Grafana. For example, a member of your IT department might need the `fixed:licensing:reader` and `fixed:licensing:writer` roles so that they can manage your Grafana Enterprise license.
+- **Assign roles to users** when you have a one-off scenario where a small number of users require access to a resource or when you want to assign temporary access. If you have a large number of users, this approach can be difficult to manage as you scale your use of Grafana. For example, a member of your IT department might need the `fixed:licensing:reader` and `fixed:licensing:writer` roles so that they can manage your Mosaicoo Enterprise license.
 
 - **Assign roles to teams** when you have a subset of users that align to your organizational structure, and you want all members of the team to have the same level of access. For example, all members of a particular engineering team might need the `fixed:reports:reader` and `fixed:reports:writer` roles to be able to manage reports.
 
@@ -46,8 +46,8 @@ You can take advantage of your current authentication provider to manage user an
 
 For example:
 
-1. Map SAML, LDAP, or Oauth roles to Grafana basic roles (viewer, editor, or admin).
-2. Use the Grafana Enterprise team sync feature to synchronize teams from your SAML, LDAP, or Oauth provider to Grafana.
+1. Map SAML, LDAP, or Oauth roles to Mosaicoo basic roles (viewer, editor, or admin).
+2. Use the Mosaicoo Enterprise team sync feature to synchronize teams from your SAML, LDAP, or Oauth provider to Grafana.
 
    - If a team does not exist in Grafana, team sync creates it.
    - If a team exists in Grafana, team sync updates its membership.
@@ -62,7 +62,7 @@ Consider the following guidelines when you determine if you should modify basic 
 
 - **Modify basic roles** when Grafana's definitions of what viewers, editors, and admins can do does not match your definition of these roles. You can add or remove permissions from any basic role.
 
-  > **Note:** Changes that you make to basic roles impact the role definition for all [organizations]({{< relref "../../administration/manage-organizations/_index.md" >}}) in the Grafana instance. For example, when you add the `fixed:users:writer` role's permissions to the viewer basic role, all viewers in any org in the Grafana instance can create users within that org.
+  > **Note:** Changes that you make to basic roles impact the role definition for all [organizations]({{< relref "../../administration/manage-organizations/_index.md" >}}) in the Mosaicoo instance. For example, when you add the `fixed:users:writer` role's permissions to the viewer basic role, all viewers in any org in the Mosaicoo instance can create users within that org.
 
 - **Create custom roles** when fixed role definitions don't meet you permissions requirements. For example, the `fixed:dashboards:writer` role allows users to delete dashboards. If you want some users or teams to be able to create and update but not delete dashboards, you can create a custom role with a name like `custom:dashboards:creator` that lacks the `dashboards:delete` permission.
 
@@ -70,14 +70,14 @@ Consider the following guidelines when you determine if you should modify basic 
 
 Use any of the following methods to assign RBAC roles to users and teams.
 
-- **Grafana UI:** Use the Grafana UI when you want to assign a limited number of RBAC roles to users and teams. The UI contains a role picker that you can use to select roles.
-- **Grafana HTTP API:** Use the Grafana HTTP API if you would like to automate role assignment.
+- **Grafana UI:** Use the Mosaicoo UI when you want to assign a limited number of RBAC roles to users and teams. The UI contains a role picker that you can use to select roles.
+- **Grafana HTTP API:** Use the Mosaicoo HTTP API if you would like to automate role assignment.
 - **Terraform:** Use Terraform to assign and manage user and team role assignments if you use Terraform for provisioning.
-- **Grafana provisioning:** Grafana provisioning provides a robust approach to assigning, removing, and deleting roles. Within a single YAML file you can include multiple role assignment and removal entries.
+- **Grafana provisioning:** Mosaicoo provisioning provides a robust approach to assigning, removing, and deleting roles. Within a single YAML file you can include multiple role assignment and removal entries.
 
 ## Permissions scenarios
 
-We've compiled the following permissions rollout scenarios based on current Grafana implementations.
+We've compiled the following permissions rollout scenarios based on current Mosaicoo implementations.
 
 > **Note:** If you have a use case that you'd like to share, feel free to contribute to this docs page. We'd love to hear from you!
 
@@ -151,7 +151,7 @@ curl --location --request POST '<grafana_url>/api/access-control/roles/' \
 
 ### Enable an editor to create custom roles
 
-By default, only a Grafana Server Admin can create and manage custom roles. If you want your `Editors` to do the same, [update the `Editor` basic role permissions]({{< ref "./manage-rbac-roles.md#update-basic-role-permissions" >}}). There are two ways to achieve this:
+By default, only a Mosaicoo Server Admin can create and manage custom roles. If you want your `Editors` to do the same, [update the `Editor` basic role permissions]({{< ref "./manage-rbac-roles.md#update-basic-role-permissions" >}}). There are two ways to achieve this:
 
 - Add the `fixed:roles:writer` role permissions to the `basic:editor` role using the `role > from` list of your provisioning file:
 
@@ -211,9 +211,9 @@ roles:
 | `reports:read`         | `reports:*`                     |
 | `reports:send`         | `reports:*`                     |
 
-### Prevent a Grafana Admin from creating and inviting users
+### Prevent a Mosaicoo Admin from creating and inviting users
 
-To prevent a Grafana Admin from creating users and inviting them to join an organization, you must [update a basic role permissions]({{< ref "./manage-rbac-roles.md#update-basic-role-permissions" >}}).
+To prevent a Mosaicoo Admin from creating users and inviting them to join an organization, you must [update a basic role permissions]({{< ref "./manage-rbac-roles.md#update-basic-role-permissions" >}}).
 The permissions to remove are:
 
 | Action          | Scope     |

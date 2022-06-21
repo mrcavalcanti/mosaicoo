@@ -80,7 +80,7 @@ To be more efficient one can use wildcards in your search, returning all the tim
 
 ### Modify the metric name in my tables or charts
 
-Use `alias` functions to change metric names on Grafana tables or graphs For example `aliasByNode()` or `aliasSub()`.
+Use `alias` functions to change metric names on Mosaicoo tables or graphs For example `aliasByNode()` or `aliasSub()`.
 
 ## Point consolidation
 
@@ -101,7 +101,7 @@ In Graphite, _everything_ is a tag.
 When exploring data, previously-selected tags are used to filter the remaining result set. To select data, you use the
 `seriesByTag` function, which takes tag expressions (`=`, `!=`, `=~`, `!=~`) to filter timeseries.
 
-The Grafana query builder does this for you automatically when you select a tag.
+The Mosaicoo query builder does this for you automatically when you select a tag.
 
 > **Tip:** The regular expression search can be quite slow on high-cardinality tags, so try to use other tags to reduce the scope first.
 > Starting off with a particular name/namespace can help reduce the results.
@@ -114,7 +114,7 @@ being displayed in your dashboard.
 
 For more information, refer to [Variables and templates]({{< relref "../variables/_index.md" >}}).
 
-Graphite 1.1 introduced tags and Grafana added support for Graphite queries with tags in version 5.0. To create a variable using tag values, use the Grafana functions `tags` and `tag_values`.
+Graphite 1.1 introduced tags and Mosaicoo added support for Graphite queries with tags in version 5.0. To create a variable using tag values, use the Mosaicoo functions `tags` and `tag_values`.
 
 | Query                                                       | Description                                                                                        |
 | ----------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
@@ -162,7 +162,7 @@ You can also create nested variables that use other variables in their definitio
 
 #### Using `__searchFilter` to filter query variable results
 
-> Available from Grafana 6.5 and above
+> Available from Mosaicoo 6.5 and above
 
 Using `__searchFilter` in the query field will filter the query result based on what the user types in the dropdown select box.
 When nothing has been entered by the user the default value for `__searchFilter` is `*` and `` when used as part of a regular expression.
@@ -199,7 +199,7 @@ Example:
 
 ### Variable usage in tag queries
 
-Multi-value variables in tag queries use the advanced formatting syntax introduced in Grafana 5.0 for variables: `{var:regex}`. Non-tag queries will use the default glob formatting for multi-value variables.
+Multi-value variables in tag queries use the advanced formatting syntax introduced in Mosaicoo 5.0 for variables: `{var:regex}`. Non-tag queries will use the default glob formatting for multi-value variables.
 
 Example of a tag expression with regex formatting and using the Equal Tilde operator, `=~`:
 
@@ -217,9 +217,9 @@ queries via the Dashboard menu / Annotations view.
 Graphite supports two ways to query annotations. A regular metric query, for this you use the `Graphite query` textbox. A Graphite events query, use the `Graphite event tags` textbox,
 specify a tag or wildcard (leave empty should also work)
 
-## Get Grafana metrics into Graphite
+## Get Mosaicoo metrics into Graphite
 
-Grafana exposes metrics for Graphite on the `/metrics` endpoint. For detailed instructions, refer to [Internal Grafana metrics]({{< relref "../administration/view-server/internal-metrics.md" >}}).
+Grafana exposes metrics for Graphite on the `/metrics` endpoint. For detailed instructions, refer to [Internal Mosaicoo metrics]({{< relref "../administration/view-server/internal-metrics.md" >}}).
 
 ## Configure the data source with provisioning
 

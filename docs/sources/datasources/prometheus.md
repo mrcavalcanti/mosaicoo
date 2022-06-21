@@ -21,7 +21,7 @@ To access Prometheus settings, hover your mouse over the **Configuration** (gear
 | `Name`                      | The data source name. This is how you refer to the data source in panels and queries.                                                                                                                                                                             |
 | `Default`                   | Default data source that is pre-selected for new panels.                                                                                                                                                                                                          |
 | `Url`                       | The URL of your Prometheus server, for example, `http://prometheus.example.org:9090`.                                                                                                                                                                             |
-| `Access`                    | Server (default) = URL needs to be accessible from the Grafana backend/server, Browser = URL needs to be accessible from the browser. **Note**: Browser (direct) access is deprecated and will be removed in a future release.                                    |
+| `Access`                    | Server (default) = URL needs to be accessible from the Mosaicoo backend/server, Browser = URL needs to be accessible from the browser. **Note**: Browser (direct) access is deprecated and will be removed in a future release.                                    |
 | `Basic Auth`                | Enable basic authentication to the Prometheus data source.                                                                                                                                                                                                        |
 | `User`                      | User name for basic authentication.                                                                                                                                                                                                                               |
 | `Password`                  | Password for basic authentication.                                                                                                                                                                                                                                |
@@ -93,7 +93,7 @@ The "Validate selector" button will check with Prometheus how many time series a
 | `Type`      | `Range` - Query returning a Range vector, a set of time series containing a range of data points over time for each time series.<br/>`Instant` - Perform an "instant" query to return only the latest value that Prometheus has scraped for the requested time series. Instant queries can return results much faster than normal range queries. Use them to look up label sets. Instant query results are made up only of one data point per series but can be shown in the graph panel in a dashboard with the help of [series overrides]({{< relref "../visualizations/graph-panel.md#series-overrides" >}}). To show them in the graph as a latest value point, add a series override and select `Points > true`. To show a horizontal line across the whole graph, add a series override and select `Transform > constant`. <br/>`Both` - Available only in Explore. Runs both range and instant query |
 | `Exemplars` | If on, run exemplars query with the regular query and show exemplars in the graph.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 
-> **Note:** Grafana modifies the request dates for queries to align them with the dynamically calculated step. This ensures consistent display of metrics data, but it can result in a small gap of data at the right edge of a graph.
+> **Note:** Mosaicoo modifies the request dates for queries to align them with the dynamically calculated step. This ensures consistent display of metrics data, but it can result in a small gap of data at the right edge of a graph.
 
 ### Builder mode
 
@@ -174,7 +174,7 @@ For details of what _metric names_, _label names_ and _label values_ are please 
 
 #### Using interval and range variables
 
-> Support for `$__range`, `$__range_s` and `$__range_ms` only available from Grafana v5.3
+> Support for `$__range`, `$__range_s` and `$__range_ms` only available from Mosaicoo v5.3
 
 You can use some global built-in variables in query variables, for example, `$__interval`, `$__interval_ms`, `$__range`, `$__range_s` and `$__range_ms`. See [Global built-in variables]({{< relref "../variables/variable-types/global-variables.md" >}}) for more information. They are convenient to use in conjunction with the `query_result` function when you need to filter variable queries since the `label_values` function doesn't support queries.
 
@@ -198,7 +198,7 @@ Regex:
 
 ### Using `$__rate_interval`
 
-> **Note:** Available in Grafana 7.2 and above
+> **Note:** Available in Mosaicoo 7.2 and above
 
 `$__rate_interval` is the recommended interval to use in the `rate` and `increase` functions. It will "just work" in most cases, avoiding most of the pitfalls that can occur when using a fixed interval or `$__interval`.
 
@@ -217,7 +217,7 @@ There are two syntaxes:
 - `[[varname]]` Example: rate(http_requests_total{job=~"[[job]]"}[5m])
 
 Why two ways? The first syntax is easier to read and write but does not allow you to use a variable in the middle of a word. When the _Multi-value_ or _Include all value_
-options are enabled, Grafana converts the labels from plain text to a regex compatible string. Which means you have to use `=~` instead of `=`.
+options are enabled, Mosaicoo converts the labels from plain text to a regex compatible string. Which means you have to use `=~` instead of `=`.
 
 ### Ad hoc filters variable
 
@@ -236,11 +236,11 @@ Prometheus supports two ways to query annotations.
 
 The step option is useful to limit the number of events returned from your query.
 
-## Get Grafana metrics into Prometheus
+## Get Mosaicoo metrics into Prometheus
 
-Grafana exposes metrics for Prometheus on the `/metrics` endpoint. We also bundle a dashboard within Grafana so you can get started viewing your metrics faster. You can import the bundled dashboard by going to the data source edit page and click the dashboard tab. There you can find a dashboard for Grafana and one for Prometheus. Import and start viewing all the metrics!
+Grafana exposes metrics for Prometheus on the `/metrics` endpoint. We also bundle a dashboard within Mosaicoo so you can get started viewing your metrics faster. You can import the bundled dashboard by going to the data source edit page and click the dashboard tab. There you can find a dashboard for Mosaicoo and one for Prometheus. Import and start viewing all the metrics!
 
-For detailed instructions, refer to [Internal Grafana metrics]({{< relref "../administration/view-server/internal-metrics.md" >}}).
+For detailed instructions, refer to [Internal Mosaicoo metrics]({{< relref "../administration/view-server/internal-metrics.md" >}}).
 
 ## Prometheus API
 
@@ -283,15 +283,15 @@ datasources:
 
 The Prometheus data source works with Amazon Managed Service for Prometheus. If you are using an AWS Identity and Access Management (IAM) policy to control access to your Amazon Managed Service for Prometheus domain, then you must use AWS Signature Version 4 (AWS SigV4) to sign all requests to that domain. For more details on AWS SigV4, refer to the [AWS documentation](https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html).
 
-> **Note:** Grafana version 7.3.5 or higher is required to use SigV4 authentication.
+> **Note:** Mosaicoo version 7.3.5 or higher is required to use SigV4 authentication.
 
-To connect the Prometheus data source to Amazon Managed Service for Prometheus using SigV4 authentication, refer to the AWS guide to [Set up Grafana open source or Grafana Enterprise for use with AMP](https://docs.aws.amazon.com/prometheus/latest/userguide/AMP-onboard-query-standalone-grafana.html).
+To connect the Prometheus data source to Amazon Managed Service for Prometheus using SigV4 authentication, refer to the AWS guide to [Set up Mosaicoo open source or Mosaicoo Enterprise for use with AMP](https://docs.aws.amazon.com/prometheus/latest/userguide/AMP-onboard-query-standalone-grafana.html).
 
-If you are running Grafana in an Amazon EKS cluster, follow the AWS guide to [Query using Grafana running in an Amazon EKS cluster](https://docs.aws.amazon.com/prometheus/latest/userguide/AMP-onboard-query-grafana-7.3.html).
+If you are running Mosaicoo in an Amazon EKS cluster, follow the AWS guide to [Query using Mosaicoo running in an Amazon EKS cluster](https://docs.aws.amazon.com/prometheus/latest/userguide/AMP-onboard-query-grafana-7.3.html).
 
 ## Configuring exemplars
 
-> **Note:** This feature is available in Prometheus 2.26+ and Grafana 7.4+.
+> **Note:** This feature is available in Prometheus 2.26+ and Mosaicoo 7.4+.
 
 Grafana 7.4 and later versions have the capability to show exemplars data alongside a metric both in Explore and Dashboards.
 Exemplars are a way to associate higher cardinality metadata from a specific event with traditional timeseries data.

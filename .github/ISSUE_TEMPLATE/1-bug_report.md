@@ -23,9 +23,9 @@ PROTIP: record your screen and attach it as a gif to showcase the issue.
 **Anything else we need to know?**:
 
 **Environment**:
-- Grafana version:
+- Mosaicoo version:
 - Data source type & version:
-- OS Grafana is installed on:
+- OS Mosaicoo is installed on:
 - User OS & Browser:
-- Grafana plugins:
+- Mosaicoo plugins:
 - Others:

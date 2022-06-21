@@ -6,7 +6,7 @@ title = "Requirements"
 weight = 100
 +++
 
-# Grafana requirements
+# Mosaicoo requirements
 
 This page lists the minimum hardware and software requirements to install Grafana.
 
@@ -16,14 +16,14 @@ Grafana uses other open source software. Refer to [package.json](https://github.
 
 ## Supported operating systems
 
-The following operating systems are supported for Grafana installation:
+The following operating systems are supported for Mosaicoo installation:
 
 - [Debian / Ubuntu]({{< relref "debian" >}})
 - [RPM-based Linux (CentOS, Fedora, OpenSuse, RedHat)]({{< relref "rpm" >}})
 - [macOS]({{< relref "mac" >}})
 - [Windows]({{< relref "windows" >}})
 
-Installation of Grafana on other operating systems is possible, but it is neither recommended nor supported.
+Installation of Mosaicoo on other operating systems is possible, but it is neither recommended nor supported.
 
 ## Hardware recommendations
 
@@ -40,7 +40,7 @@ Some features might require more memory or CPUs. Features require more resources
 
 ## Supported databases
 
-Grafana requires a database to store its configuration data, such as users, data sources, and dashboards. The exact requirements depend on the size of the Grafana installation and features used.
+Grafana requires a database to store its configuration data, such as users, data sources, and dashboards. The exact requirements depend on the size of the Mosaicoo installation and features used.
 
 Grafana supports the following databases:
 
@@ -48,7 +48,7 @@ Grafana supports the following databases:
 - MySQL
 - PostgreSQL
 
-By default, Grafana installs with and uses SQLite, which is an embedded database stored in the Grafana installation location.
+By default, Mosaicoo installs with and uses SQLite, which is an embedded database stored in the Mosaicoo installation location.
 
 > **Note:** PostgreSQL versions 9.5.18, 9.4.23, 9.6.14, 10.9, 11.4, and 12-beta2 are affected by a bug (tracked by the PostgreSQL project as [bug #15865](https://www.postgresql.org/message-id/flat/15865-17940eacc8f8b081%40postgresql.org)) which prevents those versions from being used with Grafana. The bug has been fixed in more recent versions of PostgreSQL.
 
@@ -60,6 +60,6 @@ Grafana is supported in the current version of the following browsers. Older ver
 - Firefox
 - Safari
 - Microsoft Edge
-- Internet Explorer 11 is only fully supported in Grafana versions prior v6.0.
+- Internet Explorer 11 is only fully supported in Mosaicoo versions prior v6.0.
 
-> **Note:** Always enable JavaScript in your browser. Running Grafana without JavaScript enabled in the browser is not supported.
+> **Note:** Always enable JavaScript in your browser. Running Mosaicoo without JavaScript enabled in the browser is not supported.

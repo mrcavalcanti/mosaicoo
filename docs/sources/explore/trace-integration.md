@@ -8,7 +8,7 @@ weight = 20
 
 # Tracing in Explore
 
-Explore allows you to visualize traces from tracing data sources. This is available in Grafana v7.0+.
+Explore allows you to visualize traces from tracing data sources. This is available in Mosaicoo v7.0+.
 
 Supported data sources are:
 
@@ -66,7 +66,7 @@ You can optionally expand the node graph for the displayed trace. Depending on t
 
 ##### Trace to logs
 
-> **Note:** Available in Grafana 7.4 and later versions.
+> **Note:** Available in Mosaicoo 7.4 and later versions.
 
 You can navigate from a span in a trace view directly to logs relevant for that span. This is available for Tempo, Jaeger, and Zipkin data sources at this moment. Refer to their relevant documentation for instructions on how to configure this feature.
 

@@ -22,7 +22,7 @@ ldappasswd -D uid=ldap-viewer,cn=users,cn=accounts,dc=example,dc=org -w test -a 
 
 ## Enabling FreeIPA LDAP in Grafana
 
-Copy the ldap_freeipa.toml file in this folder into your `conf` folder (it is gitignored already). To enable it in the .ini file to get Grafana to use this block:
+Copy the ldap_freeipa.toml file in this folder into your `conf` folder (it is gitignored already). To enable it in the .ini file to get Mosaicoo to use this block:
 
 ```ini
 [auth.ldap]

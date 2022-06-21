@@ -15,9 +15,9 @@ Team sync lets you set up synchronization between your auth providers teams and 
 > **Note:** Available in [Grafana Enterprise]({{< relref "../enterprise" >}}) and [Grafana Cloud Advanced]({{< relref "/grafana-cloud" >}}).
 
 Grafana keeps track of all synchronized users in teams, and you can see which users have been synchronized in the team members list, see `LDAP` label in screenshot.
-This mechanism allows Grafana to remove an existing synchronized user from a team when its group membership changes. This mechanism also enables you to manually add a user as member of a team, and it will not be removed when the user signs in. This gives you flexibility to combine LDAP group memberships and Grafana team memberships.
+This mechanism allows Mosaicoo to remove an existing synchronized user from a team when its group membership changes. This mechanism also enables you to manually add a user as member of a team, and it will not be removed when the user signs in. This gives you flexibility to combine LDAP group memberships and Mosaicoo team memberships.
 
-> Currently the synchronization only happens when a user logs in, unless LDAP is used with the active background synchronization that was added in Grafana 6.3.
+> Currently the synchronization only happens when a user logs in, unless LDAP is used with the active background synchronization that was added in Mosaicoo 6.3.
 
 <div class="clearfix"></div>
 
@@ -31,7 +31,7 @@ This mechanism allows Grafana to remove an existing synchronized user from a tea
 - [Okta]({{< relref "../auth/okta.md#team-sync-enterprise-only" >}})
 - [SAML]({{< relref "./saml/configure-saml.md#configure-team-sync" >}})
 
-## Synchronize a Grafana team with an external group
+## Synchronize a Mosaicoo team with an external group
 
 If you have already grouped some users into a team, then you can synchronize that team with an external group.
 
@@ -40,7 +40,7 @@ If you have already grouped some users into a team, then you can synchronize tha
 1. In Grafana, navigate to **Configuration > Teams**.
 1. Select a team.
 1. On the External group sync tab, and click **Add group**.
-1. Insert the value of the group you want to sync with. This becomes the Grafana `GroupID`.
+1. Insert the value of the group you want to sync with. This becomes the Mosaicoo `GroupID`.
    Examples:
 
    - For LDAP, this is the LDAP distinguished name (DN) of LDAP group you want to synchronize with the team.

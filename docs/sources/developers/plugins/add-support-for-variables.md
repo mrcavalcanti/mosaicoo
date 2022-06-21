@@ -86,7 +86,7 @@ Not only can you read the value of a variable, you can also update the variable 
 The following example shows how to update a variable called `service`.
 
 - `query` contains the query parameters you want to update. Query parameters controlling variables are prefixed with `var-`.
-- `replace: true` tells Grafana to update the current URL state, rather than creating a new history entry.
+- `replace: true` tells Mosaicoo to update the current URL state, rather than creating a new history entry.
 
 ```ts
 import { locationService } from '@grafana/runtime';
@@ -96,7 +96,7 @@ import { locationService } from '@grafana/runtime';
 locationService.partial({ 'var-service': 'billing' }, true);
 ```
 
-> **Note:** Grafana queries your data source whenever you update a variable. Excessive updates to variables can slow down Grafana and lead to a poor user experience.
+> **Note:** Mosaicoo queries your data source whenever you update a variable. Excessive updates to variables can slow down Mosaicoo and lead to a poor user experience.
 
 ## Add support for query variables to your data source
 
@@ -125,7 +125,7 @@ async metricFindQuery(query: MyVariableQuery, options?: any) {
 }
 ```
 
-> **Note:** By default, Grafana provides a default query model and editor for simple text queries. If that's all you need, then you can leave the query type as `string`.
+> **Note:** By default, Mosaicoo provides a default query model and editor for simple text queries. If that's all you need, then you can leave the query type as `string`.
 >
 > ```ts
 > async metricFindQuery(query: string, options?: any)
@@ -184,7 +184,7 @@ Let's create a custom query editor to allow the user to edit the query model.
    };
    ```
 
-   Grafana saves the query model whenever one of the text fields loses focus (`onBlur`) and then previews the values returned by `metricFindQuery`.
+   Mosaicoo saves the query model whenever one of the text fields loses focus (`onBlur`) and then previews the values returned by `metricFindQuery`.
 
    The second argument to `onChange` allows you to set a text representation of the query which will appear next to the name of the variable in the variables list.
 

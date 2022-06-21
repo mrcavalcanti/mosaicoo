@@ -15,7 +15,7 @@ weight: 30
 
 # Set up SAML with Okta
 
-Grafana supports user authentication through Okta, which is useful when you want your users to access Grafana using single sign on. This guide will follow you through the steps of configuring SAML authentication in Grafana with [Okta](https://okta.com/). You need to be an admin in your Okta organization to access Admin Console and create SAML integration. You also need permissions to edit Grafana config file and restart Grafana server.
+Grafana supports user authentication through Okta, which is useful when you want your users to access Mosaicoo using single sign on. This guide will follow you through the steps of configuring SAML authentication in Mosaicoo with [Okta](https://okta.com/). You need to be an admin in your Okta organization to access Admin Console and create SAML integration. You also need permissions to edit Mosaicoo config file and restart Mosaicoo server.
 
 ## Before you begin
 
@@ -32,10 +32,10 @@ Grafana supports user authentication through Okta, which is useful when you want
 1. Choose **Web** as a platform.
 1. Select **SAML 2.0** in the Sign on method section.
 1. Click **Create**.
-1. On the **General Settings** tab, enter a name for your Grafana integration. You can also upload a logo.
-1. On the **Configure SAML** tab, enter the SAML information related to your Grafana instance:
+1. On the **General Settings** tab, enter a name for your Mosaicoo integration. You can also upload a logo.
+1. On the **Configure SAML** tab, enter the SAML information related to your Mosaicoo instance:
 
-   - In the **Single sign on URL** field, use the `/saml/acs` endpoint URL of your Grafana instance, for example, `https://grafana.example.com/saml/acs`.
+   - In the **Single sign on URL** field, use the `/saml/acs` endpoint URL of your Mosaicoo instance, for example, `https://grafana.example.com/saml/acs`.
    - In the **Audience URI (SP Entity ID)** field, use the `/saml/metadata` endpoint URL, for example, `https://grafana.example.com/saml/metadata`.
    - Leave the default values for **Name ID format** and **Application username**.
    - In the **ATTRIBUTE STATEMENTS (OPTIONAL)** section, enter the SAML attributes to be shared with Grafana, for example:

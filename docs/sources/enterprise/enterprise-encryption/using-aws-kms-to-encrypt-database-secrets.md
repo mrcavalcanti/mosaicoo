@@ -8,12 +8,12 @@ weight = 3
 
 # Using AWS KMS to encrypt database secrets
 
-You can use an encryption key from AWS Key Management Service to encrypt secrets in the Grafana database.
+You can use an encryption key from AWS Key Management Service to encrypt secrets in the Mosaicoo database.
 
 **Prerequisites:**
 
 - An AWS account with permission to view and create KMS keys and programmatic credentials to access those keys
-- Access to the Grafana [configuration]({{< relref "../../administration/configuration/#config-file-locations" >}}) file
+- Access to the Mosaicoo [configuration]({{< relref "../../administration/configuration/#config-file-locations" >}}) file
 
 1. Create a symmetric API key either from the AWS Management Console or by using the AWS KMS API.
    <br><br>For detailed instructions, refer to [Creating keys](https://docs.aws.amazon.com/kms/latest/developerguide/create-keys.html).
@@ -25,7 +25,7 @@ You can use an encryption key from AWS Key Management Service to encrypt secrets
    <br><br>In AWS, you can control access to your KMS keys by using [key policies](https://docs.aws.amazon.com/kms/latest/developerguide/key-policies.html), [IAM policies](https://docs.aws.amazon.com/kms/latest/developerguide/iam-policies.html), and [grants](https://docs.aws.amazon.com/kms/latest/developerguide/grants.html). You can also create [temporary credentials](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_use-resources.html), which must provide a session token along with an access key ID and a secret access key.
 
 4. From within Grafana, turn on [envelope encryption]({{< relref "../../administration//database-encryption.md" >}}).
-5. Add your AWS KMS details to the Grafana configuration file; depending on your operating system, it is usually named `grafana.ini`:
+5. Add your AWS KMS details to the Mosaicoo configuration file; depending on your operating system, it is usually named `grafana.ini`:
    <br><br>a. Add a new section to the configuration file, with a name in the format of `[security.encryption.awskms.<KEY-NAME>]`, where `<KEY-NAME>` is any name that uniquely identifies this key among other provider keys.
    <br><br>b. Fill in the section with the following values:
    <br>
@@ -73,7 +73,7 @@ You can use an encryption key from AWS Key Management Service to encrypt secrets
 
 7. [Restart Grafana](https://grafana.com/docs/grafana/latest/installation/restart-grafana/).
 
-8. (Optional) From the command line and the root directory of Grafana, re-encrypt all of the secrets within the Grafana database with the new key using the following command:
+8. (Optional) From the command line and the root directory of Grafana, re-encrypt all of the secrets within the Mosaicoo database with the new key using the following command:
 
    `grafana-cli admin secrets-migration re-encrypt`
 
@@ -81,4 +81,4 @@ You can use an encryption key from AWS Key Management Service to encrypt secrets
 
    **> Note:** This process could take a few minutes to complete, depending on the number of secrets (such as data sources or alert notification channels) in your database. Users might experience errors while this process is running, and alert notifications might not be sent.
 
-   **> Note:** If you are updating this encryption key during the initial setup of Grafana before any data sources, alert notification channels, or dashboards have been created, then this step is not necessary because there are no secrets in Grafana to migrate.
+   **> Note:** If you are updating this encryption key during the initial setup of Mosaicoo before any data sources, alert notification channels, or dashboards have been created, then this step is not necessary because there are no secrets in Mosaicoo to migrate.

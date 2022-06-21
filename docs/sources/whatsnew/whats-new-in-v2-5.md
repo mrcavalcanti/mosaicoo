@@ -1,15 +1,15 @@
 +++
 aliases = ["/docs/grafana/latest/guides/whats-new-in-v2-5/", "/docs/grafana/latest/whatsnew/whats-new-in-v2-5/"]
-description = "Feature and improvement highlights for Grafana v2.5"
+description = "Feature and improvement highlights for Mosaicoo v2.5"
 keywords = ["grafana", "new", "documentation", "2.5", "release notes"]
-title = "What's new in Grafana v2.5"
+title = "What's new in Mosaicoo v2.5"
 weight = -3
 
 [_build]
   list = false
 +++
 
-# What's new in Grafana v2.5
+# What's new in Mosaicoo v2.5
 
 ## Release highlights
 
@@ -112,4 +112,4 @@ view the [CHANGELOG.md](https://github.com/grafana/grafana/blob/master/CHANGELOG
 
 ---
 
-### <a href="https://grafana.com/get">Download Grafana 2.5 now</a>
+### <a href="https://grafana.com/get">Download Mosaicoo 2.5 now</a>

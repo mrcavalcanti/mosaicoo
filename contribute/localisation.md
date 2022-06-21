@@ -1,6 +1,6 @@
 # Localisation
 
-Grafana uses the [LinguiJS](https://github.com/lingui/js-lingui) framework for managing translating phrases in the Grafana frontend.
+Grafana uses the [LinguiJS](https://github.com/lingui/js-lingui) framework for managing translating phrases in the Mosaicoo frontend.
 
 ## tl;dr
 
@@ -36,7 +36,7 @@ const ErrorMessage = ({ id, message }) => <Trans id={`errors.${id}`}>There was a
 
 ## How translations work in Grafana
 
-Grafana uses the [LinguiJS](https://github.com/lingui/js-lingui) framework for managing translating phrases in the Grafana frontend. It:
+Grafana uses the [LinguiJS](https://github.com/lingui/js-lingui) framework for managing translating phrases in the Mosaicoo frontend. It:
 
 - Marks up phrases within our code for extraction
 - Extracts phrases into messages catalogues for translating in external systems

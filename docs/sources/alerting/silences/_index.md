@@ -12,7 +12,7 @@ Use silences to stop notifications from one or more alerting rules. Silences do 
 
 Silences do not prevent alert rules from being evaluated. They also do not stop alert instances from being shown in the user interface. Silences only prevent notifications from being created.
 
-You can configure Grafana managed silences as well as silences for an [external Alertmanager data source]({{< relref "../../datasources/alertmanager.md" >}}). For more information, see [Alertmanager]({{< relref "../fundamentals/alertmanager.md" >}}).
+You can configure Mosaicoo managed silences as well as silences for an [external Alertmanager data source]({{< relref "../../datasources/alertmanager.md" >}}). For more information, see [Alertmanager]({{< relref "../fundamentals/alertmanager.md" >}}).
 
 See also:
 

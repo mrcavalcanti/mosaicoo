@@ -24,7 +24,7 @@ Recorded queries only work with backend data source plugins. Refer to [Backend d
 - row count - A query that returns meaningful rows to be counted.
 - expression - Any expression. To learn more about creating and using expressions, see [Expressions](https://grafana.com/docs/grafana/latest/panels/expressions/).
 
-After a recorded query is created or enabled, it immediately creates a snapshot and continues to create snapshots at the set interval. The recorded query stops taking snapshots when it is disabled, deleted, or when Grafana is not running. Data points are gathered in the backend by running the recorded query and forwarding each result to a remote-write enabled Prometheus instance.
+After a recorded query is created or enabled, it immediately creates a snapshot and continues to create snapshots at the set interval. The recorded query stops taking snapshots when it is disabled, deleted, or when Mosaicoo is not running. Data points are gathered in the backend by running the recorded query and forwarding each result to a remote-write enabled Prometheus instance.
 
 ## Using a recorded query
 

@@ -22,8 +22,8 @@ With enhanced LDAP integration, you can set up synchronization between LDAP grou
 of certain LDAP groups to automatically be added or removed as members to certain teams in Grafana.
 
 Grafana keeps track of all synchronized users in teams, and you can see which users have been synchronized from LDAP in the team members list, see `LDAP` label in screenshot.
-This mechanism allows Grafana to remove an existing synchronized user from a team when its LDAP group membership changes. This mechanism also allows you to manually add
-a user as member of a team, and it will not be removed when the user signs in. This gives you flexibility to combine LDAP group memberships and Grafana team memberships.
+This mechanism allows Mosaicoo to remove an existing synchronized user from a team when its LDAP group membership changes. This mechanism also allows you to manually add
+a user as member of a team, and it will not be removed when the user signs in. This gives you flexibility to combine LDAP group memberships and Mosaicoo team memberships.
 
 [Learn more about team sync.]({{< relref "team-sync.md" >}})
 
@@ -33,7 +33,7 @@ a user as member of a team, and it will not be removed when the user signs in. T
 
 In the open source version of Grafana, user data from LDAP is synchronized only during the login process when authenticating using LDAP.
 
-With active LDAP synchronization, available in Grafana Enterprise version 6.3 and later, you can configure Grafana to actively sync users with LDAP servers in the background. Only users that have logged into Grafana at least once are synchronized.
+With active LDAP synchronization, available in Mosaicoo Enterprise version 6.3 and later, you can configure Mosaicoo to actively sync users with LDAP servers in the background. Only users that have logged into Mosaicoo at least once are synchronized.
 
 Users with updated role and team membership will need to refresh the page to get access to the new features.
 
@@ -52,10 +52,10 @@ Removed users are automatically logged out and their account disabled. These acc
 sync_cron = "0 1 * * *" # This is default value (At 1 am every day)
 # This cron expression format uses 5 space-separated fields, for example
 # sync_cron = "*/10 * * * *"
-# This will run the LDAP Synchronization every 10th minute, which is also the minimal interval between the Grafana sync times i.e. you cannot set it for every 9th minute
+# This will run the LDAP Synchronization every 10th minute, which is also the minimal interval between the Mosaicoo sync times i.e. you cannot set it for every 9th minute
 
 # You can also disable active LDAP synchronization
 active_sync_enabled = true # enabled by default
 ```
 
-Single bind configuration (as in the [Single bind example]({{< relref "../auth/ldap.md#single-bind-example" >}})) is not supported with active LDAP synchronization because Grafana needs user information to perform LDAP searches.
+Single bind configuration (as in the [Single bind example]({{< relref "../auth/ldap.md#single-bind-example" >}})) is not supported with active LDAP synchronization because Mosaicoo needs user information to perform LDAP searches.

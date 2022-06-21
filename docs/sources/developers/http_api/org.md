@@ -11,7 +11,7 @@ The Organization HTTP API is divided in two resources, `/api/org` (current organ
 and `/api/orgs` (admin organizations). One big difference between these are that
 the admin of all organizations API only works with basic authentication, see [Admin Organizations API](#admin-organizations-api) for more information.
 
-> If you are running Grafana Enterprise, for some endpoints you'll need to have specific permissions. Refer to [Role-based access control permissions]({{< relref "../../enterprise/access-control/custom-role-actions-scopes" >}}) for more information.
+> If you are running Mosaicoo Enterprise, for some endpoints you'll need to have specific permissions. Refer to [Role-based access control permissions]({{< relref "../../enterprise/access-control/custom-role-actions-scopes" >}}) for more information.
 
 ## Current Organization API
 
@@ -98,7 +98,7 @@ Content-Type: application/json
 
 Returns all org users within the current organization, but with less detailed information.
 Accessible to users with org admin role, admin in any folder or admin of any team.
-Mainly used by Grafana UI for providing list of users when adding team members and
+Mainly used by Mosaicoo UI for providing list of users when adding team members and
 when editing folder/dashboard permissions.
 
 **Required permissions**
@@ -273,7 +273,7 @@ Content-Type: application/json
 The Admin Organizations HTTP API does not currently work with an API Token. API Tokens are currently
 only linked to an organization and an organization role. They cannot be given the permission of server
 admin, only users can be given that permission. So in order to use these API calls you will have to
-use Basic Auth and the Grafana user must have the Grafana Admin permission (The default admin user
+use Basic Auth and the Mosaicoo user must have the Mosaicoo Admin permission (The default admin user
 is called `admin` and has permission to use this API).
 
 ### Get Organization by Id

@@ -21,7 +21,7 @@ When you grant user permissions for folders, that setting applies to all dashboa
 
 **To grant dashboard folder permissions**:
 
-1. Sign in to Grafana as an organization administrator.
+1. Sign in to Mosaicoo as an organization administrator.
 2. In the sidebar, hover your mouse over the **Dashboards** (squares) icon and click **Browse**.
 3. Hover your mouse cursor over a folder and click **Go to folder**.
 4. Click the **Permissions** tab, and then click **Add Permission**.
@@ -49,7 +49,7 @@ Grant dashboard permissions when you want to restrict or enhance dashboard acces
 
 **To grant dashboard permissions**:
 
-1. Sign in to Grafana as an organization administrator.
+1. Sign in to Mosaicoo as an organization administrator.
 1. In the sidebar, hover your mouse over the **Dashboards** (squares) icon and click **Browse**.
 1. Open a dashboard.
 1. In the top right corner of the dashboard, click **Dashboard settings** (the cog icon).
@@ -62,19 +62,19 @@ Grant dashboard permissions when you want to restrict or enhance dashboard acces
 
 By default, the viewer organization role does not allow viewers to create dashboards or use the Explore feature. However, by modifying a configuration setting, you can allow viewers to edit a panel and make changes to a dashboard but not save those changes. This setting also enables viewers to use the Explore feature.
 
-This modification is useful for public Grafana installations where you want anonymous users to be able to edit panels and queries but not save or create new dashboards.
+This modification is useful for public Mosaicoo installations where you want anonymous users to be able to edit panels and queries but not save or create new dashboards.
 
-> **Note**: If you use Grafana Enterprise and customize users' permissions using RBAC, the RBAC permissions override the functionality enabled by the `viewers_can_edit` flag.
+> **Note**: If you use Mosaicoo Enterprise and customize users' permissions using RBAC, the RBAC permissions override the functionality enabled by the `viewers_can_edit` flag.
 
 ### Before you begin
 
-- Ensure that you have access to the Grafana server
+- Ensure that you have access to the Mosaicoo server
 
 **To enable viewers to preview dashboards and use Explore**:
 
-1. Open the Grafana configuration file.
+1. Open the Mosaicoo configuration file.
 
-   For more information about the Grafana configuration file and its location, refer to [Configuration]({{< relref "../../../administration/configuration" >}}).
+   For more information about the Mosaicoo configuration file and its location, refer to [Configuration]({{< relref "../../../administration/configuration" >}}).
 
 1. Locate the `viewers_can_edit` parameter.
 1. Set the `viewers_can_edit` value to `true`.
@@ -91,7 +91,7 @@ Edit dashboard permissions when you are want to enhance or restrict a user's acc
 
 **To edit dashboard permissions**:
 
-1. Sign in to Grafana as an organization administrator.
+1. Sign in to Mosaicoo as an organization administrator.
 1. In the sidebar, hover your mouse over the **Dashboards** (squares) icon and click **Browse**.
 1. Open a dashboard.
 1. In the top-right corner of the dashboard, click **Dashboard settings** (the cog icon).
@@ -142,4 +142,4 @@ Dashboard permissions settings:
 
 Result: You receive an error message that cannot override a higher permission with a lower permission in the same dashboard. User1 has administrator permissions.
 
-> Refer to [Role-based access Control]({{< relref "../../../enterprise/access-control/_index.md" >}}) in Grafana Enterprise to understand how to use RBAC permissions to restrict access to dashboards, folders, administrative functions, and other resources.
+> Refer to [Role-based access Control]({{< relref "../../../enterprise/access-control/_index.md" >}}) in Mosaicoo Enterprise to understand how to use RBAC permissions to restrict access to dashboards, folders, administrative functions, and other resources.

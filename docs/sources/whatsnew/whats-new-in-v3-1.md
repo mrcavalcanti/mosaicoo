@@ -1,15 +1,15 @@
 +++
 aliases = ["/docs/grafana/latest/guides/whats-new-in-v3-1/", "/docs/grafana/latest/whatsnew/whats-new-in-v3-1/"]
-description = "Feature and improvement highlights for Grafana v3.1"
+description = "Feature and improvement highlights for Mosaicoo v3.1"
 keywords = ["grafana", "new", "documentation", "3.1", "release notes"]
-title = "What's new in Grafana v3.1"
+title = "What's new in Mosaicoo v3.1"
 weight = -6
 
 [_build]
   list = false
 +++
 
-# What's new in Grafana v3.1
+# What's new in Mosaicoo v3.1
 
 ## Dashboard Export and Import
 
@@ -17,7 +17,7 @@ The export feature is now accessed from the share menu.
 
 <img src="/static/img/docs/v31/export_menu.png">
 
-Dashboards exported from Grafana 3.1 are now more portable and easier for others to import than before. The export process extracts information data source types used by panels and adds these to a new `inputs` section in the dashboard json. So when you or another person tries to import the dashboard they will be asked to select data source and optional metric prefix options.
+Dashboards exported from Mosaicoo 3.1 are now more portable and easier for others to import than before. The export process extracts information data source types used by panels and adds these to a new `inputs` section in the dashboard json. So when you or another person tries to import the dashboard they will be asked to select data source and optional metric prefix options.
 
 <img src="/static/img/docs/v31/import_step1.png">
 
@@ -41,11 +41,11 @@ We added a new template variable named constant that makes it easier to share an
 
 ## Dashboard URLs
 
-Having current time range and template variable value always sync with the URL makes it possible to always copy your current Grafana URL to share with a colleague without having to use the Share modal.
+Having current time range and template variable value always sync with the URL makes it possible to always copy your current Mosaicoo URL to share with a colleague without having to use the Share modal.
 
 ## Internal metrics
 
-Do you want metrics about viewing metrics? Of course you do! In this release we added support for sending metrics about Grafana to graphite. You can configure interval and server in the config file.
+Do you want metrics about viewing metrics? Of course you do! In this release we added support for sending metrics about Mosaicoo to graphite. You can configure interval and server in the config file.
 
 ## Logging
 
@@ -54,7 +54,7 @@ Switched logging framework to log15 to enable key value per logging and filterin
 ### Breaking changes
 
 - **Logging** format have been changed to improve log filtering.
-- **Graphite PNG** Graphite PNG support dropped from Graph panel (use Grafana native PNG instead).
+- **Graphite PNG** Graphite PNG support dropped from Graph panel (use Mosaicoo native PNG instead).
 - **Migration** No longer possible to migrate dashboards from 1.x (Stored in ES or Influx 0.8).
 
 ## CHANGELOG

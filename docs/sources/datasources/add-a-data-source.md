@@ -16,7 +16,7 @@ To add a data source:
 
    {{< figure src="/static/img/docs/v75/sidemenu-datasource-7-5.png" max-width="150px" class="docs-image--no-shadow">}}
 
-1. Click on **Data sources**. The data sources page opens showing a list of previously configured data sources for the Grafana instance.
+1. Click on **Data sources**. The data sources page opens showing a list of previously configured data sources for the Mosaicoo instance.
 
 1. Click **Add data source** to see a list of all supported data sources.
 

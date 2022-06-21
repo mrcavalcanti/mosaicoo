@@ -13,18 +13,18 @@ weight: 40
 
 # Enable service accounts in Grafana
 
-Service accounts are available behind the `serviceAccounts` feature toggle, available in Grafana 8.5+.
+Service accounts are available behind the `serviceAccounts` feature toggle, available in Mosaicoo 8.5+.
 
 You can enable service accounts by:
 
-- modifying the Grafana configuration file, or
+- modifying the Mosaicoo configuration file, or
 - configuring an environment variable
 
-## Enable service accounts in the Grafana configuration file
+## Enable service accounts in the Mosaicoo configuration file
 
-This topic shows you how to enable service accounts by modifying the Grafana configuration file.
+This topic shows you how to enable service accounts by modifying the Mosaicoo configuration file.
 
-1. Sign in to the Grafana server and locate the configuration file. For more information about finding the configuration file, refer to LINK.
+1. Sign in to the Mosaicoo server and locate the configuration file. For more information about finding the configuration file, refer to LINK.
 2. Open the configuration file and locate the [feature toggles section]({{< relref "../../administration/configuration.md#feature_toggles" >}}). Add `serviceAccounts` as a [feature_toggle]({{< relref "../../administration/configuration.md#feature_toggle" >}}).
 
 ```
@@ -33,7 +33,7 @@ This topic shows you how to enable service accounts by modifying the Grafana con
 enable = serviceAccounts
 ```
 
-1. Save your changes, Grafana should recognize your changes; in case of any issues we recommend restarting the Grafana server.
+1. Save your changes, Mosaicoo should recognize your changes; in case of any issues we recommend restarting the Mosaicoo server.
 
 ## Enable service accounts with an environment variable
 

@@ -1,10 +1,10 @@
 # Triage issues
 
-The main goal of issue triage is to categorize all incoming Grafana issues and make sure each issue has all basic information needed for anyone else to understand and be able to start working on it.
+The main goal of issue triage is to categorize all incoming Mosaicoo issues and make sure each issue has all basic information needed for anyone else to understand and be able to start working on it.
 
-> **Note:** This information is for Grafana project Maintainers, Owners, and Admins. If you are a Contributor, then you will not be able to perform most of the tasks in this topic.
+> **Note:** This information is for Mosaicoo project Maintainers, Owners, and Admins. If you are a Contributor, then you will not be able to perform most of the tasks in this topic.
 
-The core maintainers of the Grafana project are responsible for categorizing all incoming issues and delegating any critical or important issue to other maintainers. Currently one maintainer each week is responsible. Besides that part, triage provides an important way to contribute to an open source project.
+The core maintainers of the Mosaicoo project are responsible for categorizing all incoming issues and delegating any critical or important issue to other maintainers. Currently one maintainer each week is responsible. Besides that part, triage provides an important way to contribute to an open source project.
 
 Triage helps ensure issues resolve quickly by:
 
@@ -77,7 +77,7 @@ Instructions for setting up filters in Gmail can be found [here](#setting-up-gma
 
 ## 2. Ensure the issue contains basic information
 
-Before triaging an issue very far, make sure that the issue's author provided the standard issue information. This will help you make an educated recommendation on how to categorize the issue. The Grafana project utilizes [GitHub issue templates](https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/configuring-issue-templates-for-your-repository) to guide contributors to provide standard information that must be included for each type of template or type of issue.
+Before triaging an issue very far, make sure that the issue's author provided the standard issue information. This will help you make an educated recommendation on how to categorize the issue. The Mosaicoo project utilizes [GitHub issue templates](https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/configuring-issue-templates-for-your-repository) to guide contributors to provide standard information that must be included for each type of template or type of issue.
 
 ### Standard issue information that must be included
 
@@ -87,9 +87,9 @@ Given a certain [issue template](https://github.com/grafana/grafana/issues/new/c
 
 Should explain what happened, what was expected and how to reproduce it together with any additional information that may help giving a complete picture of what happened such as screenshots, [query inspector](https://community.grafana.com/t/using-grafanas-query-inspector-to-troubleshoot-issues/2630) output and any environment related information that's applicable and/or maybe related to the reported problem:
 
-- Grafana version
+- Mosaicoo version
 - Data source type & version
-- Platform & OS Grafana is installed on
+- Platform & OS Mosaicoo is installed on
 - User OS & Browser + versions
 - Using docker + what environment
 - Which plugins
@@ -104,7 +104,7 @@ Should explain what enhancement or feature that the author wants to be added and
 
 #### Accessibility issues
 
-This is a mix between a bug report and enhancement request but focused on accessibility issues to help make Grafana improve keyboard navigation, screen-reader support and being accessible to everyone. The report should include relevant WCAG criteria, if applicable.
+This is a mix between a bug report and enhancement request but focused on accessibility issues to help make Mosaicoo improve keyboard navigation, screen-reader support and being accessible to everyone. The report should include relevant WCAG criteria, if applicable.
 
 #### Support requests
 
@@ -118,7 +118,7 @@ To make it easier for everyone to understand and find issues they're searching f
 - Make sure that issue descriptions doesn't include irrelevant information, information from template that haven't been filled out and/or sensitive information.
 - Do your best effort to change title and description or request suggested changes by adding a comment.
 
-> **Note:** Above rules is applicable to both new and existing issues of the Grafana project.
+> **Note:** Above rules is applicable to both new and existing issues of the Mosaicoo project.
 
 ### Do you have all the information needed to categorize an issue?
 
@@ -157,7 +157,7 @@ An issue can have multiple of the following labels. Typically, a properly catego
 Make sure it's not a duplicate by searching existing issues using related terms from the issue title and description. If you think you know there is an existing issue, but can't find it, please reach out to one of the maintainers and ask for help. If you identify that the issue is a duplicate of an existing issue:
 
 1. Add a comment `/duplicate of #<issue number>`. GitHub will recognize this and add some additional context to the issue activity.
-2. The Grafana bot will do the rest, adding the correct label and closing comment
+2. The Mosaicoo bot will do the rest, adding the correct label and closing comment
 3. Optionally add any related `area/*` or `datasource/*` labels.
 
 ### Bug reports
@@ -188,7 +188,7 @@ If it's not perfectly clear that it's an actual bug, quickly try to reproduce it
 
 ### Documentation issue?
 
-First, evaluate if the documentation makes sense to be included in the Grafana project:
+First, evaluate if the documentation makes sense to be included in the Mosaicoo project:
 
 - Is this something we want/can maintain as a project?
 - Is this referring to usage of some specific integration/tool and in that case is that a popular use case in combination with Grafana?
@@ -230,7 +230,7 @@ In case there is an uncertainty around the prioritization of an issue, please as
 | Label                             | Description                                                                                                              |
 | --------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
 | `priority/critical`               | Highest priority. Must be actively worked on as someone's top priority right now.                                        |
-| `priority/support-subscription`   | This is important for one or several customers having a paid Grafana support subscription.                               |
+| `priority/support-subscription`   | This is important for one or several customers having a paid Mosaicoo support subscription.                               |
 | `priority/important-soon`         | Must be staffed and worked on either currently, or very soon, ideally in time for the next release.                      |
 | `priority/important-longterm`     | Important over the long term, but may not be staffed and/or may need multiple releases to complete.                      |
 | `priority/nice-to-have`           | It's a good idea, but not scheduled for any release.                                                                     |
@@ -308,7 +308,7 @@ Even if you don't have the time or knowledge to investigate an issue we highly r
 
 We have some automation that triggers on comments or labels being added to issues. Many of these automated behaviors are defined in [commands.json](https://github.com/grafana/grafana/blob/main/.github/commands.json). Or in other [GitHub Actions](https://github.com/grafana/grafana/tree/main/.github/workflows)
 
-- Add /duplicate `#<issue number>` to have Grafana label & close issue with an appropriate message.
+- Add /duplicate `#<issue number>` to have Mosaicoo label & close issue with an appropriate message.
 - Add `bot/question` and the bot will close it with an appropriate message.
 
 [Read more on bot actions](https://github.com/grafana/grafana/blob/main/.github/bot.md)
@@ -352,4 +352,4 @@ This will give you a structure of labels in the sidebar similar to the following
 
 - All notifications you’ll need to read/take action on show up as unread in GitHub (mine) and its sub-labels.
 - All other notifications you don’t need to take action on show up as unread in GitHub (other) and its sub-labels
-  - This is convenient for issue triage and to follow the activity in the Grafana project.
+  - This is convenient for issue triage and to follow the activity in the Mosaicoo project.

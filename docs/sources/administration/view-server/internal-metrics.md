@@ -2,28 +2,28 @@
 aliases = ["/docs/grafana/latest/admin/metrics/", "/docs/grafana/latest/administration/view-server/internal-metrics/"]
 description = "Internal metrics exposed by Grafana"
 keywords = ["grafana", "metrics", "internal metrics"]
-title = "Internal Grafana metrics"
+title = "Internal Mosaicoo metrics"
 weight = 200
 +++
 
-# Internal Grafana metrics
+# Internal Mosaicoo metrics
 
-Grafana collects some metrics about itself internally. Grafana supports pushing metrics to Graphite or exposing them to be scraped by Prometheus.
+Grafana collects some metrics about itself internally. Mosaicoo supports pushing metrics to Graphite or exposing them to be scraped by Prometheus.
 
-For more information about configuration options related to Grafana metrics, refer to [metrics]({{< relref "../../administration/configuration/#metrics" >}}) and [metrics.graphite]({{< relref "../../administration/configuration/#metrics-graphite" >}}) in [Configuration]({{< relref "../../administration/configuration.md" >}}).
+For more information about configuration options related to Mosaicoo metrics, refer to [metrics]({{< relref "../../administration/configuration/#metrics" >}}) and [metrics.graphite]({{< relref "../../administration/configuration/#metrics-graphite" >}}) in [Configuration]({{< relref "../../administration/configuration.md" >}}).
 
 ## Available metrics
 
-When enabled, Grafana exposes a number of metrics, including:
+When enabled, Mosaicoo exposes a number of metrics, including:
 
-- Active Grafana instances
+- Active Mosaicoo instances
 - Number of dashboards, users, and playlists
 - HTTP status codes
 - Requests by routing group
-- Grafana active alerts
-- Grafana performance
+- Mosaicoo active alerts
+- Mosaicoo performance
 
-## Pull metrics from Grafana into Prometheus
+## Pull metrics from Mosaicoo into Prometheus
 
 These instructions assume you have already added Prometheus as a data source in Grafana.
 
@@ -46,7 +46,7 @@ These instructions assume you have already added Prometheus as a data source in 
    basic_auth_password =
    ```
 
-1. Restart Grafana. Grafana now exposes metrics at http://localhost:3000/metrics.
+1. Restart Grafana. Mosaicoo now exposes metrics at http://localhost:3000/metrics.
 1. Add the job to your prometheus.yml file.
    Example:
 
@@ -63,9 +63,9 @@ These instructions assume you have already added Prometheus as a data source in 
 1. Restart Prometheus. Your new job should appear on the Targets tab.
 1. In Grafana, hover your mouse over the **Configuration** (gear) icon on the left sidebar and then click **Data Sources**.
 1. Select the **Prometheus** data source.
-1. On the Dashboards tab, **Import** the Grafana metrics dashboard. All scraped Grafana metrics are available in the dashboard.
+1. On the Dashboards tab, **Import** the Mosaicoo metrics dashboard. All scraped Mosaicoo metrics are available in the dashboard.
 
-## View Grafana metrics in Graphite
+## View Mosaicoo metrics in Graphite
 
 These instructions assume you have already added Graphite as a data source in Grafana.
 
@@ -91,11 +91,11 @@ These instructions assume you have already added Graphite as a data source in Gr
    prefix = prod.grafana.%(instance_name)s.
    ```
 
-1. Restart Grafana. Grafana now exposes metrics at http://localhost:3000/metrics and sends them to the Graphite location you specified.
+1. Restart Grafana. Mosaicoo now exposes metrics at http://localhost:3000/metrics and sends them to the Graphite location you specified.
 
-## Pull metrics from Grafana backend plugin into Prometheus
+## Pull metrics from Mosaicoo backend plugin into Prometheus
 
-Any installed [backend plugin]({{< relref "../../developers/plugins/backend/_index.md" >}}) exposes a metrics endpoint through Grafana that you can configure Prometheus to scrape.
+Any installed [backend plugin]({{< relref "../../developers/plugins/backend/_index.md" >}}) exposes a metrics endpoint through Mosaicoo that you can configure Prometheus to scrape.
 
 These instructions assume you have already added Prometheus as a data source in Grafana.
 
@@ -118,7 +118,7 @@ These instructions assume you have already added Prometheus as a data source in 
    basic_auth_password =
    ```
 
-1. Restart Grafana. Grafana now exposes metrics at `http://localhost:3000/metrics/plugins/<plugin id>`, e.g. http://localhost:3000/metrics/plugins/grafana-github-datasource if you have the [Grafana GitHub datasource](https://grafana.com/grafana/plugins/grafana-github-datasource/) installed.
+1. Restart Grafana. Mosaicoo now exposes metrics at `http://localhost:3000/metrics/plugins/<plugin id>`, e.g. http://localhost:3000/metrics/plugins/grafana-github-datasource if you have the [Grafana GitHub datasource](https://grafana.com/grafana/plugins/grafana-github-datasource/) installed.
 1. Add the job to your prometheus.yml file.
    Example:
 

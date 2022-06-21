@@ -7,7 +7,7 @@ weight = 40
 
 # Administration
 
-This section includes information for Grafana administrators, team administrators, and users performing administrative tasks:
+This section includes information for Mosaicoo administrators, team administrators, and users performing administrative tasks:
 
 - [Change Preferences]({{< relref "preferences" >}})
 - [Configuration]({{< relref "configuration" >}})

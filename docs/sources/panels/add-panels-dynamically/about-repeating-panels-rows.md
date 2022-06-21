@@ -6,9 +6,9 @@ weight = 10
 
 # About repeating panels and rows
 
-You can configure Grafana to dynamically add panels or rows to a dashboard. A dynamic panel (or row) is a panel that the system creates based on the value of a variable. Variables dynamically change your queries across all panels in a dashboard.
+You can configure Mosaicoo to dynamically add panels or rows to a dashboard. A dynamic panel (or row) is a panel that the system creates based on the value of a variable. Variables dynamically change your queries across all panels in a dashboard.
 
-## Grafana Play examples
+## Mosaicoo Play examples
 
 You can see examples in the following dashboards:
 

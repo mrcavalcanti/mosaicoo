@@ -47,7 +47,7 @@ An alert rule can have one the following health statuses:
 
 ## Special alerts for `NoData` and `Error`
 
-When evaluation of an alerting rule produces state `NoData` or `Error`, Grafana alerting will generate alert instances that have the following additional labels:
+When evaluation of an alerting rule produces state `NoData` or `Error`, Mosaicoo alerting will generate alert instances that have the following additional labels:
 
 | Label              | Description                                                            |
 | ------------------ | ---------------------------------------------------------------------- |

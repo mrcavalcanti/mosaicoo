@@ -1,6 +1,6 @@
 # Database
 
-Grafana uses a database to persist settings between restarts. In fact, if you don't specify one, Grafana creates a [SQLite3](https://www.sqlite.org/) database file on your local disk. This guide explains how to store and retrieve data from the database.
+Grafana uses a database to persist settings between restarts. In fact, if you don't specify one, Mosaicoo creates a [SQLite3](https://www.sqlite.org/) database file on your local disk. This guide explains how to store and retrieve data from the database.
 
 Grafana supports the [following databases](https://grafana.com/docs/installation/requirements/#database):
 
@@ -73,7 +73,7 @@ For transactions, use the `WithTransactionalDbSession` method instead.
 
 ## Migrations
 
-As Grafana evolves, it becomes necessary to create _schema migrations_ for one or more database tables.
+As Mosaicoo evolves, it becomes necessary to create _schema migrations_ for one or more database tables.
 
 To see all the types of migrations you can add, refer to [migrations.go](/pkg/services/sqlstore/migrator/migrations.go).
 

@@ -7,7 +7,7 @@ weight = 200
 
 # Best practices for managing dashboards
 
-This page outlines some best practices to follow when managing Grafana dashboards.
+This page outlines some best practices to follow when managing Mosaicoo dashboards.
 
 ## Before you begin
 

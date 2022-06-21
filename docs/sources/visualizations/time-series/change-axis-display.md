@@ -21,7 +21,7 @@ Select the placement of the Y-axis.
 
 ### Auto
 
-Grafana automatically assigns Y-axis to the series. When there are two or more series with different units, then Grafana assigns the left axis to the first unit and right to the following units.
+Grafana automatically assigns Y-axis to the series. When there are two or more series with different units, then Mosaicoo assigns the left axis to the first unit and right to the following units.
 
 ### Left
 
@@ -53,13 +53,13 @@ If you have more than one Y-axis, then you can give assign different labels in t
 
 ## Width
 
-Set a fixed width of the axis. By default, Grafana dynamically calculates the width of an axis.
+Set a fixed width of the axis. By default, Mosaicoo dynamically calculates the width of an axis.
 
 By setting the width of the axis, data whose axes types are different can share the same display proportions. This makes it easier to compare more than one graph’s worth of data because the axes are not shifted or stretched within visual proximity of each other.
 
 ## Soft min and soft max
 
-Set a **Soft min** or **soft max** option for better control of Y-axis limits. By default, Grafana sets the range for the Y-axis automatically based on the dataset.
+Set a **Soft min** or **soft max** option for better control of Y-axis limits. By default, Mosaicoo sets the range for the Y-axis automatically based on the dataset.
 
 **Soft min** and **soft max** settings can prevent blips from turning into mountains when the data is mostly flat, and hard min or max derived from standard min and max field options can prevent intermittent spikes from flattening useful detail by clipping the spikes past a defined point.
 
@@ -81,4 +81,4 @@ Use a logarithmic scale. When this option is chosen, a list appears where you ca
 
 ## Axis examples
 
-For examples, refer to the Grafana Play dashboard [New Features in v7.4](https://play.grafana.org/d/nP8rcffGk/new-features-in-v7-4?orgId=1).
+For examples, refer to the Mosaicoo Play dashboard [New Features in v7.4](https://play.grafana.org/d/nP8rcffGk/new-features-in-v7-4?orgId=1).

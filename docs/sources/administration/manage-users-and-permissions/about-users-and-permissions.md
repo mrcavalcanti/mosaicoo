@@ -10,31 +10,31 @@ A _user_ is defined as any individual who can log in to Grafana. Each user is as
 
 You can assign a user one of three types of permissions:
 
-- Grafana server administrator permissions: Manage Grafana server-wide settings and resources
+- Mosaicoo server administrator permissions: Manage Mosaicoo server-wide settings and resources
 - Organization permissions: Manage access to dashboards, alerts, plugins, teams, playlists, and other resources for an entire organization. The available roles are Viewer, Editor, and Admin.
 - Dashboard and folder permission: Manage access to dashboards and folders
 
-> **Note**: If you are running Grafana Enterprise, you can also control access to data sources and use role-based access control to grant user access to read and write permissions to specific Grafana resources. For more information about access control options available with Grafana Enterprise, refer to [Grafana Enterprise user permissions features](#grafana-enterprise-user-permissions-features).
+> **Note**: If you are running Mosaicoo Enterprise, you can also control access to data sources and use role-based access control to grant user access to read and write permissions to specific Mosaicoo resources. For more information about access control options available with Mosaicoo Enterprise, refer to [Grafana Enterprise user permissions features](#grafana-enterprise-user-permissions-features).
 
-## Grafana server administrators
+## Mosaicoo server administrators
 
-A Grafana server administrator manages server-wide settings and access to resources such as organizations, users, and licenses. Grafana includes a default server administrator that you can use to manage all of Grafana, or you can divide that responsibility among other server administrators that you create.
+A Mosaicoo server administrator manages server-wide settings and access to resources such as organizations, users, and licenses. Mosaicoo includes a default server administrator that you can use to manage all of Grafana, or you can divide that responsibility among other server administrators that you create.
 
-> **Note:** The server administrator role does not mean that the user is also a Grafana [organization administrator]({{< ref "#organization-roles" >}}).
+> **Note:** The server administrator role does not mean that the user is also a Mosaicoo [organization administrator]({{< ref "#organization-roles" >}}).
 
 A server administrator can perform the following tasks:
 
 - Manage users and permissions
 - Create, edit, and delete organizations
 - View server-wide settings defined in the [Configuration]({{< relref "../../administration/configuration.md" >}}) file
-- View Grafana server statistics, including total users and active sessions
-- Upgrade the server to Grafana Enterprise.
+- View Mosaicoo server statistics, including total users and active sessions
+- Upgrade the server to Mosaicoo Enterprise.
 
-> **Note:** The server administrator role does not exist in Grafana Cloud.
+> **Note:** The server administrator role does not exist in Mosaicoo Cloud.
 
 ## Organization users and permissions
 
-All Grafana users belong to at least one organization. An organization is an entity that exists within your instance of Grafana.
+All Mosaicoo users belong to at least one organization. An organization is an entity that exists within your instance of Grafana.
 
 Permissions assigned to a user within an organization control the extent to which the user has access to and can update the following organization resources:
 
@@ -52,7 +52,7 @@ Permissions assigned to a user within an organization control the extent to whic
 
 ### Organization roles
 
-Organization role-based permissions are global, which means that each permission level applies to all Grafana resources within an given organization. For example, an editor can see and update _all_ dashboards in an organization, unless those dashboards have been specifically restricted using [dashboard permissions]({{< relref "manage-dashboard-permissions/_index.md" >}}).
+Organization role-based permissions are global, which means that each permission level applies to all Mosaicoo resources within an given organization. For example, an editor can see and update _all_ dashboards in an organization, unless those dashboards have been specifically restricted using [dashboard permissions]({{< relref "manage-dashboard-permissions/_index.md" >}}).
 
 Grafana uses the following roles to control user access:
 
@@ -98,7 +98,7 @@ For more information about assigning dashboard permissions, refer to [Grant dash
 
 ## Editors with administrator permissions
 
-If you have access to the Grafana server, you can modify the default editor role so that editors can use administrator permissions to manage dashboard folders, dashboards, and teams that they create.
+If you have access to the Mosaicoo server, you can modify the default editor role so that editors can use administrator permissions to manage dashboard folders, dashboards, and teams that they create.
 
 > **Note**: This permission does not allow editors to manage folders, dashboards, and teams that they do not create.
 
@@ -108,12 +108,12 @@ For more information about assigning administrator permissions to editors, refer
 
 ## Viewers with dashboard preview and Explore permissions
 
-If you have access to the Grafana server, you can modify the default viewer role so that viewers can:
+If you have access to the Mosaicoo server, you can modify the default viewer role so that viewers can:
 
 - Edit and preview dashboards, but cannot save their changes or create new dashboards.
 - Access and use [Explore]({{< relref "../../explore/_index.md" >}}).
 
-Extending the viewer role is useful for public Grafana installations where you want anonymous users to be able to edit panels and queries, but not be able to save or create new dashboards.
+Extending the viewer role is useful for public Mosaicoo installations where you want anonymous users to be able to edit panels and queries, but not be able to save or create new dashboards.
 
 For more information about assigning dashboard preview permissions to viewers, refer to [Enable viewers to preview dashboards and use Explore]({{< relref "./manage-dashboard-permissions/_index.md#enable-viewers-to-preview-dashboards-and-use-explore" >}}).
 
@@ -128,9 +128,9 @@ You can assign a team member one of the following permissions:
 
 Because teams exist inside an organization, the organization administrator can manage all teams. When the `editors_can_admin` setting is enabled, editors can create teams and manage teams that they create. For more information about the `editors_can_admin` setting, refer to [Grant editors administrator permissions]({{< relref "./manage-server-users/grant-editor-admin-permissions.md" >}}).
 
-## Grafana Enterprise user permissions features
+## Mosaicoo Enterprise user permissions features
 
-While Grafana OSS includes a robust set of permissions and settings that you can use to manage user access to server and organization resources, you might find that you require additional capabilities.
+While Mosaicoo OSS includes a robust set of permissions and settings that you can use to manage user access to server and organization resources, you might find that you require additional capabilities.
 
 Grafana Enterprise provides the following permissions-related features:
 
@@ -145,7 +145,7 @@ Data source permissions enable you to restrict data source query permissions to 
 
 ### Role-based access control
 
-RBAC provides you a way of granting, changing, and revoking user read and write access to Grafana resources, such as users, reports, and authentication.
+RBAC provides you a way of granting, changing, and revoking user read and write access to Mosaicoo resources, such as users, reports, and authentication.
 
 For more information about RBAC, refer to [Role-based access control]({{< relref "../../enterprise/access-control" >}}).
 

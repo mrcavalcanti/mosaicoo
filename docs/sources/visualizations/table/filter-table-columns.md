@@ -22,7 +22,7 @@ A filter icon appears next to each column title.
 
 ## Filter column values
 
-To filter column values, click the filter (funnel) icon next to a column title. Grafana displays the filter options for that column.
+To filter column values, click the filter (funnel) icon next to a column title. Mosaicoo displays the filter options for that column.
 
 {{< figure src="/static/img/docs/tables/filter-column-values.png" max-width="500px" caption="Filter column values" class="docs-image--no-shadow" >}}
 

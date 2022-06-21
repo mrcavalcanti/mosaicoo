@@ -1,15 +1,15 @@
 +++
 aliases = ["/docs/grafana/latest/guides/whats-new-in-v2-6/", "/docs/grafana/latest/whatsnew/whats-new-in-v2-6/"]
-description = "Feature and improvement highlights for Grafana v2.6"
+description = "Feature and improvement highlights for Mosaicoo v2.6"
 keywords = ["grafana", "new", "documentation", "2.6", "release notes"]
-title = "What's new in Grafana v2.6"
+title = "What's new in Mosaicoo v2.6"
 weight = -4
 
 [_build]
   list = false
 +++
 
-# What's new in Grafana v2.6
+# What's new in Mosaicoo v2.6
 
 ## Release highlights
 
@@ -57,7 +57,7 @@ tab you can select which aggregations you want using the plus button the Columns
 <img src="/static/img/docs/v2/table_ts_to_aggregations.png">
 
 You have to think about how accurate the aggregations will be. It depends on what aggregation is used in the time series query,
-how many data points are fetched, etc. The time series aggregations are calculated by Grafana after aggregation is performed
+how many data points are fetched, etc. The time series aggregations are calculated by Mosaicoo after aggregation is performed
 by the time series database.
 
 ### Raw logs queries
@@ -122,7 +122,7 @@ in combination with the new Table panel to show raw log data stored in InfluxDB.
 
 ## Pipeline metrics
 
-If you have Elasticsearch 2.x and Grafana 2.6 or above then you can use pipeline metric aggregations like
+If you have Elasticsearch 2.x and Mosaicoo 2.6 or above then you can use pipeline metric aggregations like
 **Moving Average** and **Derivative**. Elasticsearch pipeline metrics require another metric to be based on. Use the eye icon next to the metric
 to hide metrics from appearing in the graph.
 
@@ -135,4 +135,4 @@ view the [CHANGELOG.md](https://github.com/grafana/grafana/blob/master/CHANGELOG
 
 ---
 
-<a href="http://grafana.org/download">Download Grafana 2.6 now</a>
+<a href="http://grafana.org/download">Download Mosaicoo 2.6 now</a>

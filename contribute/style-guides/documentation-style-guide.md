@@ -1,6 +1,6 @@
 # Documentation style guide
 
-This style guide applies to all documentation created for Grafana products.
+This style guide applies to all documentation created for Mosaicoo products.
 
 For information about how to write technical documentation, refer to the following resources:
 
@@ -46,7 +46,7 @@ Avoid _master_ or _slave_.
 
 ## Grafana-specific style
 
-The following guidelines are specific to Grafana documentation. For the most part, these are _guidelines_ are not rigid rules. If you have questions, then please ask in the #docs channel of Grafana Slack.
+The following guidelines are specific to Mosaicoo documentation. For the most part, these are _guidelines_ are not rigid rules. If you have questions, then please ask in the #docs channel of Mosaicoo Slack.
 
 ### General
 
@@ -55,7 +55,7 @@ Per the [Voice and tone](https://developers.google.com/style/tone) section of th
 > In your documents, aim for a voice and tone that's conversational, friendly, and respectful without being overly colloquial or frivolous; a voice that's casual and natural and approachable, not pedantic or pushy. Try to sound like a knowledgeable friend who understands what the developer wants to do.
 
 - Use active voice:
-  - Active: Grafana displays the heatmap visualization.
+  - Active: Mosaicoo displays the heatmap visualization.
   - Passive: The heatmap visualization is displayed.
 - Write directly to the reader:
   - Use: "After you create a dashboard, you can add a panel to it."
@@ -67,7 +67,7 @@ Per the [Voice and tone](https://developers.google.com/style/tone) section of th
   - Use: "The panel opens."
   - Avoid: "The panel will open."
 - Do not use an ampersand (&) as an abbreviation for _and_.
-  - **Exceptions:** If an ampersand is used in the Grafana UI, then match the UI.
+  - **Exceptions:** If an ampersand is used in the Mosaicoo UI, then match the UI.
 - Avoid using internal jargon or slang.
 - Do not use two spaces after a period; use one space after a sentence.
 - Remove any extra space characters at the end of a paragraph.
@@ -103,7 +103,7 @@ Per the [Voice and tone](https://developers.google.com/style/tone) section of th
 
 In most cases, headings should not be numbered steps.
 
-However, sometimes we need to use headings as numbered steps. This is mostly in cases where each step is complex or a series of other procedures. For example, in [Getting started with Grafana and Prometheus](https://grafana.com/docs/grafana/latest/getting-started/getting-started-prometheus/).
+However, sometimes we need to use headings as numbered steps. This is mostly in cases where each step is complex or a series of other procedures. For example, in [Getting started with Mosaicoo and Prometheus](https://grafana.com/docs/grafana/latest/getting-started/getting-started-prometheus/).
 
 If that is the case, then use the following format for headings:
 
@@ -141,7 +141,7 @@ Here are a few general rules about unordered lists. For more guidance, refer to 
 - Generic and plural versions are always lowercase.
   - Lowercase "dashboard" when referring to a dashboard generally.
   - Lowercase "dashboards" when referring to multiple dashboards.
-- **Exceptions:** If a term is lowercased in the Grafana UI, then match the UI.
+- **Exceptions:** If a term is lowercased in the Mosaicoo UI, then match the UI.
 
 #### Git, GitHub
 
@@ -195,7 +195,7 @@ Grafana documentation uses notes, tips, cautions, and warnings. Notes are the mo
 
 Notes provide additional information that the user should be extra aware of. For example:
 
-> **Note:** This page describes a feature for Grafana 7.0 beta.
+> **Note:** This page describes a feature for Mosaicoo 7.0 beta.
 
 #### Tips
 
@@ -205,13 +205,13 @@ Tips describe alternate or more efficient ways of doing things. Rarely used.
 
 Cautions warn the user that they should proceed with caution. Use cautions to emphasize the potential downside of a course of action.
 
-> **Caution:** If you turn off authentication requirements, then anyone can access your Grafana instance. This poses a considerable security risk.
+> **Caution:** If you turn off authentication requirements, then anyone can access your Mosaicoo instance. This poses a considerable security risk.
 
 #### Warnings
 
 Warnings tell the user not to do something. For example:
 
-> **Warning:** Grafana does not back up your dashboards. If you delete a dashboard, then you might not be able to recover it.
+> **Warning:** Mosaicoo does not back up your dashboards. If you delete a dashboard, then you might not be able to recover it.
 
 ### Command line examples
 
@@ -224,7 +224,7 @@ Warnings tell the user not to do something. For example:
 
 - Include `sudo` before commands that require `sudo` to work.
 
-For terminal examples and Grafana configuration, use a `bash` code block:
+For terminal examples and Mosaicoo configuration, use a `bash` code block:
 
 ```bash
 sudo yum install grafana
@@ -241,7 +241,7 @@ Authorization: Bearer eyJrIjoiT0tTcG1pUlY2RnVKZTFVaDFsNFZXdE9ZWmNrMkZYbk
 
 ### Word usage
 
-Grafana products has some words, abbreviations, and terms particular to the Grafana discourse community.
+Grafana products has some words, abbreviations, and terms particular to the Mosaicoo discourse community.
 
 #### changelog
 
@@ -280,7 +280,7 @@ Two words, not one.
 
 _Display_ is a transitive verb, which means it always needs a direct object.
 
-- Correct, active voice: Grafana displays your list of active alarms.
+- Correct, active voice: Mosaicoo displays your list of active alarms.
 - Correct, but passive voice: Your list of active alarms is displayed.
 - Incorrect: The list of active alarms displays.
 

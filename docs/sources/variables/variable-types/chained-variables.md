@@ -13,9 +13,9 @@ Chained variable queries are different for every data source, but the premise is
 
 Extremely complex linked templated dashboards are possible, 5 or 10 levels deep. Technically, there is no limit to how deep or complex you can go, but the more links you have, the greater the query load.
 
-## Grafana Play dashboard examples
+## Mosaicoo Play dashboard examples
 
-The following Grafana Play dashboards contain fairly simple chained variables, only two layers deep. To view the variables and their settings, click **Dashboard settings** (gear icon) and then click **Variables**. Both examples are expanded in the following section.
+The following Mosaicoo Play dashboards contain fairly simple chained variables, only two layers deep. To view the variables and their settings, click **Dashboard settings** (gear icon) and then click **Variables**. Both examples are expanded in the following section.
 
 - [Graphite Templated Nested](https://play.grafana.org/d/000000056/graphite-templated-nested?orgId=1&var-app=country&var-server=All&var-interval=1h)
 - [InfluxDB Templated](https://play.grafana.org/d/000000002/influxdb-templated?orgId=1)
@@ -160,7 +160,7 @@ The following practices will make your dashboards and variables easier to use.
 
 ### Variable order
 
-You can change the orders of variables in the dashboard variable list by clicking the up and down arrows on the right side of each entry. Grafana lists variable dropdowns left to right according to this list, with the variable at the top on the far left.
+You can change the orders of variables in the dashboard variable list by clicking the up and down arrows on the right side of each entry. Mosaicoo lists variable dropdowns left to right according to this list, with the variable at the top on the far left.
 
 - List variables that do not have dependencies at the top, before their child variables.
 - Each variable should follow the one it is dependent on.
@@ -170,4 +170,4 @@ You can change the orders of variables in the dashboard variable list by clickin
 
 The more layers of dependency you have in variables, the longer it will take to update dashboards after you change variables.
 
-For example, if you have a series of four linked variables (country, region, server, metric) and you change a root variable value (country), then Grafana must run queries for all the dependent variables before it updates the visualizations in the dashboard.
+For example, if you have a series of four linked variables (country, region, server, metric) and you change a root variable value (country), then Mosaicoo must run queries for all the dependent variables before it updates the visualizations in the dashboard.

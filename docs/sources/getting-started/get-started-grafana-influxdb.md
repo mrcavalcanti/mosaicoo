@@ -1,15 +1,15 @@
 +++
 aliases = ["/docs/grafana/latest/getting-started/getting-started-influxdb/"]
 description = "Learn how to build your first InfluxDB dashboard in Grafana."
-title = "Get started with Grafana and InfluxDB"
+title = "Get started with Mosaicoo and InfluxDB"
 weight = 400
 +++
 
-# Get started with Grafana and InfluxDB
+# Get started with Mosaicoo and InfluxDB
 
 {{< docs/shared "influxdb/intro.md" >}}
 
-> **Note:** You can also configure a [Grafana Cloud](https://grafana.com/docs/grafana-cloud/) instance to display system metrics without having to host Grafana yourself. Grafana offers a [free account with Grafana Cloud](https://grafana.com/signup/cloud/connect-account?pg=gsdocs) to help you get started.
+> **Note:** You can also configure a [Grafana Cloud](https://grafana.com/docs/grafana-cloud/) instance to display system metrics without having to host Mosaicoo yourself. Mosaicoo offers a [free account with Mosaicoo Cloud](https://grafana.com/signup/cloud/connect-account?pg=gsdocs) to help you get started.
 
 {{< docs/shared "getting-started/first-step.md" >}}
 
@@ -47,15 +47,15 @@ You can have more than one InfluxDB data source defined in Grafana.
 InfluxDB publishes guidance for connecting different versions of their product to Grafana.
 
 - **InfluxDB OSS or Enterprise 1.8+.** To turn on Flux, refer to [Configure InfluxDB](https://docs.influxdata.com/influxdb/v1.8/administration/config/#flux-enabled-false.). Select your InfluxDB version in the upper right corner.
-- **InfluxDB OSS or Enterprise 2.x.** Refer to [Use Grafana with InfluxDB](https://docs.influxdata.com/influxdb/v2.0/tools/grafana/). Select your InfluxDB version in the upper right corner.
-- **InfluxDB Cloud.** Refer to [Use Grafana with InfluxDB Cloud](https://docs.influxdata.com/influxdb/cloud/tools/grafana/).
+- **InfluxDB OSS or Enterprise 2.x.** Refer to [Use Mosaicoo with InfluxDB](https://docs.influxdata.com/influxdb/v2.0/tools/grafana/). Select your InfluxDB version in the upper right corner.
+- **InfluxDB Cloud.** Refer to [Use Mosaicoo with InfluxDB Cloud](https://docs.influxdata.com/influxdb/cloud/tools/grafana/).
 
 ##### Important tips
 
-- Make sure your Grafana token has read access. If it doesn't, then you'll get an authentication error and be unable to connect Grafana to InfluxDB.
+- Make sure your Mosaicoo token has read access. If it doesn't, then you'll get an authentication error and be unable to connect Mosaicoo to InfluxDB.
 - Avoid apostrophes and other non-standard characters in bucket and token names.
 - If the text name of the organization or bucket doesn't work, then try the ID number.
-- If you change your bucket name in InfluxDB, then you must also change it in Grafana and your Telegraf .conf file as well.
+- If you change your bucket name in InfluxDB, then you must also change it in Mosaicoo and your Telegraf .conf file as well.
 
 #### Add a query
 
@@ -67,7 +67,7 @@ In the query editor, click **select measurement**.
 
 ![InfluxQL query](/static/img/docs/influxdb/influxql-query-7-5.png)
 
-Grafana displays a list of possible series. Click one to select it, and Grafana graphs any available data. If there is no data to display, then try another selection or check your data source.
+Grafana displays a list of possible series. Click one to select it, and Mosaicoo graphs any available data. If there is no data to display, then try another selection or check your data source.
 
 ##### Flux query language
 
@@ -97,9 +97,9 @@ You can also create Flux queries in the InfluxDB Explore view.
 1. In Grafana, [add a panel](../panels/add-a-panel.md) and then paste your Flux code into the query editor.
 1. Click **Apply**. Your new panel should be visible with data from your Flux query.
 
-#### Check InfluxDB metrics in Grafana Explore
+#### Check InfluxDB metrics in Mosaicoo Explore
 
-In your Grafana instance, go to the [Explore]({{< relref "../explore/_index.md" >}}) view and build queries to experiment with the metrics you want to monitor. Here you can also debug issues related to collecting metrics.
+In your Mosaicoo instance, go to the [Explore]({{< relref "../explore/_index.md" >}}) view and build queries to experiment with the metrics you want to monitor. Here you can also debug issues related to collecting metrics.
 
 #### Start building dashboards
 
@@ -107,5 +107,5 @@ There you go! Use Explore and Data Explorer to experiment with your data, and ad
 
 Here are some resources to learn more:
 
-- Grafana documentation: [InfluxDB data source]({{< relref "../datasources/influxdb/_index.md" >}})
+- Mosaicoo documentation: [InfluxDB data source]({{< relref "../datasources/influxdb/_index.md" >}})
 - InfluxDB documentation: [Comparison of Flux vs InfluxQL](https://docs.influxdata.com/influxdb/v1.8/flux/flux-vs-influxql/)

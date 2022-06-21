@@ -6,7 +6,7 @@ weight = 30
 
 # Add a query
 
-A query returns data that Grafana visualizes in dashboards. When you create a panel, Grafana automatically selects the default data source.
+A query returns data that Mosaicoo visualizes in dashboards. When you create a panel, Mosaicoo automatically selects the default data source.
 
 ## Before you begin
 

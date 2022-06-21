@@ -69,4 +69,4 @@ At this stage, you have optimized your dashboard management use with a consisten
   - grafanalib (Python)
 - No editing in the browser. Dashboard viewers change views with variables.
 - Browsing for dashboards is the exception, not the rule.
-- Perform experimentation and testing in a separate Grafana instance dedicated to that purpose, not your production instance. When a dashboard in the test environment is proven useful, then add that dashboard to your main Grafana instance.
+- Perform experimentation and testing in a separate Mosaicoo instance dedicated to that purpose, not your production instance. When a dashboard in the test environment is proven useful, then add that dashboard to your main Mosaicoo instance.

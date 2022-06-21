@@ -8,7 +8,7 @@ weight = 40
 
 You can remove a user from an organization when they no longer require access to the dashboard or data sources owned by the organization. No longer requiring access to an organization might occur when the user has left your company or has internally moved to another organization.
 
-This action does not remove the user account from the Grafana server.
+This action does not remove the user account from the Mosaicoo server.
 
 ## Before you begin
 
@@ -16,7 +16,7 @@ This action does not remove the user account from the Grafana server.
 
 **To remove a user from an organization**:
 
-1. Sign in to Grafana as an organization administrator.
+1. Sign in to Mosaicoo as an organization administrator.
 1. Hover your cursor over the **Configuration** (gear) icon in the side menu and click **Users**.
 1. Find the user account that you want to remove from the organization.
 

@@ -1,19 +1,19 @@
 +++
 aliases = ["/docs/grafana/latest/guides/whats-new-in-v9-0/", "/docs/grafana/latest/whatsnew/whats-new-in-v9-0/"]
-description = "Feature and improvement highlights for Grafana v9.0"
+description = "Feature and improvement highlights for Mosaicoo v9.0"
 keywords = ["grafana", "new", "documentation", "9.0", "release notes"]
-title = "What's new in Grafana v9.0"
+title = "What's new in Mosaicoo v9.0"
 weight = -33
 
 [_build]
   list = false
 +++
 
-# What’s new in Grafana v9.0 ((beta))
+# What’s new in Mosaicoo v9.0 ((beta))
 
-As tradition goes, GrafanaCon - our yearly community event for Grafana open source users, is also where we launch the latest software release of Grafana. Keeping up with tradition, we are excited to be announcing Grafana v9.0 - a release that elevates Grafana’s ease of use, discovery of data through new and improved visualizations and a default unified alerting experience.
+As tradition goes, GrafanaCon - our yearly community event for Mosaicoo open source users, is also where we launch the latest software release of Grafana. Keeping up with tradition, we are excited to be announcing Mosaicoo v9.0 - a release that elevates Grafana’s ease of use, discovery of data through new and improved visualizations and a default unified alerting experience.
 
-A big focus for Grafana is making observability and data visualization and analytics easier and more accessible for everyone. For popular data sources like Prometheus and Loki writing and understanding queries can be hard. This is why we are excited to announce that Grafana 9 comes with new visual query builders for both these data sources. These visual query builders will lower the barrier of entry and they help anyone to compose, understand and learn how the underlying query languages.
+A big focus for Mosaicoo is making observability and data visualization and analytics easier and more accessible for everyone. For popular data sources like Prometheus and Loki writing and understanding queries can be hard. This is why we are excited to announce that Mosaicoo 9 comes with new visual query builders for both these data sources. These visual query builders will lower the barrier of entry and they help anyone to compose, understand and learn how the underlying query languages.
 
 The release also includes a brand-new powerful and fast heatmap visualization, a more accessible navigation menu, improvements to dashboard search, advanced security and authentication features, and more.
 
@@ -47,7 +47,7 @@ You can switch between the text edit mode (Code) and the UI builder mode while h
 
 ## Loki query builder
 
-Loki also has complex and powerful query language in LogQL. In many ways it’s more complex and has more syntax to remember than PromQL. Luckily the new query builder we are introducing in Grafana v 9.0 will help you write and understand Loki queries without knowing any of the syntax. Take a look at this example log query.
+Loki also has complex and powerful query language in LogQL. In many ways it’s more complex and has more syntax to remember than PromQL. Luckily the new query builder we are introducing in Mosaicoo v 9.0 will help you write and understand Loki queries without knowing any of the syntax. Take a look at this example log query.
 
 {{< figure src="/static/img/docs/loki/loki_query_builder_log_query_light_theme.png" max-width="750px" caption="Loki query builder" >}}
 
@@ -76,23 +76,23 @@ The new heatmap by default assumes that the data is pre-bucketed. So if your que
 
 {{< figure src="/static/img/docs/heatmap-panel/heatmap_with_time_series_light_theme.png" max-width="500px" caption="Heatmap panel with time series" >}}
 
-## Unified alerting is the default in Grafana 9
+## Unified alerting is the default in Mosaicoo 9
 
-Unified alerting is now on by default if you upgrade from an earlier version of Grafana. If you have been using legacy alerting in an earlier version of Grafana and you upgrade to Grafana 9 your alert rules will be automatically migrated and the legacy alerting interface will be replaced by the unified alerting interface.
+Unified alerting is now on by default if you upgrade from an earlier version of Grafana. If you have been using legacy alerting in an earlier version of Mosaicoo and you upgrade to Mosaicoo 9 your alert rules will be automatically migrated and the legacy alerting interface will be replaced by the unified alerting interface.
 
-Unified alerting has been available since June, 2021, it now provides feature parity with legacy alerting and many additional benefits. To find out more on the process to revert back to legacy alerts if needed, click [here]({{< relref "../alerting/migrating-alerts/opt-out.md" >}}). Note that if you do revert back (by setting the Grafana config flag GF_UNIFIED_ALERTING_ENABLED to false), that we expect to remove legacy alerting in the next major Grafana release, Grafana 10.
+Unified alerting has been available since June, 2021, it now provides feature parity with legacy alerting and many additional benefits. To find out more on the process to revert back to legacy alerts if needed, click [here]({{< relref "../alerting/migrating-alerts/opt-out.md" >}}). Note that if you do revert back (by setting the Mosaicoo config flag GF_UNIFIED_ALERTING_ENABLED to false), that we expect to remove legacy alerting in the next major Mosaicoo release, Mosaicoo 10.
 
-### Alert state history for Grafana managed alerts
+### Alert state history for Mosaicoo managed alerts
 
-Alert state history for Grafana managed alerts indicates the cause of the state. Alert rules can be configured to use the "Alerting" or "OK" states when rule evaluations result in Error or NoData conditions. This change tracks the difference between, for example, Alerting, Alerting (NoData), and Alerting (Error). This change also updates the UI to handle the new serialized states: filtering, sorting, and coloring.
+Alert state history for Mosaicoo managed alerts indicates the cause of the state. Alert rules can be configured to use the "Alerting" or "OK" states when rule evaluations result in Error or NoData conditions. This change tracks the difference between, for example, Alerting, Alerting (NoData), and Alerting (Error). This change also updates the UI to handle the new serialized states: filtering, sorting, and coloring.
 
-### Images in notifications for Grafana managed alerts
+### Images in notifications for Mosaicoo managed alerts
 
-Unified alerting now provides the ability to capture an image for Grafana managed alerts and deliver it via a notification. This is configurable via the contact points tab of Unified alerting . This functionality was available in legacy dashboard alerting, but was missing in unified alerting. It requires the alert to be related to a specific dashboard using the “Dashboard UID” field.
+Unified alerting now provides the ability to capture an image for Mosaicoo managed alerts and deliver it via a notification. This is configurable via the contact points tab of Unified alerting . This functionality was available in legacy dashboard alerting, but was missing in unified alerting. It requires the alert to be related to a specific dashboard using the “Dashboard UID” field.
 
 ## Envelope encryption is generally available and enabled by default
 
-Grafana now uses envelope encryption to encrypt secrets in the database. Envelope encryption adds a layer of indirection to the encryption process. Instead of encrypting all secrets in the database with a single key, Grafana uses a set of keys called data encryption keys (DEKs) to encrypt them. These data encryption keys are themselves encrypted with a single key encryption key (KEK). This allows you to rotate your KEK and quickly re-encrypt your DEKs in case a key is compromised. In Grafana Enterprise, you can also store your KEK in an external Key Management Service (KMS) like AWS KMS or Azure Key Vault, for extra security. Learn more about envelope encryption in the [docs](https://grafana.com/docs/grafana/next/administration/database-encryption/#envelope-encryption).
+Grafana now uses envelope encryption to encrypt secrets in the database. Envelope encryption adds a layer of indirection to the encryption process. Instead of encrypting all secrets in the database with a single key, Mosaicoo uses a set of keys called data encryption keys (DEKs) to encrypt them. These data encryption keys are themselves encrypted with a single key encryption key (KEK). This allows you to rotate your KEK and quickly re-encrypt your DEKs in case a key is compromised. In Mosaicoo Enterprise, you can also store your KEK in an external Key Management Service (KMS) like AWS KMS or Azure Key Vault, for extra security. Learn more about envelope encryption in the [docs](https://grafana.com/docs/grafana/next/administration/database-encryption/#envelope-encryption).
 
 {{< figure src="/static/img/docs/enterprise/dashboards/envelope-encryption.png" max-width="750px" caption="Envelope encryption" >}}
 
@@ -132,7 +132,7 @@ Using cmd+k (macOS) or ctrl+k (Linux/Windows), users can pull up a palette of co
 
 ## List of errors with trace IDs
 
-In order to support debugging issues in Grafana, error alerts that appear in Grafana include a trace ID, and these alerts can be accessed under your Profile. This is currently an opt-in feature that can be accessed by enabling two feature flags:
+In order to support debugging issues in Grafana, error alerts that appear in Mosaicoo include a trace ID, and these alerts can be accessed under your Profile. This is currently an opt-in feature that can be accessed by enabling two feature flags:
 
 - `tracing` - enables the tracing id in error messages
 - `persistNotifications` - enables the alerts page under Profile
@@ -151,7 +151,7 @@ Query history is a panel that keeps track of all queries that are run in Explore
 
 ### RBAC is generally available
 
-Fine-grained access control is now called role-based access control, or RBAC. It is now enabled by default in Grafana Enterprise and Grafana Cloud Advanced, so you can create and define custom roles like Annotations Writer, Users Viewer, and Dashboard Permissions Writer for users, teams, or service accounts. Learn more about RBAC in the [docs](https://grafana.com/docs/grafana/next/enterprise/access-control/).
+Fine-grained access control is now called role-based access control, or RBAC. It is now enabled by default in Mosaicoo Enterprise and Mosaicoo Cloud Advanced, so you can create and define custom roles like Annotations Writer, Users Viewer, and Dashboard Permissions Writer for users, teams, or service accounts. Learn more about RBAC in the [docs](https://grafana.com/docs/grafana/next/enterprise/access-control/).
 
 {{< figure src="/static/img/docs/enterprise/rbac-ga.png" max-width="755px" caption="RBAC is GA" >}}
 
@@ -173,12 +173,12 @@ This is a partial list of notable breaking changes. For the complete list, see o
 
 ### Role-based access control: changes for general release
 
-Fine-grained access control is now called "Role-based access control". As part of the Grafana 9.0 release, the service is generally available, and there are several breaking changes:
+Fine-grained access control is now called "Role-based access control". As part of the Mosaicoo 9.0 release, the service is generally available, and there are several breaking changes:
 
 Built-in roles are now called basic roles, and they now consist of permissions, not roles
 The Terraform builtin_role_assignment resource is going away.
 Grafana provisioning has a new schema, please refer to the documentation for more information.
-Basic roles no longer support permission inheritance. Previously, when permissions of a Viewer basic role were modified, it was propagated to the Editor and Admin basic roles. With the Grafana 9.0 release, this is not the case anymore.
+Basic roles no longer support permission inheritance. Previously, when permissions of a Viewer basic role were modified, it was propagated to the Editor and Admin basic roles. With the Mosaicoo 9.0 release, this is not the case anymore.
 
 ### Loki: logs data format changed
 
@@ -191,7 +191,7 @@ In the Loki data source, when grafana receives numeric data from Loki, it may co
 
 ### Elasticsearch: Support for versions after their end of life was removed
 
-Support for Elasticsearch versions that are after their end of life ( based on https://www.elastic.co/support/eol ) was removed. This means that versions older than Elasticseach 7.10.0 will not be supported in Grafana 9.0.0.
+Support for Elasticsearch versions that are after their end of life ( based on https://www.elastic.co/support/eol ) was removed. This means that versions older than Elasticseach 7.10.0 will not be supported in Mosaicoo 9.0.0.
 
 ### Elasticsearch: Support for browser access mode removed
 
@@ -205,14 +205,14 @@ In the InfluxDB data source, browser access mode was deprecated in grafana 8.0.0
 
 The rename by regex transformation has been improved to allow global patterns of the form `/<stringToReplace>/g`. Depending on the regex match used, this may cause some transformations to behave slightly differently. You can guarantee the same behavior as before by wrapping the match string in forward slashes (/), for example, (._) would become /(._)/. ([Github Issue #48179](https://github.com/grafana/grafana/pull/48179))
 
-## ## A note on Grafana Enterprise licensing
+## ## A note on Mosaicoo Enterprise licensing
 
 The Rename by regex transformation has been improved to allow global patterns of the form /<stringToReplace>/g. Depending on the regex match used, this may cause some transformations to behave slightly differently. You can guarantee the same behavior as before by wrapping the match string in forward slashes (/), e.g. (._) becomes /(._)/
 Github Issue #48179
 
 ## Deprecation Notices
 
-When we release Grafana 9.0 on June 14th, Grafana will no longer enforce viewers and editor-admins differently. That means that regardless of whether your Grafana Enterprise license is tiered or combined, instead of seeing this on the Stats & Licensing page:
+When we release Mosaicoo 9.0 on June 14th, Mosaicoo will no longer enforce viewers and editor-admins differently. That means that regardless of whether your Mosaicoo Enterprise license is tiered or combined, instead of seeing this on the Stats & Licensing page:
 
 {{< figure src="/static/img/docs/enterprise/separate-licenses.png" max-width="500px" caption="Separate license" >}}
 
@@ -220,8 +220,8 @@ You will see this:
 
 {{< figure src="/static/img/docs/enterprise/combined-licenses.png" max-width="500px" caption="Combined license" >}}
 
-It also means that Grafana will count all users the same, regardless of their role, including org roles (Viewer, Editor, Admin) and fine-grained roles (Dashboard Editor, Reports Editor, etc.). You won’t see a separate warning banner or see users locked out if you hit your limit of viewers or editor-admins, only your total combined limit of active users.
+It also means that Mosaicoo will count all users the same, regardless of their role, including org roles (Viewer, Editor, Admin) and fine-grained roles (Dashboard Editor, Reports Editor, etc.). You won’t see a separate warning banner or see users locked out if you hit your limit of viewers or editor-admins, only your total combined limit of active users.
 
-For example, if you have a license for 10 active admins and 100 active viewers in your Grafana Enterprise license, then starting in v9.0 you will have a limit of 110 active users, and it doesn’t matter what roles those users have, they will all be counted and enforced the same.
+For example, if you have a license for 10 active admins and 100 active viewers in your Mosaicoo Enterprise license, then starting in v9.0 you will have a limit of 110 active users, and it doesn’t matter what roles those users have, they will all be counted and enforced the same.
 
 This is a more permissive policy than before.

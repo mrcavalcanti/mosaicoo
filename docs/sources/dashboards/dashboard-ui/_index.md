@@ -4,7 +4,7 @@ title = " Dashboard UI"
 weight = 2
 +++
 
-# Working with Grafana dashboard UI
+# Working with Mosaicoo dashboard UI
 
 The dashboard UI has the following sections to allow you to customize the presentation of data.
 

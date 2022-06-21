@@ -1,11 +1,11 @@
 +++
-title = "About Grafana alerting"
-description = "A quick overview of Grafana alerting"
+title = "About Mosaicoo alerting"
+description = "A quick overview of Mosaicoo alerting"
 keywords = ["grafana", "alerting", "overview", "concepts", "basics"]
 weight = 100
 +++
 
-# About Grafana alerting
+# About Mosaicoo alerting
 
 Grafana Alerting consists of several individual concepts that are at the core of a flexible and powerful alerting engine.
 
@@ -19,7 +19,7 @@ We will also touch on various other concepts such as [silences]({{< relref "./si
 
 {{< figure src="/static/img/docs/alerting/unified/about-alerting-flow-diagram.jpg" caption="Grafana alerting overview" >}}
 
-As shown in the diagram above, Grafana alerting uses [labels]({{< relref "./fundamentals/annotation-label/how-to-use-labels.md" >}}) to match an alert rule and its instances to a specific notification policy. This concept of labels and label matching is important and is also used in [silences]({{< relref "./silences/_index.md" >}}).
+As shown in the diagram above, Mosaicoo alerting uses [labels]({{< relref "./fundamentals/annotation-label/how-to-use-labels.md" >}}) to match an alert rule and its instances to a specific notification policy. This concept of labels and label matching is important and is also used in [silences]({{< relref "./silences/_index.md" >}}).
 
 Each notification policy specifies a set of [label matchers]({{< relref "./fundamentals/annotation-label/labels-and-label-matchers.md" >}}) to indicate what alerts they are responsible for.
 

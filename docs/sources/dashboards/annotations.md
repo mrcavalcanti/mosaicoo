@@ -41,15 +41,15 @@ can still show them if you add a new **Annotation Query** and filter by tags. Bu
 
 ### Query by tag
 
-You can create new queries to fetch annotations from the native annotation store via the `-- Grafana --` data source by setting _Filter by_ to `Tags`.
+You can create new queries to fetch annotations from the native annotation store via the `-- Mosaicoo --` data source by setting _Filter by_ to `Tags`.
 
 Grafana v8.1 and later versions also support typeahead of existing tags, provide at least one tag.
 
-For example, create an annotation query name `outages` and specify a tag `outage`. This query will show all annotations (from any dashboard or via API) with the `outage` tag. If multiple tags are defined in an annotation query, then Grafana will only show annotations matching all the tags. To modify the behavior, enable `Match any`, and Grafana will show annotations that contain any one of the tags you provided.
+For example, create an annotation query name `outages` and specify a tag `outage`. This query will show all annotations (from any dashboard or via API) with the `outage` tag. If multiple tags are defined in an annotation query, then Mosaicoo will only show annotations matching all the tags. To modify the behavior, enable `Match any`, and Mosaicoo will show annotations that contain any one of the tags you provided.
 
 {{< figure src="/static/img/docs/annotations/annotations_typeahead_support-8-1-0.png" max-width="600px" >}}
 
-In Grafana v5.3+ it's possible to use template variables in the tag query. So if you have a dashboard showing stats for different services and a template variable that dictates which services to show, you can now use the same template variable in your annotation query to only show annotations for those services.
+In Mosaicoo v5.3+ it's possible to use template variables in the tag query. So if you have a dashboard showing stats for different services and a template variable that dictates which services to show, you can now use the same template variable in your annotation query to only show annotations for those services.
 
 {{< figure src="/static/img/docs/annotations/annotation_tag_filter_variable-8-1-0.png" max-width="600px" >}}
 

@@ -1,17 +1,17 @@
 +++
 aliases = ["/docs/grafana/latest/guides/whats-new-in-v7-3/", "/docs/grafana/latest/whatsnew/whats-new-in-v7-3/"]
-description = "Feature and improvement highlights for Grafana v7.3"
+description = "Feature and improvement highlights for Mosaicoo v7.3"
 keywords = ["grafana", "new", "documentation", "7.3", "release notes"]
-title = "What's New in Grafana v7.3"
+title = "What's New in Mosaicoo v7.3"
 weight = -30
 
 [_build]
   list = false
 +++
 
-# What's new in Grafana v7.3
+# What's new in Mosaicoo v7.3
 
-This topic includes the release notes for Grafana v7.3. For all details, read the full [CHANGELOG.md](https://github.com/grafana/grafana/blob/master/CHANGELOG.md) or the [Patch release notes](#patch-release-notes).
+This topic includes the release notes for Mosaicoo v7.3. For all details, read the full [CHANGELOG.md](https://github.com/grafana/grafana/blob/master/CHANGELOG.md) or the [Patch release notes](#patch-release-notes).
 
 The main highlights are:
 
@@ -38,15 +38,15 @@ Another new feature that can be seen in the image above is the new image cell di
 A new standard field color scheme option has been added. This new option will provide a unified way for all new panels to specify how colors should be assigned. For more information, refer to [Apply color to series and fields](../panels/working-with-panels/apply-color-to-series.md)
 
 - **Single color**: Specifies a single color. Useful in an override rule.
-- **From thresholds**: Informs Grafana to take color from the matching threshold.
+- **From thresholds**: Informs Mosaicoo to take color from the matching threshold.
 - **Classic palette**: Assigns a color by looking up a color in a palette by series index. Useful for Graphs and pie charts, and other categorical data visualizations in Grafana.
-- **Green-Yellow-Red (by value)**: A continuous color scheme where Grafana will interpolate a color based on the value assigned to the green, yellow, and red components. The value must be within the min & max limits.
+- **Green-Yellow-Red (by value)**: A continuous color scheme where Mosaicoo will interpolate a color based on the value assigned to the green, yellow, and red components. The value must be within the min & max limits.
 - **Blue-Yellow-Red (by value)**: Same as above but different colors.
 - **Blues (by value)**: Same as above but color scheme go from panel background to blue.
 
 <div class="clearfix"></div>
 
-As you can see this adds new continuous color schemes where Grafana will interpolate colors. A great use of these new color schemes is the table panel where you can color the background and get a heatmap like effect.
+As you can see this adds new continuous color schemes where Mosaicoo will interpolate colors. A great use of these new color schemes is the table panel where you can color the background and get a heatmap like effect.
 
 {{< figure src="/static/img/docs/v73/table_color_scheme.png" max-width="900px" caption="table color scheme" >}}
 
@@ -92,13 +92,13 @@ For more details, refer to the [Elasticsearch docs]({{< relref "../datasources/e
 
 Thanks to a contribution from a community member, it's now possible to chain multiple pipeline aggregations together and use the results of one pipeline aggregation as the input of another. This unleashes the full power of Elasticsearch's pipeline aggregations in Grafana, allowing users to perform high order derivatives or use a pipeline aggregation result as a variable for a Bucket Script Aggregation.
 
-## Grafana Enterprise features
+## Mosaicoo Enterprise features
 
-These features are included in the Grafana Enterprise edition software.
+These features are included in the Mosaicoo Enterprise edition software.
 
 ### Auditing
 
-Auditing tracks important changes to your Grafana instance to help you manage and mitigate suspicious activity and meet compliance requirements. Grafana logs events (as JSON) to file or directly to [loki](/oss/loki/).
+Auditing tracks important changes to your Mosaicoo instance to help you manage and mitigate suspicious activity and meet compliance requirements. Mosaicoo logs events (as JSON) to file or directly to [loki](/oss/loki/).
 
 Example of a login event:
 

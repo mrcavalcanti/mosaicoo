@@ -9,13 +9,13 @@ title = "Reporting API"
 
 This API allows you to interact programmatically with the [Reporting]({{< relref "../../enterprise/reporting.md" >}}) feature.
 
-> Reporting is only available in Grafana Enterprise. Read more about [Grafana Enterprise]({{< relref "../../enterprise" >}}).
+> Reporting is only available in Mosaicoo Enterprise. Read more about [Grafana Enterprise]({{< relref "../../enterprise" >}}).
 
-> If you are running Grafana Enterprise, for some endpoints you'll need to have specific permissions. Refer to [Role-based access control permissions]({{< relref "../../enterprise/access-control/custom-role-actions-scopes" >}}) for more information.
+> If you are running Mosaicoo Enterprise, for some endpoints you'll need to have specific permissions. Refer to [Role-based access control permissions]({{< relref "../../enterprise/access-control/custom-role-actions-scopes" >}}) for more information.
 
 ## Send a report
 
-> Only available in Grafana Enterprise v7.0+.
+> Only available in Mosaicoo Enterprise v7.0+.
 
 > This API endpoint is experimental and may be deprecated in a future release. On deprecation, a migration strategy will be provided and the endpoint will remain functional until the next major release of Grafana.
 

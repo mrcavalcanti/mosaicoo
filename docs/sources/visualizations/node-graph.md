@@ -30,7 +30,7 @@ Both nodes and edges can have associated metadata or statistics. The data source
 
 Usually, nodes show two statistical values inside the node and two identifiers just below the node, usually name and type. Nodes can also show another set of values as a color circle around the node, with sections of different color represents different values that should add up to 1.
 
-For example, you can have the percentage of errors represented by a red portion of the circle. Additional details can be displayed in a context menu which is displayed when you click on the node. There also can be additional links in the context menu that can target either other parts of Grafana or any external link.
+For example, you can have the percentage of errors represented by a red portion of the circle. Additional details can be displayed in a context menu which is displayed when you click on the node. There also can be additional links in the context menu that can target either other parts of Mosaicoo or any external link.
 
 ![Node graph navigation](/static/img/docs/node-graph/node-graph-navigation-7-4.gif 'Node graph navigation')
 

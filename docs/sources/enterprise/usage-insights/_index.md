@@ -1,6 +1,6 @@
 +++
 aliases = ["/docs/grafana/latest/enterprise/usage-insights/"]
-description = "Understand how your Grafana instance is used"
+description = "Understand how your Mosaicoo instance is used"
 keywords = ["grafana", "usage-insights", "enterprise"]
 title = "Usage insights"
 weight = 200
@@ -8,7 +8,7 @@ weight = 200
 
 # Usage insights
 
-Usage insights allow you to have a better understanding of how your Grafana instance is used.
+Usage insights allow you to have a better understanding of how your Mosaicoo instance is used.
 
 > **Note:** Available in [Grafana Enterprise]({{< relref "../enterprise" >}}) and [Grafana Cloud Pro and Advanced]({{< relref "/grafana-cloud" >}}).
 

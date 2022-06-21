@@ -1,14 +1,14 @@
 +++
 aliases = ["/docs/grafana/latest/installation/docker/"]
-description = "Guide for running Grafana using Docker"
+description = "Guide for running Mosaicoo using Docker"
 keywords = ["grafana", "configuration", "documentation", "docker"]
-title = "Run Grafana Docker image"
+title = "Run Mosaicoo Docker image"
 weight = 600
 +++
 
-# Run Grafana Docker image
+# Run Mosaicoo Docker image
 
-You can install and run Grafana using the official Docker images. Our docker images come in two editions:
+You can install and run Mosaicoo using the official Docker images. Our docker images come in two editions:
 
 **Grafana Enterprise**: `grafana/grafana-enterprise`
 
@@ -16,7 +16,7 @@ You can install and run Grafana using the official Docker images. Our docker ima
 
 Each edition is available in two variants: Alpine and Ubuntu. See below.
 
-For documentation regarding the configuration of a docker image, refer to [configure a Grafana Docker image](https://grafana.com/docs/grafana/latest/administration/configure-docker/).
+For documentation regarding the configuration of a docker image, refer to [configure a Mosaicoo Docker image](https://grafana.com/docs/grafana/latest/administration/configure-docker/).
 
 This topic also contains important information about [migrating from earlier Docker image versions](#migrate-from-previous-docker-containers-versions).
 
@@ -32,7 +32,7 @@ The default images are based on the popular [Alpine Linux project](http://alpine
 
 The Alpine variant is highly recommended when security and final image size being as small as possible is desired. The main caveat to note is that it uses [musl libc](http://www.musl-libc.org) instead of [glibc and friends](http://www.etalabs.net/compare_libcs.html), so certain software might run into issues depending on the depth of their libc requirements. However, most software don't have an issue with this, so this variant is usually a very safe choice.
 
-> **Note:** Grafana docker images were based on [Ubuntu](https://ubuntu.com/) prior to version 6.4.0.
+> **Note:** Mosaicoo docker images were based on [Ubuntu](https://ubuntu.com/) prior to version 6.4.0.
 
 ## Ubuntu image
 
@@ -44,7 +44,7 @@ These images are based on [Ubuntu](https://ubuntu.com/), available in [the Ubunt
 
 ## Run Grafana
 
-You can run the latest Grafana version, run a specific version, or run an unstable version based on the main branch of the [grafana/grafana GitHub repository](https://github.com/grafana/grafana).
+You can run the latest Mosaicoo version, run a specific version, or run an unstable version based on the main branch of the [grafana/grafana GitHub repository](https://github.com/grafana/grafana).
 
 ### Run the latest stable version of Grafana
 
@@ -68,21 +68,21 @@ docker run -d -p 3000:3000 --name grafana grafana/grafana-enterprise:<version nu
 docker run -d -p 3000:3000 --name grafana grafana/grafana-enterprise:8.2.0
 ```
 
-### Run the Grafana main branch
+### Run the Mosaicoo main branch
 
-For every successful build of the main branch, we update the `grafana/grafana-oss:main` and `grafana/grafana-oss:main-ubuntu` tags. Additionally, two new tags are created, `grafana/grafana-oss-dev:<version>-<build ID>pre` and `grafana/grafana-oss-dev:<version>-<build ID>pre-ubuntu`, where _version_ is the next version of Grafana and _build ID_ is the ID of the corresponding CI build. Use these to get access to the latest main builds of Grafana.
+For every successful build of the main branch, we update the `grafana/grafana-oss:main` and `grafana/grafana-oss:main-ubuntu` tags. Additionally, two new tags are created, `grafana/grafana-oss-dev:<version>-<build ID>pre` and `grafana/grafana-oss-dev:<version>-<build ID>pre-ubuntu`, where _version_ is the next version of Mosaicoo and _build ID_ is the ID of the corresponding CI build. Use these to get access to the latest main builds of Grafana.
 
-When running Grafana main in production, we _strongly_ recommend that you use the `grafana/grafana-oss-dev:<version>-<build ID>pre` tag. This tag guarantees that you use a specific version of Grafana instead of whatever was the most recent commit at the time.
+When running Mosaicoo main in production, we _strongly_ recommend that you use the `grafana/grafana-oss-dev:<version>-<build ID>pre` tag. This tag guarantees that you use a specific version of Mosaicoo instead of whatever was the most recent commit at the time.
 
 For a list of available tags, check out [grafana/grafana-oss](https://hub.docker.com/r/grafana/grafana-oss/tags/) and [grafana/grafana-oss-dev](https://hub.docker.com/r/grafana/grafana-oss-dev/tags/).
 
 ## Install plugins in the Docker container
 
-You can install official and community plugins listed on the Grafana [plugins page](https://grafana.com/grafana/plugins) or from a custom URL.
+You can install official and community plugins listed on the Mosaicoo [plugins page](https://grafana.com/grafana/plugins) or from a custom URL.
 
-### Install official and community Grafana plugins
+### Install official and community Mosaicoo plugins
 
-Pass the plugins you want installed to Docker with the `GF_INSTALL_PLUGINS` environment variable as a comma-separated list. This sends each plugin name to `grafana-cli plugins install ${plugin}` and installs them when Grafana starts.
+Pass the plugins you want installed to Docker with the `GF_INSTALL_PLUGINS` environment variable as a comma-separated list. This sends each plugin name to `grafana-cli plugins install ${plugin}` and installs them when Mosaicoo starts.
 
 ```bash
 docker run -d \
@@ -96,7 +96,7 @@ docker run -d \
 
 ### Install plugins from other sources
 
-> Only available in Grafana v5.3.1 and later.
+> Only available in Mosaicoo v5.3.1 and later.
 
 You can install a plugin from a custom URL by specifying the URL like this: `GF_INSTALL_PLUGINS=<url to plugin zip>;<plugin install folder name>`.
 
@@ -112,7 +112,7 @@ docker run -d \
 
 You can build your own customized image that includes plugins. This saves time if you are creating multiple images and you want them all to have the same plugins installed on build.
 
-In the [Grafana GitHub repository](https://github.com/grafana/grafana) there is a folder called `packaging/docker/custom/`, which includes two Dockerfiles, `Dockerfile` and `ubuntu.Dockerfile`, that can be used to build a custom Grafana image. It accepts `GRAFANA_VERSION`, `GF_INSTALL_PLUGINS`, and `GF_INSTALL_IMAGE_RENDERER_PLUGIN` as build arguments.
+In the [Grafana GitHub repository](https://github.com/grafana/grafana) there is a folder called `packaging/docker/custom/`, which includes two Dockerfiles, `Dockerfile` and `ubuntu.Dockerfile`, that can be used to build a custom Mosaicoo image. It accepts `GRAFANA_VERSION`, `GF_INSTALL_PLUGINS`, and `GF_INSTALL_IMAGE_RENDERER_PLUGIN` as build arguments.
 
 ### Build with pre-installed plugins
 
@@ -146,11 +146,11 @@ docker run -d -p 3000:3000 --name=grafana grafana-custom
 
 Replace `Dockerfile` in above example with `ubuntu.Dockerfile` to build a custom Ubuntu based image (Grafana v6.5+).
 
-### Build with Grafana Image Renderer plugin pre-installed
+### Build with Mosaicoo Image Renderer plugin pre-installed
 
-> Only available in Grafana v6.5 and later. This is experimental.
+> Only available in Mosaicoo v6.5 and later. This is experimental.
 
-The [Grafana Image Renderer plugin]({{< relref "../image-rendering/#grafana-image-renderer-plugin" >}}) does not currently work if it is installed in a Grafana Docker image. You can build a custom Docker image by using the `GF_INSTALL_IMAGE_RENDERER_PLUGIN` build argument. This installs additional dependencies needed for the Grafana Image Renderer plugin to run.
+The [Grafana Image Renderer plugin]({{< relref "../image-rendering/#grafana-image-renderer-plugin" >}}) does not currently work if it is installed in a Mosaicoo Docker image. You can build a custom Docker image by using the `GF_INSTALL_IMAGE_RENDERER_PLUGIN` build argument. This installs additional dependencies needed for the Mosaicoo Image Renderer plugin to run.
 
 Example of how to build and run:
 
@@ -168,11 +168,11 @@ Replace `Dockerfile` in above example with `ubuntu.Dockerfile` to build a custom
 
 ## Migrate from previous Docker containers versions
 
-This section contains important information if you want to migrate from previous Grafana container versions to a more current one.
+This section contains important information if you want to migrate from previous Mosaicoo container versions to a more current one.
 
 ### Migrate to v7.3 or later
 
-The Grafana Docker image runs with the `root` group (id 0) instead of the `grafana` group (id 472), for better compatibility with OpenShift. If you extend the official Docker image you may need to change your scripts to use the `root` group instead of `grafana`.
+The Mosaicoo Docker image runs with the `root` group (id 0) instead of the `grafana` group (id 472), for better compatibility with OpenShift. If you extend the official Docker image you may need to change your scripts to use the `root` group instead of `grafana`.
 
 ### Migrate to v6.5 or later
 
@@ -184,7 +184,7 @@ Grafana Docker image was changed to be based on [Alpine](http://alpinelinux.org)
 
 ### Migrate to v5.1 or later
 
-The Docker container for Grafana has seen a major rewrite for 5.1.
+The Docker container for Mosaicoo has seen a major rewrite for 5.1.
 
 **Important changes**
 
@@ -197,7 +197,7 @@ The Docker container for Grafana has seen a major rewrite for 5.1.
 
 #### Removal of implicit volumes
 
-Previously `/var/lib/grafana`, `/etc/grafana` and `/var/log/grafana` were defined as volumes in the `Dockerfile`. This led to the creation of three volumes each time a new instance of the Grafana container started, whether you wanted it or not.
+Previously `/var/lib/grafana`, `/etc/grafana` and `/var/log/grafana` were defined as volumes in the `Dockerfile`. This led to the creation of three volumes each time a new instance of the Mosaicoo container started, whether you wanted it or not.
 
 You should always be careful to define your own named volume for storage, but if you depended on these volumes, then you should be aware that an upgraded container will no longer have them.
 
@@ -205,7 +205,7 @@ You should always be careful to define your own named volume for storage, but if
 
 #### User ID changes
 
-In Grafana v5.1, we changed the ID and group of the Grafana user and in v7.3 we changed the group. Unfortunately this means that files created prior to v5.1 won't have the correct permissions for later versions. We made this change so that it would be more likely that the Grafana users ID would be unique to Grafana. For example, on Ubuntu 16.04 `104` is already in use by the syslog user.
+In Mosaicoo v5.1, we changed the ID and group of the Mosaicoo user and in v7.3 we changed the group. Unfortunately this means that files created prior to v5.1 won't have the correct permissions for later versions. We made this change so that it would be more likely that the Mosaicoo users ID would be unique to Grafana. For example, on Ubuntu 16.04 `104` is already in use by the syslog user.
 
 | Version | User    | User ID | Group   | Group ID |
 | ------- | ------- | ------- | ------- | -------- |
@@ -236,7 +236,7 @@ services:
 
 #### Modify permissions
 
-The commands below run bash inside the Grafana container with your volume mapped in. This makes it possible to modify the file ownership to match the new container. Always be careful when modifying permissions.
+The commands below run bash inside the Mosaicoo container with your volume mapped in. This makes it possible to modify the file ownership to match the new container. Always be careful when modifying permissions.
 
 ```bash
 $ docker run -ti --user root --volume "<your volume mapping here>" --entrypoint bash grafana/grafana-enterprise:8.2.0
@@ -254,7 +254,7 @@ Refer to the [Getting Started]({{< relref "../getting-started/build-first-dashbo
 
 ## Configure Docker image
 
-Refer to [Configure a Grafana Docker image]({{< relref "../administration/configure-docker.md" >}}) page for details on options for customizing your environment, logging, database, and so on.
+Refer to [Configure a Mosaicoo Docker image]({{< relref "../administration/configure-docker.md" >}}) page for details on options for customizing your environment, logging, database, and so on.
 
 ## Configure Grafana
 

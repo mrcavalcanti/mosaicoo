@@ -1,29 +1,29 @@
 ---
 aliases:
   - /docs/grafana/latest/enterprise/access-control/rbac-provisioning/
-description: Learn about RBAC provisioning and view an example YAML provisioning file that configures Grafana role assignments.
+description: Learn about RBAC provisioning and view an example YAML provisioning file that configures Mosaicoo role assignments.
 menuTitle: RBAC provisioning
-title: Grafana RBAC provisioning
+title: Mosaicoo RBAC provisioning
 weight: 60
 ---
 
-# Grafana RBAC provisioning
+# Mosaicoo RBAC provisioning
 
 You can create, change or remove [Custom roles]({{< relref "./manage-rbac-roles.md#create-custom-roles-using-provisioning" >}}) and create or remove [basic role assignments]({{< relref "./assign-rbac-roles.md#assign-a-fixed-role-to-a-basic-role-using-provisioning" >}}), by adding one or more YAML configuration files in the `provisioning/access-control/` directory.
 
 If you choose to use provisioning to assign and manage role, you must first enable it.
 
-Grafana performs provisioning during startup. After you make a change to the configuration file, you can reload it during runtime. You do not need to restart the Grafana server for your changes to take effect.
+Grafana performs provisioning during startup. After you make a change to the configuration file, you can reload it during runtime. You do not need to restart the Mosaicoo server for your changes to take effect.
 
 **Before you begin:**
 
-- Ensure that you have access to files on the server where Grafana is running.
+- Ensure that you have access to files on the server where Mosaicoo is running.
 
 **To manage and assign RBAC roles using provisioning:**
 
-1. Sign in to the Grafana server.
+1. Sign in to the Mosaicoo server.
 
-2. Locate the Grafana provisioning folder.
+2. Locate the Mosaicoo provisioning folder.
 
 3. Create a new YAML in the following folder: **provisioning/access-control**. For example, `provisioning/access-control/custom-roles.yml`
 
@@ -33,7 +33,7 @@ Grafana performs provisioning during startup. After you make a change to the con
 
    For more information about reloading the provisioning configuration at runtime, refer to [Reload provisioning configurations]({{< relref "../../http_api/admin/#reload-provisioning-configurations" >}}).
 
-## Example role configuration file using Grafana provisioning
+## Example role configuration file using Mosaicoo provisioning
 
 The following example shows a complete YAML configuration file that:
 
@@ -58,7 +58,7 @@ roles:
     uid: customuserswriter1
     # <string> description of the role, informative purpose only.
     description: 'Create, read, write users'
-    # <int> version of the role, Grafana will update the role when increased.
+    # <int> version of the role, Mosaicoo will update the role when increased.
     version: 2
     # <int> org id. Defaults to Grafana's default if not specified.
     orgId: 1

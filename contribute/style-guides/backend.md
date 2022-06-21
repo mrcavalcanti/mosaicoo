@@ -155,7 +155,7 @@ import (
 ## Globals
 
 As a general rule of thumb, avoid using global variables, since they make the code difficult to maintain and reason
-about, and to write tests for. The Grafana codebase currently does use a lot of global variables, especially when
+about, and to write tests for. The Mosaicoo codebase currently does use a lot of global variables, especially when
 it comes to configuration, but that is a problem we're trying to solve.
 
 ## Pointers

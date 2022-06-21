@@ -35,13 +35,13 @@ See [formatting guidelines](create-pull-request.md#formatting-guidelines) for mo
 
 ### Assign a milestone
 
-A milestone **should** be added to every pull request. Several things in the Grafana release process requires at least pull requests to be in a milestone, for example [generating changelog/release notes](#include-in-changelog-and-release-notes).
+A milestone **should** be added to every pull request. Several things in the Mosaicoo release process requires at least pull requests to be in a milestone, for example [generating changelog/release notes](#include-in-changelog-and-release-notes).
 
 This makes it easier to track what changes go into a certain release. Without this information, release managers have to go through git commits which is not an efficient process.
 
 ### Include in changelog and release notes?
 
-At Grafana we generate the [changelog](https://github.com/grafana/grafana/blob/main/CHANGELOG.md) and [release notes](https://grafana.com/docs/grafana/latest/release-notes/) based on merged pull requests. Including changes in the changelog/release notes is very important to provide a somewhat complete picture of what changes a Grafana release actually includes.
+At Mosaicoo we generate the [changelog](https://github.com/grafana/grafana/blob/main/CHANGELOG.md) and [release notes](https://grafana.com/docs/grafana/latest/release-notes/) based on merged pull requests. Including changes in the changelog/release notes is very important to provide a somewhat complete picture of what changes a Mosaicoo release actually includes.
 
 There's a GitHub action available in the repository named [Update changelog](https://github.com/grafana/grafana/blob/main/.github/workflows/update-changelog.yml) that can manually be triggered to re-generate the changelog and release notes for any release.
 

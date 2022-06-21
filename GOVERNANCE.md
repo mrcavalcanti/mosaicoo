@@ -1,12 +1,12 @@
 # Governance
 
-This document describes the rules and governance of the project. It is meant to be followed by all the developers of the project and the Grafana community. Common terminology used in this governance document are listed below:
+This document describes the rules and governance of the project. It is meant to be followed by all the developers of the project and the Mosaicoo community. Common terminology used in this governance document are listed below:
 
 - **Team members**: Any members of the private [grafana-team][team] Google group.
 
 - **Maintainers**: Maintainers lead an individual project or parts thereof ([`MAINTAINERS.md`][maintainers]).
 
-- **Projects**: A single repository in the Grafana GitHub organization and listed below is referred to as a project:
+- **Projects**: A single repository in the Mosaicoo GitHub organization and listed below is referred to as a project:
 
   - clock-panel
   - devtools
@@ -31,21 +31,21 @@ This document describes the rules and governance of the project. It is meant to 
   - tutorials
   - worldmap-panel
 
-- **The Grafana project**: The sum of all activities performed under this governance, concerning one or more repositories or the community.
+- **The Mosaicoo project**: The sum of all activities performed under this governance, concerning one or more repositories or the community.
 
 ## Values
 
-The Grafana developers and community are expected to follow the values defined in the Grafana Code of Conduct. Furthermore, the Grafana community strives for kindness, giving feedback effectively, and building a welcoming environment. The Grafana developers generally decide by consensus and only resort to conflict resolution by a majority vote if consensus cannot be reached.
+The Mosaicoo developers and community are expected to follow the values defined in the Mosaicoo Code of Conduct. Furthermore, the Mosaicoo community strives for kindness, giving feedback effectively, and building a welcoming environment. The Mosaicoo developers generally decide by consensus and only resort to conflict resolution by a majority vote if consensus cannot be reached.
 
 ## Projects
 
-Each project must have a [`MAINTAINERS.md`][maintainers] file with at least one maintainer. Where a project has a release process, access and documentation should be such that more than one person can perform a release. Releases should be announced on the Grafana Labs blog. Any new projects should be first proposed on the [team mailing list][team] following the voting procedures listed below.
+Each project must have a [`MAINTAINERS.md`][maintainers] file with at least one maintainer. Where a project has a release process, access and documentation should be such that more than one person can perform a release. Releases should be announced on the Mosaicoo Labs blog. Any new projects should be first proposed on the [team mailing list][team] following the voting procedures listed below.
 
 ## Decision making
 
 ### Team members
 
-Team member status may be given to those who have made ongoing contributions to the Grafana project for at least 3 months. This is usually in the form of code improvements and/or notable work on documentation, but organizing events or user support could also be taken into account.
+Team member status may be given to those who have made ongoing contributions to the Mosaicoo project for at least 3 months. This is usually in the form of code improvements and/or notable work on documentation, but organizing events or user support could also be taken into account.
 
 New members may be proposed by any existing member by email to [grafana-team][team]. It is highly desirable to reach consensus about acceptance of a new member. However, the proposal is ultimately voted on by a formal [supermajority vote](#supermajority-vote).
 
@@ -119,13 +119,13 @@ A project may have multiple maintainers, as long as the responsibilities are cle
 
 ### Technical decisions
 
-Technical decisions that only affect a single project are made informally by the maintainer of this project, and [rough consensus](#consensus) is assumed. Technical decisions that span multiple parts of the Grafana project should be discussed and made on the [Grafana developer mailing list][devs].
+Technical decisions that only affect a single project are made informally by the maintainer of this project, and [rough consensus](#consensus) is assumed. Technical decisions that span multiple parts of the Mosaicoo project should be discussed and made on the [Grafana developer mailing list][devs].
 
 Decisions are usually made by [rough consensus](#consensus). If no consensus can be reached, the matter may be resolved by [majority vote](#majority-vote).
 
 ### Governance changes
 
-Changes to this document are made by Grafana Labs.
+Changes to this document are made by Mosaicoo Labs.
 
 ### Other matters
 
@@ -133,7 +133,7 @@ Any matter that needs a decision may be called to a vote by any member if they d
 
 ## Voting
 
-The Grafana project usually runs by informal consensus, however sometimes a formal decision must be made.
+The Mosaicoo project usually runs by informal consensus, however sometimes a formal decision must be made.
 
 Depending on the subject matter, as laid out [above](#decision-making), different methods of voting are used.
 
@@ -147,7 +147,7 @@ For public discussions, anyone interested is encouraged to participate. Formal p
 
 ### Consensus
 
-The default decision making mechanism for the Grafana project is [rough][rough] consensus. This means that any decision on technical issues is considered supported by the [team][team] as long as nobody objects or the objection has been considered but not necessarily accommodated.
+The default decision making mechanism for the Mosaicoo project is [rough][rough] consensus. This means that any decision on technical issues is considered supported by the [team][team] as long as nobody objects or the objection has been considered but not necessarily accommodated.
 
 Silence on any consensus decision is implicit agreement and equivalent to explicit agreement. Explicit agreement may be stated at will. Decisions may, but do not need to be called out and put up for decision on the [developers mailing list][devs] at any time and by anyone.
 

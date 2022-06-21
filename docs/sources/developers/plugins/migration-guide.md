@@ -7,7 +7,7 @@ title = "Plugin migration guide"
 
 ## Introduction
 
-This guide helps you identify the steps you need to take based on the Grafana version your plugin supports and explains how to migrate the plugin to the 8.2.x or a later version.
+This guide helps you identify the steps you need to take based on the Mosaicoo version your plugin supports and explains how to migrate the plugin to the 8.2.x or a later version.
 
 > **Note:** If you've successfully migrated your plugin using this guide, then share your experiences with us! If you find missing information, then we encourage you to [submit an issue on GitHub](https://github.com/grafana/grafana/issues/new?title=Docs%20feedback:%20/developers/plugins/migration-guide.md) so that we can improve this guide!
 
@@ -38,7 +38,7 @@ This guide helps you identify the steps you need to take based on the Grafana ve
   - [From version 6.5.x to 7.3.0](#from-version-65x-to-730)
     - [getColorForTheme changes](#getcolorfortheme-changes)
   - [From version 6.x.x to 7.0.0](#from-version-6xx-to-700)
-    - [What's new in Grafana 7.0?](#whats-new-in-grafana-70)
+    - [What's new in Mosaicoo 7.0?](#whats-new-in-grafana-70)
       - [New data format](#new-data-format)
       - [Improved TypeScript support](#improved-typescript-support)
       - [Grafana Toolkit](#grafana-toolkit)
@@ -52,7 +52,7 @@ This guide helps you identify the steps you need to take based on the Grafana ve
 
 ## From version 8.3.x to 8.4.x
 
-This section explains how to migrate Grafana v8.3.x plugins to the updated plugin system available in Grafana v8.4.x. Depending on your plugin, you need to perform one or more of the following steps.
+This section explains how to migrate Mosaicoo v8.3.x plugins to the updated plugin system available in Mosaicoo v8.4.x. Depending on your plugin, you need to perform one or more of the following steps.
 
 ### Value Mapping Editor has been removed from @grafana-ui library
 
@@ -139,11 +139,11 @@ locationService.partial({ 'var-variable': 1 }, true);
 
 ## From version 7.x.x to 8.x.x
 
-This section explains how to migrate Grafana v7.x.x plugins to the updated plugin system available in Grafana v8.x.x. Depending on your plugin, you need to perform one or more of the following steps. We have documented the breaking changes in Grafana v8.x.x and the steps you need to take to upgrade your plugin.
+This section explains how to migrate Mosaicoo v7.x.x plugins to the updated plugin system available in Mosaicoo v8.x.x. Depending on your plugin, you need to perform one or more of the following steps. We have documented the breaking changes in Mosaicoo v8.x.x and the steps you need to take to upgrade your plugin.
 
 ### Backend plugin v1 support has been dropped
 
-Use the new [plugin sdk](https://github.com/grafana/grafana-plugin-sdk-go) to run your backend plugin running in Grafana 8.
+Use the new [plugin sdk](https://github.com/grafana/grafana-plugin-sdk-go) to run your backend plugin running in Mosaicoo 8.
 
 #### 1. Add dependency on grafana-plugin-sdk-go
 
@@ -276,11 +276,11 @@ func (d *SampleDatasource) CheckHealth(_ context.Context, req *backend.CheckHeal
 
 ### Sign and load backend plugins
 
-We strongly recommend that you not allow unsigned plugins in your Grafana installation. By allowing unsigned plugins, we cannot guarantee the authenticity of the plugin, which could compromise the security of your Grafana installation.
+We strongly recommend that you not allow unsigned plugins in your Mosaicoo installation. By allowing unsigned plugins, we cannot guarantee the authenticity of the plugin, which could compromise the security of your Mosaicoo installation.
 
 To sign your plugin, see [Sign a plugin](https://grafana.com/docs/grafana/latest/developers/plugins/sign-a-plugin/#sign-a-plugin).
 
-You can still run and develop an unsigned plugin by running your Grafana instance in [development mode](https://grafana.com/docs/grafana/latest/administration/configuration/#app_mode). Alternatively, you can use the [allow_loading_unsigned_plugins configuration setting.](../../administration/configuration.md#allow_loading_unsigned_plugins)
+You can still run and develop an unsigned plugin by running your Mosaicoo instance in [development mode](https://grafana.com/docs/grafana/latest/administration/configuration/#app_mode). Alternatively, you can use the [allow_loading_unsigned_plugins configuration setting.](../../administration/configuration.md#allow_loading_unsigned_plugins)
 
 ### Update react-hook-form from v6 to v7
 
@@ -288,7 +288,7 @@ We have upgraded react-hook-form from version 6 to version 7. To make your forms
 
 ### Update the plugin.json
 
-The property that defines which Grafana version your plugin supports has been renamed and now it is a range instead of a specific version.
+The property that defines which Mosaicoo version your plugin supports has been renamed and now it is a range instead of a specific version.
 
 ```json
 // before
@@ -310,7 +310,7 @@ The property that defines which Grafana version your plugin supports has been re
 
 ### Update imports to match emotion 11
 
-Grafana uses Emotion library to manage frontend styling. We have updated the Emotion package and this can affect your frontend plugin if you have custom styling. You only need to update the import statements to get it working in Grafana 8.
+Grafana uses Emotion library to manage frontend styling. We have updated the Emotion package and this can affect your frontend plugin if you have custom styling. You only need to update the import statements to get it working in Mosaicoo 8.
 
 ```ts
 // before
@@ -322,7 +322,7 @@ import { cx, css } from '@emotion/css';
 
 ### Update needed for app plugins using dashboards
 
-To make side navigation work properly - app plugins targeting Grafana `8.+` and integrating into the side menu via [addToNav]({{< relref "metadata.md#properties-4" >}}) property need to adjust their `plugin.json` and all dashboard json files to have a matching `uid`.
+To make side navigation work properly - app plugins targeting Mosaicoo `8.+` and integrating into the side menu via [addToNav]({{< relref "metadata.md#properties-4" >}}) property need to adjust their `plugin.json` and all dashboard json files to have a matching `uid`.
 
 **`plugin.json`**
 
@@ -358,9 +358,9 @@ To make side navigation work properly - app plugins targeting Grafana `8.+` and 
 
 ### 8.0 deprecations
 
-#### Grafana theme v1
+#### Mosaicoo theme v1
 
-In Grafana 8 we have introduced a new improved version of our theming system. The previous version of the theming system is still available but is deprecated and will be removed in the next major version of Grafana.
+In Mosaicoo 8 we have introduced a new improved version of our theming system. The previous version of the theming system is still available but is deprecated and will be removed in the next major version of Grafana.
 
 You can find more detailed information on how to apply the v2 theme [here](https://github.com/grafana/grafana/blob/main/contribute/style-guides/themes.md#theming-grafana).
 
@@ -519,7 +519,7 @@ const themeColor = getColorForTheme(color, theme);
 
 ## From version 6.x.x to 7.0.0
 
-### What's new in Grafana 7.0?
+### What's new in Mosaicoo 7.0?
 
 Grafana 7.0 introduced a whole new plugin platform based on React. The new platform supersedes the previous Angular-based plugin platform.
 
@@ -533,11 +533,11 @@ Previously, data source plugins could send data either as time series or tables.
 
 #### Improved TypeScript support
 
-While the previous Angular-based plugin SDK did support TypeScript, for the React platform, we’ve greatly improved the support. All our APIs are now TypeScript, which might require existing code to update to the new stricter type definitions. Grafana 7.0 also introduced several new APIs for plugin developers that take advantage of many of the new features in Grafana 7.0.
+While the previous Angular-based plugin SDK did support TypeScript, for the React platform, we’ve greatly improved the support. All our APIs are now TypeScript, which might require existing code to update to the new stricter type definitions. Mosaicoo 7.0 also introduced several new APIs for plugin developers that take advantage of many of the new features in Mosaicoo 7.0.
 
-#### Grafana Toolkit
+#### Mosaicoo Toolkit
 
-With Grafana 7.0, we released a new tool for making it easier to develop plugins. Before, you’d use Gulp, Grunt, or similar tools to generate the minified assets. Grafana Toolkit takes care of building and testing your plugin without complicated configuration files.
+With Mosaicoo 7.0, we released a new tool for making it easier to develop plugins. Before, you’d use Gulp, Grunt, or similar tools to generate the minified assets. Mosaicoo Toolkit takes care of building and testing your plugin without complicated configuration files.
 
 For more information, refer to [@grafana/toolkit](https://www.npmjs.com/package/@grafana/toolkit).
 
@@ -545,29 +545,29 @@ For more information, refer to [@grafana/toolkit](https://www.npmjs.com/package/
 
 Grafana 7.0 introduced the concept of _field options_, a new way of configuring your data before it gets visualized. Since this was not available in previous versions, any plugin that enables field-based configuration will not work in previous versions of Grafana.
 
-For plugins prior to Grafana 7.0, all options are considered _Display options_. The tab for field configuration isn't available.
+For plugins prior to Mosaicoo 7.0, all options are considered _Display options_. The tab for field configuration isn't available.
 
 #### Backend plugins
 
-While backend plugins were available as an experimental feature in previous versions of Grafana, the support has been greatly improved for Grafana 7. Backend plugins for Grafana 7.0 are backwards-compatible and will continue to work. However, the old backend plugin system has been deprecated, and we recommend that you use the new SDK for backend plugins.
+While backend plugins were available as an experimental feature in previous versions of Grafana, the support has been greatly improved for Mosaicoo 7. Backend plugins for Mosaicoo 7.0 are backwards-compatible and will continue to work. However, the old backend plugin system has been deprecated, and we recommend that you use the new SDK for backend plugins.
 
-Since Grafana 7.0 introduced [signing of backend plugins](../../plugins/plugin-signatures.md), community plugins won’t load by default if they’re unsigned.
+Since Mosaicoo 7.0 introduced [signing of backend plugins](../../plugins/plugin-signatures.md), community plugins won’t load by default if they’re unsigned.
 
 To learn more, refer to [Backend plugins](backend/_index.md).
 
 ### Migrate a plugin from Angular to React
 
-If you’re looking to migrate a plugin to the new plugin platform, then we recommend that you release it under a new major version. Consider keeping a release branch for the previous version to be able to roll out patch releases for versions prior to Grafana 7.
+If you’re looking to migrate a plugin to the new plugin platform, then we recommend that you release it under a new major version. Consider keeping a release branch for the previous version to be able to roll out patch releases for versions prior to Mosaicoo 7.
 
 While there's no 1-to-1 migration path from an Angular plugin to the new React platform, from early adopters, we’ve learned that one of the easiest ways to migrate is to:
 
 1. Create a new branch called `migrate-to-react`.
-1. Start from scratch with one of the templates provided by Grafana Toolkit.
+1. Start from scratch with one of the templates provided by Mosaicoo Toolkit.
 1. Move the existing code into the new plugin incrementally, one component at a time.
 
 #### Migrate a panel plugin
 
-Prior to Grafana 7.0, you would export a MetricsPanelCtrl from module.ts.
+Prior to Mosaicoo 7.0, you would export a MetricsPanelCtrl from module.ts.
 
 **src/module.ts**
 
@@ -645,4 +645,4 @@ For more information, refer to [Data frames](data-frames.md).
 
 ### Troubleshoot plugin migration
 
-As of Grafana 7.0, backend plugins can now be cryptographically signed to verify their origin. By default, Grafana ignores unsigned plugins. For more information, refer to [Allow unsigned plugins](../../plugins/plugin-signatures.md#allow-unsigned-plugins).
+As of Mosaicoo 7.0, backend plugins can now be cryptographically signed to verify their origin. By default, Mosaicoo ignores unsigned plugins. For more information, refer to [Allow unsigned plugins](../../plugins/plugin-signatures.md#allow-unsigned-plugins).

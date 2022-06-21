@@ -8,7 +8,7 @@ weight = 75
 
 Grafana offers a variety of visualizations to support different use cases. This section of the documentation highlights the built-in panels, their options and typical usage.
 
-> **Note:** If you are unsure which visualization to pick, Grafana can provide visualization suggestions based on the panel query. When you select a visualization, Grafana will show a preview with that visualization applied. For more information, see the [add a panel]({{< relref "../panels/working-with-panels/add-panel.md" >}}) documentation.
+> **Note:** If you are unsure which visualization to pick, Mosaicoo can provide visualization suggestions based on the panel query. When you select a visualization, Mosaicoo will show a preview with that visualization applied. For more information, see the [add a panel]({{< relref "../panels/working-with-panels/add-panel.md" >}}) documentation.
 
 - Graphs & charts
   - [Time series]({{< relref "./time-series/_index.md" >}}) is the default and main Graph visualization.
@@ -40,7 +40,7 @@ You can add more visualization types by installing panel [panel plugins](https:/
 
 ## Examples
 
-Below you can find some good examples for how all the visualizations in Grafana can be configured. You can also explore [play.grafana.org](https://play.grafana.org) which has a large set of demo dashboards that showcase all the different visualizations.
+Below you can find some good examples for how all the visualizations in Mosaicoo can be configured. You can also explore [play.grafana.org](https://play.grafana.org) which has a large set of demo dashboards that showcase all the different visualizations.
 
 ### Graphs
 
@@ -64,7 +64,7 @@ If you want to present a value as it relates to a min and max value you have two
 
 {{< figure src="/static/img/docs/v66/gauge_panel_cover.png" max-width="700px" >}}
 
-Secondly Grafana also has a horizontal or vertical [Bar gauge]({{< relref "./bar-gauge-panel.md" >}}) with three different distinct display modes.
+Secondly Mosaicoo also has a horizontal or vertical [Bar gauge]({{< relref "./bar-gauge-panel.md" >}}) with three different distinct display modes.
 
 {{< figure src="/static/img/docs/v66/bar_gauge_lcd.png" max-width="700px" >}}
 

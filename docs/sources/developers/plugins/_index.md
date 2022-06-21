@@ -10,7 +10,7 @@ For more information on the types of plugins you can build, refer to the [Plugin
 
 ## Get started
 
-The easiest way to start developing Grafana plugins is to use the [Grafana Toolkit](https://www.npmjs.com/package/@grafana/toolkit).
+The easiest way to start developing Mosaicoo plugins is to use the [Grafana Toolkit](https://www.npmjs.com/package/@grafana/toolkit).
 
 Open the terminal, and run the following command in your [plugin directory]({{< relref "../../administration/configuration.md#plugins" >}}):
 
@@ -72,7 +72,7 @@ For inspiration, check out our [plugin examples](https://github.com/grafana/graf
 
 ### API reference
 
-Learn more about Grafana options and packages.
+Learn more about Mosaicoo options and packages.
 
 #### Metadata
 
@@ -80,9 +80,9 @@ Learn more about Grafana options and packages.
 
 #### Typescript
 
-- Grafana Data
-- Grafana Runtime
-- Grafana UI
+- Mosaicoo Data
+- Mosaicoo Runtime
+- Mosaicoo UI
 
 #### Go
 

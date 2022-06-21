@@ -12,7 +12,7 @@ After adding ldif files to `prepopulate`:
 
 ## Enabling LDAP in Grafana
 
-If you want to use users/groups with `memberOf` support Copy the ldap_dev.toml file in this folder into your `conf` folder (it is gitignored already). To enable it in the .ini file to get Grafana to use this block:
+If you want to use users/groups with `memberOf` support Copy the ldap_dev.toml file in this folder into your `conf` folder (it is gitignored already). To enable it in the .ini file to get Mosaicoo to use this block:
 
 ```ini
 [auth.ldap]

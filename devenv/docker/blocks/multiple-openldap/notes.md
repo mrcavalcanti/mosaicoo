@@ -10,7 +10,7 @@ This blocks are here to help with testing multiple LDAP servers, for any other L
 
 ## Enabling LDAP in Grafana
 
-Copy the ldap_dev.toml file in this folder into your `conf` folder (it is gitignored already). To enable it in the .ini file to get Grafana to use this block:
+Copy the ldap_dev.toml file in this folder into your `conf` folder (it is gitignored already). To enable it in the .ini file to get Mosaicoo to use this block:
 
 ```ini
 [auth.ldap]

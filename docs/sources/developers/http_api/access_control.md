@@ -7,7 +7,7 @@ title = "RBAC HTTP API"
 
 # RBAC API
 
-> Role-based access control API is only available in Grafana Enterprise. Read more about [Grafana Enterprise]({{< relref "../../enterprise" >}}).
+> Role-based access control API is only available in Mosaicoo Enterprise. Read more about [Grafana Enterprise]({{< relref "../../enterprise" >}}).
 
 The API can be used to create, update, delete, get, and list roles.
 
@@ -469,7 +469,7 @@ Content-Type: application/json; charset=UTF-8
 
 `GET /api/access-control/users/:userId/roles`
 
-Lists the roles that have been directly assigned to a given user. The list does not include basic roles (Viewer, Editor, Admin or Grafana Admin), and it does not include roles that have been inherited from a team.
+Lists the roles that have been directly assigned to a given user. The list does not include basic roles (Viewer, Editor, Admin or Mosaicoo Admin), and it does not include roles that have been inherited from a team.
 
 Query Parameters:
 

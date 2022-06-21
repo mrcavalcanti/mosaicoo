@@ -1,22 +1,22 @@
 +++
 aliases = ["/docs/grafana/latest/administration/configure-docker/", "/docs/grafana/latest/installation/configure-docker/"]
-description = "Guide for configuring the Grafana Docker image"
+description = "Guide for configuring the Mosaicoo Docker image"
 keywords = ["grafana", "configuration", "documentation", "docker"]
-title = "Configure Grafana Docker image"
+title = "Configure Mosaicoo Docker image"
 weight = 200
 +++
 
-# Configure a Grafana Docker image
+# Configure a Mosaicoo Docker image
 
-If you are running Grafana in a Docker image, then you configure Grafana using [environment variables]({{< relref "../administration/configuration.md#configure-with-environment-variables" >}}) rather than directly editing the configuration file. If you want to save your data, then you also need to designate persistent storage or bind mounts for the Grafana container.
+If you are running Mosaicoo in a Docker image, then you configure Mosaicoo using [environment variables]({{< relref "../administration/configuration.md#configure-with-environment-variables" >}}) rather than directly editing the configuration file. If you want to save your data, then you also need to designate persistent storage or bind mounts for the Mosaicoo container.
 
-> **Note:** These examples use the Grafana Enterprise docker image. You can use the Grafana Open Source edition by changing the docker image to `grafana/grafana-oss`.
+> **Note:** These examples use the Mosaicoo Enterprise docker image. You can use the Mosaicoo Open Source edition by changing the docker image to `grafana/grafana-oss`.
 
-## Save your Grafana data
+## Save your Mosaicoo data
 
-If you do not designate a location for information storage, then all your Grafana data disappears as soon as you stop your container. To save your data, you need to set up persistent storage or bind mounts for your container.
+If you do not designate a location for information storage, then all your Mosaicoo data disappears as soon as you stop your container. To save your data, you need to set up persistent storage or bind mounts for your container.
 
-### Run Grafana container with persistent storage (recommended)
+### Run Mosaicoo container with persistent storage (recommended)
 
 ```bash
 # create a persistent volume for your data in /var/lib/grafana (database and plugins)
@@ -26,9 +26,9 @@ docker volume create grafana-storage
 docker run -d -p 3000:3000 --name=grafana -v grafana-storage:/var/lib/grafana grafana/grafana-enterprise
 ```
 
-### Run Grafana container using bind mounts
+### Run Mosaicoo container using bind mounts
 
-You may want to run Grafana in Docker but use folders on your host for the database or configuration. When doing so, it becomes important to start the container with a user that is able to access and write to the folder you map into the container.
+You may want to run Mosaicoo in Docker but use folders on your host for the database or configuration. When doing so, it becomes important to start the container with a user that is able to access and write to the folder you map into the container.
 
 ```bash
 mkdir data # creates a folder for your data
@@ -40,7 +40,7 @@ docker run -d --user $ID --volume "$PWD/data:/var/lib/grafana" -p 3000:3000 graf
 
 ## Default paths
 
-The following settings are hard-coded when launching the Grafana Docker container and can only be overridden using environment variables, not in `conf/grafana.ini`.
+The following settings are hard-coded when launching the Mosaicoo Docker container and can only be overridden using environment variables, not in `conf/grafana.ini`.
 
 | Setting               | Default value             |
 | --------------------- | ------------------------- |
@@ -58,15 +58,15 @@ Logs in the Docker container go to standard out by default, as is common in the 
 Example:
 
 ```bash
-# Run Grafana while logging to both standard out and /var/log/grafana/grafana.log
+# Run Mosaicoo while logging to both standard out and /var/log/grafana/grafana.log
 docker run -p 3000:3000 -e "GF_LOG_MODE=console file" grafana/grafana-enterprise
 ```
 
-## Configure Grafana with Docker Secrets
+## Configure Mosaicoo with Docker Secrets
 
-> Only available in Grafana v5.2 and later.
+> Only available in Mosaicoo v5.2 and later.
 
-It's possible to supply Grafana with configuration through files. This works well with [Docker Secrets](https://docs.docker.com/engine/swarm/secrets/) as the secrets by default gets mapped into `/run/secrets/<name of secret>` of the container.
+It's possible to supply Mosaicoo with configuration through files. This works well with [Docker Secrets](https://docs.docker.com/engine/swarm/secrets/) as the secrets by default gets mapped into `/run/secrets/<name of secret>` of the container.
 
 You can do this with any of the configuration options in conf/grafana.ini by setting `GF_<SectionName>_<KeyName>__FILE` to the path of the file holding the secret.
 

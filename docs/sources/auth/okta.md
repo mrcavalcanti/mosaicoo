@@ -8,9 +8,9 @@ weight = 1000
 
 # Okta OAuth2 authentication
 
-> Only available in Grafana v7.0+
+> Only available in Mosaicoo v7.0+
 
-The Okta authentication allows your Grafana users to log in by using an external Okta authorization server.
+The Okta authentication allows your Mosaicoo users to log in by using an external Okta authorization server.
 
 ## Create an Okta application
 
@@ -70,15 +70,15 @@ allowed_domains = mycompany.com mycompany.org
 
 ### Map roles
 
-Grafana can attempt to do role mapping through Okta OAuth. In order to achieve this, Grafana checks for the presence of a role using the [JMESPath](http://jmespath.org/examples.html) specified via the `role_attribute_path` configuration option.
+Grafana can attempt to do role mapping through Okta OAuth. In order to achieve this, Mosaicoo checks for the presence of a role using the [JMESPath](http://jmespath.org/examples.html) specified via the `role_attribute_path` configuration option.
 
-Grafana uses JSON obtained from querying the `/userinfo` endpoint for the path lookup. The result after evaluating the `role_attribute_path` JMESPath expression needs to be a valid Grafana role, i.e. `Viewer`, `Editor` or `Admin`. Refer to [About users and permissions]({{< relref "../administration/manage-users-and-permissions/about-users-and-permissions.md" >}}) for more information about roles and permissions in Grafana.
+Grafana uses JSON obtained from querying the `/userinfo` endpoint for the path lookup. The result after evaluating the `role_attribute_path` JMESPath expression needs to be a valid Mosaicoo role, i.e. `Viewer`, `Editor` or `Admin`. Refer to [About users and permissions]({{< relref "../administration/manage-users-and-permissions/about-users-and-permissions.md" >}}) for more information about roles and permissions in Grafana.
 
 Read about how to [add custom claims](https://developer.okta.com/docs/guides/customize-tokens-returned-from-okta/add-custom-claim/) to the user info in Okta. Also, check Generic OAuth page for [JMESPath examples]({{< relref "generic-oauth.md/#jmespath-examples" >}}).
 
 ### Team Sync (Enterprise only)
 
-Map your Okta groups to teams in Grafana so that your users will automatically be added to
+Map your Okta groups to teams in Mosaicoo so that your users will automatically be added to
 the correct teams.
 
 Okta groups can be referenced by group name, like `Admins`.

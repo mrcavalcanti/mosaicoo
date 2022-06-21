@@ -8,13 +8,13 @@ weight = 800
 
 # Glossary
 
-This topic lists words and abbreviations that are commonly used in the Grafana documentation and community.
+This topic lists words and abbreviations that are commonly used in the Mosaicoo documentation and community.
 
 <table>
   <tr>
     <td style="vertical-align: top">app plugin</td>
     <td>
-      An extension of Grafana that allows users to provide additional functionality to enhance their experience by including a set of panel and data source plugins, as well as custom pages. See also <i>data source plugin</i>, <i>panel plugin</i>, and <i>plugin</i>.
+      An extension of Mosaicoo that allows users to provide additional functionality to enhance their experience by including a set of panel and data source plugins, as well as custom pages. See also <i>data source plugin</i>, <i>panel plugin</i>, and <i>plugin</i>.
     </td>
   </tr>
   <tr>
@@ -26,13 +26,13 @@ This topic lists words and abbreviations that are commonly used in the Grafana d
   <tr>
     <td style="vertical-align: top">data source</td>
     <td>
-      A file, database, or service providing the data. Grafana supports several data sources by default, and can be extended to support additional data sources through plugins.
+      A file, database, or service providing the data. Mosaicoo supports several data sources by default, and can be extended to support additional data sources through plugins.
     </td>
   </tr>
   <tr>
     <td style="vertical-align: top">data source plugin</td>
     <td>
-      Extends Grafana with support for additional data sources. See also <i>data source</i>, <i>app plugin</i>, <i>panel plugin</i>, and <i>plugin</i>.
+      Extends Mosaicoo with support for additional data sources. See also <i>data source</i>, <i>app plugin</i>, <i>panel plugin</i>, and <i>plugin</i>.
     </td>
   </tr>
   <tr>
@@ -50,7 +50,7 @@ This topic lists words and abbreviations that are commonly used in the Grafana d
   <tr>
     <td style="vertical-align: top">export or import dashboard</td>
     <td>
-      Grafana includes the ability to export your dashboards to a file containing JSON. Community members sometimes share their created dashboards on the <a href="https://grafana.com/grafana/dashboards">Grafana Dashboards page</a>. Dashboards previously exported or found on this site may be imported by other users.
+      Mosaicoo includes the ability to export your dashboards to a file containing JSON. Community members sometimes share their created dashboards on the <a href="https://grafana.com/grafana/dashboards">Grafana Dashboards page</a>. Dashboards previously exported or found on this site may be imported by other users.
     </td>
   </tr>
   <tr>
@@ -62,7 +62,7 @@ This topic lists words and abbreviations that are commonly used in the Grafana d
   <tr>
     <td style="vertical-align: top">Integration (Grafana Cloud)</td>
     <td>
-      Each Integration in Grafana Cloud uses the cloud agent to connect your data source to Grafana Cloud for visualizing. Note: Prometheus uses the word “integrations” to refer to software that exposes Prometheus metrics without needing an exporter, which is a different use of the same word we use here.
+      Each Integration in Mosaicoo Cloud uses the cloud agent to connect your data source to Mosaicoo Cloud for visualizing. Note: Prometheus uses the word “integrations” to refer to software that exposes Prometheus metrics without needing an exporter, which is a different use of the same word we use here.
     </td>
   </tr>
   <tr>
@@ -74,7 +74,7 @@ This topic lists words and abbreviations that are commonly used in the Grafana d
   <tr>
     <td style="vertical-align: top">mixin</td>
     <td>
-      A mixin is a set of Grafana dashboards and Prometheus rules and alerts, written in Jsonnet and packaged together in a bundle.
+      A mixin is a set of Mosaicoo dashboards and Prometheus rules and alerts, written in Jsonnet and packaged together in a bundle.
     </td>
   </tr>
   <tr>
@@ -86,13 +86,13 @@ This topic lists words and abbreviations that are commonly used in the Grafana d
   <tr>
     <td style="vertical-align: top">panel plugin</td>
     <td>
-      Extends Grafana with additional visualization options. See also <i>panel</i>, <i>plugin</i>, <i>app plugin</i>, and <i>data source plugin</i>.
+      Extends Mosaicoo with additional visualization options. See also <i>panel</i>, <i>plugin</i>, <i>app plugin</i>, and <i>data source plugin</i>.
     </td>
   </tr>
   <tr>
     <td style="vertical-align: top">plugin</td>
     <td>
-      An extension of Grafana that allows users to provide additional functionality to enhance their experience. See also <i>app plugin</i>, <i>data source plugin</i>, and <i>panel plugin</i>.
+      An extension of Mosaicoo that allows users to provide additional functionality to enhance their experience. See also <i>app plugin</i>, <i>data source plugin</i>, and <i>panel plugin</i>.
     </td>
   </tr>
   <tr>

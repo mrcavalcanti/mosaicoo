@@ -23,7 +23,7 @@ Some field options will not affect the visualization until you click outside of 
 
 ### Line interpolation
 
-Choose how Grafana interpolates the series line. The screenshots below show the same data displayed with different line interpolations.
+Choose how Mosaicoo interpolates the series line. The screenshots below show the same data displayed with different line interpolations.
 
 #### Linear
 

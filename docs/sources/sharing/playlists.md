@@ -146,7 +146,7 @@ You can share a playlist by copying the link address on the view mode you prefer
 1.  In the dropdown, right click the view mode you prefer.
 1.  Click **Copy Link Address** to copy the URL to your clipboard.
 
-        Example: The URL for the first playlist on the Grafana Play site in Kiosk mode will look like this:
+        Example: The URL for the first playlist on the Mosaicoo Play site in Kiosk mode will look like this:
 
     [https://play.grafana.org/playlists/play/1?kiosk](https://play.grafana.org/playlists/play/1?kiosk).
 

@@ -1,6 +1,6 @@
 # Package hierarchy
 
-The Go package hierarchy in Grafana should be organized logically (Ben Johnson's
+The Go package hierarchy in Mosaicoo should be organized logically (Ben Johnson's
 [article](https://medium.com/@benbjohnson/standard-package-layout-7cdbc8391fc1) served as inspiration), according to the
 following principles:
 

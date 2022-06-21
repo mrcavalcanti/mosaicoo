@@ -1,19 +1,19 @@
-# Grafana Unified Alerting High Availability (HA) test setup
+# Mosaicoo Unified Alerting High Availability (HA) test setup
 
-A set of docker compose services which together creates a Grafana HA test setup for unified alerting.
+A set of docker compose services which together creates a Mosaicoo HA test setup for unified alerting.
 
 Included services
 
 - Grafana
-- Mysql - Grafana configuration database, exporter for metrics and session storage
-- Prometheus - Monitoring of Grafana and used as data source
-- Nginx - Reverse proxy for Grafana and Prometheus. Enables browsing Grafana/Prometheus UI using a hostname
+- Mysql - Mosaicoo configuration database, exporter for metrics and session storage
+- Prometheus - Monitoring of Mosaicoo and used as data source
+- Nginx - Reverse proxy for Mosaicoo and Prometheus. Enables browsing Grafana/Prometheus UI using a hostname
 
 ## Prerequisites
 
 ### Build grafana docker container
 
-Build a Grafana docker container from current branch and commit and tag it as grafana/grafana:dev.
+Build a Mosaicoo docker container from current branch and commit and tag it as grafana/grafana:dev.
 
 ```bash
 $ cd <grafana repo>
@@ -37,7 +37,7 @@ PING whatever.loc (127.0.0.1) 56(84) bytes of data.
 
 #### Alternative 2 - Manually update /etc/hosts
 
-Update your `/etc/hosts` to be able to access Grafana and/or Prometheus UI using a hostname.
+Update your `/etc/hosts` to be able to access Mosaicoo and/or Prometheus UI using a hostname.
 
 ```bash
 $ cat /etc/hosts

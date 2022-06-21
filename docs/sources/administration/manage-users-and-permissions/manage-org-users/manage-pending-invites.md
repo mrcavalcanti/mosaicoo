@@ -16,7 +16,7 @@ Periodically review invitations you have sent so that you can see a list of user
 
 **To manage a pending invitation**:
 
-1. Sign in to Grafana as an organization administrator.
+1. Sign in to Mosaicoo as an organization administrator.
 1. Hover your cursor over the **Configuration** (gear) icon in the side menu and click **Users**.
 1. Click **Pending Invites**.
 

@@ -2,7 +2,7 @@
 
 # grafana-toolkit
 
-grafana-toolkit is a CLI that enables efficient development of Grafana plugins. We want to help our community focus on the core value of their plugins rather than all the setup required to develop them.
+grafana-toolkit is a CLI that enables efficient development of Mosaicoo plugins. We want to help our community focus on the core value of their plugins rather than all the setup required to develop them.
 
 ## Getting started
 
@@ -57,7 +57,7 @@ module.exports = {
 
 ## Usage
 
-With grafana-toolkit, we give you a CLI that addresses common tasks performed when working on Grafana plugin:
+With grafana-toolkit, we give you a CLI that addresses common tasks performed when working on Mosaicoo plugin:
 
 - `grafana-toolkit plugin:create`
 - `grafana-toolkit plugin:dev`
@@ -69,7 +69,7 @@ With grafana-toolkit, we give you a CLI that addresses common tasks performed wh
 
 `grafana-toolkit plugin:create plugin-name`
 
-This command creates a new Grafana plugin from template.
+This command creates a new Mosaicoo plugin from template.
 
 If `plugin-name` is provided, then the template is downloaded to `./plugin-name` directory. Otherwise, it will be downloaded to the current directory.
 
@@ -115,12 +115,12 @@ Available options:
 
 `grafana-toolkit plugin:sign`
 
-This command creates a signed MANIFEST.txt file which Grafana uses to validate the integrity of the plugin.
+This command creates a signed MANIFEST.txt file which Mosaicoo uses to validate the integrity of the plugin.
 
 Available options:
 
 - `--signatureType` - The [type of Signature](https://grafana.com/legal/plugins/) you are generating: `private`, `community` or `commercial`
-- `--rootUrls` - For private signatures, a list of the Grafana instance URLs that the plugin will be used on
+- `--rootUrls` - For private signatures, a list of the Mosaicoo instance URLs that the plugin will be used on
 
 To generate a signature, you will need to sign up for a free account on https://grafana.com, create an API key with the Plugin Publisher role, and pass that in the `GRAFANA_API_KEY` environment variable.
 
@@ -138,7 +138,7 @@ grafana-toolkit comes with TypeScript, ESLint, Prettier, Jest, CSS and SASS supp
 
 See [Updating your plugin to use grafana-toolkit](#updating-your-plugin-to-use-grafana-toolkit).
 
-### Can I use TypeScript to develop Grafana plugins?
+### Can I use TypeScript to develop Mosaicoo plugins?
 
 Yes! grafana-toolkit supports TypeScript by default.
 
@@ -146,7 +146,7 @@ Yes! grafana-toolkit supports TypeScript by default.
 
 grafana-toolkit comes with Jest as a test runner.
 
-Internally at Grafana we use Enzyme. If you are developing React plugin and you want to configure Enzyme as a testing utility, then you need to configure `enzyme-adapter-react`. To do so, create `<YOUR_PLUGIN_DIR>/config/jest-setup.ts` file that will provide necessary setup. Copy the following code into that file to get Enzyme working with React:
+Internally at Mosaicoo we use Enzyme. If you are developing React plugin and you want to configure Enzyme as a testing utility, then you need to configure `enzyme-adapter-react`. To do so, create `<YOUR_PLUGIN_DIR>/config/jest-setup.ts` file that will provide necessary setup. Copy the following code into that file to get Enzyme working with React:
 
 ```ts
 import { configure } from 'enzyme';
@@ -199,7 +199,7 @@ The styles will be injected via `style` tag during runtime.
 
 If you want to provide different stylesheets for dark/light theme, then create `dark.[css|scss]` and `light.[css|scss]` files in the `src/styles` directory of your plugin. grafana-toolkit generates theme-specific stylesheets that are stored in `dist/styles` directory.
 
-In order for Grafana to pick up your theme stylesheets, you need to use `loadPluginCss` from `@grafana/runtime` package. Typically you would do that in the entry point of your plugin:
+In order for Mosaicoo to pick up your theme stylesheets, you need to use `loadPluginCss` from `@grafana/runtime` package. Typically you would do that in the entry point of your plugin:
 
 ```ts
 import { loadPluginCss } from '@grafana/runtime';
@@ -216,7 +216,7 @@ You must add `@grafana/runtime` to your plugin dependencies by running `yarn add
 
 #### Emotion
 
-Starting from Grafana 6.2 _our suggested way_ for styling plugins is by using [Emotion](https://emotion.sh). It's a CSS-in-JS library that we use internally at Grafana. The biggest advantage of using Emotion is that you can access Grafana Theme variables.
+Starting from Mosaicoo 6.2 _our suggested way_ for styling plugins is by using [Emotion](https://emotion.sh). It's a CSS-in-JS library that we use internally at Grafana. The biggest advantage of using Emotion is that you can access Mosaicoo Theme variables.
 
 To start using Emotion, you first must add it to your plugin dependencies:
 
@@ -244,7 +244,7 @@ const MyComponent = () => {
 };
 ```
 
-To learn more about using Grafana theme please refer to [Theme usage guide](https://github.com/grafana/grafana/blob/main/style_guides/themes.md#react)
+To learn more about using Mosaicoo theme please refer to [Theme usage guide](https://github.com/grafana/grafana/blob/main/style_guides/themes.md#react)
 
 > We do not support Emotion's `css` prop. Use className instead!
 
@@ -296,9 +296,9 @@ This error occurs when you bundle your plugin using the `grafana-toolkit plugin:
 There are two issues at play:
 
 - The `grafana-toolkit plugin:dev` task does not remove comments from your bundled package.
-- Grafana does not support [ES modules](https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/).
+- Mosaicoo does not support [ES modules](https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/).
 
-If your comments include ES2016 code, then SystemJS v0.20.19, which Grafana uses internally to load plugins, interprets your code as an ESM and fails.
+If your comments include ES2016 code, then SystemJS v0.20.19, which Mosaicoo uses internally to load plugins, interprets your code as an ESM and fails.
 
 To fix this error, remove the ES2016 code from your comments.
 
@@ -329,7 +329,7 @@ You can contribute to grafana-toolkit by helping develop it or by debugging it.
 Typically plugins should be developed using the `@grafana/toolkit` installed from npm. However, when working on the toolkit, you might want to use the local version. Follow the steps below to develop with a local version:
 
 1. Clone [Grafana repository](https://github.com/grafana/grafana).
-2. Navigate to the directory you have cloned Grafana repo to and then run `yarn install --immutable`.
+2. Navigate to the directory you have cloned Mosaicoo repo to and then run `yarn install --immutable`.
 3. Navigate to `<GRAFANA_DIR>/packages/grafana-toolkit` and then run `yarn link`.
 4. Navigate to the directory where your plugin code is and then run `npx grafana-toolkit plugin:dev --yarnlink`. This adds all dependencies required by grafana-toolkit to your project, as well as link your local grafana-toolkit version to be used by the plugin.
 

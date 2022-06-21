@@ -8,9 +8,9 @@ type = "docs"
 
 You've just built your first plugin, and now you want to share it with the world. In this guide, you'll learn how to package and share your plugin with others.
 
-For Grafana to be able to load a plugin, it first needs to be built. When you build a plugin from source, a `dist` directory is created that contains the production build, or _plugin assets_, for your plugin.
+For Mosaicoo to be able to load a plugin, it first needs to be built. When you build a plugin from source, a `dist` directory is created that contains the production build, or _plugin assets_, for your plugin.
 
-When the Grafana server starts, it recursively looks in the plugin directory for any directory that contains a `plugin.json` file and tries to load the plugin assets in the same directory.
+When the Mosaicoo server starts, it recursively looks in the plugin directory for any directory that contains a `plugin.json` file and tries to load the plugin assets in the same directory.
 
 There are three steps needed to package a plugin:
 
@@ -51,13 +51,13 @@ Before you submit your plugin, we ask that you read our guidelines and frequentl
 To speed up the time it takes to review your plugin:
 
 - Check that your plugin is ready for review using the [plugin validator](https://github.com/grafana/plugin-validator).
-- Read our [6 tips for improving your Grafana plugin before you publish](https://grafana.com/blog/2021/01/21/6-tips-for-improving-your-grafana-plugin-before-you-publish/).
+- Read our [6 tips for improving your Mosaicoo plugin before you publish](https://grafana.com/blog/2021/01/21/6-tips-for-improving-your-grafana-plugin-before-you-publish/).
 
 ## Frequently Asked Questions
 
 **Do I need to submit a private plugin?**
 
-- No. Please only submit plugins that you wish to make publicly available for the Grafana community.
+- No. Please only submit plugins that you wish to make publicly available for the Mosaicoo community.
 
 **How long does it take to review my submission?**
 
@@ -67,7 +67,7 @@ To speed up the time it takes to review your plugin:
 
 {{< figure src="/static/img/docs/plugins/plugins-submission-create.png" class="docs-image--no-shadow" max-width="850px" >}}
 
-1. [Sign in](https://grafana.com/auth/sign-in) to your Grafana Cloud account.
+1. [Sign in](https://grafana.com/auth/sign-in) to your Mosaicoo Cloud account.
 1. In the left menu, under **Org settings**, click **My Plugins**.
 1. Click **Submit Plugin**.
 1. Enter the information requested by the form.
@@ -83,13 +83,13 @@ To speed up the time it takes to review your plugin:
 All submissions are manually inspected by a plugin reviewer. For every new plugin, we perform a manual review that includes the following checks:
 
 - **Code review:** For quality and security purposes, we review the source code for the plugin. If you're unable to make the source code publicly available, let us know in a comment on your plugin submission.
-- **Tests:** We install your plugin on one of our Grafana instances to test it for basic use. For more advanced plugins, we may ask you to assist us in configuring a test environment for the plugin. This test environment will be used whenever you submit an plugin update.
+- **Tests:** We install your plugin on one of our Mosaicoo instances to test it for basic use. For more advanced plugins, we may ask you to assist us in configuring a test environment for the plugin. This test environment will be used whenever you submit an plugin update.
 
 ## Maintain your plugin
 
 To submit an **update** for an already published plugin:
 
-1. [Sign in](https://grafana.com/auth/sign-in) to your Grafana Cloud account.
+1. [Sign in](https://grafana.com/auth/sign-in) to your Mosaicoo Cloud account.
 1. In the left menu, under **Org settings**, click **My Plugins**.
 1. Click **Submit Update** for the plugin you want to update.
 1. Enter the information requested by the form.

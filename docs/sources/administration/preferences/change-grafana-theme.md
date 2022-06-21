@@ -1,12 +1,12 @@
 +++
 aliases = ["/docs/grafana/latest/administration/preferences/change-grafana-theme/"]
-description = "How to set the Grafana UI theme"
+description = "How to set the Mosaicoo UI theme"
 keywords = ["grafana", "configuration", "documentation", "home"]
 title = "Change UI theme"
 weight = 200
 +++
 
-# Change Grafana UI theme
+# Change Mosaicoo UI theme
 
 In Grafana, you can modify the UI theme configured in the Settings or Preferences. Set the UI theme for the server, an organization, a team, or your personal user account using the instructions in this topic.
 
@@ -14,7 +14,7 @@ In Grafana, you can modify the UI theme configured in the Settings or Preference
 
 ## Theme options
 
-The theme affects how Grafana displays graphs, menus, other UI elements.
+The theme affects how Mosaicoo displays graphs, menus, other UI elements.
 
 ### Default
 
@@ -34,7 +34,7 @@ Here is an example of the light theme.
 
 ## Change server UI theme
 
-Grafana server administrators can change the Grafana UI theme for all users on the server by setting the [default_theme]({{< relref "../configuration.md#default-theme" >}}) option in the Grafana configuration file.
+Grafana server administrators can change the Mosaicoo UI theme for all users on the server by setting the [default_theme]({{< relref "../configuration.md#default-theme" >}}) option in the Mosaicoo configuration file.
 
 To see what the current settings are, refer to [View server settings]({{< relref "../view-server/view-server-settings.md" >}}).
 

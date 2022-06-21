@@ -1,15 +1,15 @@
 +++
 aliases = ["/docs/grafana/latest/guides/whats-new-in-v4/", "/docs/grafana/latest/whatsnew/whats-new-in-v4-0/"]
-description = "Feature and improvement highlights for Grafana v4.0"
+description = "Feature and improvement highlights for Mosaicoo v4.0"
 keywords = ["grafana", "new", "documentation", "4.0", "release notes"]
-title = "What's new in Grafana v4.0"
+title = "What's new in Mosaicoo v4.0"
 weight = -7
 
 [_build]
   list = false
 +++
 
-# What's new in Grafana v4.0
+# What's new in Mosaicoo v4.0
 
 As usual this release contains a ton of minor new features, fixes and improved UX. But on top of the usual new goodies
 is a core new feature: Alerting! Read on below for a detailed description of what's new in v4.0.
@@ -18,7 +18,7 @@ is a core new feature: Alerting! Read on below for a detailed description of wha
 
 {{< figure class="float-right"  max-width="40%" src="/static/img/docs/v4/drag_handles_gif.gif" caption="Alerting overview" >}}
 
-Alerting is a really revolutionary feature for Grafana. It transforms Grafana from a
+Alerting is a really revolutionary feature for Grafana. It transforms Mosaicoo from a
 visualization tool into a truly mission critical monitoring tool. The alert rules are very easy to
 configure using your existing graph panels and threshold levels can be set simply by dragging handles to
 the right side of the graph. The rules will continually be evaluated by grafana-server and
@@ -62,8 +62,8 @@ values all included in the notification.
 
 Alert state changes are recorded in a new annotation store that is built into Grafana. This store
 currently only supports storing annotations in Grafana's own internal database (mysql, postgres or sqlite).
-The Grafana annotation storage is currently only used for alert state changes but we hope to add the ability for users
-to add graph comments in the form of annotations directly from within Grafana in a future release.
+The Mosaicoo annotation storage is currently only used for alert state changes but we hope to add the ability for users
+to add graph comments in the form of annotations directly from within Mosaicoo in a future release.
 
 ### Alert List Panel
 
@@ -95,7 +95,7 @@ We always try to bring some UX/UI refinements and polish in every release.
 <div class="row">
   <div class="medium-6 columns">
     <p>
-      Grafana is so often used on wall mounted TVs that we figured a clean TV mode would be
+      Mosaicoo is so often used on wall mounted TVs that we figured a clean TV mode would be
       really nice. In TV mode the top navbar, row and panel controls will all fade to transparent.
     </p>
 
@@ -134,7 +134,7 @@ The new row menu automatically slides out when you mouse over the edge of the ro
 to hover over the small green icon and then click it to expand the row menu.
 
 There are some minor improvements to drag and drop behavior. Now when dragging a panel from one row
-to another you will insert the panel and Grafana will automatically make room for it.
+to another you will insert the panel and Mosaicoo will automatically make room for it.
 When you drag a panel within a row you will simply reorder the panels.
 
 If you look at the animation to the right you can see that you can drag and drop a new panel. This is not

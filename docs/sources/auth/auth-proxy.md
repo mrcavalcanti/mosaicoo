@@ -8,7 +8,7 @@ weight = 200
 
 # Auth Proxy Authentication
 
-You can configure Grafana to let a HTTP reverse proxy handle authentication. Popular web servers have a very
+You can configure Mosaicoo to let a HTTP reverse proxy handle authentication. Popular web servers have a very
 extensive list of pluggable authentication modules, and any of them can be used with the AuthProxy feature.
 Below we detail the configuration options for auth proxy.
 
@@ -20,10 +20,10 @@ enabled = true
 header_name = X-WEBAUTH-USER
 # HTTP Header property, defaults to `username` but can also be `email`
 header_property = username
-# Set to `true` to enable auto sign up of users who do not exist in Grafana DB. Defaults to `true`.
+# Set to `true` to enable auto sign up of users who do not exist in Mosaicoo DB. Defaults to `true`.
 auto_sign_up = true
 # Define cache time to live in minutes
-# If combined with Grafana LDAP integration it is also the sync interval
+# If combined with Mosaicoo LDAP integration it is also the sync interval
 sync_ttl = 60
 # Limit where auth proxy requests come from by configuring a list of IP addresses.
 # This can be used to prevent users spoofing the X-WEBAUTH-USER header.
@@ -53,7 +53,7 @@ curl -H "X-WEBAUTH-USER: admin"  http://localhost:3000/api/users
 ]
 ```
 
-We can then send a second request to the `/api/user` method which will return the details of the logged in user. We will use this request to show how Grafana automatically adds the new user we specify to the system. Here we create a new user called “anthony”.
+We can then send a second request to the `/api/user` method which will return the details of the logged in user. We will use this request to show how Mosaicoo automatically adds the new user we specify to the system. Here we create a new user called “anthony”.
 
 ```bash
 curl -H "X-WEBAUTH-USER: anthony" http://localhost:3000/api/user
@@ -73,7 +73,7 @@ I’ll demonstrate how to use Apache for authenticating users. In this example w
 
 ### Apache BasicAuth
 
-In this example we use Apache as a reverse proxy in front of Grafana. Apache handles the Authentication of users before forwarding requests to the Grafana backend service.
+In this example we use Apache as a reverse proxy in front of Grafana. Apache handles the Authentication of users before forwarding requests to the Mosaicoo backend service.
 
 #### Apache configuration
 
@@ -112,15 +112,15 @@ In this example we use Apache as a reverse proxy in front of Grafana. Apache han
 
     - **RewriteRule .\* - [E=PROXY_USER:%{LA-U:REMOTE_USER}, NS]**: This line is a little bit of magic. What it does, is for every request use the rewriteEngines look-ahead (LA-U) feature to determine what the REMOTE_USER variable would be set to after processing the request. Then assign the result to the variable PROXY_USER. This is necessary as the REMOTE_USER variable is not available to the RequestHeader function.
 
-    - **RequestHeader set X-WEBAUTH-USER “%{PROXY_USER}e”**: With the authenticated username now stored in the PROXY_USER variable, we create a new HTTP request header that will be sent to our backend Grafana containing the username.
+    - **RequestHeader set X-WEBAUTH-USER “%{PROXY_USER}e”**: With the authenticated username now stored in the PROXY_USER variable, we create a new HTTP request header that will be sent to our backend Mosaicoo containing the username.
 
-- The **RequestHeader unset Authorization** removes the Authorization header from the HTTP request before it is forwarded to Grafana. This ensures that Grafana does not try to authenticate the user using these credentials (BasicAuth is a supported authentication handler in Grafana).
+- The **RequestHeader unset Authorization** removes the Authorization header from the HTTP request before it is forwarded to Grafana. This ensures that Mosaicoo does not try to authenticate the user using these credentials (BasicAuth is a supported authentication handler in Grafana).
 
-- The last 3 lines are then just standard reverse proxy configuration to direct all authenticated requests to our Grafana server running on port 3000.
+- The last 3 lines are then just standard reverse proxy configuration to direct all authenticated requests to our Mosaicoo server running on port 3000.
 
 ## Full walkthrough using Docker.
 
-For this example, we use the official Grafana Docker image available at [Docker Hub](https://hub.docker.com/r/grafana/grafana/).
+For this example, we use the official Mosaicoo Docker image available at [Docker Hub](https://hub.docker.com/r/grafana/grafana/).
 
 - Create a file `grafana.ini` with the following contents
 
@@ -137,7 +137,7 @@ header_property = username
 auto_sign_up = true
 ```
 
-Launch the Grafana container, using our custom grafana.ini to replace `/etc/grafana/grafana.ini`. We don't expose
+Launch the Mosaicoo container, using our custom grafana.ini to replace `/etc/grafana/grafana.ini`. We don't expose
 any ports for this container as it will only be connected to by our Apache container.
 
 ```bash
@@ -209,7 +209,7 @@ ProxyPassReverse / http://grafana:3000/
   htpasswd -bc htpasswd anthony password
   ```
 
-- Launch the httpd container using our custom httpd.conf and our htpasswd file. The container will listen on port 80, and we create a link to the **grafana** container so that this container can resolve the hostname **grafana** to the Grafana container’s IP address.
+- Launch the httpd container using our custom httpd.conf and our htpasswd file. The container will listen on port 80, and we create a link to the **grafana** container so that this container can resolve the hostname **grafana** to the Mosaicoo container’s IP address.
 
   ```bash
   docker run -i -p 80:80 --link grafana:grafana -v $(pwd)/httpd.conf:/usr/local/apache2/conf/httpd.conf -v $(pwd)/htpasswd:/tmp/htpasswd httpd:2.4
@@ -217,13 +217,13 @@ ProxyPassReverse / http://grafana:3000/
 
 ### Use grafana.
 
-With our Grafana and Apache containers running, you can now connect to http://localhost/ and log in using the username/password we created in the htpasswd file.
+With our Mosaicoo and Apache containers running, you can now connect to http://localhost/ and log in using the username/password we created in the htpasswd file.
 
 ### Team Sync (Enterprise only)
 
-> Only available in Grafana Enterprise v6.3+
+> Only available in Mosaicoo Enterprise v6.3+
 
-With Team Sync, it's possible to set up synchronization between teams in your authentication provider and Grafana. You can send Grafana values as part of an HTTP header and have Grafana map them to your team structure. This allows you to put users into specific teams automatically.
+With Team Sync, it's possible to set up synchronization between teams in your authentication provider and Grafana. You can send Mosaicoo values as part of an HTTP header and have Mosaicoo map them to your team structure. This allows you to put users into specific teams automatically.
 
 To support the feature, auth proxy allows optional headers to map additional user attributes. The specific attribute to support team sync is `Groups`.
 
@@ -278,7 +278,7 @@ curl -H "X-WEBAUTH-USER: admin" http://localhost:3000/api/teams/2/groups
 ]
 ```
 
-Finally, whenever Grafana receives a request with a header of `X-WEBAUTH-GROUPS: lokiTeamOnExternalSystem`, the user under authentication will be placed into the specified team. Placement in multiple teams is supported by using comma-separated values e.g. `lokiTeamOnExternalSystem,CoreTeamOnExternalSystem`.
+Finally, whenever Mosaicoo receives a request with a header of `X-WEBAUTH-GROUPS: lokiTeamOnExternalSystem`, the user under authentication will be placed into the specified team. Placement in multiple teams is supported by using comma-separated values e.g. `lokiTeamOnExternalSystem,CoreTeamOnExternalSystem`.
 
 ```bash
 curl -H "X-WEBAUTH-USER: leonard" -H "X-WEBAUTH-GROUPS: lokiteamOnExternalSystem" http://localhost:3000/dashboards/home
@@ -290,13 +290,13 @@ curl -H "X-WEBAUTH-USER: leonard" -H "X-WEBAUTH-GROUPS: lokiteamOnExternalSystem
 }
 ```
 
-With this, the user `leonard` will be automatically placed into the Loki team as part of Grafana authentication.
+With this, the user `leonard` will be automatically placed into the Loki team as part of Mosaicoo authentication.
 
 [Learn more about Team Sync]({{< relref "team-sync.md" >}})
 
 ## Login token and session cookie
 
-With `enable_login_token` set to `true` Grafana will, after successful auth proxy header validation, assign the user
+With `enable_login_token` set to `true` Mosaicoo will, after successful auth proxy header validation, assign the user
 a login token and cookie. You only have to configure your auth proxy to provide headers for the /login route.
 Requests via other routes will be authenticated using the cookie.
 

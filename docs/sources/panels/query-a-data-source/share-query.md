@@ -8,7 +8,7 @@ weight = 60
 
 Grafana let you use the query result from one panel for any other panel in the dashboard. Sharing query results across panels reduces the number of queries made to your data source, which can improve the performance of your dashboard.
 
-The Dashboard data source lets you select a panel in your dashboard that contains the queries ‌you want to share the results for. Instead of sending a separate query for each panel, Grafana sends one query and other panels use the query results to construct visualizations.
+The Dashboard data source lets you select a panel in your dashboard that contains the queries ‌you want to share the results for. Instead of sending a separate query for each panel, Mosaicoo sends one query and other panels use the query results to construct visualizations.
 
 This strategy can drastically reduce the number of queries being made when you for example have several panels visualizing the same data.
 

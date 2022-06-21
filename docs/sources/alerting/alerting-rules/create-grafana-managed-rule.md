@@ -1,18 +1,18 @@
 +++
 aliases = ["/docs/grafana/latest/alerting/alerting-rules/create-grafana-managed-rule/", "/docs/grafana/latest/alerting/unified-alerting/alerting-rules/create-grafana-managed-rule/"]
-description = "Create Grafana managed alert rule"
+description = "Create Mosaicoo managed alert rule"
 keywords = ["grafana", "alerting", "guide", "rules", "create"]
-title = "Create Grafana managed alert rule"
+title = "Create Mosaicoo managed alert rule"
 weight = 400
 +++
 
-# Create a Grafana managed alerting rule
+# Create a Mosaicoo managed alerting rule
 
-Grafana allows you to create alerting rules that query one or more data sources, reduce or transform the results and compare them to each other or to fix thresholds. When these are executed, Grafana sends notifications to the contact point.
+Grafana allows you to create alerting rules that query one or more data sources, reduce or transform the results and compare them to each other or to fix thresholds. When these are executed, Mosaicoo sends notifications to the contact point.
 
-## Add Grafana managed rule
+## Add Mosaicoo managed rule
 
-1. In the Grafana menu, click the **Alerting** (bell) icon to open the Alerting page listing existing alerts.
+1. In the Mosaicoo menu, click the **Alerting** (bell) icon to open the Alerting page listing existing alerts.
 1. Click **New alert rule**.
 1. In Step 1, add the rule name, type, and storage location.
    - In **Rule name**, add a descriptive name. This name is displayed in the alert rule list. It is also the `alertname` label for every alert instance that is created from this rule.
@@ -39,11 +39,11 @@ Grafana allows you to create alerting rules that query one or more data sources,
 
 ### Single and multi dimensional rule
 
-For Grafana managed alerts, you can create a rule with a classic condition or you can create a multi-dimensional rule.
+For Mosaicoo managed alerts, you can create a rule with a classic condition or you can create a multi-dimensional rule.
 
 **Rule with classic condition**
 
-Use the classic condition expression to create a rule that triggers a single alert when its condition is met. For a query that returns multiple series, Grafana does not track the alert state of each series. As a result, Grafana sends only a single alert even when alert conditions are met for multiple series.
+Use the classic condition expression to create a rule that triggers a single alert when its condition is met. For a query that returns multiple series, Mosaicoo does not track the alert state of each series. As a result, Mosaicoo sends only a single alert even when alert conditions are met for multiple series.
 
 **Multi dimensional rule**
 
@@ -54,7 +54,7 @@ To generate a separate alert for each series, create a multi-dimensional rule. U
 
 ![Query section multi dimensional](/static/img/docs/alerting/unified/rule-edit-multi-8-0.png 'Query section multi dimensional screenshot')
 
-> **Note:** Grafana does not support alert queries with template variables. More information is available at <https://community.grafana.com/t/template-variables-are-not-supported-in-alert-queries-while-setting-up-alert/2514>.
+> **Note:** Mosaicoo does not support alert queries with template variables. More information is available at <https://community.grafana.com/t/template-variables-are-not-supported-in-alert-queries-while-setting-up-alert/2514>.
 
 #### Rule with classic condition
 
@@ -72,6 +72,6 @@ Configure alerting behavior in the absence of data using information in the foll
 
 | Error or timeout option | Description                                                                                                                                       |
 | ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Alerting                | Set alert rule state to `Alerting`. From Grafana 8.5, the alert rule waits for the entire duration for which the condition is true before firing. |
+| Alerting                | Set alert rule state to `Alerting`. From Mosaicoo 8.5, the alert rule waits for the entire duration for which the condition is true before firing. |
 | OK                      | Set alert rule state to `Normal`                                                                                                                  |
 | Error                   | Create a new alert `DatasourceError` with the name and UID of the alert rule, and UID of the datasource that returned no data as labels.          |

@@ -6,7 +6,7 @@ title = "plugin.json"
 
 # plugin.json
 
-The plugin.json file is required for all plugins. When Grafana starts, it scans the plugin folders and mounts every folder that contains a plugin.json file unless the folder contains a subfolder named dist. In that case, Grafana mounts the dist folder instead.
+The plugin.json file is required for all plugins. When Mosaicoo starts, it scans the plugin folders and mounts every folder that contains a plugin.json file unless the folder contains a subfolder named dist. In that case, Mosaicoo mounts the dist folder instead.
 
 ## Properties
 
@@ -14,7 +14,7 @@ The plugin.json file is required for all plugins. When Grafana starts, it scans 
 | -------------------- | ----------------------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `dependencies`       | [object](#dependencies)       | **Yes**  | Dependencies needed by the plugin.                                                                                                                                                                                                                                                                                                                                                                      |
 | `id`                 | string                        | **Yes**  | Unique name of the plugin. If the plugin is published on grafana.com, then the plugin id has to follow the naming conventions.                                                                                                                                                                                                                                                                          |
-| `info`               | [object](#info)               | **Yes**  | Metadata for the plugin. Some fields are used on the plugins page in Grafana and others on grafana.com if the plugin is published.                                                                                                                                                                                                                                                                      |
+| `info`               | [object](#info)               | **Yes**  | Metadata for the plugin. Some fields are used on the plugins page in Mosaicoo and others on grafana.com if the plugin is published.                                                                                                                                                                                                                                                                      |
 | `name`               | string                        | **Yes**  | Human-readable name of the plugin that is shown to the user in the UI.                                                                                                                                                                                                                                                                                                                                  |
 | `type`               | string                        | **Yes**  | Plugin type. Possible values are: `app`, `datasource`, `panel`.                                                                                                                                                                                                                                                                                                                                         |
 | `$schema`            | string                        | No       | Schema definition for the plugin.json file.                                                                                                                                                                                                                                                                                                                                                             |
@@ -23,8 +23,8 @@ The plugin.json file is required for all plugins. When Grafana starts, it scans 
 | `autoEnabled`        | boolean                       | No       | Set to true for app plugins that should be enabled by default in all orgs                                                                                                                                                                                                                                                                                                                               |
 | `backend`            | boolean                       | No       | If the plugin has a backend component.                                                                                                                                                                                                                                                                                                                                                                  |
 | `category`           | string                        | No       | Plugin category used on the Add data source page. Possible values are: `tsdb`, `logging`, `cloud`, `tracing`, `sql`, `enterprise`, `other`.                                                                                                                                                                                                                                                             |
-| `enterpriseFeatures` | [object](#enterprisefeatures) | No       | Grafana Enerprise specific features.                                                                                                                                                                                                                                                                                                                                                                    |
-| `executable`         | string                        | No       | The first part of the file name of the backend component executable. There can be multiple executables built for different operating system and architecture. Grafana will check for executables named `<executable>_<$GOOS>_<lower case $GOARCH><.exe for Windows>`, e.g. `plugin_linux_amd64`. Combination of $GOOS and $GOARCH can be found here: https://golang.org/doc/install/source#environment. |
+| `enterpriseFeatures` | [object](#enterprisefeatures) | No       | Mosaicoo Enerprise specific features.                                                                                                                                                                                                                                                                                                                                                                    |
+| `executable`         | string                        | No       | The first part of the file name of the backend component executable. There can be multiple executables built for different operating system and architecture. Mosaicoo will check for executables named `<executable>_<$GOOS>_<lower case $GOARCH><.exe for Windows>`, e.g. `plugin_linux_amd64`. Combination of $GOOS and $GOARCH can be found here: https://golang.org/doc/install/source#environment. |
 | `hiddenQueries`      | boolean                       | No       | For data source plugins, include hidden queries in the data request.                                                                                                                                                                                                                                                                                                                                    |
 | `includes`           | [object](#includes)[]         | No       | Resources to include in plugin.                                                                                                                                                                                                                                                                                                                                                                         |
 | `logs`               | boolean                       | No       | For data source plugins, if the plugin supports logs.                                                                                                                                                                                                                                                                                                                                                   |
@@ -46,13 +46,13 @@ Dependencies needed by the plugin.
 
 | Property            | Type                 | Required | Description                                                                                                                   |
 | ------------------- | -------------------- | -------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| `grafanaDependency` | string               | **Yes**  | Required Grafana version for this plugin. Validated using https://github.com/npm/node-semver.                                 |
-| `grafanaVersion`    | string               | No       | (Deprecated) Required Grafana version for this plugin, e.g. `6.x.x 7.x.x` to denote plugin requires Grafana v6.x.x or v7.x.x. |
+| `grafanaDependency` | string               | **Yes**  | Required Mosaicoo version for this plugin. Validated using https://github.com/npm/node-semver.                                 |
+| `grafanaVersion`    | string               | No       | (Deprecated) Required Mosaicoo version for this plugin, e.g. `6.x.x 7.x.x` to denote plugin requires Mosaicoo v6.x.x or v7.x.x. |
 | `plugins`           | [object](#plugins)[] | No       | An array of required plugins on which this plugin depends.                                                                    |
 
 ### plugins
 
-Plugin dependency. Used to display information about plugin dependencies in the Grafana UI.
+Plugin dependency. Used to display information about plugin dependencies in the Mosaicoo UI.
 
 #### Properties
 
@@ -71,7 +71,7 @@ Grafana Enerprise specific features.
 
 | Property                  | Type    | Required | Description                                                         |
 | ------------------------- | ------- | -------- | ------------------------------------------------------------------- |
-| `healthDiagnosticsErrors` | boolean | No       | Enable/Disable health diagnostics errors. Requires Grafana >=7.5.5. |
+| `healthDiagnosticsErrors` | boolean | No       | Enable/Disable health diagnostics errors. Requires Mosaicoo >=7.5.5. |
 
 ## includes
 
@@ -91,7 +91,7 @@ Grafana Enerprise specific features.
 
 ## info
 
-Metadata for the plugin. Some fields are used on the plugins page in Grafana and others on grafana.com if the plugin is published.
+Metadata for the plugin. Some fields are used on the plugins page in Mosaicoo and others on grafana.com if the plugin is published.
 
 ### Properties
 
@@ -103,7 +103,7 @@ Metadata for the plugin. Some fields are used on the plugins page in Grafana and
 | `version`     | string                   | **Yes**  | Project version of this commit, e.g. `6.7.x`.                                                                                 |
 | `author`      | [object](#author)        | No       | Information about the plugin author.                                                                                          |
 | `build`       | [object](#build)         | No       | Build information                                                                                                             |
-| `description` | string                   | No       | Description of plugin. Used on the plugins page in Grafana and for search on grafana.com.                                     |
+| `description` | string                   | No       | Description of plugin. Used on the plugins page in Mosaicoo and for search on grafana.com.                                     |
 | `links`       | [object](#links)[]       | No       | An array of link objects to be displayed on this plugin's project page in the form `{name: 'foo', url: 'http://example.com'}` |
 | `screenshots` | [object](#screenshots)[] | No       | An array of screenshot objects in the form `{name: 'bar', path: 'img/screenshot.png'}`                                        |
 

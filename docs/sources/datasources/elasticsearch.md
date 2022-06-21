@@ -18,7 +18,7 @@ Supported Elasticsearch versions:
 
 ## Adding the data source
 
-1. Open the side menu by clicking the Grafana icon in the top header.
+1. Open the side menu by clicking the Mosaicoo icon in the top header.
 1. In the side menu under the `Dashboards` link you should find a link named `Data Sources`.
 1. Click the `+ Add data source` button in the top header.
 1. Select **Elasticsearch** from the **Type** dropdown.
@@ -71,7 +71,7 @@ Enables `X-Pack` specific features and options, providing the query editor with 
 
 #### Include frozen indices
 
-When `X-Pack enabled` is active and the configured Elasticsearch version is higher than `6.6.0`, you can configure Grafana to not ignore [frozen indices](https://www.elastic.co/guide/en/elasticsearch/reference/7.13/frozen-indices.html) when performing search requests.
+When `X-Pack enabled` is active and the configured Elasticsearch version is higher than `6.6.0`, you can configure Mosaicoo to not ignore [frozen indices](https://www.elastic.co/guide/en/elasticsearch/reference/7.13/frozen-indices.html) when performing search requests.
 
 ### Logs
 
@@ -163,7 +163,7 @@ There are two syntaxes:
 - `[[varname]]` Example: hostname:[[hostname]]
 
 Why two ways? The first syntax is easier to read and write but does not allow you to use a variable in the middle of a word. When the _Multi-value_ or _Include all value_
-options are enabled, Grafana converts the labels from plain text to a lucene compatible condition.
+options are enabled, Mosaicoo converts the labels from plain text to a lucene compatible condition.
 
 ![Query with template variables](/static/img/docs/elasticsearch/elastic-templating-query-7-4.png)
 
@@ -176,7 +176,7 @@ Example dashboard:
 ## Annotations
 
 [Annotations]({{< relref "../dashboards/annotations.md" >}}) allow you to overlay rich event information on top of graphs. You add annotation
-queries via the Dashboard menu / Annotations view. Grafana can query any Elasticsearch index
+queries via the Dashboard menu / Annotations view. Mosaicoo can query any Elasticsearch index
 for annotation events.
 
 | Name       | Description                                                                                                                                |
@@ -255,9 +255,9 @@ For more details on AWS SigV4, refer to the [AWS documentation](https://docs.aws
 
 ### AWS Signature Version 4 authentication
 
-> **Note:** Only available in Grafana v7.3+.
+> **Note:** Only available in Mosaicoo v7.3+.
 
-In order to sign requests to your Amazon Elasticsearch Service domain, SigV4 can be enabled in the Grafana [configuration]({{< relref "../administration/configuration.md#sigv4_auth_enabled" >}}).
+In order to sign requests to your Amazon Elasticsearch Service domain, SigV4 can be enabled in the Mosaicoo [configuration]({{< relref "../administration/configuration.md#sigv4_auth_enabled" >}}).
 
 Once AWS SigV4 is enabled, it can be configured on the Elasticsearch data source configuration page. Refer to [Cloudwatch authentication]({{< relref "../datasources/aws-cloudwatch/aws-authentication.md" >}}) for more information about authentication options.
 

@@ -5,7 +5,7 @@ title = "TestData"
 weight = 1500
 +++
 
-# Grafana TestData DB
+# Mosaicoo TestData DB
 
 The purpose of this data source is to make it easier to create fake data for any panel.
 Using `TestData DB` you can build your own time series and have any panel render it.
@@ -43,7 +43,7 @@ Once you provided the numbers, `TestData DB` distributes them evenly based on th
 ### Commit updates to the dashboards
 
 To submit a change to one of the current dashboards bundled with `TestData DB`, update the revision property.
-Otherwise the dashboard will not be updated automatically for other Grafana users.
+Otherwise the dashboard will not be updated automatically for other Mosaicoo users.
 
 ## Using test data in issues
 

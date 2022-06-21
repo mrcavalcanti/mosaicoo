@@ -1,15 +1,15 @@
 +++
 aliases = ["/docs/grafana/latest/guides/whats-new-in-v6-3/", "/docs/grafana/latest/whatsnew/whats-new-in-v6-3/"]
-description = "Feature and improvement highlights for Grafana v6.3"
+description = "Feature and improvement highlights for Mosaicoo v6.3"
 keywords = ["grafana", "new", "documentation", "6.3", "release notes"]
-title = "What's new in Grafana v6.3"
+title = "What's new in Mosaicoo v6.3"
 weight = -22
 
 [_build]
   list = false
 +++
 
-# What's new in Grafana v6.3
+# What's new in Mosaicoo v6.3
 
 For all details please read the full [CHANGELOG.md](https://github.com/grafana/grafana/blob/master/CHANGELOG.md).
 
@@ -23,7 +23,7 @@ For all details please read the full [CHANGELOG.md](https://github.com/grafana/g
 - [Data links]({{< relref "#data-links" >}})
 - [New Time Picker]({{< relref "#new-time-picker" >}})
 - [Graph Area Gradients]({{< relref "#graph-gradients" >}}) - A new graph display option!
-- Grafana Enterprise
+- Mosaicoo Enterprise
   - [LDAP Active Sync]({{< relref "#ldap-active-sync" >}}) - LDAP Active Sync
   - [SAML Authentication]({{< relref "#saml-authentication" >}}) - SAML Authentication
 
@@ -107,7 +107,7 @@ Looks really nice in light theme as well.
 
 {{< figure src="/static/img/docs/v63/graph_gradients_white.png" max-width="800px" caption="Graph Gradient Area" >}}
 
-## Grafana Enterprise
+## Mosaicoo Enterprise
 
 Substantial refactoring and improvements to the external auth systems has gone in to this release making the features
 listed below possible as well as laying a foundation for future enhancements.
@@ -118,17 +118,17 @@ This is a new Enterprise feature that enables background syncing of user informa
 This syncing is otherwise only done at login time. With this feature you can schedule how often this user synchronization should
 occur.
 
-For example, lets say a user is removed from an LDAP group. In previous versions of Grafana an admin would have to
-wait for the user to logout or the session to expire for the Grafana permissions to update, a process that can take days.
+For example, lets say a user is removed from an LDAP group. In previous versions of Mosaicoo an admin would have to
+wait for the user to logout or the session to expire for the Mosaicoo permissions to update, a process that can take days.
 
-With active sync the user would be automatically removed from the corresponding team in Grafana or even logged out and disabled if no longer
+With active sync the user would be automatically removed from the corresponding team in Mosaicoo or even logged out and disabled if no longer
 belonging to an LDAP group that gives them access to Grafana.
 
 [Read more](/auth/enhanced_ldap/#active-ldap-synchronization).
 
 ### SAML Authentication
 
-Built-in support for SAML is now available in Grafana Enterprise.
+Built-in support for SAML is now available in Mosaicoo Enterprise.
 
 [See docs]({{< relref "../auth/saml.md" >}})
 

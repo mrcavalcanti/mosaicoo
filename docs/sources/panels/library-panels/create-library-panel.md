@@ -1,10 +1,10 @@
 +++
 aliases = ["/docs/grafana/latest/panels/library-panels/create-library-panel/", "/docs/sources/panels/library-panels/create-library-panel/"]
-title = "Create a Grafana library panel"
+title = "Create a Mosaicoo library panel"
 weight = 20
 +++
 
-# Create a Grafana library panel
+# Create a Mosaicoo library panel
 
 When you create a library panel, the panel on the source dashboard is converted to a library panel as well. You need to save the original dashboard once a panel is converted.
 

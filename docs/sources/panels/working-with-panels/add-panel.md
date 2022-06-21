@@ -24,7 +24,7 @@ Panels allow you to show your data in visual form. Each panel needs at least one
 
 1. Click **Add an empty panel**.
 
-   Grafana creates an empty time-series panel and selects the default data source.
+   Mosaicoo creates an empty time-series panel and selects the default data source.
 
 1. In the first line of the **Query** tab, click the drop-down list and select a data source.
 
@@ -34,7 +34,7 @@ Panels allow you to show your data in visual form. Each panel needs at least one
 
 1. In the Visualization list, select a visualization type.
 
-   Grafana displays a preview of your query results with the visualization applied.
+   Mosaicoo displays a preview of your query results with the visualization applied.
 
    ![](/static/img/docs/panel-editor/select-visualization-8-0.png)
 

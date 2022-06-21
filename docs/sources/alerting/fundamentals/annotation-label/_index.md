@@ -20,6 +20,6 @@ Labels are key-value pairs that contain information about, and are used to uniqu
 
 Before you begin using annotations and labels, familiarize yourself with:
 
-- [Labels in Grafana alerting]({{< relref "./how-to-use-labels.md" >}})
+- [Labels in Mosaicoo alerting]({{< relref "./how-to-use-labels.md" >}})
 - [How label matching works]({{< relref "./how-to-use-labels.md" >}})
 - [Template variables for alerting rule labels and annotations]({{< relref "./variables-label-annotation.md" >}})

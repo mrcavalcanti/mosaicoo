@@ -72,7 +72,7 @@ The markers layer allows you to display data points as different marker shapes s
 
 - **Marker Color** configures the color of the marker. The default `Single color` keeps all points a single color. There is an alternate option to have multiple colors depending on the data point values and the threshold set at the `Thresholds` section.
 - **Marker Size** configures the size of the marker. Default is `Fixed size`, making all marker size the same regardless of the data points. However, there is also an option to scale the circles to the corresponding data points. `Min` and `Max` marker size has to be set such that the Marker layer can scale within this range.
-- **Marker Shape** allows you to choose the shape, icon, or graphic to aid in providing additional visual context to your data. Choose from assets that are included with Grafana such as simple shapes or the Unicon library. You can also specify a URL containing an image asset. The image must be a scalable vector graphic (SVG).
+- **Marker Shape** allows you to choose the shape, icon, or graphic to aid in providing additional visual context to your data. Choose from assets that are included with Mosaicoo such as simple shapes or the Unicon library. You can also specify a URL containing an image asset. The image must be a scalable vector graphic (SVG).
 - **Fill opacity** configures the transparency of each marker.
 
 ### Heatmap layer
@@ -108,7 +108,7 @@ The GeoJSON layer allows you to select and load a static GeoJSON file from the f
 
 ## Base layer
 
-The base layer loads in a blank world map from the tile server to the Grafana panel. Several base layer options are available each with specific configuration options to style the base map. The default base layer is CartoDB base map. Custom default base layers can be defined in the `.ini` configuration file.
+The base layer loads in a blank world map from the tile server to the Mosaicoo panel. Several base layer options are available each with specific configuration options to style the base map. The default base layer is CartoDB base map. Custom default base layers can be defined in the `.ini` configuration file.
 
 ![Base layer options](/static/img/docs/geomap-panel/geomap-baselayer-8-1-0.png)
 
@@ -118,7 +118,7 @@ You can configure the default base map using config files with Grafana’s provi
 
 Use the JSON configuration option `default_baselayer_config` to define the default base map. There are currently four base map options to choose from: `carto`, `esri-xyz`, `osm-standard`, `xyz`. Here are some provisioning examples for each base map option.
 
-- **carto** loads the CartoDB tile server. You can choose from `auto`, `dark`, and `light` theme for the base map and can be set as shown below. The `showLabels` tag determines whether or not Grafana shows the Country details on top of the map. Here is an example:
+- **carto** loads the CartoDB tile server. You can choose from `auto`, `dark`, and `light` theme for the base map and can be set as shown below. The `showLabels` tag determines whether or not Mosaicoo shows the Country details on top of the map. Here is an example:
 
 ```ini
 geomap_default_baselayer = `{

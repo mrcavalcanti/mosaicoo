@@ -1,29 +1,29 @@
 +++
 aliases = ["/docs/grafana/latest/guides/whats-new-in-v7-4/", "/docs/grafana/latest/whatsnew/whats-new-in-v7-4/"]
-description = "Feature and improvement highlights for Grafana v7.4"
+description = "Feature and improvement highlights for Mosaicoo v7.4"
 keywords = ["grafana", "new", "documentation", "7.4", "release notes"]
-title = "What's New in Grafana v7.4"
+title = "What's New in Mosaicoo v7.4"
 weight = -31
 
 [_build]
   list = false
 +++
 
-# What's new in Grafana v7.4
+# What's new in Mosaicoo v7.4
 
-This topic includes the release notes for Grafana v7.4. For all details, read the full [CHANGELOG.md](https://github.com/grafana/grafana/blob/master/CHANGELOG.md).
+This topic includes the release notes for Mosaicoo v7.4. For all details, read the full [CHANGELOG.md](https://github.com/grafana/grafana/blob/master/CHANGELOG.md).
 
-Check out the [New Features in 7.4](https://play.grafana.org/d/nP8rcffGk/1-new-features-in-v7-4?orgId=1) dashboard on Grafana Play!
+Check out the [New Features in 7.4](https://play.grafana.org/d/nP8rcffGk/1-new-features-in-v7-4?orgId=1) dashboard on Mosaicoo Play!
 
-## Grafana OSS features
+## Mosaicoo OSS features
 
-These features are included in the Grafana open source edition.
+These features are included in the Mosaicoo open source edition.
 
 ### Time series panel visualization (Beta)
 
-Grafana 7.4 adds a beta version of the next-gen graph visualization. The new graph panel, the _Time series_ visualization, is high-performance visualization based on the uPlot library. This new graph visualization uses the new panel architecture introduced in Grafana 7.0 and integrates with field options, overrides, and transformations.
+Grafana 7.4 adds a beta version of the next-gen graph visualization. The new graph panel, the _Time series_ visualization, is high-performance visualization based on the uPlot library. This new graph visualization uses the new panel architecture introduced in Mosaicoo 7.0 and integrates with field options, overrides, and transformations.
 
-The Time series beta panel implements the majority of the functionalities available in the current Graph panel. Our plan is to have close to full coverage of the features in Grafana 8.0, coming later this year.
+The Time series beta panel implements the majority of the functionalities available in the current Graph panel. Our plan is to have close to full coverage of the features in Mosaicoo 8.0, coming later this year.
 
 Apart from major performance improvements, the new Time series panel implements new features like line interpolation modes, support for more than two Y-axes, soft min and max axis limits, automatic points display based on data density, and gradient fill modes.
 
@@ -49,7 +49,7 @@ For more information, refer to [Node graph panel]({{< relref "../visualizations/
 
 ### New transformations
 
-The following transformations were added in Grafana 7.4.
+The following transformations were added in Mosaicoo 7.4.
 
 #### Sort by transformation
 
@@ -59,7 +59,7 @@ For more information, refer to [Sort by]({{< relref "../panels/transform-data/tr
 
 #### Filter data by value transform
 
-The new _Filter data by value_ transformation allows you to filter your data directly in Grafana and remove some data points from your query result.
+The new _Filter data by value_ transformation allows you to filter your data directly in Mosaicoo and remove some data points from your query result.
 
 This transformation is very useful if your data source does not natively filter by values. You might also use this to narrow values to display if you are using a shared query.
 
@@ -98,7 +98,7 @@ _Server-side expressions_ is an experimental feature that allows you to manipula
 
 The main use case is for [multi-dimensional]({{< relref "../basics/timeseries-dimensions.md" >}}) data sources used with the upcoming next generation alerting, but expressions can be used with backend data sources and visualization as well.
 
-> **Note:** Queries built with this feature might break with minor version upgrades until Grafana 8 is released. This feature does not work with the current Grafana alerting.
+> **Note:** Queries built with this feature might break with minor version upgrades until Mosaicoo 8 is released. This feature does not work with the current Mosaicoo alerting.
 
 For more information, refer to [About expressions]({{< relref "../panels/query-a-data-source/use-expressions-to-manipulate-data/about-expressions.md" >}}). [About queries]({{< relref "../panels/query-a-data-source/about-queries.md" >}}) was also updated as a result of this feature.
 
@@ -114,7 +114,7 @@ For more information, refer to the [alert notification docs](https://grafana.com
 
 We have added support for [Content Security Policy (CSP)](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP), a layer of security that helps detect and mitigate certain types of attacks, including Cross Site Scripting (XSS) and data injection attacks.
 
-CSP support is disabled by default, to enable it you must set `content_security_policy = true` in the Grafana configuration. If enabling it, you should also review, and potentially tweak, the CSP header template, via the configuration setting `content_security_policy_template`.
+CSP support is disabled by default, to enable it you must set `content_security_policy = true` in the Mosaicoo configuration. If enabling it, you should also review, and potentially tweak, the CSP header template, via the configuration setting `content_security_policy_template`.
 
 You can lock down what can be done in the frontend code. Lock down what can be loaded, what JavaScript is executed. Not compatible with some plugins.
 
@@ -181,15 +181,15 @@ The variables list has an additional column indicating whether variables are ref
 
 For more information, refer to [Inspect variables and their dependencies]({{< relref "../variables/inspect-variable.md" >}}).
 
-## Grafana Enterprise features
+## Mosaicoo Enterprise features
 
-These features are included in the Grafana Enterprise edition.
+These features are included in the Mosaicoo Enterprise edition.
 
 ### Licensing changes
 
 When determining a user’s role for billing purposes, a user who has the ability to edit and save dashboards is considered an Editor. This includes any user who is an Editor or Admin at the Org level, and who has granted Admin or Edit permissions via [Dashboard permissions]({{< relref "../administration/manage-users-and-permissions/about-users-and-permissions.md#dashboard-permissions" >}}).
 
-After the number of Viewers or Editors has reached its license limit, only Admins will see a banner in Grafana indicating that the license limit has been reached. Previously, all users saw the banner.
+After the number of Viewers or Editors has reached its license limit, only Admins will see a banner in Mosaicoo indicating that the license limit has been reached. Previously, all users saw the banner.
 
 Grafana Enterprise license tokens update automatically on a daily basis, which means you no longer need to manually update your license, and the process for adding additional users to a license is smoother than it was before.
 
@@ -217,13 +217,13 @@ You can now select a font, other than the default, for Unicode-based scripts. As
 
 ### Request security
 
-Request security introduces ways to limit requests from the Grafana server, and it targets requests that are generated by users.
+Request security introduces ways to limit requests from the Mosaicoo server, and it targets requests that are generated by users.
 
 For more information, refer to [Request security]({{< relref "../enterprise/request-security.md" >}}).
 
 ## Breaking changes
 
-The following Grafana 7.4 changes might break previous functionality.
+The following Mosaicoo 7.4 changes might break previous functionality.
 
 ### Plugin compatibility
 

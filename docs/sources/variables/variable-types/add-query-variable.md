@@ -10,7 +10,7 @@ Query variables allow you to write a data source query that can return a list of
 
 Query variables are generally only supported for strings. If your query return numbers or any other data type, you may need to convert them to strings in order to use them as variables. For the Azure data source, for example, you can use the [tostring](https://docs.microsoft.com/en-us/azure/data-explorer/kusto/query/tostringfunction) function for this purpose.
 
-Query expressions can contain references to other variables and in effect create linked variables. Grafana detects this and automatically refreshes a variable when one of its linked variables change.
+Query expressions can contain references to other variables and in effect create linked variables. Mosaicoo detects this and automatically refreshes a variable when one of its linked variables change.
 
 ## Query expressions
 
@@ -40,5 +40,5 @@ Query expressions are different for each data source. For more information, refe
 1. (optional) In the **Regex** field, type a regex expression to filter or capture specific parts of the names returned by your data source query. To see examples, refer to [Filter variables with regex]({{< relref "../filter-variables-with-regex.md" >}}).
 1. In the **Sort** list, select the sort order for values to be displayed in the dropdown list. The default option, **Disabled**, means that the order of options returned by your data source query will be used.
 1. (optional) Enter [Selection Options]({{< relref "../variable-selection-options.md" >}}).
-1. In **Preview of values**, Grafana displays a list of the current variable values. Review them to ensure they match what you expect.
+1. In **Preview of values**, Mosaicoo displays a list of the current variable values. Review them to ensure they match what you expect.
 1. Click **Add** to add the variable to the dashboard.

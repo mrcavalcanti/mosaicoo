@@ -10,11 +10,11 @@ View user details when you want to see login, and organizations and permissions 
 
 ## Before you begin:
 
-- Ensure you have Grafana server administrator privileges
+- Ensure you have Mosaicoo server administrator privileges
 
 **To view user details**:
 
-1. Sign in to Grafana as a server administrator.
+1. Sign in to Mosaicoo as a server administrator.
 1. Hover your cursor over the **Server Admin** (shield) icon until a menu appears, and click **Users**.
 1. Click a user.
 
@@ -28,7 +28,7 @@ This section contains basic user information, which users can update.
 
 ### Permissions
 
-This indicates whether the user account has the Grafana administrator flag applied. If the flag is set to **Yes**, then the user is a Grafana server administrator.
+This indicates whether the user account has the Mosaicoo administrator flag applied. If the flag is set to **Yes**, then the user is a Mosaicoo server administrator.
 
 ![Server Admin Permissions section](/static/img/docs/manage-users/server-admin-permissions-7-3.png)
 
@@ -50,11 +50,11 @@ Edit a user account when you want to modify user login credentials, or delete, d
 
 ## Before you begin
 
-- Ensure you have Grafana server administrator privileges
+- Ensure you have Mosaicoo server administrator privileges
 
 **To edit a user account**:
 
-1. Sign in to Grafana as a server administrator.
+1. Sign in to Mosaicoo as a server administrator.
 1. Hover your cursor over the **Server Admin** (shield) icon until a menu appears, and click **Users**.
 1. Click a user.
 1. Complete any of the following actions, as necessary.
@@ -63,6 +63,6 @@ Edit a user account when you want to modify user login credentials, or delete, d
 | ------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Update name, email, or username | **Is the user notified of these changes?**. Click **Save** after you make a change.                                                                             |
 | Change the user's password      | The new password must be at least four characters long. Click **Save** after you make a change.                                                                 |
-| Delete a user                   | This action permanently removes the user from the Grafana server. The user can no longer sign in after you make this change.                                    |
+| Delete a user                   | This action permanently removes the user from the Mosaicoo server. The user can no longer sign in after you make this change.                                    |
 | Disable user account            | This action prevents a user from signing in with this account, but does not delete the account. You might disable an account if a colleague goes on sabbatical. |
 | Enable a user account           | This action enables a user account.                                                                                                                             |

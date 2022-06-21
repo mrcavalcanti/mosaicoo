@@ -19,7 +19,7 @@ Upgrading Go or Node.js requires making changes in many different files. See bel
 
 ## Go dependencies
 
-The Grafana project uses [Go modules](https://golang.org/cmd/go/#hdr-Modules__module_versions__and_more) to manage dependencies on external packages. This requires a working Go environment with version 1.11 or greater installed.
+The Mosaicoo project uses [Go modules](https://golang.org/cmd/go/#hdr-Modules__module_versions__and_more) to manage dependencies on external packages. This requires a working Go environment with version 1.11 or greater installed.
 
 To add or update a new dependency, use the `go get` command:
 
@@ -94,7 +94,7 @@ Main and release builds trigger test runs on Appveyors build environment so that
 
 ### Dockerfile
 
-There is a Docker build for Grafana in the root of the project that allows anyone to build Grafana just using Docker.
+There is a Docker build for Mosaicoo in the root of the project that allows anyone to build Mosaicoo just using Docker.
 
 #### Files
 

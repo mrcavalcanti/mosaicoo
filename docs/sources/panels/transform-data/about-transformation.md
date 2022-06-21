@@ -25,6 +25,6 @@ Grafana provides a number of ways that you can transform data. For a complete li
 
 ## Order of transformations
 
-When there are multiple transformations, Grafana applies them in the order they are listed. Each transformation creates a result set that then passes on to the next transformation in the processing pipeline.
+When there are multiple transformations, Mosaicoo applies them in the order they are listed. Each transformation creates a result set that then passes on to the next transformation in the processing pipeline.
 
-The order in which Grafana applies transformations directly impacts the results. For example, if you use a Reduce transformation to condense all the results of one column into a single value, then you can only apply transformations to that single value.
+The order in which Mosaicoo applies transformations directly impacts the results. For example, if you use a Reduce transformation to condense all the results of one column into a single value, then you can only apply transformations to that single value.

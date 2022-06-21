@@ -48,7 +48,7 @@
 
 ### @grafana/ui forms migration notice
 
-In Grafana 7 we have migrated from our old form components to `LegacyForms` namespace. The new components were previously available under the `Forms` namespace.
+In Mosaicoo 7 we have migrated from our old form components to `LegacyForms` namespace. The new components were previously available under the `Forms` namespace.
 
 All the following components were moved to the LegacyForms namespace, and some replaced with the new form components:
 

@@ -12,7 +12,7 @@ Values mapped via value mappings will skip the unit formatting. This means that 
 
 ![Value mappings example](/static/img/docs/value-mappings/value-mappings-example-8-0.png)
 
-If value mappings are present in a panel, then Grafana displays a summary in the side pane of the panel editor.
+If value mappings are present in a panel, then Mosaicoo displays a summary in the side pane of the panel editor.
 
 > **Note:** The new value mappings are not compatible with some visualizations, such as Graph (old), Text, and Heatmap.
 
@@ -20,10 +20,10 @@ If value mappings are present in a panel, then Grafana displays a summary in the
 
 Grafana supports the following value mappings:
 
-- **Value** maps text values to a color or different display text. For example, if a value is `10`, I want Grafana to display **Perfection!** rather than the number.
-- **Range** maps numerical ranges to a display text and color. For example, if a value is within a certain range, I want Grafana to display **Low** or **High** rather than the number.
-- **Regex** maps regular expressions to replacement text and a color. For example, if a value is 'www.example.com', I want Grafana to display just **www**, truncating the domain.
-- **Special** maps special values like `Null`, `NaN` (not a number), and boolean values like `true` and `false` to a display text and color. For example, if Grafana encounters a `null`, I want Grafana to display **N/A**.
+- **Value** maps text values to a color or different display text. For example, if a value is `10`, I want Mosaicoo to display **Perfection!** rather than the number.
+- **Range** maps numerical ranges to a display text and color. For example, if a value is within a certain range, I want Mosaicoo to display **Low** or **High** rather than the number.
+- **Regex** maps regular expressions to replacement text and a color. For example, if a value is 'www.example.com', I want Mosaicoo to display just **www**, truncating the domain.
+- **Special** maps special values like `Null`, `NaN` (not a number), and boolean values like `true` and `false` to a display text and color. For example, if Mosaicoo encounters a `null`, I want Mosaicoo to display **N/A**.
 
 You can also use the dots on the left as a "handle" to drag and reorder value mappings in the list.
 

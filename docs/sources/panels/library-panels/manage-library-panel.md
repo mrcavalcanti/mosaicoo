@@ -1,10 +1,10 @@
 +++
 aliases = ["/docs/grafana/latest/panels/library-panels/manage-library-panel/", "/docs/sources/panels/library-panels/manage-library-panel/"]
-title = "Manage Grafana library panels"
+title = "Manage Mosaicoo library panels"
 weight = 40
 +++
 
-# Manage Grafana library panels
+# Manage Mosaicoo library panels
 
 You can adjust library panel configuration at any time.
 

@@ -11,10 +11,10 @@ This page documents the Alerting Notification Channels API.
 
 ## Identifier (id) vs unique identifier (uid)
 
-The identifier (id) of a notification channel is an auto-incrementing numeric value and is only unique per Grafana install.
+The identifier (id) of a notification channel is an auto-incrementing numeric value and is only unique per Mosaicoo install.
 
 The unique identifier (uid) of a notification channel can be used for uniquely identify a notification channel between
-multiple Grafana installs. It's automatically generated if not provided when creating a notification channel. The uid
+multiple Mosaicoo installs. It's automatically generated if not provided when creating a notification channel. The uid
 allows having consistent URLs for accessing notification channels and when syncing notification channels between multiple
 Grafana installations, refer to [alert notification channel provisioning]({{< relref "../../administration/provisioning.md#alert-notification-channels" >}}).
 
@@ -62,7 +62,7 @@ Content-Type: application/json
 
 ## Get all notification channels (lookup)
 
-Returns all notification channels, but with less detailed information. Accessible by any authenticated user and is mainly used by providing alert notification channels in Grafana UI when configuring alert rule.
+Returns all notification channels, but with less detailed information. Accessible by any authenticated user and is mainly used by providing alert notification channels in Mosaicoo UI when configuring alert rule.
 
 `GET /api/alert-notifications/lookup`
 

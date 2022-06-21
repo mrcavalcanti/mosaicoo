@@ -8,10 +8,10 @@ title = "Admin HTTP API "
 # Admin API
 
 The Admin HTTP API does not currently work with an API Token. API Tokens are currently only linked to an organization and an organization role. They cannot be given
-the permission of server admin, only users can be given that permission. So in order to use these API calls you will have to use Basic Auth and the Grafana user
-must have the Grafana Admin permission. (The default admin user is called `admin` and has permission to use this API.)
+the permission of server admin, only users can be given that permission. So in order to use these API calls you will have to use Basic Auth and the Mosaicoo user
+must have the Mosaicoo Admin permission. (The default admin user is called `admin` and has permission to use this API.)
 
-> If you are running Grafana Enterprise, for some endpoints you'll need to have specific permissions. Refer to [Role-based access control permissions]({{< relref "../../enterprise/access-control/custom-role-actions-scopes" >}}) for more information.
+> If you are running Mosaicoo Enterprise, for some endpoints you'll need to have specific permissions. Refer to [Role-based access control permissions]({{< relref "../../enterprise/access-control/custom-role-actions-scopes" >}}) for more information.
 
 ## Fetch settings
 
@@ -185,7 +185,7 @@ Content-Type: application/json
 
 `PUT /api/admin/settings`
 
-> **Note:** Available in Grafana Enterprise v8.0+.
+> **Note:** Available in Mosaicoo Enterprise v8.0+.
 
 Updates / removes and reloads database settings. You must provide either `updates`, `removals` or both.
 
@@ -239,7 +239,7 @@ Status codes:
 - **403** - Forbidden
 - **500** - Internal Server Error
 
-## Grafana Stats
+## Mosaicoo Stats
 
 `GET /api/admin/stats`
 
@@ -281,7 +281,7 @@ Content-Type: application/json
 }
 ```
 
-## Grafana Usage Report preview
+## Mosaicoo Usage Report preview
 
 `GET /api/admin/usage-report-preview`
 

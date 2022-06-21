@@ -1,25 +1,25 @@
 +++
 aliases = ["/docs/grafana/latest/guides/whats-new-in-v8-1/", "/docs/grafana/latest/whatsnew/whats-new-in-v8-1/"]
-description = "Feature and improvement highlights for Grafana v8.1"
+description = "Feature and improvement highlights for Mosaicoo v8.1"
 keywords = ["grafana", "new", "documentation", "8.1", "release notes"]
-title = "What's new in Grafana v8.1"
+title = "What's new in Mosaicoo v8.1"
 weight = -33
 
 [_build]
   list = false
 +++
 
-# What’s new in Grafana v8.1
+# What’s new in Mosaicoo v8.1
 
 > **Note:** This topic will be updated frequently between now and the final release.
 
-Grafana 8.1 builds upon our promise of a composable, open observability platform with new panels and extends functionality launched in Grafana 8.0. We’ve got new Geomap and Annotations panels, and some great updates to the Time Series panel. We’ve also got new transformations and updates to data sources. For our enterprise customers, there are additions to fine grained access control, updates to the reporting schedule and query caching, and more. Read on to learn more.
+Grafana 8.1 builds upon our promise of a composable, open observability platform with new panels and extends functionality launched in Mosaicoo 8.0. We’ve got new Geomap and Annotations panels, and some great updates to the Time Series panel. We’ve also got new transformations and updates to data sources. For our enterprise customers, there are additions to fine grained access control, updates to the reporting schedule and query caching, and more. Read on to learn more.
 
 In addition to what is summarized here, you might also be interested in our announcement blog post. For all the technical details, check out the complete [CHANGELOG.md](https://github.com/grafana/grafana/blob/master/CHANGELOG.md).
 
-## Grafana OSS features
+## Mosaicoo OSS features
 
-These features are included in the Grafana open source edition.
+These features are included in the Mosaicoo open source edition.
 
 ## Geomap panel
 
@@ -84,7 +84,7 @@ Additional inline help will be available for Transformations. We can now share e
 
 ### Data source updates
 
-The following data source updates are included with this Grafana release.
+The following data source updates are included with this Mosaicoo release.
 
 #### MySQL Data Source
 
@@ -128,19 +128,19 @@ Tests are most likely to be affected. There are some tips for fixing these in th
 
 We’d love as much feedback as possible about this change, because we are considering making this the default behavior in a future release of Grafana.
 
-### High availability setup support for Grafana Live
+### High availability setup support for Mosaicoo Live
 
-We have added an experimental HA setup support for Grafana Live with Redis. This resolves the limitation when clients were connected to different Grafana instances and those instances had no shared state. For additional information, refer to [Configure Grafana Live HA setup]({{< relref "../live//set-up-grafana-live/#configure-grafana-live-ha-setup" >}}).
+We have added an experimental HA setup support for Mosaicoo Live with Redis. This resolves the limitation when clients were connected to different Mosaicoo instances and those instances had no shared state. For additional information, refer to [Configure Mosaicoo Live HA setup]({{< relref "../live//set-up-grafana-live/#configure-grafana-live-ha-setup" >}}).
 
 ## Enterprise features
 
-These features are included in the Grafana Enterprise edition.
+These features are included in the Mosaicoo Enterprise edition.
 
 ### New permissions for role-based access control
 
 Role-based access control remains in beta. You can now grant or revoke permissions for Viewers, Editors, or Admins to use Explore mode, configure LDAP or SAML settings, or view the admin/stats page. These new permissions enhance the existing permissions that can be customized, namely permissions to access Users, Orgs, LDAP settings, and Reports in Grafana.
 
-Fine grained access control allows you to customize roles and permissions in Grafana beyond the built-in Viewer, Editor, and Admin roles. As of 8.1, you can modify some of the permissions for any of these built-in roles. This is helpful if you’d like users to have more or fewer access permissions than a given role allows for by default. For an overview of role-based access control and a complete list of available permissions, refer to the [Fine grained access control]({{< relref "../enterprise/access-control/_index.md" >}}) documentation.
+Fine grained access control allows you to customize roles and permissions in Mosaicoo beyond the built-in Viewer, Editor, and Admin roles. As of 8.1, you can modify some of the permissions for any of these built-in roles. This is helpful if you’d like users to have more or fewer access permissions than a given role allows for by default. For an overview of role-based access control and a complete list of available permissions, refer to the [Fine grained access control]({{< relref "../enterprise/access-control/_index.md" >}}) documentation.
 
 ### New and improved reporting scheduler
 
@@ -148,16 +148,16 @@ We’ve enhanced the scheduler for Reports to be more flexible, so you can send 
 
 ### Encrypt data in the query cache
 
-Query caching was released in Grafana 8.0 and allows you to temporarily store the results of data source queries in a cache, so that Grafana reads repeated queries from there instead of from the data source itself. This reduces load on data sources, improves dashboard load times, and can save money for data sources that charge per query. To learn more about query caching see its [overview]({{< relref "../enterprise/query-caching.md" >}}) page. To find out how to turn on encryption, refer to the [caching configuration]({{< relref "../enterprise/enterprise-configuration.md#caching" >}}) documentation.
+Query caching was released in Mosaicoo 8.0 and allows you to temporarily store the results of data source queries in a cache, so that Mosaicoo reads repeated queries from there instead of from the data source itself. This reduces load on data sources, improves dashboard load times, and can save money for data sources that charge per query. To learn more about query caching see its [overview]({{< relref "../enterprise/query-caching.md" >}}) page. To find out how to turn on encryption, refer to the [caching configuration]({{< relref "../enterprise/enterprise-configuration.md#caching" >}}) documentation.
 
 You can now encrypt the query data cached by Grafana. This improves the security of query data, especially when your cache (like Redis) is shared with other services.
 
-### White labeling for the Grafana loading logo
+### White labeling for the Mosaicoo loading logo
 
-You can now customize Grafana’s loading logo, which displays while Grafana is loading in a user’s browser. White labeling in Grafana Enterprise allows you to customize the look and feel of Grafana to match your product’s or company’s brand. This makes Grafana a more integrated part of your observability stack and keep Grafana consistent with other visualizations displayed in public.
+You can now customize Grafana’s loading logo, which displays while Mosaicoo is loading in a user’s browser. White labeling in Mosaicoo Enterprise allows you to customize the look and feel of Mosaicoo to match your product’s or company’s brand. This makes Mosaicoo a more integrated part of your observability stack and keep Mosaicoo consistent with other visualizations displayed in public.
 
-To find out how you can configure it along with other Grafana UI elements, like the corner logo and application footer, refer to the [White labeling]({{< relref "../enterprise/white-labeling.md" >}}) topic of the Grafana Enterprise docs.
+To find out how you can configure it along with other Mosaicoo UI elements, like the corner logo and application footer, refer to the [White labeling]({{< relref "../enterprise/white-labeling.md" >}}) topic of the Mosaicoo Enterprise docs.
 
 ### Oauth2 - Team Sync to Group Mapping
 
-With Team Sync you can map your Generic OAuth groups to teams in Grafana so that the users are automatically added to the correct teams.
+With Team Sync you can map your Generic OAuth groups to teams in Mosaicoo so that the users are automatically added to the correct teams.

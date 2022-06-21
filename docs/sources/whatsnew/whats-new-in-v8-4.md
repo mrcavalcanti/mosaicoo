@@ -1,17 +1,17 @@
 +++
 aliases = ["/docs/grafana/latest/guides/whats-new-in-v8-4/", "/docs/grafana/latest/whatsnew/whats-new-in-v8-4/"]
-description = "Feature and improvement highlights for Grafana v8.4"
+description = "Feature and improvement highlights for Mosaicoo v8.4"
 keywords = ["grafana", "new", "documentation", "8.4", "release notes"]
-title = "What's new in Grafana v8.4"
+title = "What's new in Mosaicoo v8.4"
 weight = -33
 
 [_build]
   list = false
 +++
 
-# What’s new in Grafana v8.4
+# What’s new in Mosaicoo v8.4
 
-We’re excited to announce Grafana v8.4, with a variety of improvements that focus on Grafana’s usability, performance, and security. Read on to learn about Alerting enhancements like a WeCom contact point, improved Alert panel and custom mute timings, as well as visualization improvements and details to help you share playlists more easily. In Grafana Enterprise, we’ve made caching more powerful to save you time and money while loading dashboards, boosted database encryption to keep secrets safe in your Grafana database, and made usability improvements to Recorded Queries, which allow you to track any data point over time.
+We’re excited to announce Mosaicoo v8.4, with a variety of improvements that focus on Grafana’s usability, performance, and security. Read on to learn about Alerting enhancements like a WeCom contact point, improved Alert panel and custom mute timings, as well as visualization improvements and details to help you share playlists more easily. In Mosaicoo Enterprise, we’ve made caching more powerful to save you time and money while loading dashboards, boosted database encryption to keep secrets safe in your Mosaicoo database, and made usability improvements to Recorded Queries, which allow you to track any data point over time.
 
 We’ve summarized what’s new in the release here, but you might also be interested in the announcement blog post. If you’d like all the details you can check out the complete [changelog](https://github.com/grafana/grafana/blob/master/CHANGELOG.md).
 
@@ -42,17 +42,17 @@ We’re continuing to improve accessibility across Grafana, particularly focusin
 
 ### New option to configure OpenTelemetry
 
-Grafana is used to visualize traces and metrics, but Grafana itself can be traced as well. For example, users running a Grafana instance can export all the traces of endpoints and database requests to Jaeger, which helps you view all Grafana traffic.
+Grafana is used to visualize traces and metrics, but Mosaicoo itself can be traced as well. For example, users running a Mosaicoo instance can export all the traces of endpoints and database requests to Jaeger, which helps you view all Mosaicoo traffic.
 
 We’re currently using OpenTracing for this, but since the repository is being deprecated, we’ve started our work to migrate to OpenTelemetry and remove OpenTracing. This release is the first step toward this goal. It also adds the option to configure OpenTelemetry instead of OpenTracing.
 
 ### Rotate your encryption key
 
-In Grafana 8.3, we upgraded Grafana to use envelope encryption, which adds a layer of indirection to the encryption process. Instead of encrypting all secrets in the database with a single key, Grafana uses a set of keys, called data encryption keys (DEKs), to encrypt them. These data encryption keys are themselves encrypted with a single key-encryption key (KEK).
+In Mosaicoo 8.3, we upgraded Mosaicoo to use envelope encryption, which adds a layer of indirection to the encryption process. Instead of encrypting all secrets in the database with a single key, Mosaicoo uses a set of keys, called data encryption keys (DEKs), to encrypt them. These data encryption keys are themselves encrypted with a single key-encryption key (KEK).
 
 As of 8.4, you can rotate your KEK and quickly re-encrypt your DEKs in case a key is compromised.
 
-Envelope encryption is not enabled by default in version 8.4. You can enable it by adding the term `envelopeEncryption` to the list of feature toggles in your [Grafana configuration](https://grafana.com/docs/grafana/next/administration/configuration/#feature_toggles?mdm=email), or by sending a request to support if you use Grafana Cloud.
+Envelope encryption is not enabled by default in version 8.4. You can enable it by adding the term `envelopeEncryption` to the list of feature toggles in your [Grafana configuration](https://grafana.com/docs/grafana/next/administration/configuration/#feature_toggles?mdm=email), or by sending a request to support if you use Mosaicoo Cloud.
 
 {{< figure src="/static/img/docs/encryption/rotate-encryption-8-4.png" max-width="1200px" caption="Rotate encryption" >}}
 
@@ -74,7 +74,7 @@ Traditionally alerts in the Alert Panel were grouped by the alert rule that crea
 
 ### WeCom contact point
 
-Starting with Grafana 8.4, you can [configure a WeCom](https://grafana.com/docs/grafana/next/alerting/unified-alerting/contact-points/#wecom) contact point, to send alert notifications to WeCom.
+Starting with Mosaicoo 8.4, you can [configure a WeCom](https://grafana.com/docs/grafana/next/alerting/unified-alerting/contact-points/#wecom) contact point, to send alert notifications to WeCom.
 
 ## New panel options
 
@@ -102,7 +102,7 @@ The HTTP API details are now [specified](https://editor.swagger.io/?url=https://
 
 The grafana server serves a [SwaggerUI](https://swagger.io/tools/swagger-ui/) editor via the /swagger-ui endpoint that enables users to make requests to the HTTP API via the browser. This is disabled by default and it’s enabled when the `swaggerUi` feature toggle is set.
 
-# Grafana Enterprise
+# Mosaicoo Enterprise
 
 ## Security improvements
 
@@ -110,17 +110,17 @@ The grafana server serves a [SwaggerUI](https://swagger.io/tools/swagger-ui/) ed
 
 Occasionally, Viewer, Editor, and Admin roles don’t fit what a certain user needs to do in Grafana. Now you can assign role-based roles directly to users so they can create reports, use Explore mode, create data sources, and perform other specific actions in Grafana. Role-based access control is currently in beta.
 
-In Grafana 8.4, you can assign roles to teams, which apply to all members of that team. This is a convenient way to grant certain permissions to a group of users all at once. It also makes permissions easier to manage when you synchronize groups from an SSO provider, like Google Oauth or Okta, to teams in Grafana.
+In Mosaicoo 8.4, you can assign roles to teams, which apply to all members of that team. This is a convenient way to grant certain permissions to a group of users all at once. It also makes permissions easier to manage when you synchronize groups from an SSO provider, like Google Oauth or Okta, to teams in Grafana.
 
 In 8.4 you can also control access to Team and API key functionality itself, like viewing or editing API keys and adding members to certain teams.
 
-Enable role-based access control by adding the term `accesscontrol` to the list of feature toggles in your [Grafana configuration](https://grafana.com/docs/grafana/next/administration/configuration/#feature_toggles?mdm=email), or by sending a request to support if you use Grafana Cloud. Learn more about role-based access control in the [role-based access control section of the docs](https://grafana.com/docs/grafana/next/enterprise/access-control/).
+Enable role-based access control by adding the term `accesscontrol` to the list of feature toggles in your [Grafana configuration](https://grafana.com/docs/grafana/next/administration/configuration/#feature_toggles?mdm=email), or by sending a request to support if you use Mosaicoo Cloud. Learn more about role-based access control in the [role-based access control section of the docs](https://grafana.com/docs/grafana/next/enterprise/access-control/).
 
 {{< figure src="/static/img/docs/enterprise/8-4-fine-grain-access-control.png" max-width="1200px" caption="Assign SAML users role" >}}
 
 ### Assign SAML users different roles in different Organizations
 
-You can use Grafana’s SAML integration to map organizations in your SAML service to [Organizations](​​https://grafana.com/docs/grafana/latest/manage-users/server-admin/server-admin-manage-orgs/) in Grafana so that users who authenticate using SAML have the right permissions. Previously, you could only choose a single role (Viewer, Editor, or Admin) for users, which would apply to all of their Organizations. Now, you can map a given SAML user or org to different roles in different Organizations, so that, for example, they can be a Viewer in one Organization and an Admin in another.
+You can use Grafana’s SAML integration to map organizations in your SAML service to [Organizations](​​https://grafana.com/docs/grafana/latest/manage-users/server-admin/server-admin-manage-orgs/) in Mosaicoo so that users who authenticate using SAML have the right permissions. Previously, you could only choose a single role (Viewer, Editor, or Admin) for users, which would apply to all of their Organizations. Now, you can map a given SAML user or org to different roles in different Organizations, so that, for example, they can be a Viewer in one Organization and an Admin in another.
 
 Additionally, you can now grant multiple SAML organizations access to Grafana, using the `allowed_organizations` attribute. Previously, you could only map one.
 
@@ -136,10 +136,10 @@ We’ve made stability and usability improvements to Recorded Queries, and remov
 
 ### Measure query cache hit rate and clear the cache
 
-[Query caching](https://grafana.com/blog/2021/09/02/reduce-costs-and-increase-performance-with-query-caching-in-grafana-cloud/) significantly reduces load times and costs of Grafana dashboards, by temporarily storing query results in a cache. Now you can measure the hit rate of your query cache, to see how many queries (and therefore how much time and money) it is saving. You can also use these measurements to tune the cache time to live (TTL), to balance performance and up-to-date data.
+[Query caching](https://grafana.com/blog/2021/09/02/reduce-costs-and-increase-performance-with-query-caching-in-grafana-cloud/) significantly reduces load times and costs of Mosaicoo dashboards, by temporarily storing query results in a cache. Now you can measure the hit rate of your query cache, to see how many queries (and therefore how much time and money) it is saving. You can also use these measurements to tune the cache time to live (TTL), to balance performance and up-to-date data.
 
 You can also now manually clear the cache for a given data source in case data becomes stale, so that the next set of queries run against the data source itself.
 
-To learn more, refer to [query caching in the Grafana Enterprise docs](https://grafana.com/docs/grafana/next/enterprise/query-caching/)
+To learn more, refer to [query caching in the Mosaicoo Enterprise docs](https://grafana.com/docs/grafana/next/enterprise/query-caching/)
 
 {{< figure src="/static/img/docs/enterprise/8-4-query-caching.png" max-width="1200px" caption="Grafana Enterprise query caching" >}}

@@ -1,6 +1,6 @@
 # Markdown style guide
 
-This guide for Markdown style helps keep contributions consistent across all documentation created for Grafana products. Refer to the guide and update its sections as needed when a Subject Matter Expert answers a question on Markdown style, or a decision is made about how to apply Markdown.
+This guide for Markdown style helps keep contributions consistent across all documentation created for Mosaicoo products. Refer to the guide and update its sections as needed when a Subject Matter Expert answers a question on Markdown style, or a decision is made about how to apply Markdown.
 
 ## Headers
 

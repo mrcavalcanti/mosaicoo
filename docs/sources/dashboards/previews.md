@@ -11,9 +11,9 @@ weight = 9
 
 Dashboard previews provide an overview of all available dashboards. They help you quickly find the right dashboard when the dashboard names aren't enough on their own.
 
-> **Note:** Dashboard previews are available in Grafana 9.0+ as an opt-in beta feature. Data source permissions are not yet taken into the account when displaying the dashboard previews - refer to the [permissions]({{< relref "#preview-visibility">}}) to learn more before enabling the feature.
+> **Note:** Dashboard previews are available in Mosaicoo 9.0+ as an opt-in beta feature. Data source permissions are not yet taken into the account when displaying the dashboard previews - refer to the [permissions]({{< relref "#preview-visibility">}}) to learn more before enabling the feature.
 
-You can view dashboard previews only when the feature is enabled for your instance. It is an opt-in feature that is, by default, disabled. You can view the previews in the Grafana UI after clicking on the _Show previews_ toggle once the administrator enables the feature following the procedure described below.
+You can view dashboard previews only when the feature is enabled for your instance. It is an opt-in feature that is, by default, disabled. You can view the previews in the Mosaicoo UI after clicking on the _Show previews_ toggle once the administrator enables the feature following the procedure described below.
 
 - [Enable dashboard previews](#enable-dashboard-previews)
 - [About the dashboard previews crawler](#about-the-dashboard-previews-crawler)
@@ -30,13 +30,13 @@ You can view dashboard previews only when the feature is enabled for your instan
 enable = dashboardPreviews
 ```
 
-3. Save your changes. Grafana should reload automatically; we recommend restarting the Grafana server in case of any issues.
+3. Save your changes. Mosaicoo should reload automatically; we recommend restarting the Mosaicoo server in case of any issues.
 
 Verify that your setup was successful in the dashboard search page. You should see dashboard preview placeholders for all your existing dashboards after clicking on the _Show previews_ toggle at the top of the page.
 
 {{< video-embed src="/static/img/docs/dashboards/previews-successful-setup.webm" max-width="950px" >}}
 
-The first crawler run should begin approximately five minutes after restarting the Grafana instance.
+The first crawler run should begin approximately five minutes after restarting the Mosaicoo instance.
 
 In case you see any warnings after clicking on the toggle, check [Grafana server logs]({{< relref "../administration/configuration.md#log" >}}) for more context. The logger used by the Previews Service is named `previews_service`.
 
@@ -65,7 +65,7 @@ Modifying a dashboard is the only way of refreshing that dashboard's preview; pr
 
 ### Rendering previews
 
-The crawler sends a render request to the Image Renderer for each dashboard in the list. The renderer is then instructed to open the dashboard in kiosk mode, take a screenshot, and scale it down to a small, 320 x 240px thumbnail. The following dashboard in Grafana Play is an example of kiosk mode: https://play.grafana.org/playlists/play/1?kiosk.
+The crawler sends a render request to the Image Renderer for each dashboard in the list. The renderer is then instructed to open the dashboard in kiosk mode, take a screenshot, and scale it down to a small, 320 x 240px thumbnail. The following dashboard in Mosaicoo Play is an example of kiosk mode: https://play.grafana.org/playlists/play/1?kiosk.
 
 Multiple render requests are issued concurrently to improve performance. The maximum number of concurrent requests can be configured via the `dashboard_previews.crawler.thread_count` config option.
 Use the new [contextPerRenderKey]({{< relref "../image-rendering/#rendering-mode" >}}) clustering mode in Image Renderer to further optimize crawler's resource usage.
@@ -80,8 +80,8 @@ The crawler saves previews and their metadata in Grafana's DB. Preview's metadat
 
 The crawler is set up with the required permissions to display all dashboards and query all data sources. The way the permissions are set up depends on the version of Grafana.
 
-In OSS and Enterprise Grafana instances without RBAC enabled, the crawler uses a special user with an `Admin` role.
-In an Enterprise Grafana instance with RBAC enabled, the crawler uses [service accounts]({{< relref "../administration/service-accounts" >}}) with three fixed roles:
+In OSS and Enterprise Mosaicoo instances without RBAC enabled, the crawler uses a special user with an `Admin` role.
+In an Enterprise Mosaicoo instance with RBAC enabled, the crawler uses [service accounts]({{< relref "../administration/service-accounts" >}}) with three fixed roles:
 
 - `fixed:dashboards:reader`
 - `fixed:datasources:reader`

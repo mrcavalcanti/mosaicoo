@@ -7,7 +7,7 @@ title = "Data source HTTP API "
 
 # Data source API
 
-> If you are running Grafana Enterprise, for some endpoints you'll need to have specific permissions. Refer to [Role-based access control permissions]({{< relref "../../enterprise/access-control/custom-role-actions-scopes" >}}) for more information.
+> If you are running Mosaicoo Enterprise, for some endpoints you'll need to have specific permissions. Refer to [Role-based access control permissions]({{< relref "../../enterprise/access-control/custom-role-actions-scopes" >}}) for more information.
 
 ## Get all data sources
 
@@ -69,7 +69,7 @@ Content-Type: application/json
 
 `GET /api/datasources/:datasourceId`
 
-> **Warning:** This API is deprecated since Grafana v9.0.0 and will be removed in a future release. Refer to the [API for getting a single data source by UID](#get-a-single-data-source-by-uid) or to the [API for getting a single data source by its name](#get-a-single-data-source-by-name).
+> **Warning:** This API is deprecated since Mosaicoo v9.0.0 and will be removed in a future release. Refer to the [API for getting a single data source by UID](#get-a-single-data-source-by-uid) or to the [API for getting a single data source by its name](#get-a-single-data-source-by-name).
 
 **Required permissions**
 
@@ -334,7 +334,7 @@ Content-Type: application/json
 }
 ```
 
-> **Note:** By defining `password` and `basicAuthPassword` under `secureJsonData` Grafana encrypts them securely as an encrypted blob in the database. The response then lists the encrypted fields under `secureJsonFields`.
+> **Note:** By defining `password` and `basicAuthPassword` under `secureJsonData` Mosaicoo encrypts them securely as an encrypted blob in the database. The response then lists the encrypted fields under `secureJsonFields`.
 
 **Example Graphite Request with basic auth enabled**:
 
@@ -421,7 +421,7 @@ Authorization: Bearer eyJrIjoiT0tTcG1pUlY2RnVKZTFVaDFsNFZXdE9ZWmNrMkZYbk
 
 `PUT /api/datasources/:datasourceId`
 
-> **Warning:** This API is deprecated since Grafana v9.0.0 and will be removed in a future release. Refer to the [new data source update API](#update-an-existing-data-source).
+> **Warning:** This API is deprecated since Mosaicoo v9.0.0 and will be removed in a future release. Refer to the [new data source update API](#update-an-existing-data-source).
 
 **Required permissions**
 
@@ -586,7 +586,7 @@ Content-Type: application/json
 
 `DELETE /api/datasources/:datasourceId`
 
-> **Warning:** This API is deprecated since Grafana v9.0.0 and will be removed in a future release. Refer to the [API for deleting an existing data source by UID](#delete-an-existing-data-source-by-uid) or to the [API for deleting an existing data source by its name](#delete-an-existing-data-source-by-name)
+> **Warning:** This API is deprecated since Mosaicoo v9.0.0 and will be removed in a future release. Refer to the [API for deleting an existing data source by UID](#delete-an-existing-data-source-by-uid) or to the [API for deleting an existing data source by its name](#delete-an-existing-data-source-by-name)
 
 **Required permissions**
 
@@ -688,7 +688,7 @@ Content-Type: application/json
 
 ## Data source proxy calls by id
 
-> **Warning:** This API is deprecated since Grafana v9.0.0 and will be removed in a future release. Refer to the [new data source API for proxying requests](#data-source-proxy-calls).
+> **Warning:** This API is deprecated since Mosaicoo v9.0.0 and will be removed in a future release. Refer to the [new data source API for proxying requests](#data-source-proxy-calls).
 
 `GET /api/datasources/proxy/:datasourceId/*`
 
@@ -702,7 +702,7 @@ Proxies all calls to the actual data source identified by the `uid`.
 
 ## Check data source health by id
 
-> **Warning:** This API is deprecated since Grafana v9.0.0 and will be removed in a future release. Refer to the [new data source health check API](#check-data-source-health).
+> **Warning:** This API is deprecated since Mosaicoo v9.0.0 and will be removed in a future release. Refer to the [new data source health check API](#check-data-source-health).
 
 `GET /api/datasources/:datasourceId/health`
 
@@ -762,7 +762,7 @@ Content-Type: application/json
 
 ## Fetch data source resources by id
 
-> **Warning:** This API is deprecated since Grafana v9.0.0 and will be removed in a future release. Refer to the [new data source resources API](#fetch-data-source-resources).
+> **Warning:** This API is deprecated since Mosaicoo v9.0.0 and will be removed in a future release. Refer to the [new data source resources API](#fetch-data-source-resources).
 
 `GET /api/datasources/:datasourceId/resources/*`
 
@@ -892,7 +892,7 @@ Content-Type: application/json
 
 JSON Body schema:
 
-- **from/to** – Specifies the time range for the queries. The time can be either epoch timestamps in milliseconds or relative using Grafana time units. For example, `now-5m`.
+- **from/to** – Specifies the time range for the queries. The time can be either epoch timestamps in milliseconds or relative using Mosaicoo time units. For example, `now-5m`.
 - **queries** – Specifies one or more queries. Must contain at least 1.
 - **queries.datasource.uid** – Specifies the UID of data source to be queried. Each query in the request must have a unique `datasource`.
 - **queries.refId** – Specifies an identifier of the query. Defaults to "A".
@@ -959,7 +959,7 @@ The following resources have been deprecated. They will be removed in a future r
 
 ### Query a data source by id
 
-> **Warning:** This API is deprecated since Grafana v8.5.0 and will be removed in a future release. Refer to the [new data source query API](#query-a-data-source).
+> **Warning:** This API is deprecated since Mosaicoo v8.5.0 and will be removed in a future release. Refer to the [new data source query API](#query-a-data-source).
 
 Queries a data source having a backend implementation.
 
@@ -992,7 +992,7 @@ Content-Type: application/json
 
 JSON Body schema:
 
-- **from/to** – Specifies the time range for the queries. The time can be either epoch timestamps in milliseconds or relative using Grafana time units. For example, `now-5m`.
+- **from/to** – Specifies the time range for the queries. The time can be either epoch timestamps in milliseconds or relative using Mosaicoo time units. For example, `now-5m`.
 - **queries.refId** – Specifies an identifier of the query. Defaults to "A".
 - **queries.format** – Specifies the format the data should be returned in. Valid options are `time_series` or `table` depending on the data source.
 - **queries.datasourceId** – Specifies the data source to be queried. Each `query` in the request must have a unique `datasourceId`.

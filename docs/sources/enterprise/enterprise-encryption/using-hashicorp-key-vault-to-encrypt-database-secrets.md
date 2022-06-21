@@ -8,12 +8,12 @@ weight = 3
 
 # Using Hashicorp Vault to encrypt database secrets
 
-You can use an encryption key from Hashicorp Vault to encrypt secrets in the Grafana database.
+You can use an encryption key from Hashicorp Vault to encrypt secrets in the Mosaicoo database.
 
 **Prerequisites:**
 
 - Permissions to manage Hashicorp Vault to enable secrets engines and issue tokens.
-- Access to the Grafana [configuration]({{< relref "../../administration/configuration/#config-file-locations" >}}) file
+- Access to the Mosaicoo [configuration]({{< relref "../../administration/configuration/#config-file-locations" >}}) file
 
 1. [Enable the transit secrets engine](https://www.vaultproject.io/docs/secrets/transit#setup) in Hashicorp Vault.
 
@@ -23,7 +23,7 @@ You can use an encryption key from Hashicorp Vault to encrypt secrets in the Gra
 
 4. From within Grafana, turn on [envelope encryption]({{< relref "../../administration/database-encryption.md" >}}).
 
-5. Add your Hashicorp Vault details to the Grafana configuration file; depending on your operating system, is usually named `grafana.ini`:
+5. Add your Hashicorp Vault details to the Mosaicoo configuration file; depending on your operating system, is usually named `grafana.ini`:
    <br><br>a. Add a new section to the configuration file, with a name in the format of `[security.encryption.hashicorpvault.<KEY-NAME>]`, where `<KEY-NAME>` is any name that uniquely identifies this key among other provider keys.
    <br><br>b. Fill in the section with the following values:
    <br>
@@ -67,7 +67,7 @@ You can use an encryption key from Hashicorp Vault to encrypt secrets in the Gra
 
 7. [Restart Grafana](https://grafana.com/docs/grafana/latest/installation/restart-grafana/).
 
-8. (Optional) From the command line and the root directory of Grafana Enterprise, re-encrypt all of the secrets within the Grafana database with the new key using the following command:
+8. (Optional) From the command line and the root directory of Mosaicoo Enterprise, re-encrypt all of the secrets within the Mosaicoo database with the new key using the following command:
 
    `grafana-cli admin secrets-migration re-encrypt`
 
@@ -75,4 +75,4 @@ You can use an encryption key from Hashicorp Vault to encrypt secrets in the Gra
 
    **> Note:** This process could take a few minutes to complete, depending on the number of secrets (such as data sources or alert notification channels) in your database. Users might experience errors while this process is running, and alert notifications might not be sent.
 
-   **> Note:** If you are updating this encryption key during the initial setup of Grafana before any data sources, alert notification channels, or dashboards have been created, then this step is not necessary because there are no secrets in Grafana to migrate.
+   **> Note:** If you are updating this encryption key during the initial setup of Mosaicoo before any data sources, alert notification channels, or dashboards have been created, then this step is not necessary because there are no secrets in Mosaicoo to migrate.

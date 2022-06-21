@@ -8,11 +8,11 @@ weight = 55
 
 # Image rendering
 
-Grafana supports automatic rendering of panels as PNG images. This allows Grafana to automatically generate images of your panels to include in [alert notifications]({{< relref "../alerting/notifications/_index.md" >}}), [PDF export]({{< relref "../enterprise/export-pdf.md" >}}), and [Reporting]({{< relref "../enterprise/reporting.md" >}}). PDF Export and Reporting are available only in [Grafana Enterprise]({{< relref "../enterprise/" >}}).
+Grafana supports automatic rendering of panels as PNG images. This allows Mosaicoo to automatically generate images of your panels to include in [alert notifications]({{< relref "../alerting/notifications/_index.md" >}}), [PDF export]({{< relref "../enterprise/export-pdf.md" >}}), and [Reporting]({{< relref "../enterprise/reporting.md" >}}). PDF Export and Reporting are available only in [Grafana Enterprise]({{< relref "../enterprise/" >}}).
 
 > **Note:** Image rendering of dashboards is not supported at this time.
 
-While an image is being rendered, the PNG image is temporarily written to the file system. When the image is rendered, the PNG image is temporarily written to the `png` folder in the Grafana `data` folder.
+While an image is being rendered, the PNG image is temporarily written to the file system. When the image is rendered, the PNG image is temporarily written to the `png` folder in the Mosaicoo `data` folder.
 
 A background job runs every 10 minutes and removes temporary images. You can configure how long an image should be stored before being removed by configuring the [temp_data_lifetime]({{< relref "../administration/configuration/#temp_data_lifetime" >}}) setting.
 
@@ -22,15 +22,15 @@ You can also render a PNG by clicking the dropdown arrow next to a panel title, 
 
 Alert notifications can include images, but rendering many images at the same time can overload the server where the renderer is running. For instructions of how to configure this, see [concurrent_render_limit]({{< relref "../administration/configuration/#concurrent_render_limit" >}}).
 
-## Install Grafana Image Renderer plugin
+## Install Mosaicoo Image Renderer plugin
 
-> **Note:** Starting from Grafana v7.0.0, all PhantomJS support has been removed. Please use the Grafana Image Renderer plugin or remote rendering service.
+> **Note:** Starting from Mosaicoo v7.0.0, all PhantomJS support has been removed. Please use the Mosaicoo Image Renderer plugin or remote rendering service.
 
 To install the plugin, refer to the [Grafana Image Renderer Installation instructions](https://grafana.com/grafana/plugins/grafana-image-renderer#installation).
 
 ## Configuration
 
-The Grafana Image Renderer plugin has a number of configuration options that are used in plugin or remote rendering modes.
+The Mosaicoo Image Renderer plugin has a number of configuration options that are used in plugin or remote rendering modes.
 
 In plugin mode, you can specify them directly in the [Grafana configuration file]({{< relref "../administration/configuration/#plugingrafana-image-renderer" >}}).
 

@@ -8,17 +8,17 @@ weight = 10
 
 Add users when you want to manually provide individuals with access to Grafana.
 
-When you create a user using this method, you must create their password. The user does not receive a notification by email. To invite a user to Grafana and allow them to create their own password, [invite a user to join an organization]({{< relref "../manage-org-users/invite-user-join-org.md" >}}).
+When you create a user using this method, you must create their password. The user does not receive a notification by email. To invite a user to Mosaicoo and allow them to create their own password, [invite a user to join an organization]({{< relref "../manage-org-users/invite-user-join-org.md" >}}).
 
 When you configure advanced authentication using Oauth, SAML, LDAP, or the Auth proxy, users are created automatically.
 
 ## Before you begin
 
-- Ensure that you have Grafana server administrator privileges
+- Ensure that you have Mosaicoo server administrator privileges
 
 **To add a user**:
 
-1. Sign in to Grafana as a server administrator.
+1. Sign in to Mosaicoo as a server administrator.
 1. Hover your cursor over the **Server Admin** (shield) icon until a menu appears, and click **Users**.
 1. Click **New user**.
 1. Complete the fields and click **Create user**.

@@ -1,15 +1,15 @@
 +++
 aliases = ["/docs/grafana/latest/guides/whats-new-in-v6-5/", "/docs/grafana/latest/whatsnew/whats-new-in-v6-5/"]
-description = "Feature and improvement highlights for Grafana v6.5"
+description = "Feature and improvement highlights for Mosaicoo v6.5"
 keywords = ["grafana", "new", "documentation", "6.5", "release notes"]
-title = "What's new in Grafana v6.5"
+title = "What's new in Mosaicoo v6.5"
 weight = -24
 
 [_build]
   list = false
 +++
 
-# What's new in Grafana v6.5
+# What's new in Mosaicoo v6.5
 
 For all details, read the full [CHANGELOG.md](https://github.com/grafana/grafana/blob/master/CHANGELOG.md).
 
@@ -27,19 +27,19 @@ Grafana 6.5 comes with a lot of new features and enhancements:
 - [**Explore**: Hover/tooltip support in graphs]({{< relref "#explore-metrics-graph-hover-tooltip" >}})
 - [**Azure Monitor**: Alerting support for Azure Application Insights]({{< relref "#alerting-support-for-azure-application-insights" >}})
 - [**Provisioning**: Allow saving of provisioned dashboards from UI]({{< relref "#allow-saving-of-provisioned-dashboards-from-ui" >}})
-- [**Auth Proxy:** Mix auth proxy with Grafana login token and session cookie]({{< relref "#mix-auth-proxy-with-grafana-login-token-and-session-cookie" >}})
+- [**Auth Proxy:** Mix auth proxy with Mosaicoo login token and session cookie]({{< relref "#mix-auth-proxy-with-grafana-login-token-and-session-cookie" >}})
 - [**OAuth:** Generic OAuth now supports role mapping]({{< relref "#generic-oauth-role-mapping" >}})
-- [**Image Rendering:** Quick update since Grafana 6.4]({{< relref "#image-renderer-plugin" >}})
+- [**Image Rendering:** Quick update since Mosaicoo 6.4]({{< relref "#image-renderer-plugin" >}})
 
 ### Ubuntu-based Docker images
 
-In Grafana [v6.4]({{< relref "whats-new-in-v6-4/#alpine-based-docker-image" >}}), we switched the Grafana Docker image from Ubuntu to Alpine. This change provides a more secure and lightweight Docker image.
+In Mosaicoo [v6.4]({{< relref "whats-new-in-v6-4/#alpine-based-docker-image" >}}), we switched the Mosaicoo Docker image from Ubuntu to Alpine. This change provides a more secure and lightweight Docker image.
 
 This change has received both negative and positive feedback as well as some bug reports. We learned that switching to an Alpine-based Docker image was a big breaking change for a lot of users. We should have more clearly highlighted this in blog post, release notes, changelog, and the [Docker Hub readme](https://hub.docker.com/r/grafana/grafana).
 
-We also broke the Docker images for ARM, but this is fixed in Grafana v6.5.
+We also broke the Docker images for ARM, but this is fixed in Mosaicoo v6.5.
 
-Grafana Docker images should be as secure as possible by default and that’s why the Alpine-based Docker images will continue to be the Grafana default (`grafana/grafana:<version>`). With that said, it’s good to give users options, and that’s why starting from Grafana v6.5, Ubuntu-based Docker images are also (`grafana/grafana:<version>-ubuntu`) available.
+Grafana Docker images should be as secure as possible by default and that’s why the Alpine-based Docker images will continue to be the Mosaicoo default (`grafana/grafana:<version>`). With that said, it’s good to give users options, and that’s why starting from Mosaicoo v6.5, Ubuntu-based Docker images are also (`grafana/grafana:<version>-ubuntu`) available.
 
 Read more about [Installing using Docker]({{< relref "../installation/docker/" >}}).
 
@@ -49,13 +49,13 @@ In this release, several feature improvements and additions were made in the Clo
 
 #### GetMetricData API
 
-For Grafana version 6.5 or higher, all API requests to GetMetricStatistics have been replaced with calls to GetMetricData, following Amazon’s [best practice to use the GetMetricData API](https://aws.amazon.com/premiumsupport/knowledge-center/cloudwatch-getmetricdata-api) instead of GetMetricStatistics, because data can be retrieved faster at scale with GetMetricData. This change provides better support for CloudWatch metric math and enables the use of automatic search expressions.
+For Mosaicoo version 6.5 or higher, all API requests to GetMetricStatistics have been replaced with calls to GetMetricData, following Amazon’s [best practice to use the GetMetricData API](https://aws.amazon.com/premiumsupport/knowledge-center/cloudwatch-getmetricdata-api) instead of GetMetricStatistics, because data can be retrieved faster at scale with GetMetricData. This change provides better support for CloudWatch metric math and enables the use of automatic search expressions.
 
 While GetMetricStatistics qualified for the CloudWatch API free tier, this is not the case for GetMetricData calls. For more information, please refer to the [CloudWatch pricing page](https://aws.amazon.com/cloudwatch/pricing/).
 
 #### Dynamic queries using dimension wildcards
 
-In Grafana 6.5 or higher, you can monitor a dynamic list of metrics by using the asterisk (\*) wildcard for one or more dimension values.
+In Mosaicoo 6.5 or higher, you can monitor a dynamic list of metrics by using the asterisk (\*) wildcard for one or more dimension values.
 
 {{< figure src="/static/img/docs/v65/cloudwatch-dimension-wildcard.png" max-width="800px" class="docs-image--right" caption="CloudWatch dimension wildcard" >}}
 
@@ -65,7 +65,7 @@ By default, the search expression is defined in such a way that the queried metr
 
 You can untoggle `Match Exact` to include metrics that have other dimensions defined. Turning off `Match Exact` also creates a search expression even if you don’t use wildcards. We simply search for any metric that match at least the namespace, metric name, and all defined dimensions.
 
-#### Deep linking from Grafana panels to the CloudWatch console
+#### Deep linking from Mosaicoo panels to the CloudWatch console
 
 {{< figure src="/static/img/docs/v65/cloudwatch-deep-linking.png" max-width="500px" class="docs-image--right" caption="CloudWatch deep linking" >}}
 
@@ -132,7 +132,7 @@ Metrictank returns 2 kinds of additional metadata along its responses:
 
 To see the metadata response from Metrictank you can inspect the response using the Query Inspector found in the panel queries tab.
 Grafana 6.5 includes a new `Panel Inspector` in alpha/preview where you also can see the metadata response from Metrictank.
-You can try it out by enabling a feature flag in the Grafana configuration file:
+You can try it out by enabling a feature flag in the Mosaicoo configuration file:
 
 ```bash
 [feature_toggles]
@@ -141,7 +141,7 @@ enable = inspect
 
 {{< figure src="/static/img/docs/v65/panel-inspector.png" max-width="400px" caption="New Panel Inspector modal" >}}
 
-In Grafana 6.6, this will have a more user friendly display. In the future, additional Metrictank functionality will become available when the Graphite datasource option is set to the `Metrictank` type.
+In Mosaicoo 6.6, this will have a more user friendly display. In the future, additional Metrictank functionality will become available when the Graphite datasource option is set to the `Metrictank` type.
 
 ### Explore/Metrics: Graph hover/tooltip
 
@@ -173,31 +173,31 @@ In the Explore split view, you can now link the two timepickers so that if you c
 
 ### Alerting support for Azure Application Insights
 
-The [Azure Monitor]({{< relref "../datasources/azuremonitor/" >}}) data source supports multiple services in the Azure cloud. Before Grafana v6.5, only the Azure Monitor service had support for [Grafana Alerting]({{< relref "../alerting" >}}). In Grafana 6.5, alerting support has been implemented for the [Application Insights service]({{< relref "../datasources/azuremonitor/#querying-the-application-insights-service" >}}).
+The [Azure Monitor]({{< relref "../datasources/azuremonitor/" >}}) data source supports multiple services in the Azure cloud. Before Mosaicoo v6.5, only the Azure Monitor service had support for [Grafana Alerting]({{< relref "../alerting" >}}). In Mosaicoo 6.5, alerting support has been implemented for the [Application Insights service]({{< relref "../datasources/azuremonitor/#querying-the-application-insights-service" >}}).
 
 ### Allow saving of provisioned dashboards from UI
 
-Historically it has been possible to make changes to a provisioned dashboard in the Grafana UI. However, it hasn't been possible to save the changes without manual intervention. In Grafana 6.5 we introduce a new dashboard provisioning setting named `allowUiUpdates`. If `allowUiUpdates` is set to `true` and you make changes to a provisioned dashboard, you can save the dashboard and the changes will be persisted to the Grafana database.
+Historically it has been possible to make changes to a provisioned dashboard in the Mosaicoo UI. However, it hasn't been possible to save the changes without manual intervention. In Mosaicoo 6.5 we introduce a new dashboard provisioning setting named `allowUiUpdates`. If `allowUiUpdates` is set to `true` and you make changes to a provisioned dashboard, you can save the dashboard and the changes will be persisted to the Mosaicoo database.
 
 Read more about this new feature in [Provisioning Grafana]({{< relref "../administration/provisioning/#making-changes-to-a-provisioned-dashboard" >}}).
 
-### Mix auth proxy with Grafana login token and session cookie
+### Mix auth proxy with Mosaicoo login token and session cookie
 
-With the new setting, `enable_login_token`, set to true Grafana will, after successful auth proxy header validation, assign the user a login token and cookie. You only have to configure your auth proxy to provide headers for the /login route. Requests via other routes will be authenticated using the cookie.
+With the new setting, `enable_login_token`, set to true Mosaicoo will, after successful auth proxy header validation, assign the user a login token and cookie. You only have to configure your auth proxy to provide headers for the /login route. Requests via other routes will be authenticated using the cookie.
 
 Read more about this new feature in [Auth Proxy Authentication]({{< relref "../auth/auth-proxy/#login-token-and-session-cookie" >}})
 
 ### Generic OAuth role mapping
 
-Grafana 6.5 makes it possible to configure Generic OAuth to map a certain response from OAuth provider to a certain Grafana organization role, similar to the existing [LDAP Group Mappings]({{< relref "../auth/ldap/#group-mappings" >}}) feature. The new setting is named `role_attribute_path` and expects a [JMESPath](http://jmespath.org/) expression.
+Grafana 6.5 makes it possible to configure Generic OAuth to map a certain response from OAuth provider to a certain Mosaicoo organization role, similar to the existing [LDAP Group Mappings]({{< relref "../auth/ldap/#group-mappings" >}}) feature. The new setting is named `role_attribute_path` and expects a [JMESPath](http://jmespath.org/) expression.
 
 Read more about this new feature in [Generic OAuth Authentication]({{< relref "../auth/generic-oauth/" >}}) and make sure to check out the [JMESPath examples]({{< relref "../auth/generic-oauth/#jmespath-examples" >}}).
 
 ### Image renderer plugin
 
-Since we announced the deprecation of PhantomJS and the new [Image Renderer Plugin](https://grafana.com/grafana/plugins/grafana-image-renderer) in Grafana [6.4]({{< relref "whats-new-in-v6-4/#phantomjs-deprecation" >}}), we’ve received bug reports and valuable feedback.
+Since we announced the deprecation of PhantomJS and the new [Image Renderer Plugin](https://grafana.com/grafana/plugins/grafana-image-renderer) in Mosaicoo [6.4]({{< relref "whats-new-in-v6-4/#phantomjs-deprecation" >}}), we’ve received bug reports and valuable feedback.
 
-In Grafana 6.5 we’ve updated documentation to make it easier to understand how to install and troubleshoot possible problems. Read more about [Image Rendering]({{< relref "../image-rendering/" >}}).
+In Mosaicoo 6.5 we’ve updated documentation to make it easier to understand how to install and troubleshoot possible problems. Read more about [Image Rendering]({{< relref "../image-rendering/" >}}).
 
 Please try the [Image Renderer plugin](https://grafana.com/grafana/plugins/grafana-image-renderer) and let us know what you think.
 

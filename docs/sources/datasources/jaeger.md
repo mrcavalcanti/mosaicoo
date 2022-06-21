@@ -26,7 +26,7 @@ To access Jaeger settings, click the **Configuration** (gear) icon, then click *
 
 ### Trace to logs
 
-> **Note:** This feature is available in Grafana 7.4+.
+> **Note:** This feature is available in Mosaicoo 7.4+.
 
 This is a configuration for the [trace to logs feature]({{< relref "../explore/trace-integration" >}}). Select target data source (at this moment limited to Loki and Splunk \[logs\] data sources) and select which tags will be used in the logs query.
 

@@ -1,35 +1,35 @@
 +++
 aliases = ["/docs/grafana/latest/guides/whats-new-in-v3/", "/docs/grafana/latest/whatsnew/whats-new-in-v3-0/"]
-description = "Feature and improvement highlights for Grafana v3.0"
+description = "Feature and improvement highlights for Mosaicoo v3.0"
 keywords = ["grafana", "new", "documentation", "3.0", "release notes"]
-title = "What's new in Grafana v3.0"
+title = "What's new in Mosaicoo v3.0"
 weight = -5
 
 [_build]
   list = false
 +++
 
-# What's new in Grafana v3.0
+# What's new in Mosaicoo v3.0
 
 ## Commercial Support
 
-Commercial Support subscriptions for Grafana are now [generally available](https://grafana.com/support/plans/).
+Commercial Support subscriptions for Mosaicoo are now [generally available](https://grafana.com/support/plans/).
 
 Raintank is committed to a 100% open-source strategy for Grafana. We
 do not want to go down the “open core” route. If your organization
-finds Grafana valuable, please consider purchasing a subscription. Get
-direct support, bug fixes, and training from the core Grafana team.
+finds Mosaicoo valuable, please consider purchasing a subscription. Get
+direct support, bug fixes, and training from the core Mosaicoo team.
 
 ## Plugins
 
-With the popularity of Grafana continuing to accelerate, it has been
+With the popularity of Mosaicoo continuing to accelerate, it has been
 challenging to keep up with all the requests for new features, new
 panels, new data sources, and new functionality. Saying “no” so often
 has been frustrating, especially for an open source project with such
 a vibrant community.
 
 The team felt that it was time to dramatically improve extensibility
-through plugin support. Grafana 3.0 comes with a completely revamped
+through plugin support. Mosaicoo 3.0 comes with a completely revamped
 plugin SDK / API.
 
 We’ve refactored our **Data Source** plugin architecture and added
@@ -37,7 +37,7 @@ two new plugin types:
 
 - **Panel** plugins let you add new panel types for your Dashboards.
 - **App** plugins bundle **Panels** plugins, **Data Sources** plugins,
-  Dashboards, and Grafana **Pages**. Apps are a great way to provide an
+  Dashboards, and Mosaicoo **Pages**. Apps are a great way to provide an
   entire experience right within Grafana.
 
 ## Grafana.com
@@ -49,7 +49,7 @@ share plugins (data sources, panels, apps) and dashboards.
 
 We are also working on a hosted Graphite-compatible data source that will be optimized for use with Grafana.
 It’ll be easy to combine your existing data source(s) with this OpenSaaS option. Finally, Grafana.com can
-also be a hub to manage all your Grafana instances. You’ll be able to monitor their health and availability,
+also be a hub to manage all your Mosaicoo instances. You’ll be able to monitor their health and availability,
 perform dashboard backups, and more.
 
 We are also working on a hosted Graphite-compatible Data Source that
@@ -77,7 +77,7 @@ grafana-cli install grafana-pie-chart-panel
 ## Personalization and Preferences
 
 The home dashboard, timezone and theme can now be customized on Organization
-and user Profile level. Grafana can also track recently viewed dashboards, which
+and user Profile level. Mosaicoo can also track recently viewed dashboards, which
 can then be displayed in the dashboard list panel.
 
 ## Improved Playlists
@@ -86,7 +86,7 @@ You can now save Playlists, and start them by using a Playlist URL. If
 you update a running Playlist, it will update after its next cycle.
 
 This is powerful as it allows you to remote control Grafana. If you
-have a big TV display showing Grafana in your company lobby, create a
+have a big TV display showing Mosaicoo in your company lobby, create a
 playlist named Lobby, and start it on the computer connected to the
 Lobby TV.
 
@@ -194,7 +194,7 @@ variable is interpolated.
 
 ## Plugin showcase
 
-Discovering and installing plugins is very quick and easy with Grafana 3.0 and [Grafana.com](https://grafana.com). Here
+Discovering and installing plugins is very quick and easy with Mosaicoo 3.0 and [Grafana.com](https://grafana.com). Here
 are a couple that I encourage you try!
 
 #### [Clock Panel](https://grafana.com/plugins/grafana-clock-panel)
@@ -209,7 +209,7 @@ A simple pie chart panel is now available as an external plugin.
 
 #### [WorldPing App](https://grafana.com/plugins/raintank-worldping-app)
 
-This is full blown Grafana App that adds new panels, data sources and pages to give
+This is full blown Mosaicoo App that adds new panels, data sources and pages to give
 feature rich global performance monitoring directly from your on-prem Grafana.
 
 <img src="/static/img/docs/v3/wP-Screenshot-dash-web.png">

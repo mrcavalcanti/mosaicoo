@@ -7,13 +7,13 @@ title = "Folder HTTP API "
 
 # Folder API
 
-> If you are running Grafana Enterprise, for some endpoints you'll need to have specific permissions. Refer to [Role-based access control permissions]({{< relref "../../enterprise/access-control/custom-role-actions-scopes" >}}) for more information.
+> If you are running Mosaicoo Enterprise, for some endpoints you'll need to have specific permissions. Refer to [Role-based access control permissions]({{< relref "../../enterprise/access-control/custom-role-actions-scopes" >}}) for more information.
 
 ## Identifier (id) vs unique identifier (uid)
 
-The identifier (id) of a folder is an auto-incrementing numeric value and is only unique per Grafana install.
+The identifier (id) of a folder is an auto-incrementing numeric value and is only unique per Mosaicoo install.
 
-The unique identifier (uid) of a folder can be used for uniquely identify folders between multiple Grafana installs. It's automatically generated if not provided when creating a folder. The uid allows having consistent URLs for accessing folders and when syncing folders between multiple Grafana installs. This means that changing the title of a folder will not break any bookmarked links to that folder.
+The unique identifier (uid) of a folder can be used for uniquely identify folders between multiple Mosaicoo installs. It's automatically generated if not provided when creating a folder. The uid allows having consistent URLs for accessing folders and when syncing folders between multiple Mosaicoo installs. This means that changing the title of a folder will not break any bookmarked links to that folder.
 
 The uid can have a maximum length of 40 characters.
 
@@ -273,7 +273,7 @@ Content-Length: 97
 
 Deletes an existing folder identified by UID along with all dashboards (and their alerts) stored in the folder. This operation cannot be reverted.
 
-If [Grafana alerting]({{< relref "../../alerting/_index.md" >}}) is enabled, you can set an optional query parameter `forceDeleteRules=false` so that requests will fail with 400 (Bad Request) error if the folder contains any Grafana alerts. However, if this parameter is set to `true` then it will delete any Grafana alerts under this folder.
+If [Grafana alerting]({{< relref "../../alerting/_index.md" >}}) is enabled, you can set an optional query parameter `forceDeleteRules=false` so that requests will fail with 400 (Bad Request) error if the folder contains any Mosaicoo alerts. However, if this parameter is set to `true` then it will delete any Mosaicoo alerts under this folder.
 
 **Required permissions**
 

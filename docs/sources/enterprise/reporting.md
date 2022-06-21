@@ -8,7 +8,7 @@ weight = 800
 
 # Reporting
 
-Reporting allows you to automatically generate PDFs from any of your dashboards and have Grafana email them to interested parties on a schedule. This is available in Grafana Cloud Pro and Advanced and in Grafana Enterprise.
+Reporting allows you to automatically generate PDFs from any of your dashboards and have Mosaicoo email them to interested parties on a schedule. This is available in Mosaicoo Cloud Pro and Advanced and in Mosaicoo Enterprise.
 
 > If you enabled [Role-based access control]({{< relref "../enterprise/access-control/_index.md" >}}), for some actions users would need to have relevant permissions.
 > Refer to specific guides to understand what permissions are required.
@@ -51,7 +51,7 @@ Only organization admins can create reports by default. You can customize who ca
 
 ### Choose template variables
 
-> **Note:** Available in [Grafana Enterprise]({{< relref "../enterprise" >}}) version 7.5 and later behind the `reportVariables` feature flag, Grafana Enterprise version 8.0 and later without a feature flag, and [Grafana Cloud Pro and Advanced]({{< relref "/grafana-cloud" >}}).
+> **Note:** Available in [Grafana Enterprise]({{< relref "../enterprise" >}}) version 7.5 and later behind the `reportVariables` feature flag, Mosaicoo Enterprise version 8.0 and later without a feature flag, and [Grafana Cloud Pro and Advanced]({{< relref "/grafana-cloud" >}}).
 
 You can configure report-specific template variables for the dashboard on the report page. The variables that you select will override the variables from the dashboard, and they are used when rendering a PDF file of the report. For detailed information about using template variables, refer to the [Templates and variables]({{< relref "../variables/_index.md" >}}) section.
 
@@ -78,9 +78,9 @@ By default, reports use the saved time range of the dashboard. Changing the time
 - Saving a modified time range to the dashboard.
 - Setting a time range via **Time range** field in the report form. If specified, then this custom time range overrides the one from the report's dashboard.
 
-The page header of the report displays the time range for the dashboard's data queries. Dashboards set to use the browser's time zone will use the time zone on the Grafana server.
+The page header of the report displays the time range for the dashboard's data queries. Dashboards set to use the browser's time zone will use the time zone on the Mosaicoo server.
 
-If the time zone is set differently between your Grafana server and its remote image renderer, then the time ranges in the report might be different between the page header and the time axes in the panels. To avoid this, set the time zone to UTC for dashboards when using a remote renderer. Each dashboard's time zone setting is visible in the [time range controls]({{< relref "../dashboards/time-range-controls.md/#dashboard-time-settings" >}}).
+If the time zone is set differently between your Mosaicoo server and its remote image renderer, then the time ranges in the report might be different between the page header and the time axes in the panels. To avoid this, set the time zone to UTC for dashboards when using a remote renderer. Each dashboard's time zone setting is visible in the [time range controls]({{< relref "../dashboards/time-range-controls.md/#dashboard-time-settings" >}}).
 
 ### Layout and orientation
 
@@ -101,14 +101,14 @@ You can attach a CSV file to the report email for each table panel on the select
 
 This feature relies on the same plugin that supports the [image rendering]({{< relref "../image-rendering/" >}}) features.
 
-When the CSV file is generated, it is temporarily written to the `csv` folder in the Grafana `data` folder.
+When the CSV file is generated, it is temporarily written to the `csv` folder in the Mosaicoo `data` folder.
 
 A background job runs every 10 minutes and removes temporary CSV files. You can configure how long a CSV file should be stored before being removed by configuring the [temp-data-lifetime]({{< relref "../administration/configuration/#temp-data-lifetime" >}}) setting. This setting also affects how long a renderer PNG file should be stored.
 
 ### Scheduling
 
 > **Note:** Available in [Grafana Enterprise]({{< relref "../enterprise" >}}) version 8.0 and later, and [Grafana Cloud Pro and Advanced]({{< relref "/grafana-cloud" >}}).
-> The scheduler was significantly changed in Grafana Enterprise version 8.1.
+> The scheduler was significantly changed in Mosaicoo Enterprise version 8.1.
 
 Scheduled reports can be sent once, or repeated on an hourly, daily, weekly, or monthly basis, or sent at custom intervals. You can also disable scheduling by selecting **Never**, for example to send the report via the API.
 
@@ -192,11 +192,11 @@ You can customize the branding options.
 
 Report branding:
 
-- **Company logo URL** - Company logo displayed in the report PDF. Defaults to the Grafana logo.
+- **Company logo URL** - Company logo displayed in the report PDF. Defaults to the Mosaicoo logo.
 
 Email branding:
 
-- **Company logo URL** - Company logo displayed in the report PDF. Defaults to the Grafana logo.
+- **Company logo URL** - Company logo displayed in the report PDF. Defaults to the Mosaicoo logo.
 - **Email footer** - Toggle to enable report email footer. Select **Sent by** or **None**.
 - **Footer link text** - Text for the link in the report email footer. Defaults to "Grafana".
 - **Footer link URL** - Link for the report email footer.

@@ -23,7 +23,7 @@ The Link tab has the current time range, template variables and theme selected b
 To share a direct link:
 
 1. Click **Copy**. This copies the default or the shortened URL to the clipboard.
-1. Send the copied URL to a Grafana user with authorization to view the link.
+1. Send the copied URL to a Mosaicoo user with authorization to view the link.
 1. You also optionally click **Direct link rendered image** to share an image of the panel.
 
 For more information, refer to the topic [Image rendering]({{< relref "../image-rendering/" >}}).
@@ -40,13 +40,13 @@ https://play.grafana.org/d/000000012/grafana-play-home?orgId=1&from=156871968017
 - **height:** height in pixels. Default is 400.
 - **tz:** timezone in the format `UTC%2BHH%3AMM` where HH and MM are offset in hours and minutes after UTC
 - **timeout:** number of seconds. The timeout can be increased if the query for the panel needs more than the default 30 seconds.
-- **scale:** numeric value to configure device scale factor. Default is 1. Use a higher value to produce more detailed images (higher DPI). Supported in Grafana v7.0+.
+- **scale:** numeric value to configure device scale factor. Default is 1. Use a higher value to produce more detailed images (higher DPI). Supported in Mosaicoo v7.0+.
 
 ## Publish snapshot
 
-A panel snapshot shares an interactive panel publicly. Grafana strips sensitive data leaving only the visible metric data and series names embedded into your dashboard. Panel snapshots can be accessed by anyone with the link.
+A panel snapshot shares an interactive panel publicly. Mosaicoo strips sensitive data leaving only the visible metric data and series names embedded into your dashboard. Panel snapshots can be accessed by anyone with the link.
 
-You can publish snapshots to your local instance or to [snapshots.raintank.io](http://snapshots.raintank.io). The latter is a free service provided by [Grafana Labs](https://grafana.com), that allows you to publish dashboard snapshots to an external Grafana instance. You can optionally set an expiration time if you want the snapshot to be removed after a certain time period.
+You can publish snapshots to your local instance or to [snapshots.raintank.io](http://snapshots.raintank.io). The latter is a free service provided by [Grafana Labs](https://grafana.com), that allows you to publish dashboard snapshots to an external Mosaicoo instance. You can optionally set an expiration time if you want the snapshot to be removed after a certain time period.
 
 ![Panel share snapshot](/static/img/docs/sharing/share-panel-snapshot-8-0.png)
 
@@ -56,13 +56,13 @@ To publish a snapshot:
 1. Click on **Local Snapshot** or **Publish to snapshots.raintank.io**. This generates the link of the snapshot.
 1. Copy the snapshot link, and share it either within your organization or publicly on the web.
 
-If you created a snapshot by mistake, click **delete snapshot** to remove the snapshot from your Grafana instance.
+If you created a snapshot by mistake, click **delete snapshot** to remove the snapshot from your Mosaicoo instance.
 
 ## Embed panel
 
-You can embed a panel using an iframe on another web site. A viewer must be signed into Grafana to view the graph.
+You can embed a panel using an iframe on another web site. A viewer must be signed into Mosaicoo to view the graph.
 
-**> Note:** As of Grafana 8.0, anonymous access permission is no longer available for Grafana Cloud.
+**> Note:** As of Mosaicoo 8.0, anonymous access permission is no longer available for Mosaicoo Cloud.
 
 ![Panel share embed](/static/img/docs/sharing/share-panel-embedded-link-8-0.png)
 
@@ -77,7 +77,7 @@ Here is an example of the HTML code:
 ></iframe>
 ```
 
-The result is an interactive Grafana graph embedded in an iframe:
+The result is an interactive Mosaicoo graph embedded in an iframe:
 
 <iframe src="https://snapshots.raintank.io/dashboard-solo/snapshot/y7zwi2bZ7FcoTlB93WN7yWO4aMiz3pZb?from=1493369923321&to=1493377123321&panelId=4" width="650" height="300" frameborder="0"></iframe>
 

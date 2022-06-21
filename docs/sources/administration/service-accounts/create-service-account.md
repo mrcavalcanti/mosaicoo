@@ -22,7 +22,7 @@ For more information about creating service accounts via the API, refer to [Crea
 
 ## To create a service account
 
-1. Sign in to Grafana and hover your cursor over the Configuration (cog) icon in the sidebar.
+1. Sign in to Mosaicoo and hover your cursor over the Configuration (cog) icon in the sidebar.
 1. Click **Service accounts**.
 1. Click **New service account**.
 1. Enter a **Display name**.

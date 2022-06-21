@@ -7,7 +7,7 @@ title = "Service account HTTP API "
 
 # Service account API
 
-> If you are running Grafana Enterprise, for some endpoints you'll need to have specific permissions. Refer to [Role-based access control permissions]({{< relref "../../enterprise/access-control/custom-role-actions-scopes" >}}) for more information.
+> If you are running Mosaicoo Enterprise, for some endpoints you'll need to have specific permissions. Refer to [Role-based access control permissions]({{< relref "../../enterprise/access-control/custom-role-actions-scopes" >}}) for more information.
 
 ## Search service accounts with Paging
 
@@ -102,7 +102,7 @@ Authorization: Basic YWRtaW46YWRtaW4=
 }
 ```
 
-Requires basic authentication and that the authenticated user is a Grafana Admin.
+Requires basic authentication and that the authenticated user is a Mosaicoo Admin.
 
 **Example Response**:
 
@@ -145,7 +145,7 @@ Content-Type: application/json
 Authorization: Basic YWRtaW46YWRtaW4=
 ```
 
-Requires basic authentication and that the authenticated user is a Grafana Admin.
+Requires basic authentication and that the authenticated user is a Mosaicoo Admin.
 
 **Example Response**:
 
@@ -193,7 +193,7 @@ Authorization: Basic YWRtaW46YWRtaW4=
 }
 ```
 
-Requires basic authentication and that the authenticated user is a Grafana Admin.
+Requires basic authentication and that the authenticated user is a Mosaicoo Admin.
 
 **Example Response**:
 
@@ -240,7 +240,7 @@ Content-Type: application/json
 Authorization: Basic YWRtaW46YWRtaW4=
 ```
 
-Requires basic authentication and that the authenticated user is a Grafana Admin.
+Requires basic authentication and that the authenticated user is a Mosaicoo Admin.
 
 **Example Response**:
 
@@ -287,7 +287,7 @@ Authorization: Basic YWRtaW46YWRtaW4=
 }
 ```
 
-Requires basic authentication and that the authenticated user is a Grafana Admin.
+Requires basic authentication and that the authenticated user is a Mosaicoo Admin.
 
 **Example Response**:
 
@@ -323,7 +323,7 @@ Content-Type: application/json
 Authorization: Basic YWRtaW46YWRtaW4=
 ```
 
-Requires basic authentication and that the authenticated user is a Grafana Admin.
+Requires basic authentication and that the authenticated user is a Mosaicoo Admin.
 
 **Example Response**:
 

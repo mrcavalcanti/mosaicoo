@@ -1,12 +1,12 @@
 +++
 aliases = ["/docs/grafana/latest/panels/working-with-panels/navigate-panel-editor/", "/docs/sources/panels/working-with-panels/navigate-panel-editor/"]
-title = "Navigate the Grafana panel editor"
+title = "Navigate the Mosaicoo panel editor"
 weight = 10
 +++
 
-# Navigate the Grafana panel editor
+# Navigate the Mosaicoo panel editor
 
-This page describes the parts of the Grafana panel editor.
+This page describes the parts of the Mosaicoo panel editor.
 
 1. Panel header: The header section lists the dashboard in which the panel appears and the following controls:
 
@@ -27,7 +27,7 @@ This page describes the parts of the Grafana panel editor.
    - **Query tab -** Select your data source and enter queries here. For more information, refer to [Add a query]({{< relref "../query-a-data-source/add-a-query.md" >}}).
 
    - **Transform tab -** Apply data transformations. For more information, refer to [Transform data]({{< relref "../transform-data/_index.md" >}}).
-   - **Alert tab -** Write alert rules. For more information, refer to [Overview of Grafana 8 alerting]({{< relref "../../alerting/_index.md" >}}).
+   - **Alert tab -** Write alert rules. For more information, refer to [Overview of Mosaicoo 8 alerting]({{< relref "../../alerting/_index.md" >}}).
 
 4. Panel display options: The display options section contains tabs where you configure almost every aspect of your data visualization, including:
 

@@ -23,7 +23,7 @@ http://<my_grafana_server_name_or_ip>:<grafana_server_port>/grafana/login/github
 This callback URL must match the full HTTP address that you use in your
 browser to access Grafana, but with the suffix path of `/login/github`.
 When the GitHub OAuth application is created you will get a Client ID and a
-Client Secret. Specify these in the Grafana configuration file. For
+Client Secret. Specify these in the Mosaicoo configuration file. For
 example:
 
 ## Enable GitHub in Grafana
@@ -43,9 +43,9 @@ allowed_organizations =
 ```
 
 You may have to set the `root_url` option of `[server]` for the callback URL to be
-correct. For example in case you are serving Grafana behind a proxy.
+correct. For example in case you are serving Mosaicoo behind a proxy.
 
-Restart the Grafana back-end. You should now see a GitHub login button
+Restart the Mosaicoo back-end. You should now see a GitHub login button
 on the login page. You can now login or sign up with your GitHub
 accounts.
 
@@ -79,7 +79,7 @@ allow_sign_up = true
 Require an active organization membership for at least one of the given
 organizations on GitHub. If the authenticated user isn't a member of at least
 one of the organizations they will not be able to register or authenticate with
-your Grafana instance. For example
+your Mosaicoo instance. For example
 
 ```bash
 [auth.github]
@@ -97,9 +97,9 @@ allowed_organizations = github google
 
 ### Team Sync (Enterprise only)
 
-> Only available in Grafana Enterprise v6.3+
+> Only available in Mosaicoo Enterprise v6.3+
 
-With Team Sync you can map your GitHub org teams to teams in Grafana so that your users will automatically be added to
+With Team Sync you can map your GitHub org teams to teams in Mosaicoo so that your users will automatically be added to
 the correct teams.
 
 Your GitHub teams can be referenced in two ways:

@@ -12,17 +12,17 @@ In [Introduction to time series]({{< relref "timeseries.md#time-series-databases
 
 > Another feature of a TSDB is the ability to filter measurements using _tags_. Each data point is labeled with a tag that adds context information, such as where the measurement was taken.
 
-With time series data, the data often contain more than a single series, and is a set of multiple time series. Many Grafana data sources support this type of data.
+With time series data, the data often contain more than a single series, and is a set of multiple time series. Many Mosaicoo data sources support this type of data.
 
 {{< figure src="/static/img/docs/example_graph_multi_dim.png" class="docs-image--no-shadow" max-width="850px" >}}
 
 The common case is issuing a single query for a measurement with one or more additional properties as dimensions. For example, querying a temperature measurement along with a location property. In this case, multiple series are returned back from that single query and each series has unique location as a dimension.
 
-To identify unique series within a set of time series, Grafana stores dimensions in _labels_.
+To identify unique series within a set of time series, Mosaicoo stores dimensions in _labels_.
 
 ## Labels
 
-Each time series in Grafana optionally has labels. Labels are a set of key/value pairs for identifying dimensions. Example labels could be `{location=us}` or `{country=us,state=ma,city=boston}`. Within a set of time series, the combination of its name and labels identifies each series. For example, `temperature {country=us,state=ma,city=boston}` could identify the series of temperature values for the city of Boston in the US.
+Each time series in Mosaicoo optionally has labels. Labels are a set of key/value pairs for identifying dimensions. Example labels could be `{location=us}` or `{country=us,state=ma,city=boston}`. Within a set of time series, the combination of its name and labels identifies each series. For example, `temperature {country=us,state=ma,city=boston}` could identify the series of temperature values for the city of Boston in the US.
 
 Different sources of time series data have dimensions stored natively, or common storage patterns that allow the data to be extracted into dimensions.
 

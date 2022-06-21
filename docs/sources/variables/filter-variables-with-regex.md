@@ -78,7 +78,7 @@ demo.robustperception.io:9100
 
 ## Filter and modify using named text and value capture groups
 
-> **Note:** This feature is available in Grafana 7.4+.
+> **Note:** This feature is available in Mosaicoo 7.4+.
 
 Using named capture groups, you can capture separate 'text' and 'value' parts from the options returned by the variable query. This allows the variable drop-down list to contain a friendly name for each value that can be selected.
 

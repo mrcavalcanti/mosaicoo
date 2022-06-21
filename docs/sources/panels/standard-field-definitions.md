@@ -8,7 +8,7 @@ weight = 1200
 
 This section explains all available standard options. They are listed in alphabetical order.
 
-You can apply standard options to most built-in Grafana panels. Some older panels and community panels that have not updated to the new panel and data model will be missing either all or some of these field options.
+You can apply standard options to most built-in Mosaicoo panels. Some older panels and community panels that have not updated to the new panel and data model will be missing either all or some of these field options.
 
 Most field options will not affect the visualization until you click outside of the field option box you are editing or press Enter.
 
@@ -16,7 +16,7 @@ Most field options will not affect the visualization until you click outside of 
 
 ## Decimals
 
-Number of decimals to render value with. Leave empty for Grafana to use the number of decimals provided by the data source.
+Number of decimals to render value with. Leave empty for Mosaicoo to use the number of decimals provided by the data source.
 
 To change this setting, type a number in the field and then click outside the field or press Enter.
 
@@ -36,7 +36,7 @@ Given a field with a name of Temp, and labels of {"Loc"="PBI", "Sensor"="3"}
 
 | Expression syntax            | Example                 | Renders to                     | Explanation                                                                                                                                                                                                        |
 | ---------------------------- | ----------------------- | ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `${__field.displayName}`     | Same as syntax          | `Temp {Loc="PBI", Sensor="3"}` | Displays the field name, and labels in `{}` if they are present. If there is only one label key in the response, then for the label portion, Grafana displays the value of the label without the enclosing braces. |
+| `${__field.displayName}`     | Same as syntax          | `Temp {Loc="PBI", Sensor="3"}` | Displays the field name, and labels in `{}` if they are present. If there is only one label key in the response, then for the label portion, Mosaicoo displays the value of the label without the enclosing braces. |
 | `${__field.name}`            | Same as syntax          | `Temp`                         | Displays the name of the field (without labels).                                                                                                                                                                   |
 | `${__field.labels}`          | Same as syntax          | `Loc="PBI", Sensor="3"`        | Displays the labels without the name.                                                                                                                                                                              |
 | `${__field.labels.X}`        | `${__field.labels.Loc}` | `PBI`                          | Displays the value of the specified label key.                                                                                                                                                                     |
@@ -54,7 +54,7 @@ Lets you set the minimum value used in percentage threshold calculations. Leave 
 
 ## No value
 
-Enter what Grafana should display if the field value is empty or null. The default value is a hyphen (-).
+Enter what Mosaicoo should display if the field value is empty or null. The default value is a hyphen (-).
 
 ## Unit
 
@@ -80,4 +80,4 @@ You can also paste a native emoji in the unit picker and pick it as a custom uni
 
 ### String units
 
-Grafana can sometime be too aggressive in parsing strings and displaying them as numbers. To make Grafana show the original string create a field override and add a unit property with the `string` unit.
+Grafana can sometime be too aggressive in parsing strings and displaying them as numbers. To make Mosaicoo show the original string create a field override and add a unit property with the `string` unit.

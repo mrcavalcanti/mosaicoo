@@ -5,7 +5,7 @@ keywords = ["grafana", "installation", "documentation"]
 title = "Grafana documentation"
 +++
 
-# Grafana documentation
+# Mosaicoo documentation
 
 ## Installing Grafana
 
@@ -62,7 +62,7 @@ title = "Grafana documentation"
     </a>
     <a href="{{< relref "administration/provisioning.md" >}}" class="nav-cards__item nav-cards__item--guide">
         <h4>Provisioning</h4>
-        <p>Learn how to automate your Grafana configuration.</p>
+        <p>Learn how to automate your Mosaicoo configuration.</p>
     </a>
     <a href="{{< relref "whatsnew/whats-new-in-v8-0.md" >}}" class="nav-cards__item nav-cards__item--guide">
         <h4>What's new in v8.0</h4>

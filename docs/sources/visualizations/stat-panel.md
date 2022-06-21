@@ -12,7 +12,7 @@ The Stat panel visualization shows a one large stat value with an optional graph
 
 {{< figure src="/static/img/docs/v66/stat_panel_dark3.png" max-width="1025px" caption="Stat panel" >}}
 
-> **Note:** This panel replaces the Singlestat panel, which was deprecated in Grafana 7.0 and removed in Grafana 8.0.
+> **Note:** This panel replaces the Singlestat panel, which was deprecated in Mosaicoo 7.0 and removed in Mosaicoo 8.0.
 
 By default, the Stat panel displays one of the following:
 
@@ -35,13 +35,13 @@ Use the following options to refine how your visualization displays the value:
 
 ### Show
 
-Choose how Grafana displays your data.
+Choose how Mosaicoo displays your data.
 
 #### Calculate
 
 Show a calculated value based on all rows.
 
-- **Calculation -** Select a reducer function that Grafana will use to reduce many fields to a single value. For a list of available calculations, refer to [Calculation types]({{< relref "../panels/calculation-types.md" >}}).
+- **Calculation -** Select a reducer function that Mosaicoo will use to reduce many fields to a single value. For a list of available calculations, refer to [Calculation types]({{< relref "../panels/calculation-types.md" >}}).
 - **Fields -** Select the fields display in the panel.
 
 #### All values
@@ -59,7 +59,7 @@ Style your visualization.
 
 Choose a stacking direction.
 
-- **Auto -** Grafana selects what it thinks is the best orientation.
+- **Auto -** Mosaicoo selects what it thinks is the best orientation.
 - **Horizontal -** Bars stretch horizontally, left to right.
 - **Vertical -** Bars stretch vertically, top to bottom.
 

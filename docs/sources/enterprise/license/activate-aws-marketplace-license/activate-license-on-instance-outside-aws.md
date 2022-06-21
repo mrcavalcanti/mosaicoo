@@ -1,34 +1,34 @@
 +++
 aliases = ["/docs/grafana/latest/enterprise/activate-aws-marketplace-license/activate-license-on-instance-outside-aws/", "/docs/grafana/latest/enterprise/license/activate-aws-marketplace-license/activate-license-on-instance-outside-aws/"]
-description = "Activate a Grafana Enterprise license from AWS on an instance deployed outside of AWS"
+description = "Activate a Mosaicoo Enterprise license from AWS on an instance deployed outside of AWS"
 keywords = ["grafana", "enterprise", "aws", "marketplace", "activate"]
-title = "Activate a Grafana Enterprise license from AWS on an instance deployed outside of AWS"
+title = "Activate a Mosaicoo Enterprise license from AWS on an instance deployed outside of AWS"
 weight = 300
 +++
 
-# Activate a Grafana Enterprise license from AWS on an instance deployed outside of AWS
+# Activate a Mosaicoo Enterprise license from AWS on an instance deployed outside of AWS
 
-While AWS Marketplace lists ECS and EKS as the supported environments for Grafana Enterprise, you can apply a Grafana Enterprise license from AWS Marketplace to any Grafana instance with network access to the AWS licensing service.
+While AWS Marketplace lists ECS and EKS as the supported environments for Mosaicoo Enterprise, you can apply a Mosaicoo Enterprise license from AWS Marketplace to any Mosaicoo instance with network access to the AWS licensing service.
 
 ## Before you begin
 
 - Purchase a subscription to [Grafana Enterprise from AWS Marketplace](https://aws.amazon.com/marketplace/pp/prodview-dlncd4kzt5kx6).
-- Be sure that the IAM user that was used to purchase Grafana Enterprise has permission to manage subscriptions, create new IAM users, and create access policies.
-- Be sure there is network access between AWS and the environment where you intend to run Grafana. Network access is required because your Grafana instance communicates with the [AWS License Manager endpoints and quotas](https://docs.aws.amazon.com/general/latest/gr/licensemanager.html) to retrieve license and subscription information. Grafana instances with access to the public internet will have access to AWS license manager.
+- Be sure that the IAM user that was used to purchase Mosaicoo Enterprise has permission to manage subscriptions, create new IAM users, and create access policies.
+- Be sure there is network access between AWS and the environment where you intend to run Grafana. Network access is required because your Mosaicoo instance communicates with the [AWS License Manager endpoints and quotas](https://docs.aws.amazon.com/general/latest/gr/licensemanager.html) to retrieve license and subscription information. Mosaicoo instances with access to the public internet will have access to AWS license manager.
 
-To activate a Grafana Enterprise license from AWS on a Grafana Enterprise instance deployed outside of AWS, complete the following tasks.
+To activate a Mosaicoo Enterprise license from AWS on a Mosaicoo Enterprise instance deployed outside of AWS, complete the following tasks.
 
-## Task 1: Install Grafana Enterprise
+## Task 1: Install Mosaicoo Enterprise
 
 To install Grafana, refer to the documentation specific to your implementation.
 
 - [Install Grafana]({{< relref "../../../installation/" >}}).
-- [Run Grafana Docker image]({{< relref "../../../installation/docker" >}}).
-- [Deploy Grafana on Kubernetes]({{< relref "../../../installation/kubernetes/#deploy-grafana-enterprise-on-kubernetes" >}}).
+- [Run Mosaicoo Docker image]({{< relref "../../../installation/docker" >}}).
+- [Deploy Mosaicoo on Kubernetes]({{< relref "../../../installation/kubernetes/#deploy-grafana-enterprise-on-kubernetes" >}}).
 
-## Task 2: Create an AWS IAM user with access to your Grafana Enterprise license
+## Task 2: Create an AWS IAM user with access to your Mosaicoo Enterprise license
 
-To retrieve your license, Grafana Enterprise requires access to your AWS account and license information. To grant access, create an IAM user in AWS with access to the license, and pass its credentials as environment variables on the host or container where Grafana is running. These environment variables allow Grafana to retrieve license details from AWS.
+To retrieve your license, Mosaicoo Enterprise requires access to your AWS account and license information. To grant access, create an IAM user in AWS with access to the license, and pass its credentials as environment variables on the host or container where Mosaicoo is running. These environment variables allow Mosaicoo to retrieve license details from AWS.
 
 1. In the AWS License Manager service, create an IAM policy with the following permissions:
 
@@ -41,7 +41,7 @@ To retrieve your license, Grafana Enterprise requires access to your AWS account
 
    For more information about AWS Identity and Access Management, refer to [IAM users](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_users.html).
 
-1. To limit the policy to obtain usage data just for Grafana Enterprise, in the **Resources** section of the policy, specify your license ARN.
+1. To limit the policy to obtain usage data just for Mosaicoo Enterprise, in the **Resources** section of the policy, specify your license ARN.
 
    You can find your license ID in the **Granted Licenses** section of [AWS License Manager](https://console.aws.amazon.com/license-manager/home).
 
@@ -93,9 +93,9 @@ To retrieve your license, Grafana Enterprise requires access to your AWS account
    AWS_REGION=us-east-1
    ```
 
-## Task 3: Configure Grafana Enterprise to validate its license with AWS
+## Task 3: Configure Mosaicoo Enterprise to validate its license with AWS
 
-In this task you configure Grafana Enterprise to validate the license with AWS instead of Grafana Labs.
+In this task you configure Mosaicoo Enterprise to validate the license with AWS instead of Mosaicoo Labs.
 
 Choose one of the following options to update the [license_validation_type]({{< relref "../../enterprise-configuration.md#license_validation_type" >}}) configuration to `aws`:
 
@@ -116,6 +116,6 @@ Choose one of the following options to update the [license_validation_type]({{< 
 
 ## Task 4: Start or restart Grafana
 
-To activate Grafana Enterprise features, start (or restart) Grafana.
+To activate Mosaicoo Enterprise features, start (or restart) Grafana.
 
 For information about restarting Grafana, refer to [Restart Grafana]({{< relref "../../../installation/restart-grafana" >}}).

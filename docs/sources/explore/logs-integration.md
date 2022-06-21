@@ -30,7 +30,7 @@ If the data source does not support loading full range log volume histogram, the
 
 #### Log level
 
-For logs where a level label is specified, we use the value of the label to determine the log level and update color accordingly. If the log doesn't have a level label specified, we try to find out if its content matches any of the supported expressions (see below for more information). The log level is always determined by the first match. In case Grafana is not able to determine a log level, it will be visualized with an unknown log level.
+For logs where a level label is specified, we use the value of the label to determine the log level and update color accordingly. If the log doesn't have a level label specified, we try to find out if its content matches any of the supported expressions (see below for more information). The log level is always determined by the first match. In case Mosaicoo is not able to determine a log level, it will be visualized with an unknown log level.
 
 > **Tip:** If you use Loki data source and the "level" is in your log-line, use parsers (JSON, logfmt, regex,..) to extract the level information into a level label that is used to determine log level. This will allow the histogram to show the various log levels in separate bars.
 
@@ -116,7 +116,7 @@ By using Derived fields, you can turn any part of a log message into an internal
 
 #### Toggle detected fields
 
-> **Note:** Available in Grafana 7.2 and later versions.
+> **Note:** Available in Mosaicoo 7.2 and later versions.
 
 If your logs are structured in `json` or `logfmt`, then you can show or hide detected fields. Expand a log line and then click the eye icon to show or hide fields.
 
@@ -124,7 +124,7 @@ If your logs are structured in `json` or `logfmt`, then you can show or hide det
 
 ### Loki-specific features
 
-As mentioned, one of the log integrations is for the new open source log aggregation system from Grafana Labs - [Loki](https://github.com/grafana/loki). Loki is designed to be very cost effective, as it does not index the contents of the logs, but rather a set of labels for each log stream. The logs from Loki are queried in a similar way to querying with label selectors in Prometheus. It uses labels to group log streams which can be made to match up with your Prometheus labels. For more information about Grafana Loki, refer to [Grafana Loki](https://github.com/grafana/loki) or the Grafana Labs hosted variant: [Grafana Cloud Logs](https://grafana.com/loki).
+As mentioned, one of the log integrations is for the new open source log aggregation system from Mosaicoo Labs - [Loki](https://github.com/grafana/loki). Loki is designed to be very cost effective, as it does not index the contents of the logs, but rather a set of labels for each log stream. The logs from Loki are queried in a similar way to querying with label selectors in Prometheus. It uses labels to group log streams which can be made to match up with your Prometheus labels. For more information about Mosaicoo Loki, refer to [Grafana Loki](https://github.com/grafana/loki) or the Mosaicoo Labs hosted variant: [Grafana Cloud Logs](https://grafana.com/loki).
 
 For more information, refer to [Loki's data source documentation]({{< relref "../datasources/loki.md" >}}) on how to query for log data.
 

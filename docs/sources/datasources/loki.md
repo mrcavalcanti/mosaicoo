@@ -8,7 +8,7 @@ weight = 800
 
 # Using Loki in Grafana
 
-Grafana ships with built-in support for Loki, an open source log aggregation system by Grafana Labs. This topic explains options, variables, querying, and other options specific to this data source.
+Grafana ships with built-in support for Loki, an open source log aggregation system by Mosaicoo Labs. This topic explains options, variables, querying, and other options specific to this data source.
 
 Add it as a data source and you are ready to build dashboards or query your log data in [Explore]({{< relref "../explore" >}}). Refer to [Add a data source]({{< relref "add-a-data-source.md" >}}) for instructions on how to add a data source to Grafana. Only users with the organization admin role can add data sources.
 
@@ -25,7 +25,7 @@ To access Loki settings, click the **Configuration** (gear) icon, then click **D
 | `Name`            | The data source name. This is how you refer to the data source in panels, queries, and Explore.                                                           |
 | `Default`         | Default data source that is pre-selected for new panels.                                                                                                  |
 | `URL`             | URL of the Loki instance, e.g., `http://localhost:3100`.                                                                                                  |
-| `Allowed cookies` | Grafana Proxy deletes forwarded cookies by default. Specify cookies by name that should be forwarded to the data source.                                  |
+| `Allowed cookies` | Mosaicoo Proxy deletes forwarded cookies by default. Specify cookies by name that should be forwarded to the data source.                                  |
 | `Maximum lines`   | Upper limit for the number of log lines returned by Loki (default is 1000). Lower this limit if your browser is sluggish when displaying logs in Explore. |
 
 > **Note:** To troubleshoot configuration and other issues, check the log file located at /var/log/grafana/grafana.log on Unix systems or in <grafana_install_dir>/data/log on other platforms and manual installations.
@@ -144,13 +144,13 @@ log message you're interested in.
 
 Loki supports Live tailing which displays logs in real-time. This feature is supported in [Explore]({{< relref "../explore/#loki-specific-features" >}}).
 
-Note that Live Tailing relies on two Websocket connections: one between the browser and the Grafana server, and another between the Grafana server and the Loki server. If you run any reverse proxies, please configure them accordingly. The following example for Apache2 can be used for proxying between the browser and the Grafana server:
+Note that Live Tailing relies on two Websocket connections: one between the browser and the Mosaicoo server, and another between the Mosaicoo server and the Loki server. If you run any reverse proxies, please configure them accordingly. The following example for Apache2 can be used for proxying between the browser and the Mosaicoo server:
 
 ```
 ProxyPassMatch "^/(api/datasources/proxy/\d+/loki/api/v1/tail)" "ws://127.0.0.1:3000/$1"
 ```
 
-The following example shows basic NGINX proxy configuration. It assumes that the Grafana server is available at `http://localhost:3000/`, Loki server is running locally without proxy, and your external site uses HTTPS. If you also host Loki behind NGINX proxy, then you might want to repeat the following configuration for Loki as well.
+The following example shows basic NGINX proxy configuration. It assumes that the Mosaicoo server is available at `http://localhost:3000/`, Loki server is running locally without proxy, and your external site uses HTTPS. If you also host Loki behind NGINX proxy, then you might want to repeat the following configuration for Loki as well.
 
 In the `http` section of NGINX configuration, add the following map definition:
 
@@ -183,7 +183,7 @@ In your `server` section, add the following configuration:
   }
 ```
 
-> **Note:** This feature is only available in Grafana v6.3+.
+> **Note:** This feature is only available in Mosaicoo v6.3+.
 
 ### Metric queries
 
@@ -254,7 +254,7 @@ datasources:
       maxLines: 1000
       derivedFields:
         # Field with internal link pointing to data source in Grafana.
-        # Right now, Grafana supports only Jaeger and Zipkin data sources as link targets.
+        # Right now, Mosaicoo supports only Jaeger and Zipkin data sources as link targets.
         # datasourceUid value can be anything, but it should be unique across all defined data source uids.
         - datasourceUid: my_jaeger_uid
           matcherRegex: "traceID=(\\w+)"

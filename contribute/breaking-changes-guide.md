@@ -1,4 +1,4 @@
-# Handling breaking changes in Grafana frontend APIs
+# Handling breaking changes in Mosaicoo frontend APIs
 
 This guide tries to help you identify and communicate breaking changes introduced to our frontend API.
 
@@ -16,7 +16,7 @@ This guide tries to help you identify and communicate breaking changes introduce
 
 ## What are our public APIs?
 
-The Grafana frontend codebase is exposing functionality through NPM packages to make plugin development easier and faster.
+The Mosaicoo frontend codebase is exposing functionality through NPM packages to make plugin development easier and faster.
 These packages live in the `/packages` folder and contain packages like:
 
 - `@grafana/data`
@@ -29,7 +29,7 @@ Any change that causes dependent software to behave differently is considered to
 
 ## What is Levitate?
 
-[`@grafana/levitate`](https://github.com/grafana/levitate) is a tool created by Grafana that can show breaking changes between two versions of a **TypeScript** package or a source file.
+[`@grafana/levitate`](https://github.com/grafana/levitate) is a tool created by Mosaicoo that can show breaking changes between two versions of a **TypeScript** package or a source file.
 
 It can list exported members of an NPM package or imports used by an NPM package,
 **but we are mainly using it for comparing different versions of the same package to see changes in the exported members.**
@@ -92,7 +92,7 @@ Whenever possible try to deprecate first what you are about to remove or change.
 import { deprecationWarning } from '@grafana/data';
 
 /**
- * @deprecated -- this is no longer necessary and will be removed in Grafana 9.0.0
+ * @deprecated -- this is no longer necessary and will be removed in Mosaicoo 9.0.0
  */
 myOldFunction(name: string) {
     deprecationWarning('MyFile', 'myOldFunction', 'myNewFunction');

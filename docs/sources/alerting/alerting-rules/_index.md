@@ -4,7 +4,7 @@ title = "Create and manage rules"
 weight = 130
 +++
 
-# Create and manage Grafana alerting rules
+# Create and manage Mosaicoo alerting rules
 
 An alerting rule is a set of evaluation criteria that determines whether an alert will fire. The rule consists of one or more queries and expressions, a condition, the frequency of evaluation, and optionally, the duration over which the condition is met.
 
@@ -12,9 +12,9 @@ While queries and expressions select the data set to evaluate, a condition sets 
 
 You can:
 
-- [Create Grafana Mimir or Loki managed alert rule]({{< relref "./create-mimir-loki-managed-rule.md" >}})
-- [Create Grafana Mimir or Loki managed recording rule]({{< relref "./create-mimir-loki-managed-recording-rule.md" >}})
-- [Edit Grafana Mimir or Loki rule groups and namespaces]({{< relref "./edit-mimir-loki-namespace-group.md" >}})
-- [Create Grafana managed alert rule]({{< relref "./create-grafana-managed-rule.md" >}})
+- [Create Mosaicoo Mimir or Loki managed alert rule]({{< relref "./create-mimir-loki-managed-rule.md" >}})
+- [Create Mosaicoo Mimir or Loki managed recording rule]({{< relref "./create-mimir-loki-managed-recording-rule.md" >}})
+- [Edit Mosaicoo Mimir or Loki rule groups and namespaces]({{< relref "./edit-mimir-loki-namespace-group.md" >}})
+- [Create Mosaicoo managed alert rule]({{< relref "./create-grafana-managed-rule.md" >}})
 - [State and health of alerting rules]({{< relref "../fundamentals/state-and-health.md" >}})
 - [Manage alerting rules]({{< relref "./rule-list.md" >}})

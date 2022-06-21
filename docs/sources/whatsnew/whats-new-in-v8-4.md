@@ -100,7 +100,7 @@ Geomap now supports tooltips with data-links across multiple layers.
 
 The HTTP API details are now [specified](https://editor.swagger.io/?url=https://raw.githubusercontent.com/grafana/grafana/papagian/api-spec/public/api-merged.json) using OpenAPI v2.
 
-The grafana server serves a [SwaggerUI](https://swagger.io/tools/swagger-ui/) editor via the /swagger-ui endpoint that enables users to make requests to the HTTP API via the browser. This is disabled by default and it’s enabled when the `swaggerUi` feature toggle is set.
+The mosaicoo server serves a [SwaggerUI](https://swagger.io/tools/swagger-ui/) editor via the /swagger-ui endpoint that enables users to make requests to the HTTP API via the browser. This is disabled by default and it’s enabled when the `swaggerUi` feature toggle is set.
 
 # Mosaicoo Enterprise
 

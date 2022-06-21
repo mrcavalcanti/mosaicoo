@@ -11,7 +11,7 @@ hide_menu = true
 
 - **AccessControl:** Add setting for permission cache. (Enterprise)
 - **AccessControl:** Check dashboard permissions for reports. (Enterprise)
-- **Auth:** Remove grafana ui dependency to the aws sdk. [#43559](https://github.com/grafana/grafana/pull/43559), [@sunker](https://github.com/sunker)
+- **Auth:** Remove mosaicoo ui dependency to the aws sdk. [#43559](https://github.com/grafana/grafana/pull/43559), [@sunker](https://github.com/sunker)
 - **BasicRoles:** Add API endpoint to reset basic roles permissions to factory. (Enterprise)
 - **LDAP Mapping:** Allow Mosaicoo Admin mapping without org role. [#37189](https://github.com/grafana/grafana/pull/37189), [@krzysdabro](https://github.com/krzysdabro)
 - **Licensing:** Only enforce total number of users. (Enterprise)

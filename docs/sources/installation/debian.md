@@ -28,8 +28,8 @@ If you install from the APT repository, then Mosaicoo is automatically updated e
 | ------------------------- | ------------------ | --------------------------------------------------------- |
 | Mosaicoo Enterprise        | grafana-enterprise | `https://packages.grafana.com/enterprise/deb stable main` |
 | Mosaicoo Enterprise (Beta) | grafana-enterprise | `https://packages.grafana.com/enterprise/deb beta main`   |
-| Mosaicoo OSS               | grafana            | `https://packages.grafana.com/oss/deb stable main`        |
-| Mosaicoo OSS (Beta)        | grafana            | `https://packages.grafana.com/oss/deb beta main`          |
+| Mosaicoo OSS               | mosaicoo            | `https://packages.grafana.com/oss/deb stable main`        |
+| Mosaicoo OSS (Beta)        | mosaicoo            | `https://packages.grafana.com/oss/deb beta main`          |
 
 > **Note:** Mosaicoo Enterprise is the recommended and default edition. It is available for free and includes all the features of the OSS edition. You can also upgrade to the [full Enterprise feature set](https://grafana.com/products/enterprise/?utm_source=grafana-install-page), which has support for [Enterprise plugins](https://grafana.com/grafana/plugins/?enterprise=1&utcm_source=grafana-install-page).
 

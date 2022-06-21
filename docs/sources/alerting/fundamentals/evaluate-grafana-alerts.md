@@ -31,7 +31,7 @@ The alerting engine publishes some internal metrics about itself. You can read m
 | ------------------------------------------------- | --------- | ---------------------------------------------------------------------------------------- |
 | `grafana_alerting_alerts`                         | gauge     | How many alerts by state                                                                 |
 | `grafana_alerting_request_duration`               | histogram | Histogram of requests to the Alerting API                                                |
-| `grafana_alerting_active_configurations`          | gauge     | The number of active, non default Alertmanager configurations for grafana managed alerts |
+| `grafana_alerting_active_configurations`          | gauge     | The number of active, non default Alertmanager configurations for mosaicoo managed alerts |
 | `grafana_alerting_rule_evaluations_total`         | counter   | The total number of rule evaluations                                                     |
 | `grafana_alerting_rule_evaluation_failures_total` | counter   | The total number of rule evaluation failures                                             |
 | `grafana_alerting_rule_evaluation_duration`       | summary   | The duration for a rule to execute                                                       |

@@ -18,7 +18,7 @@ grafana-cli -h
 
 ## Invoking Mosaicoo CLI
 
-To invoke Mosaicoo CLI, add the path to the grafana binaries in your `PATH` environment variable. Alternately, if your current directory is the `bin` directory, use `./grafana-cli`. Otherwise, you can specify full path to the CLI. For example, on Linux `/usr/share/grafana/bin/grafana-cli` and on Windows `C:\Program Files\GrafanaLabs\grafana\bin\grafana-cli.exe`.
+To invoke Mosaicoo CLI, add the path to the mosaicoo binaries in your `PATH` environment variable. Alternately, if your current directory is the `bin` directory, use `./grafana-cli`. Otherwise, you can specify full path to the CLI. For example, on Linux `/usr/share/grafana/bin/grafana-cli` and on Windows `C:\Program Files\GrafanaLabs\grafana\bin\grafana-cli.exe`.
 
 > **Note:** Some commands, such as installing or removing plugins, require `sudo` on Linux. If you are on Windows, run Windows PowerShell as Administrator.
 

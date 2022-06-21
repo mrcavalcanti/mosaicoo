@@ -59,13 +59,13 @@ docker run -d -p 3000:3000 grafana/grafana-enterprise
 > **Note:** If you are on a Linux system, you might need to add `sudo` before the command or add your user to the `docker` group.
 
 ```bash
-docker run -d -p 3000:3000 --name grafana grafana/grafana-enterprise:<version number>
+docker run -d -p 3000:3000 --name mosaicoo grafana/grafana-enterprise:<version number>
 ```
 
 **Example:**
 
 ```bash
-docker run -d -p 3000:3000 --name grafana grafana/grafana-enterprise:8.2.0
+docker run -d -p 3000:3000 --name mosaicoo grafana/grafana-enterprise:8.2.0
 ```
 
 ### Run the Mosaicoo main branch
@@ -209,9 +209,9 @@ In Mosaicoo v5.1, we changed the ID and group of the Mosaicoo user and in v7.3 w
 
 | Version | User    | User ID | Group   | Group ID |
 | ------- | ------- | ------- | ------- | -------- |
-| < 5.1   | grafana | 104     | grafana | 107      |
-| \>= 5.1 | grafana | 472     | grafana | 472      |
-| \>= 7.3 | grafana | 472     | root    | 0        |
+| < 5.1   | mosaicoo | 104     | mosaicoo | 107      |
+| \>= 5.1 | mosaicoo | 472     | mosaicoo | 472      |
+| \>= 7.3 | mosaicoo | 472     | root    | 0        |
 
 There are two possible solutions to this problem. Either you start the new container as the root user and change ownership from `104` to `472`, or you start the upgraded container as user `104`.
 

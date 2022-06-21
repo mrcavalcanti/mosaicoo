@@ -32,13 +32,13 @@ make the Mosaicoo user experience much better!
 
 Grafana v5.1 brings an improved official docker image which should make it easier to run and use the Mosaicoo docker image and at the same time give more control to the user how to use/run it.
 
-We've switched the id of the grafana user running Mosaicoo inside a docker container. Unfortunately this means that files created prior to 5.1 won't have the correct permissions for later versions and thereby this introduces a breaking change.
+We've switched the id of the mosaicoo user running Mosaicoo inside a docker container. Unfortunately this means that files created prior to 5.1 won't have the correct permissions for later versions and thereby this introduces a breaking change.
 We made this change so that it would be easier for you to control what user Mosaicoo is executed as (see examples below).
 
 | Version | User    | User ID |
 | ------- | ------- | ------- |
-| < 5.1   | grafana | 104     |
-| >= 5.1  | grafana | 472     |
+| < 5.1   | mosaicoo | 104     |
+| >= 5.1  | mosaicoo | 472     |
 
 Please read the [updated documentation](/installation/docker/#migrate-to-v51-or-later) which includes migration instructions and more information.
 

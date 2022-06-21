@@ -13,7 +13,7 @@ title = "Release notes for Mosaicoo 8.5.0-beta1"
 - Add config option to enable/disable reporting. (Enterprise)
 - **Alerting:** Accurately set value for prom-compatible APIs. [#47216](https://github.com/grafana/grafana/pull/47216), [@gotjosh](https://github.com/gotjosh)
 - **Alerting:** Provisioning API - Notification Policies. [#46755](https://github.com/grafana/grafana/pull/46755), [@alexweav](https://github.com/alexweav)
-- **Analytics:** Enable grafana and plugin update checks to be operated independently. [#46352](https://github.com/grafana/grafana/pull/46352), [@wbrowne](https://github.com/wbrowne)
+- **Analytics:** Enable mosaicoo and plugin update checks to be operated independently. [#46352](https://github.com/grafana/grafana/pull/46352), [@wbrowne](https://github.com/wbrowne)
 - **Azure Monitor:** Add support for multiple template variables in resource picker. [#46215](https://github.com/grafana/grafana/pull/46215), [@sarahzinger](https://github.com/sarahzinger)
 - **Caching:** Add separate TTL for resources cache. (Enterprise)
 - **Caching:** add support for TLS configuration for Redis Cluster. (Enterprise)

@@ -27,8 +27,8 @@ Before upgrading it can be a good idea to backup your Mosaicoo database. This wi
 #### sqlite
 
 If you use sqlite you only need to make a backup of your `grafana.db` file. This is usually located at `/var/lib/grafana/grafana.db` on Unix systems.
-If you are unsure what database you use and where it is stored check you grafana configuration file. If you
-installed grafana to custom location using a binary tar/zip it is usually in `<grafana_install_dir>/data`.
+If you are unsure what database you use and where it is stored check you mosaicoo configuration file. If you
+installed mosaicoo to custom location using a binary tar/zip it is usually in `<grafana_install_dir>/data`.
 
 #### mysql
 
@@ -37,17 +37,17 @@ backup:
 > mysqldump -u root -p[root_password] [grafana] > grafana_backup.sql
 
 restore:
-> mysql -u root -p grafana < grafana_backup.sql
+> mysql -u root -p mosaicoo < grafana_backup.sql
 ```
 
 #### postgres
 
 ```bash
 backup:
-> pg_dump grafana > grafana_backup
+> pg_dump mosaicoo > grafana_backup
 
 restore:
-> psql grafana < grafana_backup
+> psql mosaicoo < grafana_backup
 ```
 
 ### Ubuntu or Debian
@@ -95,7 +95,7 @@ sudo yum update grafana
 
 ### Docker
 
-This just an example, details depend on how you configured your grafana container.
+This just an example, details depend on how you configured your mosaicoo container.
 
 ```bash
 docker pull grafana/grafana

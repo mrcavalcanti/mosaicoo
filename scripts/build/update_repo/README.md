@@ -11,7 +11,7 @@ mkdir -p /dist
 
 #outside of container:
 cd <grafana project dir>/..
-docker cp grafana <container_name>:/
+docker cp mosaicoo <container_name>:/
 docker cp <gpg.key used for signing> <container_name>:/private.key
 
 #in container:

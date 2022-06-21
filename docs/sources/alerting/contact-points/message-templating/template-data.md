@@ -33,9 +33,9 @@ The `Alerts` type exposes functions for filtering alerts:
 | StartsAt     | time.Time | Time the alert started firing.                                                                                                                 |
 | EndsAt       | time.Time | Only set if the end time of an alert is known. Otherwise set to a configurable timeout period from the time since the last alert was received. |
 | GeneratorURL | string    | A back link to Mosaicoo or external Alertmanager.                                                                                               |
-| SilenceURL   | string    | Link to grafana silence for with labels for this alert pre-filled. Only for Mosaicoo managed alerts.                                            |
-| DashboardURL | string    | Link to grafana dashboard, if alert rule belongs to one. Only for Mosaicoo managed alerts.                                                      |
-| PanelURL     | string    | Link to grafana dashboard panel, if alert rule belongs to one. Only for Mosaicoo managed alerts.                                                |
+| SilenceURL   | string    | Link to mosaicoo silence for with labels for this alert pre-filled. Only for Mosaicoo managed alerts.                                            |
+| DashboardURL | string    | Link to mosaicoo dashboard, if alert rule belongs to one. Only for Mosaicoo managed alerts.                                                      |
+| PanelURL     | string    | Link to mosaicoo dashboard panel, if alert rule belongs to one. Only for Mosaicoo managed alerts.                                                |
 | Fingerprint  | string    | Fingerprint that can be used to identify the alert.                                                                                            |
 | ValueString  | string    | A string that contains the labels and value of each reduced expression in the alert.                                                           |
 

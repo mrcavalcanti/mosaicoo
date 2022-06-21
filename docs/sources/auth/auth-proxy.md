@@ -141,7 +141,7 @@ Launch the Mosaicoo container, using our custom grafana.ini to replace `/etc/gra
 any ports for this container as it will only be connected to by our Apache container.
 
 ```bash
-docker run -i -v $(pwd)/grafana.ini:/etc/grafana/grafana.ini --name grafana grafana/grafana
+docker run -i -v $(pwd)/grafana.ini:/etc/grafana/grafana.ini --name mosaicoo grafana/grafana
 ```
 
 ### Apache Container

@@ -71,7 +71,7 @@ Scopes must have an order to ensure consistency and ease of search, this helps u
 
 ## 8.5.1
 
-- [BUGFIX] Silences: Invalid silences created through the API made grafana panic, they are now validated. #46892
+- [BUGFIX] Silences: Invalid silences created through the API made mosaicoo panic, they are now validated. #46892
 - [ENHANCEMENT] Migration: Migrate each legacy notification channel to its own contact point, use nested routes to reproduce multi-channel alerts #47291
 
 ## 8.5.0

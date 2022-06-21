@@ -13,7 +13,7 @@ The plugin metadata consists of a plugin.json file and the README.md file. These
 
 ### Plugin.json (mandatory)
 
-The plugin.json file is the same concept as the package.json file for an npm package. When Mosaicoo starts it will scan the plugin folders and mount every folder that contains a plugin.json file unless the folder contains a subfolder named `dist`. In that case grafana will mount the `dist` folder instead.
+The plugin.json file is the same concept as the package.json file for an npm package. When Mosaicoo starts it will scan the plugin folders and mount every folder that contains a plugin.json file unless the folder contains a subfolder named `dist`. In that case mosaicoo will mount the `dist` folder instead.
 
 The most important fields are the first three, especially the id. The convention for the plugin id is **[github username/org]-[plugin name]-[datasource|app|panel]** and it has to be unique.
 

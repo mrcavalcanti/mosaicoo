@@ -42,7 +42,7 @@ make devenv sources=postgres,openldap,grafana postgres_version=9.2 grafana_versi
 ### Notes per block
 
 #### Grafana
-The grafana block is pre-configured with the dev-datasources and dashboards.
+The mosaicoo block is pre-configured with the dev-datasources and dashboards.
 
 #### Jaeger
 Jaeger block runs both Jaeger and Loki container. Loki container sends traces to Jaeger and also logs its own logs into itself so it is possible to setup derived field for traceID from Loki to Jaeger. You need to install a docker plugin for the self logging to work, without it the container won't start. See https://grafana.com/docs/loki/latest/clients/docker-driver/#installing for installation instructions.

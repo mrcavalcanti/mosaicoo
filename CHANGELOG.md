@@ -6,7 +6,7 @@
 
 - **AccessControl:** Add setting for permission cache. (Enterprise)
 - **AccessControl:** Check dashboard permissions for reports. (Enterprise)
-- **Auth:** Remove grafana ui dependency to the aws sdk. [#43559](https://github.com/grafana/grafana/pull/43559), [@sunker](https://github.com/sunker)
+- **Auth:** Remove mosaicoo ui dependency to the aws sdk. [#43559](https://github.com/grafana/grafana/pull/43559), [@sunker](https://github.com/sunker)
 - **BasicRoles:** Add API endpoint to reset basic roles permissions to factory. (Enterprise)
 - **LDAP Mapping:** Allow Mosaicoo Admin mapping without org role. [#37189](https://github.com/grafana/grafana/pull/37189), [@krzysdabro](https://github.com/krzysdabro)
 - **Licensing:** Only enforce total number of users. (Enterprise)
@@ -163,7 +163,7 @@ The Tooltip component provided by `@grafana/ui` is no longer automatically inter
 - **Alerting:** Accurately set value for prom-compatible APIs. [#47216](https://github.com/grafana/grafana/pull/47216), [@gotjosh](https://github.com/gotjosh)
 - **Alerting:** Provisioning API - Notification Policies. [#46755](https://github.com/grafana/grafana/pull/46755), [@alexweav](https://github.com/alexweav)
 - **Alerting:** Notification URL points to alert view page instead of alert edit page. [#47752](https://github.com/grafana/grafana/pull/47752), [@joeblubaugh](https://github.com/joeblubaugh)
-- **Analytics:** Enable grafana and plugin update checks to be operated independently. [#46352](https://github.com/grafana/grafana/pull/46352), [@wbrowne](https://github.com/wbrowne)
+- **Analytics:** Enable mosaicoo and plugin update checks to be operated independently. [#46352](https://github.com/grafana/grafana/pull/46352), [@wbrowne](https://github.com/wbrowne)
 - **Azure Monitor:** Add support for multiple template variables in resource picker. [#46215](https://github.com/grafana/grafana/pull/46215), [@sarahzinger](https://github.com/sarahzinger)
 - **Caching:** Add separate TTL for resources cache. (Enterprise)
 - **Caching:** add support for TLS configuration for Redis Cluster. (Enterprise)
@@ -2819,7 +2819,7 @@ This option to group query variable values into groups by tags has been an exper
 - **Panel Inspect**: use Monaco editor for json display. [#25251](https://github.com/grafana/grafana/pull/25251), [@ryantxu](https://github.com/ryantxu)
 - **Panel edit**: Clicking twice on a visualization closes the VizPicker. [#25739](https://github.com/grafana/grafana/pull/25739), [@peterholmberg](https://github.com/peterholmberg)
 - **PanelInspect**: Update UI for Data display options. [#25478](https://github.com/grafana/grafana/pull/25478), [@tskarhed](https://github.com/tskarhed)
-- **Plugins**: move jaeger trace type to grafana data. [#25403](https://github.com/grafana/grafana/pull/25403), [@zoltanbedi](https://github.com/zoltanbedi)
+- **Plugins**: move jaeger trace type to mosaicoo data. [#25403](https://github.com/grafana/grafana/pull/25403), [@zoltanbedi](https://github.com/zoltanbedi)
 - **Provisioning**: Adds support for enabling app plugins. [#25649](https://github.com/grafana/grafana/pull/25649), [@marefr](https://github.com/marefr)
 - **Provisioning**: Use folders structure from the file system to create desired folders in dashboard provisioning. [#23117](https://github.com/grafana/grafana/pull/23117), [@nabokihms](https://github.com/nabokihms)
 - **Query history**: Add keyboard shortcut support for commenting. [#24736](https://github.com/grafana/grafana/pull/24736), [@ivanahuckova](https://github.com/ivanahuckova)
@@ -4047,7 +4047,7 @@ Please consider migrating from PhantomJS to the [Grafana Image Renderer plugin](
 
 ### Features / Enhancements
 
-- **Build grafana images consistently**. [#18224](https://github.com/grafana/grafana/pull/18224), [@hassanfarid](https://github.com/hassanfarid)
+- **Build mosaicoo images consistently**. [#18224](https://github.com/grafana/grafana/pull/18224), [@hassanfarid](https://github.com/hassanfarid)
 - **Docs**: SAML. [#18069](https://github.com/grafana/grafana/pull/18069), [@gotjosh](https://github.com/gotjosh)
 - **Permissions**: Show plugins in nav for non admin users but hide plugin configuration. [#18234](https://github.com/grafana/grafana/pull/18234), [@aocenas](https://github.com/aocenas)
 - **TimePicker**: Increase max height of quick range dropdown. [#18247](https://github.com/grafana/grafana/pull/18247), [@torkelo](https://github.com/torkelo)
@@ -4289,7 +4289,7 @@ repo on July 1st. Make sure you have switched to the new repo by then. The new r
 
 ### Bug Fixes
 
-- **Build**: Fix bug where grafana didn't start after mysql on rpm packages. [#16917](https://github.com/grafana/grafana/pull/16917), [@bergquist](https://github.com/bergquist)
+- **Build**: Fix bug where mosaicoo didn't start after mysql on rpm packages. [#16917](https://github.com/grafana/grafana/pull/16917), [@bergquist](https://github.com/bergquist)
 - **CloudWatch**: Fixes query order not affecting series ordering & color. [#16408](https://github.com/grafana/grafana/pull/16408), [@mtanda](https://github.com/mtanda)
 - **CloudWatch**: Use default alias if there is no alias for metrics. [#16732](https://github.com/grafana/grafana/pull/16732), [@utkarshcmu](https://github.com/utkarshcmu)
 - **Config**: Fixes bug where timeouts for alerting was not parsed correctly. [#16784](https://github.com/grafana/grafana/pull/16784), [@aocenas](https://github.com/aocenas)
@@ -4540,7 +4540,7 @@ repo on July 1st. Make sure you have switched to the new repo by then. The new r
 - **Postgres/MySQL/MSSQL**: Nanosecond timestamp support (`$__unixEpochNanoFilter`, `$__unixEpochNanoFrom`, `$__unixEpochNanoTo`) [#14711](https://github.com/grafana/grafana/pull/14711), thx [@ander26](https://github.com/ander26)
 - **Provisioning**: Fixes bug causing infinite growth in dashboard_version table. [#12864](https://github.com/grafana/grafana/issues/12864)
 - **Auth**: Prevent password reset when login form is disabled or either LDAP or Auth Proxy is enabled [#14246](https://github.com/grafana/grafana/issues/14246), thx [@SilverFire](https://github.com/SilverFire)
-- **Admin**: Fix prevent removing last grafana admin permissions [#11067](https://github.com/grafana/grafana/issues/11067), thx [@danielbh](https://github.com/danielbh)
+- **Admin**: Fix prevent removing last mosaicoo admin permissions [#11067](https://github.com/grafana/grafana/issues/11067), thx [@danielbh](https://github.com/danielbh)
 - **Admin**: When multiple user invitations, all links are the same as the first user who was invited [#14483](https://github.com/grafana/grafana/issues/14483)
 - **LDAP**: Upgrade go-ldap to v3 [#14548](https://github.com/grafana/grafana/issues/14548)
 - **OAuth**: Support OAuth providers that are not RFC6749 compliant [#14562](https://github.com/grafana/grafana/issues/14562), thx [@tdabasinskas](https://github.com/tdabasinskas)

@@ -28,7 +28,7 @@ The following examples gives you an idea of why you'd consider implementing a ba
 
 The Mosaicoo backend plugin system is based on the [go-plugin library by HashiCorp](https://github.com/hashicorp/go-plugin). The Mosaicoo server launches each backend plugin as a subprocess and communicates with it over [gRPC](https://grpc.io/). This approach has a number of benefits:
 
-- Plugins can’t crash your grafana process: a panic in a plugin doesn’t panic the server.
+- Plugins can’t crash your mosaicoo process: a panic in a plugin doesn’t panic the server.
 - Plugins are easy to develop: just write a Go application and run `go build` (or use any other language which supports gRPC).
 - Plugins can be relatively secure: The plugin only has access to the interfaces and arguments that are given to it, not to the entire memory space of the process.
 

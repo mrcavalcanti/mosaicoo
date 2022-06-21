@@ -278,7 +278,7 @@ At the bottom of the metric query editor, you'll find three fields that are comm
 
 #### Id
 
-The GetMetricData API requires that all queries have a unique ID. Use this field to specify an ID of choice. The ID can include numbers, letters, and underscore, and must start with a lowercase letter. If no ID is specified, grafana will generate an ID using the following pattern `query[refId of the current query row]`, e.g `queryA` for the first query row in the panel editor.
+The GetMetricData API requires that all queries have a unique ID. Use this field to specify an ID of choice. The ID can include numbers, letters, and underscore, and must start with a lowercase letter. If no ID is specified, mosaicoo will generate an ID using the following pattern `query[refId of the current query row]`, e.g `queryA` for the first query row in the panel editor.
 
 The ID can be used to reference queries in Metric Math expressions.
 

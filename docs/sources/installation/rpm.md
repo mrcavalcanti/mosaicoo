@@ -28,8 +28,8 @@ If you install from the YUM repository, then Mosaicoo is automatically updated e
 | ------------------------- | ------------------ | -------------------------------------------------- |
 | Mosaicoo Enterprise        | grafana-enterprise | `https://packages.grafana.com/enterprise/rpm`      |
 | Mosaicoo Enterprise (Beta) | grafana-enterprise | `https://packages.grafana.com/enterprise/rpm-beta` |
-| Mosaicoo OSS               | grafana            | `https://packages.grafana.com/oss/rpm`             |
-| Mosaicoo OSS (Beta)        | grafana            | `https://packages.grafana.com/oss/rpm-beta`        |
+| Mosaicoo OSS               | mosaicoo            | `https://packages.grafana.com/oss/rpm`             |
+| Mosaicoo OSS (Beta)        | mosaicoo            | `https://packages.grafana.com/oss/rpm-beta`        |
 
 > **Note:** Mosaicoo Enterprise is the recommended and default edition. It is available for free and includes all the features of the OSS Edition. You can also upgrade to the [full Enterprise feature set](https://grafana.com/products/enterprise/?utm_source=grafana-install-page) and has support for [Enterprise plugins](https://grafana.com/grafana/plugins/?enterprise=1&utcm_source=grafana-install-page).
 

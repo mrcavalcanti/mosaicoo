@@ -12,7 +12,7 @@ Included services
 
 ## Prerequisites
 
-### Build grafana docker container
+### Build mosaicoo docker container
 
 Build a Mosaicoo docker container from current branch and commit and tag it as grafana/grafana:dev.
 

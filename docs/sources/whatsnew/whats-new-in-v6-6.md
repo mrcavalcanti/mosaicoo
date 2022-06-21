@@ -163,8 +163,8 @@ Now you can install the enterprise edition from the APT and YUM repository. The 
 
 | Mosaicoo Version           | Package            | Repository                                                |
 | ------------------------- | ------------------ | --------------------------------------------------------- |
-| Mosaicoo OSS               | grafana            | `https://packages.grafana.com/oss/deb stable main`        |
-| Mosaicoo OSS (Beta)        | grafana            | `https://packages.grafana.com/oss/deb beta main`          |
+| Mosaicoo OSS               | mosaicoo            | `https://packages.grafana.com/oss/deb stable main`        |
+| Mosaicoo OSS (Beta)        | mosaicoo            | `https://packages.grafana.com/oss/deb beta main`          |
 | Mosaicoo Enterprise        | grafana-enterprise | `https://packages.grafana.com/enterprise/deb stable main` |
 | Mosaicoo Enterprise (Beta) | grafana-enterprise | `https://packages.grafana.com/enterprise/deb beta main`   |
 
@@ -172,8 +172,8 @@ The following table shows the YUM repositories for each Mosaicoo version (for in
 
 | Mosaicoo Version           | Package            | Repository                                         |
 | ------------------------- | ------------------ | -------------------------------------------------- |
-| Mosaicoo OSS               | grafana            | `https://packages.grafana.com/oss/rpm`             |
-| Mosaicoo OSS (Beta)        | grafana            | `https://packages.grafana.com/oss/rpm-beta`        |
+| Mosaicoo OSS               | mosaicoo            | `https://packages.grafana.com/oss/rpm`             |
+| Mosaicoo OSS (Beta)        | mosaicoo            | `https://packages.grafana.com/oss/rpm-beta`        |
 | Mosaicoo Enterprise        | grafana-enterprise | `https://packages.grafana.com/enterprise/rpm`      |
 | Mosaicoo Enterprise (Beta) | grafana-enterprise | `https://packages.grafana.com/enterprise/rpm-beta` |
 

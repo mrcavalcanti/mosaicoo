@@ -12,7 +12,7 @@ Panels are the main building blocks of dashboards.
 
 ### Scrolling
 
-The grafana dashboard framework controls the panel height. To enable a scrollbar within the panel the PanelCtrl needs to set the scrollable static variable:
+The mosaicoo dashboard framework controls the panel height. To enable a scrollbar within the panel the PanelCtrl needs to set the scrollable static variable:
 
 ```javascript
 export class MyPanelCtrl extends PanelCtrl {

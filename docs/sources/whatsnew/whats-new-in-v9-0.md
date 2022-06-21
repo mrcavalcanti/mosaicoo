@@ -187,7 +187,7 @@ The logs are represented by a single dataframe with a "labels" field added, inst
 
 ### Loki: NaN values representation changed in numeric data
 
-In the Loki data source, when grafana receives numeric data from Loki, it may contain NaN (not a number) values. For consistency and performance reasons we changed how we represent such values in Grafana. In previous versions, the behavior was different between alerting queries and other queries (like dashboard queries or explore queries). Alerting queries kept NaN values unchanged, but other queries converted these values to “null”. Starting with grafana 9.0.0, we will always keep these values unchanged. In other words, queries in dashboards and explore will behave the same as alerting queries in this regard.
+In the Loki data source, when mosaicoo receives numeric data from Loki, it may contain NaN (not a number) values. For consistency and performance reasons we changed how we represent such values in Grafana. In previous versions, the behavior was different between alerting queries and other queries (like dashboard queries or explore queries). Alerting queries kept NaN values unchanged, but other queries converted these values to “null”. Starting with mosaicoo 9.0.0, we will always keep these values unchanged. In other words, queries in dashboards and explore will behave the same as alerting queries in this regard.
 
 ### Elasticsearch: Support for versions after their end of life was removed
 
@@ -195,11 +195,11 @@ Support for Elasticsearch versions that are after their end of life ( based on h
 
 ### Elasticsearch: Support for browser access mode removed
 
-In the Elasticsearch data source, browser access mode was deprecated in grafana 7.4.0 and removed in 9.0.0. If you used this mode, please switch to server access mode on the data source configuration page.
+In the Elasticsearch data source, browser access mode was deprecated in mosaicoo 7.4.0 and removed in 9.0.0. If you used this mode, please switch to server access mode on the data source configuration page.
 
 <!-- ### InfluxDB: Support for browser access mode removed (should this stay??)
 
-In the InfluxDB data source, browser access mode was deprecated in grafana 8.0.0 and we are removing this feature in 9.0.0. If you are using this mode, you need to [switch to server access mode]({{< relref "../datasources/influxdb/_index.md##influxql-classic-influxdb-query" >}}) on the data source configuration page or you can do this via provisioning. -->
+In the InfluxDB data source, browser access mode was deprecated in mosaicoo 8.0.0 and we are removing this feature in 9.0.0. If you are using this mode, you need to [switch to server access mode]({{< relref "../datasources/influxdb/_index.md##influxql-classic-influxdb-query" >}}) on the data source configuration page or you can do this via provisioning. -->
 
 ### Transformations: Allow more complex regex expressions in rename by regex
 

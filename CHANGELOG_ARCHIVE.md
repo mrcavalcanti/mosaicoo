@@ -387,7 +387,7 @@ See [security announcement](https://community.grafana.com/t/grafana-5-2-3-and-4-
 - **Provisioning**: Verify checksum of dashboards before updating to reduce load on database [#11670](https://github.com/grafana/grafana/issues/11670)
 - **Provisioning**: Support symlinked files in dashboard provisioning config files [#11958](https://github.com/grafana/grafana/issues/11958)
 - **Dashboard list panel**: Search dashboards by folder [#11525](https://github.com/grafana/grafana/issues/11525)
-- **Sidenav**: Always show server admin link in sidenav if grafana admin [#11657](https://github.com/grafana/grafana/issues/11657)
+- **Sidenav**: Always show server admin link in sidenav if mosaicoo admin [#11657](https://github.com/grafana/grafana/issues/11657)
 
 # 5.1.5 (2018-06-27)
 
@@ -749,7 +749,7 @@ See [security announcement](https://community.grafana.com/t/grafana-5-2-3-and-4-
 ## Minor
 
 - **SMTP**: Make it possible to set specific HELO for smtp client. [#9319](https://github.com/grafana/grafana/issues/9319)
-- **Dataproxy**: Allow grafana to renegotiate tls connection [#9250](https://github.com/grafana/grafana/issues/9250)
+- **Dataproxy**: Allow mosaicoo to renegotiate tls connection [#9250](https://github.com/grafana/grafana/issues/9250)
 - **HTTP**: set net.Dialer.DualStack to true for all http clients [#9367](https://github.com/grafana/grafana/pull/9367)
 - **Alerting**: Add diff and percent diff as series reducers [#9386](https://github.com/grafana/grafana/pull/9386), thx [@shanhuhai5739](https://github.com/shanhuhai5739)
 - **Slack**: Allow images to be uploaded to slack when Token is present [#7175](https://github.com/grafana/grafana/issues/7175), thx [@xginn8](https://github.com/xginn8)
@@ -974,7 +974,7 @@ Pull Request: [#8472](https://github.com/grafana/grafana/pull/8472)
 - **Graph**: Cannot add fill below to series override [#7916](https://github.com/grafana/grafana/issues/7916)
 - **InfluxDB**: Influxb Data source test passes even if the Database doesn't exist [#7864](https://github.com/grafana/grafana/issues/7864)
 - **Prometheus**: Displaying Prometheus annotations is incredibly slow [#7750](https://github.com/grafana/grafana/issues/7750), thx [@mtanda](https://github.com/mtanda)
-- **Graphite**: grafana generates empty find query to graphite -> 422 Unprocessable Entity [#7740](https://github.com/grafana/grafana/issues/7740)
+- **Graphite**: mosaicoo generates empty find query to graphite -> 422 Unprocessable Entity [#7740](https://github.com/grafana/grafana/issues/7740)
 - **Admin**: make organization filter case insensitive [#8194](https://github.com/grafana/grafana/issues/8194), thx [@Alexander-N](https://github.com/Alexander-N)
 
 ## Changes
@@ -1294,7 +1294,7 @@ Pull Request: [#8472](https://github.com/grafana/grafana/pull/8472)
 - **Time picker**: Fixed issue timepicker and UTC when reading time from URL, fixes [#5078](https://github.com/grafana/grafana/issues/5078)
 - **CloudWatch**: Support for Multiple Account by AssumeRole, closes [#3522](https://github.com/grafana/grafana/issues/3522)
 - **Singlestat**: Fixed alignment and minimum height issue, fixes [#5113](https://github.com/grafana/grafana/issues/5113), fixes [#4679](https://github.com/grafana/grafana/issues/4679)
-- **Share modal**: Fixed link when using grafana under dashboard sub url, fixes [#5109](https://github.com/grafana/grafana/issues/5109)
+- **Share modal**: Fixed link when using mosaicoo under dashboard sub url, fixes [#5109](https://github.com/grafana/grafana/issues/5109)
 - **Prometheus**: Fixed bug in query editor that caused it not to load when reloading page, fixes [#5107](https://github.com/grafana/grafana/issues/5107)
 - **Elasticsearch**: Fixed bug when template variable query returns numeric values, fixes [#5097](https://github.com/grafana/grafana/issues/5097), fixes [#5088](https://github.com/grafana/grafana/issues/5088)
 - **Logging**: Fixed issue with reading logging level value, fixes [#5079](https://github.com/grafana/grafana/issues/5079)
@@ -1533,7 +1533,7 @@ slack channel (link to slack channel in readme).
 
 - [Pull #2720](https://github.com/grafana/grafana/pull/2720). Admin: Initial basic quota support (per Org)
 - [Issue #2577](https://github.com/grafana/grafana/issues/2577). Panel: Resize handles in panel bottom right corners for easy width and height change
-- [Issue #2457](https://github.com/grafana/grafana/issues/2457). Admin: admin page for all grafana organizations (list / edit view)
+- [Issue #2457](https://github.com/grafana/grafana/issues/2457). Admin: admin page for all mosaicoo organizations (list / edit view)
 - [Issue #1186](https://github.com/grafana/grafana/issues/1186). Time Picker: New option `today`, will set time range from midnight to now
 - [Issue #2647](https://github.com/grafana/grafana/issues/2647). InfluxDB: You can now set group by time interval on each query
 - [Issue #2599](https://github.com/grafana/grafana/issues/2599). InfluxDB: Improved alias support, you can now use the `AS` clause for each select statement
@@ -1674,7 +1674,7 @@ Grunt & Watch tasks:
 
 **Fixes**
 
-- [Issue #1784](https://github.com/grafana/grafana/issues/1784). Data source proxy: Fixed issue with using data source proxy when grafana is behind nginx suburl
+- [Issue #1784](https://github.com/grafana/grafana/issues/1784). Data source proxy: Fixed issue with using data source proxy when mosaicoo is behind nginx suburl
 - [Issue #1749](https://github.com/grafana/grafana/issues/1749). Graph Panel: Table legends are now visible when rendered to PNG
 - [Issue #1786](https://github.com/grafana/grafana/issues/1786). Graph Panel: Legend in table mode now aligns, graph area is reduced depending on how many series
 - [Issue #1734](https://github.com/grafana/grafana/issues/1734). Support for unicode / international characters in dashboard title (improved slugify)
@@ -1713,7 +1713,7 @@ Grunt & Watch tasks:
 
 **Fixes**
 
-- [Issue #1649](https://github.com/grafana/grafana/issues/1649). HTTP API: grafana /render calls nows with api keys
+- [Issue #1649](https://github.com/grafana/grafana/issues/1649). HTTP API: mosaicoo /render calls nows with api keys
 - [Issue #1667](https://github.com/grafana/grafana/issues/1667). Data source proxy & session timeout fix (caused 401 Unauthorized error after a while)
 - [Issue #1707](https://github.com/grafana/grafana/issues/1707). Unsaved changes: Do not show for snapshots, scripted and file based dashboards
 - [Issue #1703](https://github.com/grafana/grafana/issues/1703). Unsaved changes: Do not show for users with role `Viewer`
@@ -2039,7 +2039,7 @@ Read this [blog post](https://grafana.com/blog/2014/09/11/grafana-1.8.0-rc1-rele
 - [Issue #461](https://github.com/grafana/grafana/issues/461). New graphite function definition added isNonNull, Thanks @tmonk42
 - [Issue #455](https://github.com/grafana/grafana/issues/455). New InfluxDB function difference add to function dropdown
 - [Issue #459](https://github.com/grafana/grafana/issues/459). Added parameter to keepLastValue graphite function definition (default 100)
-  [Issue #418](https://github.com/grafana/grafana/issues/418). to the browser cache when upgrading grafana and improve load performance
+  [Issue #418](https://github.com/grafana/grafana/issues/418). to the browser cache when upgrading mosaicoo and improve load performance
 - [Issue #327](https://github.com/grafana/grafana/issues/327). Partial support for url encoded metrics when using Graphite data source. Thanks @axe-felix
 - [Issue #473](https://github.com/grafana/grafana/issues/473). Improvement to InfluxDB query editor and function/value column selection
 - [Issue #375](https://github.com/grafana/grafana/issues/375). Initial support for filtering (templated queries) for InfluxDB. Thanks @mavimo

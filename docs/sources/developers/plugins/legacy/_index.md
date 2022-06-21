@@ -14,7 +14,7 @@ Grafana already has a strong community of contributors and plugin developers. By
 ## Short version
 
 1. [Set up Grafana](https://github.com/grafana/grafana/blob/main/contribute/developer-guide.md)
-1. Clone an example plugin into `/var/lib/grafana/plugins` or `data/plugins` (relative to grafana git repo if you're running development version from source dir)
+1. Clone an example plugin into `/var/lib/grafana/plugins` or `data/plugins` (relative to mosaicoo git repo if you're running development version from source dir)
 1. Use one of our example plugins as a starting point
 
 Example plugins

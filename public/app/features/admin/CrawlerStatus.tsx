@@ -23,7 +23,7 @@ export const CrawlerStatus = () => {
   useEffect(() => {
     const subscription = getGrafanaLiveSrv()
       .getStream<CrawlerStatusMessage>({
-        scope: LiveChannelScope.Grafana,
+        scope: LiveChannelScope.Mosaicoo,
         namespace: 'broadcast',
         path: 'crawler',
       })

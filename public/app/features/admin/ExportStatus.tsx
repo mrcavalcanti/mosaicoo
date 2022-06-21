@@ -26,7 +26,7 @@ export const ExportStatus = () => {
   useEffect(() => {
     const subscription = getGrafanaLiveSrv()
       .getStream<ExportStatusMessage>({
-        scope: LiveChannelScope.Grafana,
+        scope: LiveChannelScope.Mosaicoo,
         namespace: 'broadcast',
         path: 'export',
       })

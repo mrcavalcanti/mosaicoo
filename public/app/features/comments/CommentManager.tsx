@@ -59,7 +59,7 @@ export class CommentManager extends PureComponent<Props, State> {
 
   getLiveAddress = () => {
     return {
-      scope: LiveChannelScope.Grafana,
+      scope: LiveChannelScope.Mosaicoo,
       namespace: 'comment',
       path: `${this.props.objectType}/${this.props.objectId}`,
     };

@@ -59,7 +59,7 @@ class DashboardWatcher {
     // Check for changes
     if (uid !== this.uid) {
       this.channel = {
-        scope: LiveChannelScope.Grafana,
+        scope: LiveChannelScope.Mosaicoo,
         namespace: 'dashboard',
         path: `uid/${uid}`,
       };

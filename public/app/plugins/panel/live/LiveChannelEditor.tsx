@@ -16,7 +16,7 @@ import { LivePanelOptions } from './types';
 type Props = StandardEditorProps<LiveChannelAddress, any, LivePanelOptions>;
 
 const scopes: Array<SelectableValue<LiveChannelScope>> = [
-  { label: 'Grafana', value: LiveChannelScope.Grafana, description: 'Core grafana live features' },
+  { label: 'Grafana', value: LiveChannelScope.Mosaicoo, description: 'Core grafana live features' },
   { label: 'Data Sources', value: LiveChannelScope.DataSource, description: 'Data sources with live support' },
   { label: 'Plugins', value: LiveChannelScope.Plugin, description: 'Plugins with live support' },
 ];

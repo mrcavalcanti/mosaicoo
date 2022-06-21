@@ -157,7 +157,7 @@ describe('LiveDataStream', () => {
   const expectErrorResponse = expectResponse(LoadingState.Error);
 
   const dummyLiveChannelAddress: LiveChannelAddress = {
-    scope: LiveChannelScope.Grafana,
+    scope: LiveChannelScope.Mosaicoo,
     namespace: 'stream',
     path: 'abc',
   };

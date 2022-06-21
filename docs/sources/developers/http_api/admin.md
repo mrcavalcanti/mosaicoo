@@ -98,7 +98,7 @@ Content-Type: application/json
     "host":"127.0.0.1:0000",
     "name":"grafana",
     "password":"************",
-    "path":"grafana.db",
+    "path":"mosaicoo.db",
     "ssl_mode":"disable",
     "type":"sqlite3",
     "user":"root"

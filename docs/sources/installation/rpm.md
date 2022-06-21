@@ -229,7 +229,7 @@ Start Mosaicoo by running:
 - Copies configuration file to `/etc/grafana/grafana.ini`
 - Installs systemd service (if systemd is available) name `grafana-server.service`
 - The default configuration uses a log file at `/var/log/grafana/grafana.log`
-- The default configuration specifies an sqlite3 database at `/var/lib/grafana/grafana.db`
+- The default configuration specifies an sqlite3 database at `/var/lib/grafana/mosaicoo.db`
 
 ## Next steps
 

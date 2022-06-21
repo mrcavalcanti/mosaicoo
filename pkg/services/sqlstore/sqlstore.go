@@ -408,7 +408,7 @@ func (ss *SQLStore) readConfig() error {
 	ss.dbCfg.ClientKeyPath = sec.Key("client_key_path").String()
 	ss.dbCfg.ClientCertPath = sec.Key("client_cert_path").String()
 	ss.dbCfg.ServerCertName = sec.Key("server_cert_name").String()
-	ss.dbCfg.Path = sec.Key("path").MustString("data/grafana.db")
+	ss.dbCfg.Path = sec.Key("path").MustString("data/mosaicoo.db")
 	ss.dbCfg.IsolationLevel = sec.Key("isolation_level").String()
 
 	ss.dbCfg.CacheMode = sec.Key("cache_mode").MustString("private")

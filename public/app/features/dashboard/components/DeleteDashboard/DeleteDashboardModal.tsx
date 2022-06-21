@@ -72,7 +72,7 @@ const ProvisionedDeleteModal = ({ hideModal, provisionedId }: { hideModal(): voi
     `}
   >
     <p>
-      This dashboard is managed by Grafana provisioning and cannot be deleted. Remove the dashboard from the config file
+      This dashboard is managed by Mosaicoo provisioning and cannot be deleted. Remove the dashboard from the config file
       to delete it.
     </p>
     <p>

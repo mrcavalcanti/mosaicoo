@@ -21,7 +21,7 @@ export class BlugeSearcher implements GrafanaSearcher {
   }
 
   async tags(query: SearchQuery): Promise<TermCount[]> {
-    const ds = (await getDataSourceSrv().get('-- Grafana --')) as GrafanaDatasource;
+    const ds = (await getDataSourceSrv().get('-- Mosaicoo --')) as GrafanaDatasource;
     const target = {
       ...query,
       refId: 'A',
@@ -52,7 +52,7 @@ const firstPageSize = 50;
 const nextPageSizes = 100;
 
 export async function doSearchQuery(query: SearchQuery): Promise<QueryResponse> {
-  const ds = (await getDataSourceSrv().get('-- Grafana --')) as GrafanaDatasource;
+  const ds = (await getDataSourceSrv().get('-- Mosaicoo --')) as GrafanaDatasource;
   const target = {
     ...query,
     refId: 'A',

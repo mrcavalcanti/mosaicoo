@@ -37,7 +37,7 @@ interface State {
 const connector = connect(mapStateToProps, mapDispatchToProps);
 export type Props = OwnProps & ConnectedProps<typeof connector>;
 
-const headerTooltip = `Sync LDAP or OAuth groups with your Grafana teams.`;
+const headerTooltip = `Sync LDAP or OAuth groups with your Mosaicoo teams.`;
 
 export class TeamGroupSync extends PureComponent<Props, State> {
   constructor(props: Props) {
@@ -105,7 +105,7 @@ export class TeamGroupSync extends PureComponent<Props, State> {
             featureId={'team-sync'}
             eventVariant={'trial'}
             featureName={'team sync'}
-            text={'Add a group to enable team sync for free during your trial of Grafana Pro.'}
+            text={'Add a group to enable team sync for free during your trial of Mosaicoo Pro.'}
           />
         )}
         <div className="page-action-bar">
@@ -198,7 +198,7 @@ export const TeamSyncUpgradeContent = ({ action }: { action?: UpgradeContentProp
       featureName={'team sync'}
       featureUrl={'https://grafana.com/docs/grafana/latest/enterprise/team-sync'}
       description={
-        'Team Sync makes it easier for you to manage users’ access in Grafana, by immediately updating each user’s Grafana teams and permissions based on their single sign-on group membership, instead of when users sign in.'
+        'Team Sync makes it easier for you to manage users’ access in Grafana, by immediately updating each user’s Mosaicoo teams and permissions based on their single sign-on group membership, instead of when users sign in.'
       }
     />
   );

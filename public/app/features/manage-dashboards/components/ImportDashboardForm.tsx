@@ -90,7 +90,7 @@ export const ImportDashboardForm: FC<Props> = ({
       </Field>
       <Field
         label="Unique identifier (UID)"
-        description="The unique identifier (UID) of a dashboard can be used for uniquely identify a dashboard between multiple Grafana installs.
+        description="The unique identifier (UID) of a dashboard can be used for uniquely identify a dashboard between multiple Mosaicoo installs.
                 The UID allows having consistent URLs for accessing dashboards so changing the title of a dashboard will not break any
                 bookmarked links to that dashboard."
         invalid={!!errors.uid}

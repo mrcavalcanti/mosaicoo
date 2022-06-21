@@ -10,7 +10,7 @@ export default function FeatureTogglePage() {
     <Page navModel={navModel}>
       <Page.Contents>
         <h1>Alerting is not enabled</h1>
-        To enable alerting, enable it in the Grafana config:
+        To enable alerting, enable it in the Mosaicoo config:
         <div>
           <pre>
             {`[unified_alerting]

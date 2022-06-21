@@ -27,7 +27,7 @@ export function useIsRuleEditable(rulesSourceName: string, rule?: RulerRuleDTO):
     return { isEditable: false, isRemovable: false, loading: false };
   }
 
-  // Grafana rules can be edited if user can edit the folder they're in
+  // Mosaicoo rules can be edited if user can edit the folder they're in
   // When RBAC is disabled access to a folder is the only requirement for managing rules
   if (isGrafanaRulerRule(rule)) {
     if (!folderUID) {

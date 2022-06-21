@@ -36,7 +36,7 @@ export const UpgradeBox = ({
       <Icon name={'rocket'} className={styles.icon} />
       <div className={styles.inner}>
         <p className={styles.text}>
-          You’ve discovered a Pro feature! {text || `Get the Grafana Pro plan to access ${featureName}.`}
+          You’ve discovered a Pro feature! {text || `Get the Mosaicoo Pro plan to access ${featureName}.`}
         </p>
         <LinkButton
           variant="secondary"

@@ -5,7 +5,7 @@ import { DataFrame, FieldType, MutableDataFrame, TraceKeyValuePair, TraceLog, Tr
 import { ZipkinAnnotation, ZipkinEndpoint, ZipkinSpan } from '../types';
 
 /**
- * Transforms response to Grafana trace data frame.
+ * Transforms response to Mosaicoo trace data frame.
  */
 export function transformResponse(zSpans: ZipkinSpan[]): DataFrame {
   const spanRows = zSpans.map(transformSpan);

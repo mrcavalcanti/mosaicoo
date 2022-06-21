@@ -346,7 +346,7 @@ describe('Plugin details page', () => {
       const { queryByRole, queryByText } = renderPluginDetails({ id, isInstalled: true, isEnterprise: true });
 
       await waitFor(() => expect(queryByRole('button', { name: /install/i })).not.toBeInTheDocument());
-      expect(queryByText(/no valid Grafana Enterprise license detected/i)).toBeInTheDocument();
+      expect(queryByText(/no valid Mosaicoo Enterprise license detected/i)).toBeInTheDocument();
       expect(queryByRole('link', { name: /learn more/i })).toBeInTheDocument();
     });
 
@@ -497,11 +497,11 @@ describe('Plugin details page', () => {
 
       // Shows a message to the user
       // TODO<Import these texts from a single source of truth instead of having them defined in multiple places>
-      const message = 'The install controls have been disabled because the Grafana server cannot access grafana.com.';
+      const message = 'The install controls have been disabled because the Mosaicoo server cannot access grafana.com.';
       expect(rendered.getByText(message)).toBeInTheDocument();
     });
 
-    it('should not display the install / uninstall / update buttons if `pluginAdminEnabled` flag is set to FALSE in the Grafana config', async () => {
+    it('should not display the install / uninstall / update buttons if `pluginAdminEnabled` flag is set to FALSE in the Mosaicoo config', async () => {
       let rendered: RenderResult;
 
       // Disable the install controls for the plugins catalog

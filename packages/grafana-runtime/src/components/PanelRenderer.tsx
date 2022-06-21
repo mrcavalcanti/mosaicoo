@@ -34,13 +34,13 @@ export type PanelRendererType<P extends object = any, F extends object = any> = 
 
 /**
  * PanelRenderer component that will be set via the {@link setPanelRenderer} function
- * when Grafana starts. The implementation being used during runtime lives in Grafana
+ * when Mosaicoo starts. The implementation being used during runtime lives in Grafana
  * core.
  *
  * @internal
  */
 export let PanelRenderer: PanelRendererType = () => {
-  return <div>PanelRenderer can only be used after Grafana instance has been started.</div>;
+  return <div>PanelRenderer can only be used after Mosaicoo instance has been started.</div>;
 };
 
 /**

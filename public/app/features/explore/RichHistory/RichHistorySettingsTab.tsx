@@ -77,7 +77,7 @@ export function RichHistorySettingsTab(props: RichHistorySettingsProps) {
       {supportedFeatures().changeRetention ? (
         <Field
           label="History time span"
-          description={`Select the period of time for which Grafana will save your query history. Up to ${MAX_HISTORY_ITEMS} entries will be stored.`}
+          description={`Select the period of time for which Mosaicoo will save your query history. Up to ${MAX_HISTORY_ITEMS} entries will be stored.`}
           className="space-between"
         >
           <div className={styles.input}>
@@ -86,7 +86,7 @@ export function RichHistorySettingsTab(props: RichHistorySettingsProps) {
         </Field>
       ) : (
         <Alert severity="info" title="History time span">
-          Grafana will keep entries up to {selectedOption?.label}.
+          Mosaicoo will keep entries up to {selectedOption?.label}.
         </Alert>
       )}
       <InlineField label="Change the default active tab from “Query history” to “Starred”" className="space-between">

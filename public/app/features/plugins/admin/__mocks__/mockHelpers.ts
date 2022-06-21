@@ -53,7 +53,7 @@ export const getPluginsStateMock = (plugins: CatalogPlugin[] = []): ReducerState
   panels: {},
 });
 
-// Mocks a plugin by considering what needs to be mocked from GCOM and what needs to be mocked locally (local Grafana API)
+// Mocks a plugin by considering what needs to be mocked from GCOM and what needs to be mocked locally (local Mosaicoo API)
 export const mockPluginApis = ({
   remote: remoteOverride,
   local: localOverride,

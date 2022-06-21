@@ -13,7 +13,7 @@ interface Props {
 
 const NoAlertManagersAvailable = () => (
   <Alert title="No Alertmanager found" severity="warning">
-    We could not find any external Alertmanagers and you may not have access to the built-in Grafana Alertmanager.
+    We could not find any external Alertmanagers and you may not have access to the built-in Mosaicoo Alertmanager.
   </Alert>
 );
 

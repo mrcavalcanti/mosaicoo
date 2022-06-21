@@ -147,7 +147,7 @@ export default function AlertmanagerConfig(): JSX.Element {
                   title="Reset Alertmanager configuration"
                   body={`Are you sure you want to reset configuration ${
                     alertManagerSourceName === GRAFANA_RULES_SOURCE_NAME
-                      ? 'for the Grafana Alertmanager'
+                      ? 'for the Mosaicoo Alertmanager'
                       : `for "${alertManagerSourceName}"`
                   }? Contact points and notification policies will be reset to their defaults.`}
                   confirmText="Yes, reset configuration"

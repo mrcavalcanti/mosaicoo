@@ -43,7 +43,7 @@ export const InstallControls = ({ plugin, latestCompatibleVersion }: Props) => {
   if (plugin.isEnterprise && !featureEnabled('enterprise.plugins')) {
     return (
       <HorizontalGroup height="auto" align="center">
-        <span className={styles.message}>No valid Grafana Enterprise license detected.</span>
+        <span className={styles.message}>No valid Mosaicoo Enterprise license detected.</span>
         <LinkButton
           href={`${getExternalManageLink(plugin.id)}?utm_source=grafana_catalog_learn_more`}
           target="_blank"
@@ -97,7 +97,7 @@ export const InstallControls = ({ plugin, latestCompatibleVersion }: Props) => {
   if (!isRemotePluginsAvailable) {
     return (
       <div className={styles.message}>
-        The install controls have been disabled because the Grafana server cannot access grafana.com.
+        The install controls have been disabled because the Mosaicoo server cannot access grafana.com.
       </div>
     );
   }

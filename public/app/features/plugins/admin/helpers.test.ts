@@ -650,7 +650,7 @@ describe('Plugins/Helpers', () => {
   });
 
   describe('isLocalPluginVisible()', () => {
-    test('should return TRUE if the plugin is not listed as hidden in the main Grafana configuration', () => {
+    test('should return TRUE if the plugin is not listed as hidden in the main Mosaicoo configuration', () => {
       config.pluginCatalogHiddenPlugins = ['akumuli-datasource'];
       const plugin = getLocalPluginMock({
         id: 'barchart',
@@ -659,7 +659,7 @@ describe('Plugins/Helpers', () => {
       expect(isLocalPluginVisible(plugin)).toBe(true);
     });
 
-    test('should return FALSE if the plugin is listed as hidden in the main Grafana configuration', () => {
+    test('should return FALSE if the plugin is listed as hidden in the main Mosaicoo configuration', () => {
       config.pluginCatalogHiddenPlugins = ['akumuli-datasource'];
       const plugin = getLocalPluginMock({
         id: 'akumuli-datasource',
@@ -670,7 +670,7 @@ describe('Plugins/Helpers', () => {
   });
 
   describe('isRemotePluginVisible()', () => {
-    test('should return TRUE if the plugin is not listed as hidden in the main Grafana configuration', () => {
+    test('should return TRUE if the plugin is not listed as hidden in the main Mosaicoo configuration', () => {
       config.pluginCatalogHiddenPlugins = ['akumuli-datasource'];
       const plugin = getRemotePluginMock({
         slug: 'barchart',
@@ -679,7 +679,7 @@ describe('Plugins/Helpers', () => {
       expect(isRemotePluginVisible(plugin)).toBe(true);
     });
 
-    test('should return FALSE if the plugin is listed as hidden in the main Grafana configuration', () => {
+    test('should return FALSE if the plugin is listed as hidden in the main Mosaicoo configuration', () => {
       config.pluginCatalogHiddenPlugins = ['akumuli-datasource'];
       const plugin = getRemotePluginMock({
         slug: 'akumuli-datasource',

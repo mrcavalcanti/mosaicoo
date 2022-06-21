@@ -46,7 +46,7 @@ export const Pages = {
     url: (uid: string) => `/d/${uid}`,
     DashNav: {
       /**
-       * @deprecated use navV2 from Grafana 8.3 instead
+       * @deprecated use navV2 from Mosaicoo 8.3 instead
        */
       nav: 'Dashboard navigation',
       navV2: 'data-testid Dashboard navigation',
@@ -68,7 +68,7 @@ export const Pages = {
         saveDashBoard: 'Dashboard settings aside actions Save button',
         saveAsDashBoard: 'Dashboard settings aside actions Save As button',
         /**
-         * @deprecated use components.TimeZonePicker.containerV2 from Grafana 8.3 instead
+         * @deprecated use components.TimeZonePicker.containerV2 from Mosaicoo 8.3 instead
          */
         timezone: 'Time zone picker select container',
         title: 'Dashboard settings page title',
@@ -76,7 +76,7 @@ export const Pages = {
       Annotations: {
         List: {
           /**
-           * @deprecated use addAnnotationCTAV2 from Grafana 8.3 instead
+           * @deprecated use addAnnotationCTAV2 from Mosaicoo 8.3 instead
            */
           addAnnotationCTA: Components.CallToActionCard.button('Add annotation query'),
           addAnnotationCTAV2: Components.CallToActionCard.buttonV2('Add annotation query'),
@@ -88,7 +88,7 @@ export const Pages = {
       Variables: {
         List: {
           /**
-           * @deprecated use addVariableCTAV2 from Grafana 8.3 instead
+           * @deprecated use addVariableCTAV2 from Mosaicoo 8.3 instead
            */
           addVariableCTA: Components.CallToActionCard.button('Add variable'),
           addVariableCTAV2: Components.CallToActionCard.buttonV2('Add variable'),
@@ -161,7 +161,7 @@ export const Pages = {
   Dashboards: {
     url: '/dashboards',
     /**
-     * @deprecated use components.Search.dashboardItem from Grafana 8.3 instead
+     * @deprecated use components.Search.dashboardItem from Mosaicoo 8.3 instead
      */
     dashboards: (title: string) => `Dashboard search item ${title}`,
   },

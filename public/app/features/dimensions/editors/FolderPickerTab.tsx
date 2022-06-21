@@ -73,7 +73,7 @@ export const FolderPickerTab = (props: Props) => {
           : (item: FileElement) => item.name.endsWith('.png') || item.name.endsWith('.gif');
 
       getDatasourceSrv()
-        .get('-- Grafana --')
+        .get('-- Mosaicoo --')
         .then((ds) => {
           (ds as GrafanaDatasource).listFiles(folder).subscribe({
             next: (frame) => {

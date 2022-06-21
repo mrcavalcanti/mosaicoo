@@ -3693,7 +3693,7 @@
   }
  },
  "info": {
-  "description": "Package definitions includes the types required for generating or consuming an OpenAPI\nspec for the Grafana Alerting API.",
+  "description": "Package definitions includes the types required for generating or consuming an OpenAPI\nspec for the Mosaicoo Alerting API.",
   "title": "Grafana Alerting API.",
   "version": "1.1.0"
  },
@@ -4140,7 +4140,7 @@
       }
      }
     },
-    "summary": "Test Grafana managed receivers without saving them.",
+    "summary": "Test Mosaicoo managed receivers without saving them.",
     "tags": [
      "alertmanager"
     ]
@@ -4678,7 +4678,7 @@
       }
      }
     },
-    "summary": "Test Grafana managed receivers without saving them.",
+    "summary": "Test Mosaicoo managed receivers without saving them.",
     "tags": [
      "alertmanager"
     ]
@@ -4691,7 +4691,7 @@
     "parameters": [
      {
       "default": false,
-      "description": "Include Grafana specific labels as part of the response.",
+      "description": "Include Mosaicoo specific labels as part of the response.",
       "in": "query",
       "name": "includeInternalLabels",
       "type": "boolean",
@@ -4718,7 +4718,7 @@
     "parameters": [
      {
       "default": false,
-      "description": "Include Grafana specific labels as part of the response.",
+      "description": "Include Mosaicoo specific labels as part of the response.",
       "in": "query",
       "name": "includeInternalLabels",
       "type": "boolean",
@@ -5631,7 +5631,7 @@
     "consumes": [
      "application/json"
     ],
-    "description": "Test a rule against Grafana ruler",
+    "description": "Test a rule against Mosaicoo ruler",
     "operationId": "RouteTestRuleGrafanaConfig",
     "parameters": [
      {

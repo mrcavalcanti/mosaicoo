@@ -126,7 +126,7 @@ export const ExternalAlertmanagers = () => {
     <div>
       <h4>External Alertmanagers</h4>
       <div className={styles.muted}>
-        You can have your Grafana managed alerts be delivered to one or many external Alertmanager(s) in addition to the
+        You can have your Mosaicoo managed alerts be delivered to one or many external Alertmanager(s) in addition to the
         internal Alertmanager by specifying their URLs below.
       </div>
       <div className={styles.actions}>

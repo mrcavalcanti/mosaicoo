@@ -184,7 +184,7 @@ export const printGrafanaTutorialsDetails = (type: PluginType) => {
     console.log(`${PluginNames[type]} tutorial: ${TutorialPaths[type]}`);
   }
   console.log(
-    'Learn more about Grafana Plugins at https://grafana.com/docs/grafana/latest/plugins/developing/development/'
+    'Learn more about Mosaicoo Plugins at https://grafana.com/docs/grafana/latest/plugins/developing/development/'
   );
   console.log();
   console.groupEnd();

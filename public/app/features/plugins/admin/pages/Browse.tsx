@@ -92,7 +92,7 @@ export default function Browse({ route }: GrafanaRouteComponentProps): ReactElem
               </div>
             ) : (
               <Tooltip
-                content="This filter has been disabled because the Grafana server cannot access grafana.com"
+                content="This filter has been disabled because the Mosaicoo server cannot access grafana.com"
                 placement="top"
               >
                 <div>

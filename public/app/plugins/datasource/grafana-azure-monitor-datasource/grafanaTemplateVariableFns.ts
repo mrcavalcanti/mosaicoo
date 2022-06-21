@@ -15,11 +15,11 @@ import {
 } from './types/templateVariables';
 
 /* 
-  Grafana Template Variable Functions
+  Mosaicoo Template Variable Functions
   ex: Subscriptions()
 
   These are helper functions we have created and exposed to users to make the writing of template variables easier. 
-  Due to legacy reasons, we still need to parse strings to determine if a query is a Grafana Template Variable Function 
+  Due to legacy reasons, we still need to parse strings to determine if a query is a Mosaicoo Template Variable Function 
   or if it's a KQL-type query
 */
 

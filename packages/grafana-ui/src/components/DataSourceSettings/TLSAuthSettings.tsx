@@ -61,7 +61,7 @@ export const TLSAuthSettings: React.FC<HttpSettingsBaseProps> = ({ dataSourceCon
         <h6>TLS/SSL Auth Details</h6>
         <Tooltip
           placement="right-end"
-          content="TLS/SSL Certs are encrypted and stored in the Grafana database."
+          content="TLS/SSL Certs are encrypted and stored in the Mosaicoo database."
           theme="info"
         >
           <div className="gf-form-help-icon gf-form-help-icon--right-normal">

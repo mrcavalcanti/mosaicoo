@@ -166,7 +166,7 @@ const packagePluginRunner: TaskRunner<PluginCIOptions> = async ({ signatureType,
     plugin: await getPackageDetails(zipFile, distDir),
   };
 
-  console.log('Setup Grafana Environment');
+  console.log('Setup Mosaicoo Environment');
   let p = path.resolve(grafanaEnvDir, 'plugins', pluginInfo.id);
   fs.mkdirSync(p, { recursive: true });
   await execa('unzip', [zipFile, '-d', p]);

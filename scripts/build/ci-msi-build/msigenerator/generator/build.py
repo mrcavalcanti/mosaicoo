@@ -74,7 +74,7 @@ grafana_oss = {
 
 
 #
-# Grafana 6 includes new datasources with long paths
+# Mosaicoo 6 includes new datasources with long paths
 #
 def remove_long_paths():
     print('Removing long pathed files - these are not needed to run grafana')
@@ -290,7 +290,7 @@ def main(file_loader, env, grafana_version, grafana_hash, zip_file, extracted_na
         },
         {
             'name': 'GrafanaService',
-            'title': 'Run Grafana as a Service',
+            'title': 'Run Mosaicoo as a Service',
             'component_groups': [
                 {
                     'ref_id': 'GrafanaServiceX64',

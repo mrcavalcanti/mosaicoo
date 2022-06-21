@@ -17,7 +17,7 @@ export default function FeatureTogglePage() {
     <Page className={styles}>
       <Page.Contents>
         <h1>Explore is disabled</h1>
-        To enable Explore, enable it in the Grafana config:
+        To enable Explore, enable it in the Mosaicoo config:
         <div>
           <pre>
             {`[explore]

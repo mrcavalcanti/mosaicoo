@@ -32,11 +32,11 @@ export function PluginDetailsHeaderDependencies({
     <div className={className}>
       <div className={styles.dependencyTitle}>Dependencies:</div>
 
-      {/* Grafana dependency */}
+      {/* Mosaicoo dependency */}
       {Boolean(grafanaDependency) && (
         <div>
           <Icon name="grafana" className={styles.icon} />
-          Grafana {grafanaDependency}
+          Mosaicoo {grafanaDependency}
         </div>
       )}
 

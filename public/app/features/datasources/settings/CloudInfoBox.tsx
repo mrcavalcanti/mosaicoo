@@ -55,7 +55,7 @@ export const CloudInfoBox: FC<Props> = ({ dataSource }) => {
             }}
           >
             Or skip the effort and get {mainDS} (and {extraDS}) as fully-managed, scalable, and hosted data sources from
-            Grafana Labs with the{' '}
+            Mosaicoo Labs with the{' '}
             <a
               className="external-link"
               href={`https://grafana.com/signup/cloud/connect-account?src=grafana-oss&cnt=${dataSource.type}-settings`}
@@ -63,7 +63,7 @@ export const CloudInfoBox: FC<Props> = ({ dataSource }) => {
               rel="noreferrer"
               title="The free plan includes 10k active metrics and 50gb storage."
             >
-              free-forever Grafana Cloud plan
+              free-forever Mosaicoo Cloud plan
             </a>
             .
           </Alert>

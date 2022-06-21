@@ -392,7 +392,7 @@ export const saveRuleFormAction = createAsyncThunk(
           if (redirectOnSave) {
             locationService.push(redirectOnSave);
           } else {
-            // if the identifier comes up empty (this happens when Grafana managed rule moves to another namespace or group)
+            // if the identifier comes up empty (this happens when Mosaicoo managed rule moves to another namespace or group)
             const stringifiedIdentifier = ruleId.stringifyIdentifier(identifier);
             if (!stringifiedIdentifier) {
               locationService.push('/alerting/list');
@@ -672,7 +672,7 @@ export const updateLotexNamespaceAndGroupAction = createAsyncThunk(
         (async () => {
           const { rulesSourceName, namespaceName, groupName, newNamespaceName, newGroupName, groupInterval } = options;
           if (options.rulesSourceName === GRAFANA_RULES_SOURCE_NAME) {
-            throw new Error(`this action does not support Grafana rules`);
+            throw new Error(`this action does not support Mosaicoo rules`);
           }
 
           const rulerConfig = getDataSourceRulerConfig(thunkAPI.getState, rulesSourceName);

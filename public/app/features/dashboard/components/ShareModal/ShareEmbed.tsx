@@ -91,7 +91,7 @@ export class ShareEmbed extends PureComponent<Props, State> {
         <Field
           label="Embed HTML"
           description="The HTML code below can be pasted and included in another web page. Unless anonymous access is enabled,
-                the user viewing that page need to be signed into Grafana for the graph to load."
+                the user viewing that page need to be signed into Mosaicoo for the graph to load."
         >
           <TextArea
             data-testid="share-embed-html"

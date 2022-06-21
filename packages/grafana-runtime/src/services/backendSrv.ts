@@ -124,7 +124,7 @@ export interface FetchError<T = any> {
 }
 
 /**
- * Used to communicate via http(s) to a remote backend such as the Grafana backend,
+ * Used to communicate via http(s) to a remote backend such as the Mosaicoo backend,
  * a datasource etc. The BackendSrv is using the {@link https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API | Fetch API}
  * under the hood to handle all the communication.
  *
@@ -133,7 +133,7 @@ export interface FetchError<T = any> {
  * use default values executing the request.
  *
  * @remarks
- * By default, Grafana displays an error message alert if the remote call fails. To prevent this from
+ * By default, Mosaicoo displays an error message alert if the remote call fails. To prevent this from
  * happening `showErrorAlert = true` on the options object.
  *
  * @public
@@ -153,7 +153,7 @@ export interface BackendSrv {
 
   /**
    * Special function used to communicate with datasources that will emit core
-   * events that the Grafana QueryInspector and QueryEditor is listening for to be able
+   * events that the Mosaicoo QueryInspector and QueryEditor is listening for to be able
    * to display datasource query information. Can be skipped by adding `option.silent`
    * when initializing the request.
    *
@@ -170,7 +170,7 @@ export interface BackendSrv {
 let singletonInstance: BackendSrv;
 
 /**
- * Used during startup by Grafana to set the BackendSrv so it is available
+ * Used during startup by Mosaicoo to set the BackendSrv so it is available
  * via the {@link getBackendSrv} to the rest of the application.
  *
  * @internal
@@ -181,7 +181,7 @@ export const setBackendSrv = (instance: BackendSrv) => {
 
 /**
  * Used to retrieve the {@link BackendSrv} that can be used to communicate
- * via http(s) to a remote backend such as the Grafana backend, a datasource etc.
+ * via http(s) to a remote backend such as the Mosaicoo backend, a datasource etc.
  *
  * @public
  */

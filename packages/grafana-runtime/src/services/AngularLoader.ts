@@ -65,7 +65,7 @@ export interface AngularLoader {
 let instance: AngularLoader;
 
 /**
- * Used during startup by Grafana to set the AngularLoader so it is available
+ * Used during startup by Mosaicoo to set the AngularLoader so it is available
  * via the {@link getAngularLoader} to the rest of the application.
  *
  * @internal

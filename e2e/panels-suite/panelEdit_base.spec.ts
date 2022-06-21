@@ -47,13 +47,13 @@ e2e.scenario({
         e2e.components.Tab.title('Alert').should('be.visible').click();
         e2e.components.Tab.active().should('have.text', 'Alert0'); // there's no alert so therefore Alert + 0
 
-        // Needs to be disabled until Grafana EE turns unified alerting on by default
+        // Needs to be disabled until Mosaicoo EE turns unified alerting on by default
         // e2e.components.AlertTab.content().should('not.exist');
 
         e2e.components.QueryTab.content().should('not.exist');
         e2e.components.TransformTab.content().should('not.exist');
 
-        // Needs to be disabled until Grafana EE turns unified alerting on by default
+        // Needs to be disabled until Mosaicoo EE turns unified alerting on by default
         // e2e.components.PanelAlertTabContent.content().should('exist');
         // e2e.components.PanelAlertTabContent.content().should('be.visible');
 

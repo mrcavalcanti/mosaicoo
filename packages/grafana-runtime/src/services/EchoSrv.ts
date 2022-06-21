@@ -23,7 +23,7 @@ export interface EchoMeta {
    */
   sessionId: string;
   /**
-   * The current users username used to login into Grafana e.g. email.
+   * The current users username used to login into Mosaicoo e.g. email.
    */
   userLogin: string;
   /**
@@ -113,7 +113,7 @@ export interface EchoSrv {
 let singletonInstance: EchoSrv;
 
 /**
- * Used during startup by Grafana to set the EchoSrv so it is available
+ * Used during startup by Mosaicoo to set the EchoSrv so it is available
  * via the {@link getEchoSrv} to the rest of the application.
  *
  * @internal
@@ -133,7 +133,7 @@ export function getEchoSrv(): EchoSrv {
 }
 
 /**
- * Used to register echo backends that will receive Grafana echo events during application
+ * Used to register echo backends that will receive Mosaicoo echo events during application
  * runtime.
  *
  * @public

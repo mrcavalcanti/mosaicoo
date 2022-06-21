@@ -47,7 +47,7 @@ export function getCredentials(options: DataSourceSettings<any, any>): AzureCred
           authType: 'msi',
         };
       } else {
-        // If authentication type is managed identity but managed identities were disabled in Grafana config,
+        // If authentication type is managed identity but managed identities were disabled in Mosaicoo config,
         // then we should fallback to an empty app registration (client secret) configuration
         return {
           authType: 'clientsecret',
@@ -72,7 +72,7 @@ export function updateCredentials(
   switch (credentials.authType) {
     case 'msi':
       if (!config.azure.managedIdentityEnabled) {
-        throw new Error('Managed Identity authentication is not enabled in Grafana config.');
+        throw new Error('Managed Identity authentication is not enabled in Mosaicoo config.');
       }
 
       options = {

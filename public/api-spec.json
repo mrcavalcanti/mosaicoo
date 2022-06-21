@@ -4,7 +4,7 @@
   "schemes": ["http", "https"],
   "swagger": "2.0",
   "info": {
-    "description": "The Grafana backend exposes an HTTP API, the same API is used by the frontend to do\neverything from saving dashboards, creating users and updating data sources.",
+    "description": "The Mosaicoo backend exposes an HTTP API, the same API is used by the frontend to do\neverything from saving dashboards, creating users and updating data sources.",
     "title": "Grafana HTTP API.",
     "contact": {
       "name": "Grafana Labs",
@@ -71,7 +71,7 @@
     },
     "/access-control/builtin-roles/{builtinRole}/roles/{roleUID}": {
       "delete": {
-        "description": "Deletes a built-in role assignment (for one of Viewer, Editor, Admin, or Grafana Admin) to the role with the provided UID.\n\nYou need to have a permission with action `roles.builtin:remove` and scope `permissions:type:delegate`. `permissions:type:delegate` scope ensures that users can only remove built-in role assignments with the roles which have same, or a subset of permissions which the user has. For example, if a user does not have required permissions for creating users, they won’t be able to remove a built-in role assignment which allows to do that.",
+        "description": "Deletes a built-in role assignment (for one of Viewer, Editor, Admin, or Mosaicoo Admin) to the role with the provided UID.\n\nYou need to have a permission with action `roles.builtin:remove` and scope `permissions:type:delegate`. `permissions:type:delegate` scope ensures that users can only remove built-in role assignments with the roles which have same, or a subset of permissions which the user has. For example, if a user does not have required permissions for creating users, they won’t be able to remove a built-in role assignment which allows to do that.",
         "tags": ["access_control", "enterprise"],
         "summary": "Remove a built-in role assignment.",
         "operationId": "removeBuiltinRole",
@@ -438,7 +438,7 @@
     },
     "/access-control/users/{user_id}/roles": {
       "get": {
-        "description": "Lists the roles that have been directly assigned to a given user. The list does not include built-in roles (Viewer, Editor, Admin or Grafana Admin), and it does not include roles that have been inherited from a team.\n\nYou need to have a permission with action `users.roles:list` and scope `users:id:\u003cuser ID\u003e`.",
+        "description": "Lists the roles that have been directly assigned to a given user. The list does not include built-in roles (Viewer, Editor, Admin or Mosaicoo Admin), and it does not include roles that have been inherited from a team.\n\nYou need to have a permission with action `users.roles:list` and scope `users:id:\u003cuser ID\u003e`.",
         "tags": ["access_control", "enterprise"],
         "summary": "List roles assigned to a user.",
         "operationId": "listUserRoles",
@@ -618,7 +618,7 @@
             "basic": []
           }
         ],
-        "description": "If you are running Grafana Enterprise and have Fine-grained access control enabled, you need to have a permission with action `ldap.config:reload`.",
+        "description": "If you are running Mosaicoo Enterprise and have Fine-grained access control enabled, you need to have a permission with action `ldap.config:reload`.",
         "tags": ["admin_ldap"],
         "summary": "Reloads the LDAP configuration.",
         "operationId": "reloadLDAP",
@@ -645,7 +645,7 @@
             "basic": []
           }
         ],
-        "description": "If you are running Grafana Enterprise and have Fine-grained access control enabled, you need to have a permission with action `ldap.status:read`.",
+        "description": "If you are running Mosaicoo Enterprise and have Fine-grained access control enabled, you need to have a permission with action `ldap.status:read`.",
         "tags": ["admin_ldap"],
         "summary": "Attempts to connect to all the configured LDAP servers and returns information on whenever they're available or not.",
         "operationId": "getLDAPStatus",
@@ -672,9 +672,9 @@
             "basic": []
           }
         ],
-        "description": "If you are running Grafana Enterprise and have Fine-grained access control enabled, you need to have a permission with action `ldap.user:sync`.",
+        "description": "If you are running Mosaicoo Enterprise and have Fine-grained access control enabled, you need to have a permission with action `ldap.user:sync`.",
         "tags": ["admin_ldap"],
-        "summary": "Enables a single Grafana user to be synchronized against LDAP.",
+        "summary": "Enables a single Mosaicoo user to be synchronized against LDAP.",
         "operationId": "syncLDAPUser",
         "parameters": [
           {
@@ -709,9 +709,9 @@
             "basic": []
           }
         ],
-        "description": "If you are running Grafana Enterprise and have Fine-grained access control enabled, you need to have a permission with action `ldap.user:read`.",
+        "description": "If you are running Mosaicoo Enterprise and have Fine-grained access control enabled, you need to have a permission with action `ldap.user:read`.",
         "tags": ["admin_ldap"],
-        "summary": "Finds an user based on a username in LDAP. This helps illustrate how would the particular user be mapped in Grafana when synced.",
+        "summary": "Finds an user based on a username in LDAP. This helps illustrate how would the particular user be mapped in Mosaicoo when synced.",
         "operationId": "getLDAPUser",
         "parameters": [
           {
@@ -800,7 +800,7 @@
             "basic": []
           }
         ],
-        "description": "Reloads the provisioning config files for access control again. It won’t return until the new provisioned entities are already stored in the database. In case of dashboards, it will stop polling for changes in dashboard files and then restart it with new configurations after returning.\nIf you are running Grafana Enterprise and have Fine-grained access control enabled, you need to have a permission with action `provisioning:reload` and scope `provisioners:accesscontrol`.",
+        "description": "Reloads the provisioning config files for access control again. It won’t return until the new provisioned entities are already stored in the database. In case of dashboards, it will stop polling for changes in dashboard files and then restart it with new configurations after returning.\nIf you are running Mosaicoo Enterprise and have Fine-grained access control enabled, you need to have a permission with action `provisioning:reload` and scope `provisioners:accesscontrol`.",
         "tags": ["admin_provisioning"],
         "summary": "Reload access control provisioning configurations.",
         "operationId": "reloadProvisionedAccessControl",
@@ -827,7 +827,7 @@
             "basic": []
           }
         ],
-        "description": "Reloads the provisioning config files for dashboards again. It won’t return until the new provisioned entities are already stored in the database. In case of dashboards, it will stop polling for changes in dashboard files and then restart it with new configurations after returning.\nIf you are running Grafana Enterprise and have Fine-grained access control enabled, you need to have a permission with action `provisioning:reload` and scope `provisioners:dashboards`.",
+        "description": "Reloads the provisioning config files for dashboards again. It won’t return until the new provisioned entities are already stored in the database. In case of dashboards, it will stop polling for changes in dashboard files and then restart it with new configurations after returning.\nIf you are running Mosaicoo Enterprise and have Fine-grained access control enabled, you need to have a permission with action `provisioning:reload` and scope `provisioners:dashboards`.",
         "tags": ["admin_provisioning"],
         "summary": "Reload dashboard provisioning configurations.",
         "operationId": "reloadProvisionedDashboards",
@@ -854,7 +854,7 @@
             "basic": []
           }
         ],
-        "description": "Reloads the provisioning config files for datasources again. It won’t return until the new provisioned entities are already stored in the database. In case of dashboards, it will stop polling for changes in dashboard files and then restart it with new configurations after returning.\nIf you are running Grafana Enterprise and have Fine-grained access control enabled, you need to have a permission with action `provisioning:reload` and scope `provisioners:datasources`.",
+        "description": "Reloads the provisioning config files for datasources again. It won’t return until the new provisioned entities are already stored in the database. In case of dashboards, it will stop polling for changes in dashboard files and then restart it with new configurations after returning.\nIf you are running Mosaicoo Enterprise and have Fine-grained access control enabled, you need to have a permission with action `provisioning:reload` and scope `provisioners:datasources`.",
         "tags": ["admin_provisioning"],
         "summary": "Reload datasource provisioning configurations.",
         "operationId": "reloadProvisionedDatasources",
@@ -881,7 +881,7 @@
             "basic": []
           }
         ],
-        "description": "Reloads the provisioning config files for legacy alert notifiers again. It won’t return until the new provisioned entities are already stored in the database. In case of dashboards, it will stop polling for changes in dashboard files and then restart it with new configurations after returning.\nIf you are running Grafana Enterprise and have Fine-grained access control enabled, you need to have a permission with action `provisioning:reload` and scope `provisioners:notifications`.",
+        "description": "Reloads the provisioning config files for legacy alert notifiers again. It won’t return until the new provisioned entities are already stored in the database. In case of dashboards, it will stop polling for changes in dashboard files and then restart it with new configurations after returning.\nIf you are running Mosaicoo Enterprise and have Fine-grained access control enabled, you need to have a permission with action `provisioning:reload` and scope `provisioners:notifications`.",
         "tags": ["admin_provisioning"],
         "summary": "Reload legacy alert notifier provisioning configurations.",
         "operationId": "reloadProvisionedAlertNotifiers",
@@ -908,7 +908,7 @@
             "basic": []
           }
         ],
-        "description": "Reloads the provisioning config files for plugins again. It won’t return until the new provisioned entities are already stored in the database. In case of dashboards, it will stop polling for changes in dashboard files and then restart it with new configurations after returning.\nIf you are running Grafana Enterprise and have Fine-grained access control enabled, you need to have a permission with action `provisioning:reload` and scope `provisioners:plugin`.",
+        "description": "Reloads the provisioning config files for plugins again. It won’t return until the new provisioned entities are already stored in the database. In case of dashboards, it will stop polling for changes in dashboard files and then restart it with new configurations after returning.\nIf you are running Mosaicoo Enterprise and have Fine-grained access control enabled, you need to have a permission with action `provisioning:reload` and scope `provisioners:plugin`.",
         "tags": ["admin_provisioning"],
         "summary": "Reload plugin provisioning configurations.",
         "operationId": "reloadProvisionedPlugins",
@@ -935,7 +935,7 @@
             "basic": []
           }
         ],
-        "description": "If you are running Grafana Enterprise and have Fine-grained access control enabled, you need to have a permission with action `settings:read` and scopes: `settings:*`, `settings:auth.saml:` and `settings:auth.saml:enabled` (property level).",
+        "description": "If you are running Mosaicoo Enterprise and have Fine-grained access control enabled, you need to have a permission with action `settings:read` and scopes: `settings:*`, `settings:auth.saml:` and `settings:auth.saml:enabled` (property level).",
         "tags": ["admin"],
         "summary": "Fetch settings.",
         "operationId": "getSettings",
@@ -954,9 +954,9 @@
     },
     "/admin/stats": {
       "get": {
-        "description": "Only works with Basic Authentication (username and password). See introduction for an explanation.\nIf you are running Grafana Enterprise and have Fine-grained access control enabled, you need to have a permission with action `server:stats:read`.",
+        "description": "Only works with Basic Authentication (username and password). See introduction for an explanation.\nIf you are running Mosaicoo Enterprise and have Fine-grained access control enabled, you need to have a permission with action `server:stats:read`.",
         "tags": ["admin"],
-        "summary": "Fetch Grafana Stats.",
+        "summary": "Fetch Mosaicoo Stats.",
         "operationId": "getStats",
         "responses": {
           "200": {
@@ -981,7 +981,7 @@
             "basic": []
           }
         ],
-        "description": "If you are running Grafana Enterprise and have Fine-grained access control enabled, you need to have a permission with action `users:create`.\nNote that OrgId is an optional parameter that can be used to assign a new user to a different organization when `auto_assign_org` is set to `true`.",
+        "description": "If you are running Mosaicoo Enterprise and have Fine-grained access control enabled, you need to have a permission with action `users:create`.\nNote that OrgId is an optional parameter that can be used to assign a new user to a different organization when `auto_assign_org` is set to `true`.",
         "tags": ["admin_users"],
         "summary": "Create new user.",
         "operationId": "createUser",
@@ -1025,7 +1025,7 @@
             "basic": []
           }
         ],
-        "description": "If you are running Grafana Enterprise and have Fine-grained access control enabled, you need to have a permission with action `users:delete` and scope `global.users:*`.",
+        "description": "If you are running Mosaicoo Enterprise and have Fine-grained access control enabled, you need to have a permission with action `users:delete` and scope `global.users:*`.",
         "tags": ["admin_users"],
         "summary": "Delete global User.",
         "operationId": "deleteUser",
@@ -1065,7 +1065,7 @@
             "basic": []
           }
         ],
-        "description": "If you are running Grafana Enterprise and have Fine-grained access control enabled, you need to have a permission with action `users.authtoken:list` and scope `global.users:*`.",
+        "description": "If you are running Mosaicoo Enterprise and have Fine-grained access control enabled, you need to have a permission with action `users.authtoken:list` and scope `global.users:*`.",
         "tags": ["admin_users"],
         "summary": "Return a list of all auth tokens (devices) that the user currently have logged in from.",
         "operationId": "getAuthTokens",
@@ -1102,7 +1102,7 @@
             "basic": []
           }
         ],
-        "description": "If you are running Grafana Enterprise and have Fine-grained access control enabled, you need to have a permission with action `users:disable` and scope `global.users:1` (userIDScope).",
+        "description": "If you are running Mosaicoo Enterprise and have Fine-grained access control enabled, you need to have a permission with action `users:disable` and scope `global.users:1` (userIDScope).",
         "tags": ["admin_users"],
         "summary": "Disable user.",
         "operationId": "disableUser",
@@ -1142,7 +1142,7 @@
             "basic": []
           }
         ],
-        "description": "If you are running Grafana Enterprise and have Fine-grained access control enabled, you need to have a permission with action `users:enable` and scope `global.users:1` (userIDScope).",
+        "description": "If you are running Mosaicoo Enterprise and have Fine-grained access control enabled, you need to have a permission with action `users:enable` and scope `global.users:1` (userIDScope).",
         "tags": ["admin_users"],
         "summary": "Enable user.",
         "operationId": "enableUser",
@@ -1182,7 +1182,7 @@
             "basic": []
           }
         ],
-        "description": "If you are running Grafana Enterprise and have Fine-grained access control enabled, you need to have a permission with action `users.logout` and scope `global.users:*`.",
+        "description": "If you are running Mosaicoo Enterprise and have Fine-grained access control enabled, you need to have a permission with action `users.logout` and scope `global.users:*`.",
         "tags": ["admin_users"],
         "summary": "Logout user revokes all auth tokens (devices) for the user. User of issued auth tokens (devices) will no longer be logged in and will be required to authenticate again upon next activity.",
         "operationId": "logoutUser",
@@ -1225,7 +1225,7 @@
             "basic": []
           }
         ],
-        "description": "If you are running Grafana Enterprise and have Fine-grained access control enabled, you need to have a permission with action `users.password:update` and scope `global.users:*`.",
+        "description": "If you are running Mosaicoo Enterprise and have Fine-grained access control enabled, you need to have a permission with action `users.password:update` and scope `global.users:*`.",
         "tags": ["admin_users"],
         "summary": "Set password for user.",
         "operationId": "setPassword",
@@ -1269,7 +1269,7 @@
     },
     "/admin/users/{user_id}/permissions": {
       "put": {
-        "description": "Only works with Basic Authentication (username and password). See introduction for an explanation.\nIf you are running Grafana Enterprise and have Fine-grained access control enabled, you need to have a permission with action `users.permissions:update` and scope `global.users:*`.",
+        "description": "Only works with Basic Authentication (username and password). See introduction for an explanation.\nIf you are running Mosaicoo Enterprise and have Fine-grained access control enabled, you need to have a permission with action `users.permissions:update` and scope `global.users:*`.",
         "tags": ["admin_users"],
         "summary": "Set permissions for user.",
         "operationId": "setPermissions",
@@ -1318,7 +1318,7 @@
             "basic": []
           }
         ],
-        "description": "If you are running Grafana Enterprise and have Fine-grained access control enabled, you need to have a permission with action `users.quotas:list` and scope `global.users:1` (userIDScope).",
+        "description": "If you are running Mosaicoo Enterprise and have Fine-grained access control enabled, you need to have a permission with action `users.quotas:list` and scope `global.users:1` (userIDScope).",
         "tags": ["admin_users"],
         "summary": "Fetch user quota.",
         "operationId": "getUserQuota",
@@ -1358,7 +1358,7 @@
             "basic": []
           }
         ],
-        "description": "If you are running Grafana Enterprise and have Fine-grained access control enabled, you need to have a permission with action `users.quotas:update` and scope `global.users:1` (userIDScope).",
+        "description": "If you are running Mosaicoo Enterprise and have Fine-grained access control enabled, you need to have a permission with action `users.quotas:update` and scope `global.users:1` (userIDScope).",
         "tags": ["admin_users"],
         "summary": "Update user quota.",
         "operationId": "updateUserQuota",
@@ -1414,7 +1414,7 @@
             "basic": []
           }
         ],
-        "description": "Revokes the given auth token (device) for the user. User of issued auth token (device) will no longer be logged in and will be required to authenticate again upon next activity.\nIf you are running Grafana Enterprise and have Fine-grained access control enabled, you need to have a permission with action `users.authtoken:update` and scope `global.users:*`.",
+        "description": "Revokes the given auth token (device) for the user. User of issued auth token (device) will no longer be logged in and will be required to authenticate again upon next activity.\nIf you are running Mosaicoo Enterprise and have Fine-grained access control enabled, you need to have a permission with action `users.authtoken:update` and scope `global.users:*`.",
         "tags": ["admin_users"],
         "summary": "Revoke auth token for user.",
         "operationId": "revokeAuthToken",
@@ -1517,7 +1517,7 @@
     },
     "/alert-notifications/lookup": {
       "get": {
-        "description": "Returns all notification channels, but with less detailed information. Accessible by any authenticated user and is mainly used by providing alert notification channels in Grafana UI when configuring alert rule.",
+        "description": "Returns all notification channels, but with less detailed information. Accessible by any authenticated user and is mainly used by providing alert notification channels in Mosaicoo UI when configuring alert rule.",
         "tags": ["legacy_alerts_notification_channels"],
         "summary": "Get all notification channels (lookup)",
         "operationId": "lookupAlertNotificationChannels",
@@ -2017,7 +2017,7 @@
     },
     "/annotations": {
       "get": {
-        "description": "Starting in Grafana v6.4 regions annotations are now returned in one entity that now includes the timeEnd property.",
+        "description": "Starting in Mosaicoo v6.4 regions annotations are now returned in one entity that now includes the timeEnd property.",
         "tags": ["annotations"],
         "summary": "Find Annotations.",
         "operationId": "getAnnotations",
@@ -2118,7 +2118,7 @@
         }
       },
       "post": {
-        "description": "Creates an annotation in the Grafana database. The dashboardId and panelId fields are optional. If they are not specified then an organization annotation is created and can be queried in any dashboard that adds the Grafana annotations data source. When creating a region annotation include the timeEnd property.\nThe format for `time` and `timeEnd` should be epoch numbers in millisecond resolution.\nThe response for this HTTP request is slightly different in versions prior to v6.4. In prior versions you would also get an endId if you where creating a region. But in 6.4 regions are represented using a single event with time and timeEnd properties.",
+        "description": "Creates an annotation in the Mosaicoo database. The dashboardId and panelId fields are optional. If they are not specified then an organization annotation is created and can be queried in any dashboard that adds the Mosaicoo annotations data source. When creating a region annotation include the timeEnd property.\nThe format for `time` and `timeEnd` should be epoch numbers in millisecond resolution.\nThe response for this HTTP request is slightly different in versions prior to v6.4. In prior versions you would also get an endId if you where creating a region. But in 6.4 regions are represented using a single event with time and timeEnd properties.",
         "tags": ["annotations"],
         "summary": "Create Annotation.",
         "operationId": "createAnnotation",
@@ -2341,7 +2341,7 @@
         }
       },
       "patch": {
-        "description": "Updates one or more properties of an annotation that matches the specified ID.\nThis operation currently supports updating of the `text`, `tags`, `time` and `timeEnd` properties.\nThis is available in Grafana 6.0.0-beta2 and above.",
+        "description": "Updates one or more properties of an annotation that matches the specified ID.\nThis operation currently supports updating of the `text`, `tags`, `time` and `timeEnd` properties.\nThis is available in Mosaicoo 6.0.0-beta2 and above.",
         "tags": ["annotations"],
         "summary": "Patch Annotation",
         "operationId": "patchAnnotation",
@@ -3204,7 +3204,7 @@
     },
     "/datasources": {
       "get": {
-        "description": "If you are running Grafana Enterprise and have Fine-grained access control enabled\nyou need to have a permission with action: `datasources:read` and scope: `datasources:*`.",
+        "description": "If you are running Mosaicoo Enterprise and have Fine-grained access control enabled\nyou need to have a permission with action: `datasources:read` and scope: `datasources:*`.",
         "tags": ["datasources"],
         "summary": "Get all data sources.",
         "operationId": "getDatasources",
@@ -3224,7 +3224,7 @@
         }
       },
       "post": {
-        "description": "By defining `password` and `basicAuthPassword` under secureJsonData property\nGrafana encrypts them securely as an encrypted blob in the database.\nThe response then lists the encrypted fields under secureJsonFields.\n\nIf you are running Grafana Enterprise and have Fine-grained access control enabled\nyou need to have a permission with action: `datasources:create`",
+        "description": "By defining `password` and `basicAuthPassword` under secureJsonData property\nGrafana encrypts them securely as an encrypted blob in the database.\nThe response then lists the encrypted fields under secureJsonFields.\n\nIf you are running Mosaicoo Enterprise and have Fine-grained access control enabled\nyou need to have a permission with action: `datasources:create`",
         "tags": ["datasources"],
         "summary": "Create a data source.",
         "operationId": "addDatasource",
@@ -3259,7 +3259,7 @@
     },
     "/datasources/id/{name}": {
       "get": {
-        "description": "If you are running Grafana Enterprise and have Fine-grained access control enabled\nyou need to have a permission with action: `datasources:read` and scopes: `datasources:*`, `datasources:name:*` and `datasources:name:test_datasource` (single data source).",
+        "description": "If you are running Mosaicoo Enterprise and have Fine-grained access control enabled\nyou need to have a permission with action: `datasources:read` and scopes: `datasources:*`, `datasources:name:*` and `datasources:name:test_datasource` (single data source).",
         "tags": ["datasources"],
         "summary": "Get data source Id by Name.",
         "operationId": "getDatasourceIdByName",
@@ -3293,7 +3293,7 @@
     },
     "/datasources/name/{name}": {
       "get": {
-        "description": "If you are running Grafana Enterprise and have Fine-grained access control enabled\nyou need to have a permission with action: `datasources:read` and scopes: `datasources:*`, `datasources:name:*` and `datasources:name:test_datasource` (single data source).",
+        "description": "If you are running Mosaicoo Enterprise and have Fine-grained access control enabled\nyou need to have a permission with action: `datasources:read` and scopes: `datasources:*`, `datasources:name:*` and `datasources:name:test_datasource` (single data source).",
         "tags": ["datasources"],
         "summary": "Get a single data source by Name.",
         "operationId": "getDatasourceByName",
@@ -3322,7 +3322,7 @@
         }
       },
       "delete": {
-        "description": "If you are running Grafana Enterprise and have Fine-grained access control enabled\nyou need to have a permission with action: `datasources:delete` and scopes: `datasources:*`, `datasources:name:*` and `datasources:name:test_datasource` (single data source).",
+        "description": "If you are running Mosaicoo Enterprise and have Fine-grained access control enabled\nyou need to have a permission with action: `datasources:delete` and scopes: `datasources:*`, `datasources:name:*` and `datasources:name:test_datasource` (single data source).",
         "tags": ["datasources"],
         "summary": "Delete an existing data source by name.",
         "operationId": "deleteDatasourceByName",
@@ -3629,7 +3629,7 @@
     },
     "/datasources/uid/{uid}": {
       "get": {
-        "description": "If you are running Grafana Enterprise and have Fine-grained access control enabled\nyou need to have a permission with action: `datasources:read` and scopes: `datasources:*`, `datasources:uid:*` and `datasources:uid:kLtEtcRGk` (single data source).",
+        "description": "If you are running Mosaicoo Enterprise and have Fine-grained access control enabled\nyou need to have a permission with action: `datasources:read` and scopes: `datasources:*`, `datasources:uid:*` and `datasources:uid:kLtEtcRGk` (single data source).",
         "tags": ["datasources"],
         "summary": "Get a single data source by UID.",
         "operationId": "getDatasourceByUID",
@@ -3664,7 +3664,7 @@
         }
       },
       "put": {
-        "description": "Similar to creating a data source, `password` and `basicAuthPassword` should be defined under\nsecureJsonData in order to be stored securely as an encrypted blob in the database. Then, the\nencrypted fields are listed under secureJsonFields section in the response.\n\nIf you are running Grafana Enterprise and have Fine-grained access control enabled\nyou need to have a permission with action: `datasources:write` and scopes: `datasources:*`, `datasources:uid:*` and `datasources:uid:1` (single data source).",
+        "description": "Similar to creating a data source, `password` and `basicAuthPassword` should be defined under\nsecureJsonData in order to be stored securely as an encrypted blob in the database. Then, the\nencrypted fields are listed under secureJsonFields section in the response.\n\nIf you are running Mosaicoo Enterprise and have Fine-grained access control enabled\nyou need to have a permission with action: `datasources:write` and scopes: `datasources:*`, `datasources:uid:*` and `datasources:uid:1` (single data source).",
         "tags": ["datasources"],
         "summary": "Update an existing data source.",
         "operationId": "updateDatasourceByUID",
@@ -3701,7 +3701,7 @@
         }
       },
       "delete": {
-        "description": "If you are running Grafana Enterprise and have Fine-grained access control enabled\nyou need to have a permission with action: `datasources:delete` and scopes: `datasources:*`, `datasources:uid:*` and `datasources:uid:kLtEtcRGk` (single data source).",
+        "description": "If you are running Mosaicoo Enterprise and have Fine-grained access control enabled\nyou need to have a permission with action: `datasources:delete` and scopes: `datasources:*`, `datasources:uid:*` and `datasources:uid:kLtEtcRGk` (single data source).",
         "tags": ["datasources"],
         "summary": "Delete an existing data source by UID.",
         "operationId": "deleteDatasourceByUID",
@@ -3960,7 +3960,7 @@
     },
     "/datasources/{id}": {
       "get": {
-        "description": "If you are running Grafana Enterprise and have Fine-grained access control enabled\nyou need to have a permission with action: `datasources:read` and scopes: `datasources:*`, `datasources:id:*` and `datasources:id:1` (single data source).\n\nPlease refer to [updated API](#/datasources/getDatasourceByUID) instead",
+        "description": "If you are running Mosaicoo Enterprise and have Fine-grained access control enabled\nyou need to have a permission with action: `datasources:read` and scopes: `datasources:*`, `datasources:id:*` and `datasources:id:1` (single data source).\n\nPlease refer to [updated API](#/datasources/getDatasourceByUID) instead",
         "tags": ["datasources"],
         "summary": "Get a single data source by Id.",
         "operationId": "getDatasourceByID",
@@ -3996,7 +3996,7 @@
         }
       },
       "put": {
-        "description": "Similar to creating a data source, `password` and `basicAuthPassword` should be defined under\nsecureJsonData in order to be stored securely as an encrypted blob in the database. Then, the\nencrypted fields are listed under secureJsonFields section in the response.\n\nIf you are running Grafana Enterprise and have Fine-grained access control enabled\nyou need to have a permission with action: `datasources:write` and scopes: `datasources:*`, `datasources:id:*` and `datasources:id:1` (single data source).\n\nPlease refer to [updated API](#/datasources/updateDatasourceByUID) instead",
+        "description": "Similar to creating a data source, `password` and `basicAuthPassword` should be defined under\nsecureJsonData in order to be stored securely as an encrypted blob in the database. Then, the\nencrypted fields are listed under secureJsonFields section in the response.\n\nIf you are running Mosaicoo Enterprise and have Fine-grained access control enabled\nyou need to have a permission with action: `datasources:write` and scopes: `datasources:*`, `datasources:id:*` and `datasources:id:1` (single data source).\n\nPlease refer to [updated API](#/datasources/updateDatasourceByUID) instead",
         "tags": ["datasources"],
         "summary": "Update an existing data source by its sequential ID.",
         "operationId": "updateDatasourceByID",
@@ -4034,7 +4034,7 @@
         }
       },
       "delete": {
-        "description": "If you are running Grafana Enterprise and have Fine-grained access control enabled\nyou need to have a permission with action: `datasources:delete` and scopes: `datasources:*`, `datasources:id:*` and `datasources:id:1` (single data source).\n\nPlease refer to [updated API](#/datasources/deleteDatasourceByUID) instead",
+        "description": "If you are running Mosaicoo Enterprise and have Fine-grained access control enabled\nyou need to have a permission with action: `datasources:delete` and scopes: `datasources:*`, `datasources:id:*` and `datasources:id:1` (single data source).\n\nPlease refer to [updated API](#/datasources/deleteDatasourceByUID) instead",
         "tags": ["datasources"],
         "summary": "Delete an existing data source by id.",
         "operationId": "deleteDatasourceByID",
@@ -4149,7 +4149,7 @@
     },
     "/ds/query": {
       "post": {
-        "description": "If you are running Grafana Enterprise and have Fine-grained access control enabled\nyou need to have a permission with action: `datasources:query`.",
+        "description": "If you are running Mosaicoo Enterprise and have Fine-grained access control enabled\nyou need to have a permission with action: `datasources:query`.",
         "tags": ["ds"],
         "summary": "Query metrics with expressions",
         "operationId": "queryMetricsWithExpressions",
@@ -4395,7 +4395,7 @@
             "type": "boolean",
             "default": false,
             "x-go-name": "ForceDeleteRules",
-            "description": "If `true` any Grafana 8 Alerts under this folder will be deleted.\nSet to `false` so that the request will fail if the folder contains any Grafana 8 Alerts.",
+            "description": "If `true` any Mosaicoo 8 Alerts under this folder will be deleted.\nSet to `false` so that the request will fail if the folder contains any Mosaicoo 8 Alerts.",
             "name": "forceDeleteRules",
             "in": "query"
           }
@@ -4889,7 +4889,7 @@
         }
       },
       "delete": {
-        "description": "Removes the license stored in the Grafana database. Available in Grafana Enterprise v7.4+.\n\nYou need to have a permission with action `licensing:delete`.",
+        "description": "Removes the license stored in the Mosaicoo database. Available in Mosaicoo Enterprise v7.4+.\n\nYou need to have a permission with action `licensing:delete`.",
         "tags": ["licensing", "enterprise"],
         "summary": "Remove license from database.",
         "operationId": "deleteLicenseToken",
@@ -4928,7 +4928,7 @@
     },
     "/licensing/token/renew": {
       "post": {
-        "description": "Manually ask license issuer for a new token. Available in Grafana Enterprise v7.4+.\n\nYou need to have a permission with action `licensing:update`.",
+        "description": "Manually ask license issuer for a new token. Available in Mosaicoo Enterprise v7.4+.\n\nYou need to have a permission with action `licensing:update`.",
         "tags": ["licensing", "enterprise"],
         "summary": "Manually force license refresh.",
         "operationId": "postRenewLicenseToken",
@@ -5227,7 +5227,7 @@
     },
     "/org/users": {
       "get": {
-        "description": "Returns all org users within the current organization. Accessible to users with org admin role.\nIf you are running Grafana Enterprise and have Fine-grained access control enabled\nyou need to have a permission with action: `org.users:read` with scope `users:*`.",
+        "description": "Returns all org users within the current organization. Accessible to users with org admin role.\nIf you are running Mosaicoo Enterprise and have Fine-grained access control enabled\nyou need to have a permission with action: `org.users:read` with scope `users:*`.",
         "tags": ["current_org_details"],
         "summary": "Get all users within the current organization.",
         "operationId": "getOrgUsers",
@@ -5247,7 +5247,7 @@
         }
       },
       "post": {
-        "description": "Adds a global user to the current organization.\n\nIf you are running Grafana Enterprise and have Fine-grained access control enabled\nyou need to have a permission with action: `org.users:add` with scope `users:*`.",
+        "description": "Adds a global user to the current organization.\n\nIf you are running Mosaicoo Enterprise and have Fine-grained access control enabled\nyou need to have a permission with action: `org.users:add` with scope `users:*`.",
         "tags": ["current_org_details"],
         "summary": "Add a new user to the current organization",
         "operationId": "addOrgUser",
@@ -5280,7 +5280,7 @@
     },
     "/org/users/lookup": {
       "get": {
-        "description": "Returns all org users within the current organization, but with less detailed information.\nAccessible to users with org admin role, admin in any folder or admin of any team.\nMainly used by Grafana UI for providing list of users when adding team members and when editing folder/dashboard permissions.",
+        "description": "Returns all org users within the current organization, but with less detailed information.\nAccessible to users with org admin role, admin in any folder or admin of any team.\nMainly used by Mosaicoo UI for providing list of users when adding team members and when editing folder/dashboard permissions.",
         "tags": ["current_org_details"],
         "summary": "Get all users within the current organization (lookup)",
         "operationId": "lookupOrgUsers",
@@ -5317,7 +5317,7 @@
     },
     "/org/users/{user_id}": {
       "delete": {
-        "description": "If you are running Grafana Enterprise and have Fine-grained access control enabled\nyou need to have a permission with action: `org.users:remove` with scope `users:*`.",
+        "description": "If you are running Mosaicoo Enterprise and have Fine-grained access control enabled\nyou need to have a permission with action: `org.users:remove` with scope `users:*`.",
         "tags": ["current_org_details"],
         "summary": "Delete user in current organization",
         "operationId": "deleteOrgUser",
@@ -5350,7 +5350,7 @@
         }
       },
       "patch": {
-        "description": "If you are running Grafana Enterprise and have Fine-grained access control enabled\nyou need to have a permission with action: `org.users.role:update` with scope `users:*`.",
+        "description": "If you are running Mosaicoo Enterprise and have Fine-grained access control enabled\nyou need to have a permission with action: `org.users.role:update` with scope `users:*`.",
         "tags": ["current_org_details"],
         "summary": "Updates the given user",
         "operationId": "updateOrgUser",
@@ -5722,7 +5722,7 @@
     },
     "/orgs/{org_id}/quotas": {
       "get": {
-        "description": "If you are running Grafana Enterprise and have Fine-grained access control enabled, you need to have a permission with action `orgs.quotas:read` and scope `org:id:1` (orgIDScope).\nlist",
+        "description": "If you are running Mosaicoo Enterprise and have Fine-grained access control enabled, you need to have a permission with action `orgs.quotas:read` and scope `org:id:1` (orgIDScope).\nlist",
         "tags": ["orgs"],
         "summary": "Fetch Organization quota.",
         "operationId": "getOrgQuota",
@@ -5762,7 +5762,7 @@
             "basic": []
           }
         ],
-        "description": "If you are running Grafana Enterprise and have Fine-grained access control enabled, you need to have a permission with action `orgs.quotas:write` and scope `org:id:1` (orgIDScope).",
+        "description": "If you are running Mosaicoo Enterprise and have Fine-grained access control enabled, you need to have a permission with action `orgs.quotas:write` and scope `org:id:1` (orgIDScope).",
         "tags": ["orgs"],
         "summary": "Update user quota.",
         "operationId": "updateOrgQuota",
@@ -5818,7 +5818,7 @@
             "basic": []
           }
         ],
-        "description": "If you are running Grafana Enterprise and have Fine-grained access control enabled\nyou need to have a permission with action: `org.users:read` with scope `users:*`.",
+        "description": "If you are running Mosaicoo Enterprise and have Fine-grained access control enabled\nyou need to have a permission with action: `org.users:read` with scope `users:*`.",
         "tags": ["orgs"],
         "summary": "Get Users in Organization.",
         "operationId": "adminGetOrgUsers",
@@ -5848,7 +5848,7 @@
         }
       },
       "post": {
-        "description": "Adds a global user to the current organization.\n\nIf you are running Grafana Enterprise and have Fine-grained access control enabled\nyou need to have a permission with action: `org.users:add` with scope `users:*`.",
+        "description": "Adds a global user to the current organization.\n\nIf you are running Mosaicoo Enterprise and have Fine-grained access control enabled\nyou need to have a permission with action: `org.users:add` with scope `users:*`.",
         "tags": ["orgs"],
         "summary": "Add a new user to the current organization",
         "operationId": "adminAddOrgUser",
@@ -5889,7 +5889,7 @@
     },
     "/orgs/{org_id}/users/{user_id}": {
       "delete": {
-        "description": "If you are running Grafana Enterprise and have Fine-grained access control enabled\nyou need to have a permission with action: `org.users:remove` with scope `users:*`.",
+        "description": "If you are running Mosaicoo Enterprise and have Fine-grained access control enabled\nyou need to have a permission with action: `org.users:remove` with scope `users:*`.",
         "tags": ["orgs"],
         "summary": "Delete user in current organization",
         "operationId": "adminDeleteOrgUser",
@@ -5930,7 +5930,7 @@
         }
       },
       "patch": {
-        "description": "If you are running Grafana Enterprise and have Fine-grained access control enabled\nyou need to have a permission with action: `org.users.role:update` with scope `users:*`.",
+        "description": "If you are running Mosaicoo Enterprise and have Fine-grained access control enabled\nyou need to have a permission with action: `org.users.role:update` with scope `users:*`.",
         "tags": ["orgs"],
         "summary": "Update Users in Organization.",
         "operationId": "adminUpdateOrgUser",
@@ -6285,7 +6285,7 @@
     },
     "/reports/email": {
       "post": {
-        "description": "Generate and send a report. This API waits for the report to be generated before returning. We recommend that you set the client’s timeout to at least 60 seconds. Available to org admins only and with a valid license.\n\nOnly available in Grafana Enterprise v7.0+.\nThis API endpoint is experimental and may be deprecated in a future release. On deprecation, a migration strategy will be provided and the endpoint will remain functional until the next major release of Grafana.\n\nYou need to have a permission with action `reports:send`.",
+        "description": "Generate and send a report. This API waits for the report to be generated before returning. We recommend that you set the client’s timeout to at least 60 seconds. Available to org admins only and with a valid license.\n\nOnly available in Mosaicoo Enterprise v7.0+.\nThis API endpoint is experimental and may be deprecated in a future release. On deprecation, a migration strategy will be provided and the endpoint will remain functional until the next major release of Grafana.\n\nYou need to have a permission with action `reports:send`.",
         "tags": ["reports", "enterprise"],
         "summary": "Send a report.",
         "operationId": "sendReport",
@@ -6324,7 +6324,7 @@
     },
     "/reports/render/pdf/{DashboardID}": {
       "get": {
-        "description": "Please refer to [reports enterprise](#/reports/renderReportPDFs) instead. This will be removed in Grafana 10.",
+        "description": "Please refer to [reports enterprise](#/reports/renderReportPDFs) instead. This will be removed in Mosaicoo 10.",
         "produces": ["application/pdf"],
         "tags": ["reports", "enterprise"],
         "summary": "Render report for dashboard.",
@@ -6735,7 +6735,7 @@
             "type": "integer",
             "format": "int64",
             "x-go-name": "Page",
-            "description": "Use this parameter to access hits beyond limit. Numbering starts at 1. limit param acts as page size. Only available in Grafana v6.2+.",
+            "description": "Use this parameter to access hits beyond limit. Numbering starts at 1. limit param acts as page size. Only available in Mosaicoo v6.2+.",
             "name": "page",
             "in": "query"
           },
@@ -6808,7 +6808,7 @@
       "post": {
         "description": "Snapshot public mode should be enabled or authentication is required.",
         "tags": ["snapshots"],
-        "summary": "When creating a snapshot using the API, you have to provide the full dashboard payload including the snapshot data. This endpoint is designed for the Grafana UI.",
+        "summary": "When creating a snapshot using the API, you have to provide the full dashboard payload including the snapshot data. This endpoint is designed for the Mosaicoo UI.",
         "operationId": "createSnapshot",
         "parameters": [
           {
@@ -7466,7 +7466,7 @@
     },
     "/tsdb/query": {
       "post": {
-        "description": "Please refer to [updated API](#/ds/queryMetricsWithExpressions) instead\n\nQueries a data source having backend implementation.\n\nMost of Grafana’s builtin data sources have backend implementation.\n\nIf you are running Grafana Enterprise and have Fine-grained access control enabled\nyou need to have a permission with action: `datasources:query`.",
+        "description": "Please refer to [updated API](#/ds/queryMetricsWithExpressions) instead\n\nQueries a data source having backend implementation.\n\nMost of Grafana’s builtin data sources have backend implementation.\n\nIf you are running Mosaicoo Enterprise and have Fine-grained access control enabled\nyou need to have a permission with action: `datasources:query`.",
         "tags": ["datasources"],
         "summary": "Query metrics.",
         "operationId": "queryDatasource",
@@ -8282,7 +8282,7 @@
       "properties": {
         "builtInRole": {
           "type": "string",
-          "enum": ["Viewer", " Editor", " Admin", " Grafana Admin"],
+          "enum": ["Viewer", " Editor", " Admin", " Mosaicoo Admin"],
           "x-go-name": "BuiltinRole"
         },
         "global": {
@@ -11137,7 +11137,7 @@
           "x-go-name": "Debug"
         },
         "from": {
-          "description": "From Start time in epoch timestamps in milliseconds or relative using Grafana time units.",
+          "description": "From Start time in epoch timestamps in milliseconds or relative using Mosaicoo time units.",
           "type": "string",
           "x-go-name": "From",
           "example": "now-1h"
@@ -11163,7 +11163,7 @@
           ]
         },
         "to": {
-          "description": "To End time in epoch timestamps in milliseconds or relative using Grafana time units.",
+          "description": "To End time in epoch timestamps in milliseconds or relative using Mosaicoo time units.",
           "type": "string",
           "x-go-name": "To",
           "example": "now"
@@ -14194,11 +14194,11 @@
   ],
   "tags": [
     {
-      "description": "If you are running Grafana Enterprise and have Fine-grained access control enabled, for some endpoints you would need to have relevant permissions. Refer to specific resources to understand what permissions are required.",
+      "description": "If you are running Mosaicoo Enterprise and have Fine-grained access control enabled, for some endpoints you would need to have relevant permissions. Refer to specific resources to understand what permissions are required.",
       "name": "datasources"
     },
     {
-      "description": "Folders are identified by the identifier (id) and the unique identifier (uid).\nThe identifier (id) of a folder is an auto-incrementing numeric value and is only unique per Grafana install.\nThe unique identifier (uid) of a folder can be used for uniquely identify folders between multiple Grafana installs. It’s automatically generated if not provided when creating a folder. The uid allows having consistent URLs for accessing folders and when syncing folders between multiple Grafana installs. This means that changing the title of a folder will not break any bookmarked links to that folder.\nThe uid can have a maximum length of 40 characters.\n\nThe General folder (id=0) is special and is not part of the Folder API which means that you cannot use this API for retrieving information about the General folder.",
+      "description": "Folders are identified by the identifier (id) and the unique identifier (uid).\nThe identifier (id) of a folder is an auto-incrementing numeric value and is only unique per Mosaicoo install.\nThe unique identifier (uid) of a folder can be used for uniquely identify folders between multiple Mosaicoo installs. It’s automatically generated if not provided when creating a folder. The uid allows having consistent URLs for accessing folders and when syncing folders between multiple Mosaicoo installs. This means that changing the title of a folder will not break any bookmarked links to that folder.\nThe uid can have a maximum length of 40 characters.\n\nThe General folder (id=0) is special and is not part of the Folder API which means that you cannot use this API for retrieving information about the General folder.",
       "name": "folders"
     },
     {
@@ -14206,31 +14206,31 @@
       "name": "folder_permissions"
     },
     {
-      "description": "The Admin HTTP API does not currently work with an API Token. API Tokens are currently only linked to an organization and an organization role. They cannot be given the permission of server admin, only users can be given that permission. So in order to use these API calls you will have to use Basic Auth and the Grafana user must have the Grafana Admin permission. (The default admin user is called admin and has permission to use this API.)",
+      "description": "The Admin HTTP API does not currently work with an API Token. API Tokens are currently only linked to an organization and an organization role. They cannot be given the permission of server admin, only users can be given that permission. So in order to use these API calls you will have to use Basic Auth and the Mosaicoo user must have the Mosaicoo Admin permission. (The default admin user is called admin and has permission to use this API.)",
       "name": "admin"
     },
     {
-      "description": "You can use the Alerting API to get information about legacy dashboard alerts and their states but this API cannot be used to modify the alert. To create new alerts or modify them you need to update the dashboard JSON that contains the alerts.\nThis topic is relevant for the legacy dashboard alerts only.\nYou can find Grafana 8 alerts API specification details [here](https://editor.swagger.io/?url=https://raw.githubusercontent.com/grafana/grafana/main/pkg/services/ngalert/api/tooling/post.json).",
+      "description": "You can use the Alerting API to get information about legacy dashboard alerts and their states but this API cannot be used to modify the alert. To create new alerts or modify them you need to update the dashboard JSON that contains the alerts.\nThis topic is relevant for the legacy dashboard alerts only.\nYou can find Mosaicoo 8 alerts API specification details [here](https://editor.swagger.io/?url=https://raw.githubusercontent.com/grafana/grafana/main/pkg/services/ngalert/api/tooling/post.json).",
       "name": "legacy_alerts"
     },
     {
-      "description": "The identifier (id) of a notification channel is an auto-incrementing numeric value and is only unique per Grafana install.\nThe unique identifier (uid) of a notification channel can be used for uniquely identify a notification channel between multiple Grafana installs. It’s automatically generated if not provided when creating a notification channel. The uid allows having consistent URLs for accessing notification channels and when syncing notification channels between multiple Grafana installations, refer to alert notification channel provisioning.\nThe uid can have a maximum length of 40 characters.",
+      "description": "The identifier (id) of a notification channel is an auto-incrementing numeric value and is only unique per Mosaicoo install.\nThe unique identifier (uid) of a notification channel can be used for uniquely identify a notification channel between multiple Mosaicoo installs. It’s automatically generated if not provided when creating a notification channel. The uid allows having consistent URLs for accessing notification channels and when syncing notification channels between multiple Mosaicoo installations, refer to alert notification channel provisioning.\nThe uid can have a maximum length of 40 characters.",
       "name": "legacy_alerts_notification_channels"
     },
     {
-      "description": "Grafana Annotations feature released in Grafana 4.6. Annotations are saved in the Grafana database (sqlite, mysql or postgres). Annotations can be organization annotations that can be shown on any dashboard by configuring an annotation data source - they are filtered by tags. Or they can be tied to a panel on a dashboard and are then only shown on that panel.",
+      "description": "Grafana Annotations feature released in Mosaicoo 4.6. Annotations are saved in the Mosaicoo database (sqlite, mysql or postgres). Annotations can be organization annotations that can be shown on any dashboard by configuring an annotation data source - they are filtered by tags. Or they can be tied to a panel on a dashboard and are then only shown on that panel.",
       "name": "annotations"
     },
     {
-      "description": "The identifier (ID) of a library element is an auto-incrementing numeric value that is unique per Grafana install.\nThe unique identifier (UID) of a library element uniquely identifies library elements between multiple Grafana installs. It’s automatically generated unless you specify it during library element creation. The UID provides consistent URLs for accessing library elements and when syncing library elements between multiple Grafana installs.\nThe maximum length of a UID is 40 characters.",
+      "description": "The identifier (ID) of a library element is an auto-incrementing numeric value that is unique per Mosaicoo install.\nThe unique identifier (UID) of a library element uniquely identifies library elements between multiple Mosaicoo installs. It’s automatically generated unless you specify it during library element creation. The UID provides consistent URLs for accessing library elements and when syncing library elements between multiple Mosaicoo installs.\nThe maximum length of a UID is 40 characters.",
       "name": "library_elements"
     },
     {
-      "description": "The Admin Organizations HTTP API does not currently work with an API Token. API Tokens are currently only linked to an organization and an organization role. They cannot be given the permission of server admin, only users can be given that permission. So in order to use these API calls you will have to use Basic Auth and the Grafana user must have the Grafana Admin permission (The default admin user is called `admin` and has permission to use this API).",
+      "description": "The Admin Organizations HTTP API does not currently work with an API Token. API Tokens are currently only linked to an organization and an organization role. They cannot be given the permission of server admin, only users can be given that permission. So in order to use these API calls you will have to use Basic Auth and the Mosaicoo user must have the Mosaicoo Admin permission (The default admin user is called `admin` and has permission to use this API).",
       "name": "orgs"
     },
     {
-      "description": "If you are running Grafana Enterprise and have Fine-grained access control enabled, for some endpoints you would need to have relevant permissions. Refer to specific resources to understand what permissions are required.",
+      "description": "If you are running Mosaicoo Enterprise and have Fine-grained access control enabled, for some endpoints you would need to have relevant permissions. Refer to specific resources to understand what permissions are required.",
       "name": "current_org_details"
     },
     {
@@ -14238,23 +14238,23 @@
       "name": "teams"
     },
     {
-      "description": "This API can be used to enable, disable, list, add and remove permissions for a data source.\nPermissions can be set for a user or a team. Permissions cannot be set for Admins - they always have access to everything.\nThis is only available in Grafana Enterprise\nIf you are running Grafana Enterprise and have Fine-grained access control enabled, for some endpoints you would need to have relevant permissions. Refer to specific resources to understand what permissions are required.",
+      "description": "This API can be used to enable, disable, list, add and remove permissions for a data source.\nPermissions can be set for a user or a team. Permissions cannot be set for Admins - they always have access to everything.\nThis is only available in Mosaicoo Enterprise\nIf you are running Mosaicoo Enterprise and have Fine-grained access control enabled, for some endpoints you would need to have relevant permissions. Refer to specific resources to understand what permissions are required.",
       "name": "datasource_permissions"
     },
     {
-      "description": "These are only available in Grafana Enterprise",
+      "description": "These are only available in Mosaicoo Enterprise",
       "name": "enterprise"
     },
     {
-      "description": "The API can be used to create, update, get and list roles, and create or remove built-in role assignments. To use the API, you would need to enable fine-grained access control.\nThis only available in Grafana Enterprise.\nThe API does not currently work with an API Token. So in order to use these API endpoints you will have to use Basic auth.",
+      "description": "The API can be used to create, update, get and list roles, and create or remove built-in role assignments. To use the API, you would need to enable fine-grained access control.\nThis only available in Mosaicoo Enterprise.\nThe API does not currently work with an API Token. So in order to use these API endpoints you will have to use Basic auth.",
       "name": "access_control"
     },
     {
-      "description": "Licensing is only available in Grafana Enterprise. Read more about Grafana Enterprise.\nIf you are running Grafana Enterprise and have Fine-grained access control enabled, for some endpoints you would need to have relevant permissions. Refer to specific resources to understand what permissions are required.",
+      "description": "Licensing is only available in Mosaicoo Enterprise. Read more about Mosaicoo Enterprise.\nIf you are running Mosaicoo Enterprise and have Fine-grained access control enabled, for some endpoints you would need to have relevant permissions. Refer to specific resources to understand what permissions are required.",
       "name": "licensing"
     },
     {
-      "description": "This API allows you to interact programmatically with the Reporting feature.\nReporting is only available in Grafana Enterprise. Read more about Grafana Enterprise.\nIf you have Fine-grained access Control enabled, for some endpoints you would need to have relevant permissions. Refer to specific resources to understand what permissions are required.",
+      "description": "This API allows you to interact programmatically with the Reporting feature.\nReporting is only available in Mosaicoo Enterprise. Read more about Mosaicoo Enterprise.\nIf you have Fine-grained access Control enabled, for some endpoints you would need to have relevant permissions. Refer to specific resources to understand what permissions are required.",
       "name": "reports"
     },
     {

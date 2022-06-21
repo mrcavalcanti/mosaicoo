@@ -35,7 +35,7 @@ describe('useAlertManagerSourceName', () => {
     expect(alertManager).toBeUndefined();
   });
 
-  it('Should return Grafana AM when it is available and no alert manager query param exists', () => {
+  it('Should return Mosaicoo AM when it is available and no alert manager query param exists', () => {
     const wrapper: React.FC = ({ children }) => <MemoryRouter>{children}</MemoryRouter>;
 
     const availableAMs = [grafanaAm, externalAmProm, externalAmMimir];

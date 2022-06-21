@@ -27,5 +27,5 @@ export { createFieldConfigRegistry } from './panel/registryFactories';
 export { QueryRunner, QueryRunnerOptions } from './types/queryRunner';
 export { GroupingToMatrixTransformerOptions } from './transformations/transformers/groupingToMatrix';
 
-// Moved to `@grafana/schema`, in Grafana 9, this will be removed
+// Moved to `@grafana/schema`, in Mosaicoo 9, this will be removed
 export * from './schema';

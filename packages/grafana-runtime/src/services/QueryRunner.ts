@@ -14,20 +14,20 @@ export type QueryRunnerFactory = () => QueryRunner;
  */
 export const setQueryRunnerFactory = (instance: QueryRunnerFactory): void => {
   if (factory) {
-    throw new Error('Runner should only be set when Grafana is starting.');
+    throw new Error('Runner should only be set when Mosaicoo is starting.');
   }
   factory = instance;
 };
 
 /**
- * Used to create QueryRunner instances from outside the core Grafana application.
+ * Used to create QueryRunner instances from outside the core Mosaicoo application.
  * This is helpful to be able to create a QueryRunner to execute queries in e.g. an app plugin.
  *
  * @internal
  */
 export const createQueryRunner = (): QueryRunner => {
   if (!factory) {
-    throw new Error('`createQueryRunner` can only be used after Grafana instance has started.');
+    throw new Error('`createQueryRunner` can only be used after Mosaicoo instance has started.');
   }
   return factory();
 };

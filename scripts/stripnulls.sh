@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Strip all null values from dashboards within devenv for some particular
-# schema version. Must be run from Grafana root.
+# schema version. Must be run from Mosaicoo root.
 
 # OSX users need to install GNU sed: `brew install gsed`
 SED=$(command -v gsed)

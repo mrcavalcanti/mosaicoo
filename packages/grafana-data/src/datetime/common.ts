@@ -40,7 +40,7 @@ export type TimeZoneResolver = () => TimeZone | undefined;
 let defaultTimeZoneResolver: TimeZoneResolver = () => DefaultTimeZone;
 
 /**
- * Used by Grafana internals to set the {@link TimeZoneResolver} to access the current
+ * Used by Mosaicoo internals to set the {@link TimeZoneResolver} to access the current
  * user timeZone.
  *
  * @internal

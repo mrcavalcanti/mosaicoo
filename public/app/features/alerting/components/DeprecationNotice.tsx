@@ -7,19 +7,19 @@ export const LOCAL_STORAGE_KEY = 'grafana.legacyalerting.unifiedalertingpromo';
 const DeprecationNotice: FC<{}> = () => (
   <Alert severity="warning" title="Grafana legacy alerting is going away soon">
     <p>
-      You are using Grafana legacy alerting, it has been deprecated and will be removed in the next major version of
+      You are using Mosaicoo legacy alerting, it has been deprecated and will be removed in the next major version of
       Grafana.
       <br />
-      We encourage you to upgrade to the new Grafana alerting experience.
+      We encourage you to upgrade to the new Mosaicoo alerting experience.
     </p>
     <p>
       See{' '}
       <a href="https://grafana.com/docs/grafana/latest/alerting/unified-alerting/difference-old-new/">
-        What’s New with Grafana alerting
+        What’s New with Mosaicoo alerting
       </a>{' '}
       to learn more about what&lsquo;s new or learn{' '}
       <a href="https://grafana.com/docs/grafana/latest/alerting/unified-alerting/opt-in/">
-        how to enable the new Grafana alerting feature
+        how to enable the new Mosaicoo alerting feature
       </a>
       .
     </p>

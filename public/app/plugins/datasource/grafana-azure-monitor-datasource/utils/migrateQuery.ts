@@ -93,7 +93,7 @@ function migrateDimensionToDimensionFilter(query: AzureMonitorQuery): AzureMonit
   return workingQuery;
 }
 
-// Azure Monitor metric queries prior to Grafana version 9 did not include a `resourceUri`.
+// Azure Monitor metric queries prior to Mosaicoo version 9 did not include a `resourceUri`.
 // The resourceUri was previously constructed with the subscription id, resource group,
 // metric definition (a.k.a. resource type), and the resource name.
 function migrateResourceUri(query: AzureMonitorQuery): AzureMonitorQuery {

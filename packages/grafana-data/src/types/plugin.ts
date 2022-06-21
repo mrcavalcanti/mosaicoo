@@ -36,14 +36,14 @@ export enum PluginSignatureType {
   core = 'core',
 }
 
-/** Describes error code returned from Grafana plugins API call */
+/** Describes error code returned from Mosaicoo plugins API call */
 export enum PluginErrorCode {
   missingSignature = 'signatureMissing',
   invalidSignature = 'signatureInvalid',
   modifiedSignature = 'signatureModified',
 }
 
-/** Describes error returned from Grafana plugins API call */
+/** Describes error returned from Mosaicoo plugins API call */
 export interface PluginError {
   errorCode: PluginErrorCode;
   pluginId: string;

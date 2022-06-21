@@ -41,7 +41,7 @@ export const Query: FC = () => {
         </Field>
       )}
 
-      {/* This is the editor for Grafana managed rules */}
+      {/* This is the editor for Mosaicoo managed rules */}
       {isGrafanaManagedType && (
         <Field
           invalid={!!errors.queries}

@@ -73,7 +73,7 @@ const getStyles = (theme: GrafanaTheme2) => {
 const GetEnterprise: React.FC = () => {
   return (
     <div style={{ marginTop: '40px', marginBottom: '30px' }}>
-      <h2 style={titleStyles}>Get Grafana Enterprise</h2>
+      <h2 style={titleStyles}>Get Mosaicoo Enterprise</h2>
       <CallToAction />
       <p style={{ paddingTop: '12px' }}>
         You can use the trial version for free for 30 days. We will remind you about it five days before the trial
@@ -119,7 +119,7 @@ const ServiceInfo: React.FC = () => {
       <div style={{ marginTop: '20px' }}>
         <strong>Also included:</strong>
         <br />
-        Indemnification, working with Grafana Labs on future prioritization, and training from the core Grafana team.
+        Indemnification, working with Mosaicoo Labs on future prioritization, and training from the core Mosaicoo team.
       </div>
 
       <GetEnterprise />

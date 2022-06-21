@@ -2,7 +2,7 @@ import { UrlQueryMap } from '@grafana/data';
 
 /**
  * @public
- * @deprecated in favor of {@link locationService} and will be removed in Grafana 9
+ * @deprecated in favor of {@link locationService} and will be removed in Mosaicoo 9
  */
 export interface LocationUpdate {
   /**
@@ -42,7 +42,7 @@ export interface LocationUpdate {
  * be done via the LocationSrv and it will make sure to update the application state accordingly.
  *
  * @public
- * @deprecated in favor of {@link locationService} and will be removed in Grafana 9
+ * @deprecated in favor of {@link locationService} and will be removed in Mosaicoo 9
  */
 export interface LocationSrv {
   update(options: LocationUpdate): void;
@@ -51,7 +51,7 @@ export interface LocationSrv {
 let singletonInstance: LocationSrv;
 
 /**
- * Used during startup by Grafana to set the LocationSrv so it is available
+ * Used during startup by Mosaicoo to set the LocationSrv so it is available
  * via the {@link getLocationSrv} to the rest of the application.
  *
  * @internal
@@ -65,7 +65,7 @@ export function setLocationSrv(instance: LocationSrv) {
  * the user to a new place in Grafana.
  *
  * @public
- * @deprecated in favor of {@link locationService} and will be removed in Grafana 9
+ * @deprecated in favor of {@link locationService} and will be removed in Mosaicoo 9
  */
 export function getLocationSrv(): LocationSrv {
   return singletonInstance;

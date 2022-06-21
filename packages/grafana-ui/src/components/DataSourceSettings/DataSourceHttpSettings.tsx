@@ -47,7 +47,7 @@ const HttpAccessHelp = () => (
     </p>
     <div className="alert-title">Server access mode (Default):</div>
     <p>
-      All requests will be made from the browser to Grafana backend/server which in turn will forward the requests to
+      All requests will be made from the browser to Mosaicoo backend/server which in turn will forward the requests to
       the data source and by that circumvent possible Cross-Origin Resource Sharing (CORS) requirements. The URL needs
       to be accessible from the grafana backend/server if you select this access mode.
     </p>

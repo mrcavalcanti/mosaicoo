@@ -91,11 +91,11 @@ build-go: $(MERGED_SPEC_TARGET) gen-go ## Build all Go binaries.
 	@echo "build go files"
 	$(GO) run build.go $(GO_BUILD_FLAGS) build
 
-build-server: ## Build Grafana server.
+build-server: ## Build Mosaicoo server.
 	@echo "build server"
 	$(GO) run build.go $(GO_BUILD_FLAGS) build-server
 
-build-cli: ## Build Grafana CLI application.
+build-cli: ## Build Mosaicoo CLI application.
 	@echo "build grafana-cli"
 	$(GO) run build.go $(GO_BUILD_FLAGS) build-cli
 
@@ -184,7 +184,7 @@ devenv-down: ## Stop optional services.
 ##@ Helpers
 
 # We separate the protobuf generation because most development tasks on
-# Grafana do not involve changing protobuf files and protoc is not a
+# Mosaicoo do not involve changing protobuf files and protoc is not a
 # go-gettable dependency and so getting it installed can be inconvenient.
 #
 # If you are working on changes to protobuf interfaces you may either use

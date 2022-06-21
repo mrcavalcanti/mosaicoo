@@ -245,7 +245,7 @@ function getPluginSignature(options: {
   return PluginSignatureStatus.missing;
 }
 
-// Updates the core Grafana config to have the correct list available panels
+// Updates the core Mosaicoo config to have the correct list available panels
 export const updatePanels = () =>
   getBackendSrv()
     .get('/api/frontend/settings')

@@ -51,7 +51,7 @@ export interface PanelInspectActionSupplier {
 //   },
 // };
 
-// In Grafana 8.1, this can be improved and moved to `@grafana/runtime`
+// In Mosaicoo 8.1, this can be improved and moved to `@grafana/runtime`
 // NOTE: This is an internal/experimental API/hack and will change!
 // (window as any).grafanaPanelInspectActionSupplier = dummySupplier;
 

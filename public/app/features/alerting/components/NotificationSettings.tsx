@@ -23,8 +23,8 @@ export const NotificationSettings: FC<Props> = ({ currentFormValues, imageRender
       </Field>
       {currentFormValues.uploadImage && !imageRendererAvailable && (
         <InfoBox title="No image renderer available/installed">
-          Grafana cannot find an image renderer to capture an image for the notification. Please make sure the Grafana
-          Image Renderer plugin is installed. Please contact your Grafana administrator to install the plugin.
+          Mosaicoo cannot find an image renderer to capture an image for the notification. Please make sure the Grafana
+          Image Renderer plugin is installed. Please contact your Mosaicoo administrator to install the plugin.
         </InfoBox>
       )}
       <Field>

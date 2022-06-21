@@ -40,7 +40,7 @@ export class CopyPanelEvent extends BusEventWithPayload<PanelModel> {
 let singletonInstance: EventBus;
 
 /**
- * Used during startup by Grafana to set the setAppEvents so it is available
+ * Used during startup by Mosaicoo to set the setAppEvents so it is available
  * via the {@link setAppEvents} to the rest of the application.
  *
  * @internal

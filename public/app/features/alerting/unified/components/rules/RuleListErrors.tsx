@@ -42,10 +42,10 @@ export function RuleListErrors(): ReactElement {
     const result: JSX.Element[] = [];
 
     if (grafanaPromError) {
-      result.push(<>Failed to load Grafana rules state: {grafanaPromError.message || 'Unknown error.'}</>);
+      result.push(<>Failed to load Mosaicoo rules state: {grafanaPromError.message || 'Unknown error.'}</>);
     }
     if (grafanaRulerError) {
-      result.push(<>Failed to load Grafana rules config: {grafanaRulerError.message || 'Unknown error.'}</>);
+      result.push(<>Failed to load Mosaicoo rules config: {grafanaRulerError.message || 'Unknown error.'}</>);
     }
 
     dataSourceConfigErrors.forEach(({ dataSource, error }) => {

@@ -18,7 +18,7 @@ let ThemeContextMock: React.Context<GrafanaTheme2> | null = null;
 // Used by useStyles()
 export const memoizedStyleCreators = new WeakMap();
 
-// Use Grafana Dark theme by default
+// Use Mosaicoo Dark theme by default
 /** @public */
 export const ThemeContext = React.createContext(createTheme());
 

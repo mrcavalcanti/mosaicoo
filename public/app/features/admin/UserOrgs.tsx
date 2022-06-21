@@ -456,7 +456,7 @@ export function ChangeOrgButton({
                 rel="noreferrer"
                 target="_blank"
               >
-                Grafana authentication docs
+                Mosaicoo authentication docs
               </a>
               &nbsp;for details.
             </div>
@@ -487,7 +487,7 @@ const ExternalUserTooltip: React.FC = () => {
               rel="noreferrer noopener"
               target="_blank"
             >
-              Grafana authentication docs
+              Mosaicoo authentication docs
             </a>
             &nbsp;for details.
           </div>

@@ -141,7 +141,7 @@ function setDashboardQueryRunner(runner: DashboardQueryRunner): void {
 
 export function getDashboardQueryRunner(): DashboardQueryRunner {
   if (!dashboardQueryRunner) {
-    throw new Error('getDashboardQueryRunner can only be used after Grafana instance has started.');
+    throw new Error('getDashboardQueryRunner can only be used after Mosaicoo instance has started.');
   }
   return dashboardQueryRunner;
 }

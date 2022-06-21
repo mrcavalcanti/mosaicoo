@@ -164,7 +164,7 @@ const options = bootData.settings;
 options.bootData = bootData;
 
 /**
- * Use this to access the {@link GrafanaBootConfig} for the current running Grafana instance.
+ * Use this to access the {@link GrafanaBootConfig} for the current running Mosaicoo instance.
  *
  * @public
  */

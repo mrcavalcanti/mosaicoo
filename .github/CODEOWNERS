@@ -54,7 +54,7 @@ go.sum @grafana/backend-platform
 /pkg/services/sqlstore/migrations @grafana/backend-platform @grafana/hosted-grafana-team
 *_mig.go @grafana/backend-platform @grafana/hosted-grafana-team
 
-# Grafana edge
+# Mosaicoo edge
 /pkg/services/live/ @grafana/grafana-edge-squad
 /pkg/services/searchV2/ @grafana/grafana-edge-squad
 /pkg/services/store/ @grafana/grafana-edge-squad
@@ -168,7 +168,7 @@ lerna.json @grafana/frontend-ops
 # Cloud middleware
 /grafana-mixin/ @grafana/hosted-grafana-team
 
-# Grafana authentication and authorization
+# Mosaicoo authentication and authorization
 /pkg/services/accesscontrol @grafana/grafana-authnz-team
 /pkg/services/auth @grafana/grafana-authnz-team
 /pkg/services/dashboards/accesscontrol.go @grafana/grafana-authnz-team

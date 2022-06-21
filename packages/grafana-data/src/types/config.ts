@@ -10,7 +10,7 @@ import { GrafanaTheme } from './theme';
 import { NavLinkDTO, OrgRole } from '.';
 
 /**
- * Describes the build information that will be available via the Grafana configuration.
+ * Describes the build information that will be available via the Mosaicoo configuration.
  *
  * @public
  */
@@ -128,7 +128,7 @@ export interface BootData {
 }
 
 /**
- * Describes all the different Grafana configuration values available for an instance.
+ * Describes all the different Mosaicoo configuration values available for an instance.
  *
  * @internal
  */

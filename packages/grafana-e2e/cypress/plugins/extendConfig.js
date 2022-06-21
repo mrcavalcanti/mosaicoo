@@ -73,7 +73,7 @@ module.exports = async (baseConfig) => {
       },
     };
   } else {
-    // Temporary legacy support for Grafana core (using `yarn start`)
+    // Temporary legacy support for Mosaicoo core (using `yarn start`)
     return baseConfig;
   }
 };

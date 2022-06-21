@@ -11,7 +11,7 @@
   ],
   "swagger": "2.0",
   "info": {
-    "description": "Package definitions includes the types required for generating or consuming an OpenAPI\nspec for the Grafana Alerting API.",
+    "description": "Package definitions includes the types required for generating or consuming an OpenAPI\nspec for the Mosaicoo Alerting API.",
     "title": "Grafana Alerting API.",
     "version": "1.1.0"
   },
@@ -408,7 +408,7 @@
         "tags": [
           "alertmanager"
         ],
-        "summary": "Test Grafana managed receivers without saving them.",
+        "summary": "Test Mosaicoo managed receivers without saving them.",
         "operationId": "RoutePostTestGrafanaReceivers",
         "parameters": [
           {
@@ -939,7 +939,7 @@
         "tags": [
           "alertmanager"
         ],
-        "summary": "Test Grafana managed receivers without saving them.",
+        "summary": "Test Mosaicoo managed receivers without saving them.",
         "operationId": "RoutePostTestReceivers",
         "parameters": [
           {
@@ -1015,7 +1015,7 @@
             "type": "boolean",
             "default": false,
             "x-go-name": "IncludeInternalLabels",
-            "description": "Include Grafana specific labels as part of the response.",
+            "description": "Include Mosaicoo specific labels as part of the response.",
             "name": "includeInternalLabels",
             "in": "query"
           }
@@ -1042,7 +1042,7 @@
             "type": "boolean",
             "default": false,
             "x-go-name": "IncludeInternalLabels",
-            "description": "Include Grafana specific labels as part of the response.",
+            "description": "Include Mosaicoo specific labels as part of the response.",
             "name": "includeInternalLabels",
             "in": "query"
           },
@@ -1947,7 +1947,7 @@
     },
     "/api/v1/rule/test/grafana": {
       "post": {
-        "description": "Test a rule against Grafana ruler",
+        "description": "Test a rule against Mosaicoo ruler",
         "consumes": [
           "application/json"
         ],

@@ -23,7 +23,7 @@ export interface SaveDashboardOptions {
    *  same dashboard title in folder or same dashboard uid. */
   overwrite?: boolean;
   /** Set the dashboard refresh interval.
-   *  If this is lower than the minimum refresh interval, Grafana will ignore it and will enforce the minimum refresh interval. */
+   *  If this is lower than the minimum refresh interval, Mosaicoo will ignore it and will enforce the minimum refresh interval. */
   refresh?: string;
 }
 

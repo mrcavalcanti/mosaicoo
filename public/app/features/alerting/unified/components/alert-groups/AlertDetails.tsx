@@ -22,7 +22,7 @@ export const AlertDetails: FC<AmNotificationsAlertDetailsProps> = ({ alert, aler
   const styles = useStyles2(getStyles);
   const instancePermissions = getInstancesPermissions(alertManagerSourceName);
 
-  // For Grafana Managed alerts the Generator URL redirects to the alert rule edit page, so update permission is required
+  // For Mosaicoo Managed alerts the Generator URL redirects to the alert rule edit page, so update permission is required
   // For external alert manager the Generator URL redirects to an external service which we don't control
   const isGrafanaSource = isGrafanaRulesSource(alertManagerSourceName);
   const isSeeSourceButtonEnabled = isGrafanaSource

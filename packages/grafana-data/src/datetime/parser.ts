@@ -13,7 +13,7 @@ import { DateTimeInput, DateTime, isDateTime } from './moment_wrapper';
  */
 export interface DateTimeOptionsWhenParsing extends DateTimeOptions {
   /**
-   * If the input is a Grafana quick date, e.g. now-6h, then you can specify this to control
+   * If the input is a Mosaicoo quick date, e.g. now-6h, then you can specify this to control
    * whether the last part of the date and time value is included or excluded.
    *
    * Example: now-6h and the current time is 12:20:00 if roundUp is set to true
@@ -30,7 +30,7 @@ type DateTimeParser<T extends DateTimeOptions = DateTimeOptions> = (value: DateT
  * is parsed with that timeZone as a base. The only exception to this is if the passed value is in a UTC-based
  * format. Then it will use UTC as the base. If no format is specified the current system format will be assumed.
  *
- * It can also parse the Grafana quick date and time format, e.g. now-6h will be parsed as Date.now() - 6 hours and
+ * It can also parse the Mosaicoo quick date and time format, e.g. now-6h will be parsed as Date.now() - 6 hours and
  * returned as a valid DateTime value.
  *
  * If no options are supplied, then default values are used. For more details please see {@link DateTimeOptions}.

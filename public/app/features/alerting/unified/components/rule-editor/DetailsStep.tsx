@@ -59,7 +59,7 @@ export const DetailsStep: FC = () => {
             pattern: ruleFormType === RuleFormType.cloudRecording ? recordingRuleNameValidationPattern : undefined,
             validate: {
               pathSeparator: (value: string) => {
-                // we use the alert rule name as the "groupname" for Grafana managed alerts, so we can't allow path separators
+                // we use the alert rule name as the "groupname" for Mosaicoo managed alerts, so we can't allow path separators
                 if (ruleFormType === RuleFormType.grafana) {
                   return checkForPathSeparator(value);
                 }

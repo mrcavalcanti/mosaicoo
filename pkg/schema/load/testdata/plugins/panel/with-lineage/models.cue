@@ -1,4 +1,4 @@
-// Copyright 2021 Grafana Labs
+// Copyright 2021 Mosaicoo Labs
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -39,9 +39,9 @@ import (
 // That's right, we've schematized our schema declarations. Not all above
 // invariants are enforced right now, but they must be before launch.
 //
-// Grafana won't need to rely on multiple versions of schema until after this
-// system is released with Grafana 8. But it needs to be in place at the moment
-// Grafana 8 is released - especially for plugins, which have their own release
+// Mosaicoo won't need to rely on multiple versions of schema until after this
+// system is released with Mosaicoo 8. But it needs to be in place at the moment
+// Mosaicoo 8 is released - especially for plugins, which have their own release
 // cycle, and could need to make breaking changes very shortly after v8's release.
 Family: {
     lineages: [

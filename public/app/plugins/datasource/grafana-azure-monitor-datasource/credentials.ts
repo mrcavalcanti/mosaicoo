@@ -20,7 +20,7 @@ export function getAuthType(options: AzureDataSourceSettings | AzureDataSourceIn
     }
 
     // For newly created datasource with no configuration, managed identity is the default authentication type
-    // if they are enabled in Grafana config
+    // if they are enabled in Mosaicoo config
     return config.azure.managedIdentityEnabled ? 'msi' : 'clientsecret';
   }
 
@@ -63,7 +63,7 @@ export function getAzureCloud(options: AzureDataSourceSettings | AzureDataSource
   const authType = getAuthType(options);
   switch (authType) {
     case 'msi':
-      // In case of managed identity, the cloud is always same as where Grafana is hosted
+      // In case of managed identity, the cloud is always same as where Mosaicoo is hosted
       return getDefaultAzureCloud();
     case 'clientsecret':
       return options.jsonData.cloudName || getDefaultAzureCloud();
@@ -99,7 +99,7 @@ export function getCredentials(options: AzureDataSourceSettings): AzureCredentia
           defaultSubscriptionId: options.jsonData.subscriptionId,
         };
       } else {
-        // If authentication type is managed identity but managed identities were disabled in Grafana config,
+        // If authentication type is managed identity but managed identities were disabled in Mosaicoo config,
         // then we should fallback to an empty app registration (client secret) configuration
         return {
           authType: 'clientsecret',
@@ -125,7 +125,7 @@ export function updateCredentials(
   switch (credentials.authType) {
     case 'msi':
       if (!config.azure.managedIdentityEnabled) {
-        throw new Error('Managed Identity authentication is not enabled in Grafana config.');
+        throw new Error('Managed Identity authentication is not enabled in Mosaicoo config.');
       }
 
       options = {

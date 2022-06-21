@@ -153,9 +153,9 @@ export class ShareLink extends PureComponent<Props, State> {
               rel="noopener noreferrer"
               className="external-link"
             >
-              Grafana image renderer plugin
+              Mosaicoo image renderer plugin
             </a>
-            . Please contact your Grafana administrator to install the plugin.
+            . Please contact your Mosaicoo administrator to install the plugin.
           </Alert>
         )}
       </>

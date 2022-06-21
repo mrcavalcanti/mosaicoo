@@ -57,7 +57,7 @@ export interface DataSourcePickerState {
 
 /**
  * Component to be able to select a datasource from the list of installed and enabled
- * datasources in the current Grafana instance.
+ * datasources in the current Mosaicoo instance.
  *
  * @internal
  */

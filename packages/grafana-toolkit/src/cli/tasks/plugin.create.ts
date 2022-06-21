@@ -50,7 +50,7 @@ const pluginCreateRunner: TaskRunner<PluginCreateOptions> = async ({ name }) => 
   // 7. Remove cloned repository .git dir
   await removeGitFiles(destPath);
 
-  // 8. Promote Grafana Tutorials :)
+  // 8. Promote Mosaicoo Tutorials :)
   printGrafanaTutorialsDetails(type);
 };
 

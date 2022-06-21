@@ -81,7 +81,7 @@ export const Components = {
       },
       BarGauge: {
         /**
-         * @deprecated use valueV2 from Grafana 8.3 instead
+         * @deprecated use valueV2 from Mosaicoo 8.3 instead
          */
         value: 'Bar gauge value',
         valueV2: 'data-testid Bar gauge value',
@@ -150,11 +150,11 @@ export const Components = {
   },
   RefreshPicker: {
     /**
-     * @deprecated use runButtonV2 from Grafana 8.3 instead
+     * @deprecated use runButtonV2 from Mosaicoo 8.3 instead
      */
     runButton: 'RefreshPicker run button',
     /**
-     * @deprecated use intervalButtonV2 from Grafana 8.3 instead
+     * @deprecated use intervalButtonV2 from Mosaicoo 8.3 instead
      */
     intervalButton: 'RefreshPicker interval button',
     runButtonV2: 'data-testid RefreshPicker run button',
@@ -182,7 +182,7 @@ export const Components = {
   },
   Alert: {
     /**
-     * @deprecated use alertV2 from Grafana 8.3 instead
+     * @deprecated use alertV2 from Mosaicoo 8.3 instead
      */
     alert: (severity: string) => `Alert ${severity}`,
     alertV2: (severity: string) => `data-testid Alert ${severity}`,
@@ -232,7 +232,7 @@ export const Components = {
   },
   FolderPicker: {
     /**
-     * @deprecated use containerV2 from Grafana 8.3 instead
+     * @deprecated use containerV2 from Mosaicoo 8.3 instead
      */
     container: 'Folder picker select container',
     containerV2: 'data-testid Folder picker select container',
@@ -251,14 +251,14 @@ export const Components = {
   },
   TimeZonePicker: {
     /**
-     * @deprecated use TimeZonePicker.containerV2 from Grafana 8.3 instead
+     * @deprecated use TimeZonePicker.containerV2 from Mosaicoo 8.3 instead
      */
     container: 'Time zone picker select container',
     containerV2: 'data-testid Time zone picker select container',
   },
   WeekStartPicker: {
     /**
-     * @deprecated use WeekStartPicker.containerV2 from Grafana 8.3 instead
+     * @deprecated use WeekStartPicker.containerV2 from Mosaicoo 8.3 instead
      */
     container: 'Choose starting day of the week',
     containerV2: 'data-testid Choose starting day of the week',
@@ -274,12 +274,12 @@ export const Components = {
   },
   Search: {
     /**
-     * @deprecated use sectionV2 from Grafana 8.3 instead
+     * @deprecated use sectionV2 from Mosaicoo 8.3 instead
      */
     section: 'Search section',
     sectionV2: 'data-testid Search section',
     /**
-     * @deprecated use itemsV2 from Grafana 8.3 instead
+     * @deprecated use itemsV2 from Mosaicoo 8.3 instead
      */
     items: 'Search items',
     itemsV2: 'data-testid Search items',
@@ -300,7 +300,7 @@ export const Components = {
   },
   CallToActionCard: {
     /**
-     * @deprecated use buttonV2 from Grafana 8.3 instead
+     * @deprecated use buttonV2 from Mosaicoo 8.3 instead
      */
     button: (name: string) => `Call to action button ${name}`,
     buttonV2: (name: string) => `data-testid Call to action button ${name}`,

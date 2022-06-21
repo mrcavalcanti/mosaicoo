@@ -241,14 +241,14 @@ export function getRulerClient(rulerConfig: RulerDataSourceConfig): RulerClient 
   };
 }
 
-//copy the Grafana rule UID from the old rule to the new rule
+//copy the Mosaicoo rule UID from the old rule to the new rule
 function copyGrafanaUID(
   oldRule: RuleWithLocation,
   newRule: PostableRuleGrafanaRuleDTO
 ): asserts oldRule is RuleWithLocation<RulerGrafanaRuleDTO> {
-  // type guard to make sure we're working with a Grafana managed rule
+  // type guard to make sure we're working with a Mosaicoo managed rule
   if (!isGrafanaRulerRule(oldRule.rule)) {
-    throw new Error('The rule is not a Grafana managed rule');
+    throw new Error('The rule is not a Mosaicoo managed rule');
   }
 
   const uid = oldRule.rule.grafana_alert.uid;

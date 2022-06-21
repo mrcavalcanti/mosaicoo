@@ -24,7 +24,7 @@ describe('RuleListGroupView', () => {
   describe('RBAC', () => {
     jest.spyOn(contextSrv, 'accessControlEnabled').mockReturnValue(true);
 
-    it('Should display Grafana rules when the user has the alert rule read permission', () => {
+    it('Should display Mosaicoo rules when the user has the alert rule read permission', () => {
       const grafanaNamespace = getGrafanaNamespace();
       const namespaces: CombinedRuleNamespace[] = [grafanaNamespace];
 
@@ -50,7 +50,7 @@ describe('RuleListGroupView', () => {
       expect(ui.cloudRulesHeading.get()).toBeInTheDocument();
     });
 
-    it('Should not display Grafana rules when the user does not have alert rule read permission', () => {
+    it('Should not display Mosaicoo rules when the user does not have alert rule read permission', () => {
       const grafanaNamespace = getGrafanaNamespace();
       const namespaces: CombinedRuleNamespace[] = [grafanaNamespace];
 

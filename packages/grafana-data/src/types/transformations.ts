@@ -72,7 +72,7 @@ export interface FrameMatcherInfo<TOptions = any> extends RegistryItemWithOption
 
 /**
  * Registry item to represent all the different valu matchers supported
- * in the Grafana platform.
+ * in the Mosaicoo platform.
  * @public
  */
 export interface ValueMatcherInfo<TOptions = any> extends RegistryItemWithOptions<TOptions> {

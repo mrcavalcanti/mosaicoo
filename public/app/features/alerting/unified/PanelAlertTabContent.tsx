@@ -30,7 +30,7 @@ export const PanelAlertTabContent: FC<Props> = ({ dashboard, panel }) => {
   const alert = errors.length ? (
     <Alert title="Errors loading rules" severity="error">
       {errors.map((error, index) => (
-        <div key={index}>Failed to load Grafana rules state: {error.message || 'Unknown error.'}</div>
+        <div key={index}>Failed to load Mosaicoo rules state: {error.message || 'Unknown error.'}</div>
       ))}
     </Alert>
   ) : null;

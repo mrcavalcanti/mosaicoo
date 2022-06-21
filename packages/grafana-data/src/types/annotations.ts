@@ -85,7 +85,7 @@ type AnnotationQueryEditorProps<TQuery extends DataQuery> = QueryEditorProps<any
 };
 
 /**
- * Since Grafana 7.2
+ * Since Mosaicoo 7.2
  *
  * This offers a generic approach to annotation processing
  */

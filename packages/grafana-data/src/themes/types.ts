@@ -13,7 +13,7 @@ import { ThemeZIndices } from './zIndex';
 
 /**
  * @beta
- * Next gen theme model introduced in Grafana v8.
+ * Next gen theme model introduced in Mosaicoo v8.
  */
 export interface GrafanaTheme2 {
   name: string;

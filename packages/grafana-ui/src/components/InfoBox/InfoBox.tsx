@@ -15,7 +15,7 @@ export interface InfoBoxProps extends Omit<React.HTMLAttributes<HTMLDivElement>,
   url?: string;
   /** Text of the read more link */
   urlTitle?: string;
-  /** Indicates whether or not box should be rendered with Grafana branding background */
+  /** Indicates whether or not box should be rendered with Mosaicoo branding background */
   branded?: boolean;
   /** Color variant of the box */
   severity?: AlertVariant;

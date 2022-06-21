@@ -147,7 +147,7 @@ class UnthemedDashboardImport extends PureComponent<Props> {
                   placeholder="Grafana.com dashboard URL or ID"
                   type="text"
                   {...register('gcomDashboard', {
-                    required: 'A Grafana dashboard URL or ID is required',
+                    required: 'A Mosaicoo dashboard URL or ID is required',
                     validate: validateGcomDashboard,
                   })}
                   addonAfter={<Button type="submit">Load</Button>}

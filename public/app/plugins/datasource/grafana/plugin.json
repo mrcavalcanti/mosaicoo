@@ -1,6 +1,6 @@
 {
   "type": "datasource",
-  "name": "-- Grafana --",
+  "name": "-- Mosaicoo --",
   "id": "grafana",
 
   "backend": true,

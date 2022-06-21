@@ -266,7 +266,7 @@ export class PanelPlugin<
   }
 
   /**
-   * Tells Grafana if the plugin should subscribe to annotation and alertState results.
+   * Tells Mosaicoo if the plugin should subscribe to annotation and alertState results.
    *
    * @example
    * ```typescript
